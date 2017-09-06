@@ -1,0 +1,81 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: 適用於 Java 開發人員的 Azure
+metadata:
+  document_id: 1152a217-eb0e-45e9-b01b-bd27080d615e
+  title: 適用於 Java 開發人員的 Azure - 教學課程、API 參考
+  description: 請使用下列資源來尋找適用於 Java 開發人員的優質教學課程和工具，以透過 Azure 開始開發應用程式。
+  keywords: 'Azure, Java, SDK, API, Maven, Spring'
+  author: rloutlaw
+  ms.author: routlaw
+  manager: douge
+  ms.date: 07/13/2017
+  ms.topic: article
+  ms.prod: azure
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+  - items:
+      - type: markdown
+        text: |
+          請使用下列資源來尋找適用於 Java 開發人員的優質教學課程和工具，以透過 Azure 開始開發應用程式。
+  - items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+            html: <p>將第一個 Web 應用程式部署至 Azure</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            title: 開始使用
+          - href: 'https://azure.microsoft.com/resources/samples/?platform=java&view=azure-java'
+            html: <p>使用 Java 的 Azure 程式碼範例</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
+            title: 程式碼範例
+          - href: java-azure-tools.md
+            html: <p>開發人員工具</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+            title: SDK &amp; 工具
+          - href: java-sdk-azure-install.md
+            html: <p>適用於 Java 的 Azure 程式庫</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+            title: API 參考
+  - title: 5 分鐘快速入門
+    items:
+      - type: paragraph
+        text: 了解如何使用 Azure 服務來建置 Java 應用程式。
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
+            title: 將第一個 Web 應用程式部署至 Azure
+            href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/MySQL.svg'
+            title: 連線到適用於 MySQL 的 Azure 資料庫
+            href: 'https://docs.microsoft.com/azure/mysql/connect-java'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/CosmosDB_rgb_ui_lighttheme.svg'
+            title: 使用 Cosmos DB 建置 Web 應用程式
+            href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-java'
+          - image:
+              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/jenkins_logo.svg'
+            title: 使用 Jenkins® 來 CI/CD 至 App Service
+            href: 'https://docs.microsoft.com/azure/jenkins/java-deploy-webapp-tutorial'
+  - title: 範例
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">使用 Spring Boot 和 MySQL 來建立 Web 應用程式</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/storage-blob-java-getting-started/">使用 Java 的 Azure Blob 儲存體</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/azure-cosmos-db-mongodb-java-getting-started/">使用 MongoDB API 來連線到 Azure Cosmos DB</a>'

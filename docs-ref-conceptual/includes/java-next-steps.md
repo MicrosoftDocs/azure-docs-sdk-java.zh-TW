@@ -1,0 +1,1 @@
+如需在 Azure 上建立及部署 Java 應用程式的詳細資訊，請瀏覽 [Java 開發人員中心](https://docs.microsoft.com/java/api)。
