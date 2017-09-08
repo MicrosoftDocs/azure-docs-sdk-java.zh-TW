@@ -18,6 +18,6 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
 ---
-# <a name="azure-management-libraries-for-java-samples-for-sql-database"></a>針對 SQL 資料庫所提供之適用於 Java 的 Azure 管理程式庫範例
+# <a name="azure-management-libraries-for-java-samples-for-sql-database"></a><span data-ttu-id="61edd-104">針對 SQL 資料庫所提供之適用於 Java 的 Azure 管理程式庫範例</span><span class="sxs-lookup"><span data-stu-id="61edd-104">Azure management libraries for Java samples for SQL Database</span></span>
 
 [!INCLUDE [java-sql-samples](includes/java-sql-samples.md)]

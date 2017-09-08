@@ -18,8 +18,8 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
 ---
-# <a name="azure-management-libraries-for-java-samples-for-virtual-machines"></a>針對虛擬機器所提供之適用於 Java 的 Azure 管理程式庫範例
+# <a name="azure-management-libraries-for-java-samples-for-virtual-machines"></a><span data-ttu-id="8d171-104">針對虛擬機器所提供之適用於 Java 的 Azure 管理程式庫範例</span><span class="sxs-lookup"><span data-stu-id="8d171-104">Azure management libraries for Java samples for virtual machines</span></span>
 
-下表連結到可供用來建立和設定 Azure 虛擬機器的 Java 來源。
+<span data-ttu-id="8d171-105">下表連結到可供用來建立和設定 Azure 虛擬機器的 Java 來源。</span><span class="sxs-lookup"><span data-stu-id="8d171-105">The following table links to Java source you can use to create and configure Azure virtual machines.</span></span>
 
 [!INCLUDE [java-vm-samples](includes/java-vm-samples.md)]

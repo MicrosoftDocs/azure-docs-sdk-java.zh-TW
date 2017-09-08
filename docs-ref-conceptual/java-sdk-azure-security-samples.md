@@ -17,8 +17,8 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
 ---
-# <a name="java-samples-for-azure-active-directory"></a>Azure Active Directory 的 Java 範例
+# <a name="java-samples-for-azure-active-directory"></a><span data-ttu-id="1eb6e-104">Azure Active Directory 的 Java 範例</span><span class="sxs-lookup"><span data-stu-id="1eb6e-104">Java samples for Azure Active Directory</span></span>
 
-下表連結到可供用來在應用程式中存取和使用 Azure Active Directory (AD) 的 Java 來源。
+<span data-ttu-id="1eb6e-105">下表連結到可供用來在應用程式中存取和使用 Azure Active Directory (AD) 的 Java 來源。</span><span class="sxs-lookup"><span data-stu-id="1eb6e-105">The following table links to Java source you can use to access and work with Azure Active Directory(AD) in your apps.</span></span>
 
 [!INCLUDE [java-vm-samples](includes/java-aad-samples.md)]

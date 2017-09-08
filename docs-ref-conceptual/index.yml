@@ -1,11 +1,11 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: 適用於 Java 開發人員的 Azure
+title: <span data-ttu-id="46704-101">適用於 Java 開發人員的 Azure</span><span class="sxs-lookup"><span data-stu-id="46704-101">Azure for Java developers</span></span>
 metadata:
   document_id: 1152a217-eb0e-45e9-b01b-bd27080d615e
-  title: 適用於 Java 開發人員的 Azure - 教學課程、API 參考
-  description: 請使用下列資源來尋找適用於 Java 開發人員的優質教學課程和工具，以透過 Azure 開始開發應用程式。
-  keywords: 'Azure, Java, SDK, API, Maven, Spring'
+  title: '<span data-ttu-id="46704-102">適用於 Java 開發人員的 Azure - 教學課程、API 參考</span><span class="sxs-lookup"><span data-stu-id="46704-102">Azure for Java developers - Tutorials, API Reference</span></span>'
+  description: <span data-ttu-id="46704-103">請使用下列資源來尋找適用於 Java 開發人員的優質教學課程和工具，以透過 Azure 開始開發應用程式。</span><span class="sxs-lookup"><span data-stu-id="46704-103">Get started developing apps with Azure using the resources below to find great tutorials and tools for Java developers.</span></span>
+  keywords: '<span data-ttu-id="46704-104">Azure, Java, SDK, API, Maven, Spring</span><span class="sxs-lookup"><span data-stu-id="46704-104">Azure, Java, SDK, API, Maven, Spring</span></span>'
   author: rloutlaw
   ms.author: routlaw
   manager: douge
@@ -19,7 +19,7 @@ sections:
   - items:
       - type: markdown
         text: |
-          請使用下列資源來尋找適用於 Java 開發人員的優質教學課程和工具，以透過 Azure 開始開發應用程式。
+          <span data-ttu-id="46704-105">請使用下列資源來尋找適用於 Java 開發人員的優質教學課程和工具，以透過 Azure 開始開發應用程式。</span><span class="sxs-lookup"><span data-stu-id="46704-105">Get started developing apps with Azure using the resources below to find great tutorials and tools for Java developers.</span></span>
   - items:
       - type: list
         style: cards
@@ -27,29 +27,29 @@ sections:
         columns: 2
         items:
           - href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
-            html: <p>將第一個 Web 應用程式部署至 Azure</p>
+            html: <p><span data-ttu-id="46704-106">將第一個 Web 應用程式部署至 Azure</span><span class="sxs-lookup"><span data-stu-id="46704-106">Deploy your first web app to Azure</span></span></p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            title: 開始使用
+            title: <span data-ttu-id="46704-107">開始使用</span><span class="sxs-lookup"><span data-stu-id="46704-107">Get Started</span></span>
           - href: 'https://azure.microsoft.com/resources/samples/?platform=java&view=azure-java'
-            html: <p>使用 Java 的 Azure 程式碼範例</p>
+            html: <p><span data-ttu-id="46704-108">使用 Java 的 Azure 程式碼範例</span><span class="sxs-lookup"><span data-stu-id="46704-108">Azure code samples using Java</span></span></p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
-            title: 程式碼範例
+            title: <span data-ttu-id="46704-109">程式碼範例</span><span class="sxs-lookup"><span data-stu-id="46704-109">Code Samples</span></span>
           - href: java-azure-tools.md
-            html: <p>開發人員工具</p>
+            html: <p><span data-ttu-id="46704-110">開發人員工具</span><span class="sxs-lookup"><span data-stu-id="46704-110">Developer tools</span></span></p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
-            title: SDK &amp; 工具
+            title: <span data-ttu-id="46704-111">SDK &amp; 工具</span><span class="sxs-lookup"><span data-stu-id="46704-111">SDK &amp; Tools</span></span>
           - href: java-sdk-azure-install.md
-            html: <p>適用於 Java 的 Azure 程式庫</p>
+            html: <p><span data-ttu-id="46704-112">適用於 Java 的 Azure 程式庫</span><span class="sxs-lookup"><span data-stu-id="46704-112">Azure Libraries for Java</span></span></p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-            title: API 參考
-  - title: 5 分鐘快速入門
+            title: <span data-ttu-id="46704-113">API 參考</span><span class="sxs-lookup"><span data-stu-id="46704-113">API Reference</span></span>
+  - title: <span data-ttu-id="46704-114">5 分鐘快速入門</span><span class="sxs-lookup"><span data-stu-id="46704-114">5-Minute Quickstarts</span></span>
     items:
       - type: paragraph
-        text: 了解如何使用 Azure 服務來建置 Java 應用程式。
+        text: <span data-ttu-id="46704-115">了解如何使用 Azure 服務來建置 Java 應用程式。</span><span class="sxs-lookup"><span data-stu-id="46704-115">Learn how to build Java apps with Azure services.</span></span>
       - type: list
         style: cards
         className: cardsM
@@ -57,25 +57,25 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
-            title: 將第一個 Web 應用程式部署至 Azure
+            title: <span data-ttu-id="46704-116">將第一個 Web 應用程式部署至 Azure</span><span class="sxs-lookup"><span data-stu-id="46704-116">Deploy your first web app to Azure</span></span>
             href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/MySQL.svg'
-            title: 連線到適用於 MySQL 的 Azure 資料庫
+            title: <span data-ttu-id="46704-117">連線到適用於 MySQL 的 Azure 資料庫</span><span class="sxs-lookup"><span data-stu-id="46704-117">Connect to Azure Database for MySQL</span></span>
             href: 'https://docs.microsoft.com/azure/mysql/connect-java'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/CosmosDB_rgb_ui_lighttheme.svg'
-            title: 使用 Cosmos DB 建置 Web 應用程式
+            title: <span data-ttu-id="46704-118">使用 Cosmos DB 建置 Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="46704-118">Build a web app with Cosmos DB</span></span>
             href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-java'
           - image:
               src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/jenkins_logo.svg'
-            title: 使用 Jenkins® 來 CI/CD 至 App Service
+            title: <span data-ttu-id="46704-119">使用 Jenkins® 來 CI/CD 至 App Service</span><span class="sxs-lookup"><span data-stu-id="46704-119">CI/CD to App Service with Jenkins®</span></span>
             href: 'https://docs.microsoft.com/azure/jenkins/java-deploy-webapp-tutorial'
-  - title: 範例
+  - title: <span data-ttu-id="46704-120">範例</span><span class="sxs-lookup"><span data-stu-id="46704-120">Samples</span></span>
     items:
       - type: list
         style: unordered
         items:
-          - html: '<a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">使用 Spring Boot 和 MySQL 來建立 Web 應用程式</a>'
-          - html: '<a href="https://azure.microsoft.com/resources/samples/storage-blob-java-getting-started/">使用 Java 的 Azure Blob 儲存體</a>'
-          - html: '<a href="https://azure.microsoft.com/resources/samples/azure-cosmos-db-mongodb-java-getting-started/">使用 MongoDB API 來連線到 Azure Cosmos DB</a>'
+          - html: '<span data-ttu-id="46704-121"><a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">使用 Spring Boot 和 MySQL 來建立 Web 應用程式</a></span><span class="sxs-lookup"><span data-stu-id="46704-121"><a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">Create a web app with Spring Boot and MySQL</a></span></span>'
+          - html: '<span data-ttu-id="46704-122"><a href="https://azure.microsoft.com/resources/samples/storage-blob-java-getting-started/">使用 Java 的 Azure Blob 儲存體</a></span><span class="sxs-lookup"><span data-stu-id="46704-122"><a href="https://azure.microsoft.com/resources/samples/storage-blob-java-getting-started/">Azure Blob Storage with Java</a></span></span>'
+          - html: '<span data-ttu-id="46704-123"><a href="https://azure.microsoft.com/resources/samples/azure-cosmos-db-mongodb-java-getting-started/">使用 MongoDB API 來連線到 Azure Cosmos DB</a></span><span class="sxs-lookup"><span data-stu-id="46704-123"><a href="https://azure.microsoft.com/resources/samples/azure-cosmos-db-mongodb-java-getting-started/">Connect to Azure Cosmos DB with the MongoDB API</a></span></span>'

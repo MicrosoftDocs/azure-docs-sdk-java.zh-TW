@@ -18,22 +18,22 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
 ---
-# <a name="get-started-with-the-azure-libraries-for-java"></a>開始使用適用於 Java 的 Azure 程式庫
+# <a name="get-started-with-the-azure-libraries-for-java"></a><span data-ttu-id="5e5a9-104">開始使用適用於 Java 的 Azure 程式庫</span><span class="sxs-lookup"><span data-stu-id="5e5a9-104">Get started with the Azure libraries for Java</span></span>
 
-本指南會逐步引導您使用 Azure 服務主體來設定開發環境，並執行程式碼範例來透過適用於 Java 的 Azure 程式庫在 Azure 訂用帳戶中建立及使用資源。
+<span data-ttu-id="5e5a9-105">本指南會逐步引導您使用 Azure 服務主體來設定開發環境，並執行程式碼範例來透過適用於 Java 的 Azure 程式庫在 Azure 訂用帳戶中建立及使用資源。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-105">This guide walks you through setting up a development environment with an Azure service principal and running sample code that creates and uses resources in your Azure subscription using the Azure libraries for Java.</span></span>
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a><span data-ttu-id="5e5a9-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="5e5a9-106">Prerequisites</span></span>
 
-- 一個 Azure 帳戶。 如果您沒有帳戶，請[取得免費試用帳戶](https://azure.microsoft.com/free/)
-- [Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) 或 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。
-- [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (包含在 Azure Cloud Shell 內)
-- [Maven 3](http://maven.apache.org/download.cgi) (包含在 Azure Cloud Shell 內)
+- <span data-ttu-id="5e5a9-107">一個 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-107">An Azure account.</span></span> <span data-ttu-id="5e5a9-108">如果您沒有帳戶，請[取得免費試用帳戶](https://azure.microsoft.com/free/)</span><span class="sxs-lookup"><span data-stu-id="5e5a9-108">If you don't have one , [get a free trial](https://azure.microsoft.com/free/)</span></span>
+- <span data-ttu-id="5e5a9-109">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) 或 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-109">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
+- [<span data-ttu-id="5e5a9-110">Java 8</span><span class="sxs-lookup"><span data-stu-id="5e5a9-110">Java 8</span></span>](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (包含在 Azure Cloud Shell 內)
+- [<span data-ttu-id="5e5a9-111">Maven 3</span><span class="sxs-lookup"><span data-stu-id="5e5a9-111">Maven 3</span></span>](http://maven.apache.org/download.cgi) (包含在 Azure Cloud Shell 內)
 
-## <a name="set-up-authentication"></a>設定驗證
+## <a name="set-up-authentication"></a><span data-ttu-id="5e5a9-112">設定驗證</span><span class="sxs-lookup"><span data-stu-id="5e5a9-112">Set up authentication</span></span>
 
-Java 應用程式必須有 Azure 訂用帳戶的讀取和建立權限，才能在此教學課程中執行程式碼範例。 請建立服務主體，並將應用程式設定為使用其認證來執行。 服務主體可讓您建立與身分識別相關聯的非互動式帳戶，而且對於此身分識別，您只賦予它應用程式執行時所需的權限。
+<span data-ttu-id="5e5a9-113">Java 應用程式必須有 Azure 訂用帳戶的讀取和建立權限，才能在此教學課程中執行程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-113">Your Java application needs read and create permissions in your Azure subscription to run the sample code in this tutorial.</span></span> <span data-ttu-id="5e5a9-114">請建立服務主體，並將應用程式設定為使用其認證來執行。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-114">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="5e5a9-115">服務主體可讓您建立與身分識別相關聯的非互動式帳戶，而且對於此身分識別，您只賦予它應用程式執行時所需的權限。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-115">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
 
-[使用 Azure CLI 2.0 建立服務主體](/cli/azure/create-an-azure-service-principal-azure-cli)並擷取輸出。 您必須在 password 引數中提供[安全的密碼](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)，而不是提供 `MY_SECURE_PASSWORD`。
+<span data-ttu-id="5e5a9-116">[使用 Azure CLI 2.0 建立服務主體](/cli/azure/create-an-azure-service-principal-azure-cli)並擷取輸出。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-116">[Create a service principal using the Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="5e5a9-117">您必須在 password 引數中提供[安全的密碼](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)，而不是提供 `MY_SECURE_PASSWORD`。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-117">You'll need to provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span>
 
 
 ```azurecli-interactive
@@ -50,7 +50,7 @@ az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
 }
 ```
 
-接下來，將下列內容複製到您系統上的文字檔：
+<span data-ttu-id="5e5a9-118">接下來，將下列內容複製到您系統上的文字檔：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-118">Next, copy the following into a text file on your system:</span></span>
 
 ```text
 # sample management library properties file
@@ -64,25 +64,25 @@ authURL=https\://login.windows.net/
 graphURL=https\://graph.windows.net/
 ```
 
-將前四個值替換為以下內容：
+<span data-ttu-id="5e5a9-119">將前四個值替換為以下內容：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-119">Replace the top four values with the following:</span></span>
 
-- subscription：使用在 Azure CLI 2.0 中透過 `az account show` 所得到的 id 值。
-- client：使用從服務主體輸出所擷取之輸出中得到的 appId 值。
-- key：使用從服務主體輸出所得到的 password 值。
-- tenant：使用從服務主體輸出所得到的 tenant 值。
+- <span data-ttu-id="5e5a9-120">subscription：使用在 Azure CLI 2.0 中透過 `az account show` 所得到的 id 值。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-120">subscription: use the *id* value from `az account show` in the Azure CLI 2.0.</span></span>
+- <span data-ttu-id="5e5a9-121">client：使用從服務主體輸出所擷取之輸出中得到的 appId 值。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-121">client: use the *appId* value from the output taken from a service principal output.</span></span>
+- <span data-ttu-id="5e5a9-122">key：使用從服務主體輸出所得到的 password 值。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-122">key: use the *password* value from the service principal output .</span></span>
+- <span data-ttu-id="5e5a9-123">tenant：使用從服務主體輸出所得到的 tenant 值。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-123">tenant: use the *tenant* value from the service principal output.</span></span>
 
-將此檔案儲存在系統上可供程式碼讀取且安全的位置。 在殼層中使用驗證檔案的完整路徑來設定環境變數 `AZURE_AUTH_LOCATION`。    
+<span data-ttu-id="5e5a9-124">將此檔案儲存在系統上可供程式碼讀取且安全的位置。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-124">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="5e5a9-125">在殼層中使用驗證檔案的完整路徑來設定環境變數 `AZURE_AUTH_LOCATION`。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-125">Set an environment variable `AZURE_AUTH_LOCATION` with the full path to the authentication file in your shell.</span></span>    
 
 ```bash
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-## <a name="create-a-new-maven-project"></a>建立新的 Maven 專案
+## <a name="create-a-new-maven-project"></a><span data-ttu-id="5e5a9-126">建立新的 Maven 專案</span><span class="sxs-lookup"><span data-stu-id="5e5a9-126">Create a new Maven project</span></span>
 
 > [!NOTE]
-> 本指南使用 Maven 建置工具來建置及執行程式碼範例，但 Gradle 等其他建置工具也能與適用於 Java 的 Azure 程式庫搭配運作。 
+> <span data-ttu-id="5e5a9-127">本指南使用 Maven 建置工具來建置及執行程式碼範例，但 Gradle 等其他建置工具也能與適用於 Java 的 Azure 程式庫搭配運作。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-127">This guide uses Maven build tool to build and run the sample code, but other build tools such as Gradle also work with the Azure libraries for Java.</span></span> 
 
-透過命令列在系統上的新目錄中建立 Maven 專案：
+<span data-ttu-id="5e5a9-128">透過命令列在系統上的新目錄中建立 Maven 專案：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-128">Create a Maven project from the command line in a new directory on your system:</span></span>
 
 ```
 mkdir java-azure-test
@@ -91,7 +91,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=testAzureApp  \
 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 
-這會在 `testAzureApp` 資料夾內建立基本的 Maven 專案。 在 `pom.xml` 專案中新增下列項目以匯入本教學課程之程式碼範例所使用的程式庫。
+<span data-ttu-id="5e5a9-129">這會在 `testAzureApp` 資料夾內建立基本的 Maven 專案。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-129">This creates a basic Maven project under the `testAzureApp` folder.</span></span> <span data-ttu-id="5e5a9-130">在 `pom.xml` 專案中新增下列項目以匯入本教學課程之程式碼範例所使用的程式庫。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-130">Add the following entries into the project `pom.xml` to import the libraries used in the sample code in this tutorial.</span></span>
 
 ```XML
 <dependency>
@@ -111,7 +111,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=testAzureApp  \
 </dependency>
 ```
 
-在最上層 `project` 元素底下新增 `build` 項目以使用 [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) 來執行這些範例：
+<span data-ttu-id="5e5a9-131">在最上層 `project` 元素底下新增 `build` 項目以使用 [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) 來執行這些範例：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-131">Add a `build` entry under the top-level `project` element to use the [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) to run the samples:</span></span>
 
 ```XML
 <build>
@@ -127,9 +127,9 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=testAzureApp  \
 </build>
  ```
    
-## <a name="create-a-linux-virtual-machine"></a>建立 Linux 虛擬機器
+## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="5e5a9-132">建立 Linux 虛擬機器</span><span class="sxs-lookup"><span data-stu-id="5e5a9-132">Create a Linux virtual machine</span></span>
 
-在專案的 `src/main/java` 目錄中建立名為 `AzureApp.java` 的新檔案，然後貼上以下程式碼區塊。 使用機器的實際值來更新 `userName` 和 `sshKey` 變數。 此程式碼會在美國東部 Azure 區域執行的 `sampleResourceGroup` 資源群組中，建立名為 `testLinuxVM` 的新 Linux VM。
+<span data-ttu-id="5e5a9-133">在專案的 `src/main/java` 目錄中建立名為 `AzureApp.java` 的新檔案，然後貼上以下程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-133">Create a new file named `AzureApp.java` in the project's `src/main/java` directory and paste in the following block of code.</span></span> <span data-ttu-id="5e5a9-134">使用機器的實際值來更新 `userName` 和 `sshKey` 變數。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-134">Update the `userName` and `sshKey` variables with real values for your machine.</span></span> <span data-ttu-id="5e5a9-135">此程式碼會在美國東部 Azure 區域執行的 `sampleResourceGroup` 資源群組中，建立名為 `testLinuxVM` 的新 Linux VM。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-135">The code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleResourceGroup` running in the US East Azure region.</span></span>
 
 ```java
 package com.fabrikam.testAzureApp;
@@ -197,27 +197,27 @@ public class AzureApp {
 }
 ```
 
-從命令列執行範例：
+<span data-ttu-id="5e5a9-136">從命令列執行範例：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-136">Run the sample from the command line:</span></span>
 
 ```
 mvn compile exec:java
 ```
 
-您會在主控台中看到某些 REST 要求和回應，因為 SDK 會對 Azure REST API 進行基礎呼叫，以設定虛擬機器和其資源。 當程式完成時，請使用 Azure CLI 2.0 在訂用帳戶中確認虛擬機器：
+<span data-ttu-id="5e5a9-137">您會在主控台中看到某些 REST 要求和回應，因為 SDK 會對 Azure REST API 進行基礎呼叫，以設定虛擬機器和其資源。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-137">You'll see some REST requests and responses in the console as the SDK makes the underlying calls to the Azure REST API to configure the virtual machine and its resources.</span></span> <span data-ttu-id="5e5a9-138">當程式完成時，請使用 Azure CLI 2.0 在訂用帳戶中確認虛擬機器：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-138">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>
 
 ```azurecli-interactive
 az vm list --resource-group sampleVmResourceGroup
 ```
 
-在確認程式碼有效後，請使用 CLI 來刪除 VM 和其資源。
+<span data-ttu-id="5e5a9-139">在確認程式碼有效後，請使用 CLI 來刪除 VM 和其資源。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-139">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleVmResourceGroup
 ```
 
-## <a name="deploy-a-web-app-from-a-github-repo"></a>從 GitHub 存放庫部署 Web 應用程式
+## <a name="deploy-a-web-app-from-a-github-repo"></a><span data-ttu-id="5e5a9-140">從 GitHub 存放庫部署 Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="5e5a9-140">Deploy a web app from a GitHub repo</span></span>
 
-將 `AzureApp.java` 中的主要方法替換為下列內容，並將 `appName` 變數更新為唯一值再執行程式碼。 此程式碼會將公用 GitHub 存放庫中 `master` 分支內的 Web 應用程式，部署至執行於免費定價層的新的 [Azure App Service Web 應用程式](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)。
+<span data-ttu-id="5e5a9-141">將 `AzureApp.java` 中的主要方法替換為下列內容，並將 `appName` 變數更新為唯一值再執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-141">Replace the main method in `AzureApp.java` with the one below, updating the `appName` variable to a unique value before running the code.</span></span> <span data-ttu-id="5e5a9-142">此程式碼會將公用 GitHub 存放庫中 `master` 分支內的 Web 應用程式，部署至執行於免費定價層的新的 [Azure App Service Web 應用程式](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-142">This code deploys a web application from the `master` branch in a public GitHub repo into a new [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) running in the free pricing tier.</span></span>
 
 ```java
     public static void main(String[] args) {
@@ -249,28 +249,28 @@ az group delete --name sampleVmResourceGroup
     }
 ```
 
-使用 Maven 如往常一樣地執行程式碼：
+<span data-ttu-id="5e5a9-143">使用 Maven 如往常一樣地執行程式碼：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-143">Run the code as before using Maven:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-使用 CLI 開啟瀏覽器並讓其指向該應用程式：
+<span data-ttu-id="5e5a9-144">使用 CLI 開啟瀏覽器並讓其指向該應用程式：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-144">Open a browser pointed to the application using the CLI:</span></span>
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME
 ```
 
-確認過部署後，請從訂用帳戶中移除 Web 應用程式和方案。
+<span data-ttu-id="5e5a9-145">確認過部署後，請從訂用帳戶中移除 Web 應用程式和方案。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-145">Remove the web app and plan from your subscription once you've verified the deployment.</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleWebResourceGroup
 ```
 
-## <a name="connect-to-a-sql-database"></a>連線到 SQL 資料庫
+## <a name="connect-to-a-sql-database"></a><span data-ttu-id="5e5a9-146">連線到 SQL 資料庫</span><span class="sxs-lookup"><span data-stu-id="5e5a9-146">Connect to a SQL database</span></span>
 
-使用下列程式碼取代 `AzureApp.java` 中目前的主要方法，並為 `dbPassword` 變數設定實際的值。
-此程式碼會使用允許遠端存取的防火牆規則來建立新的 SQL 資料庫，然後使用 SQL Database JBDC 驅動程式來與該資料庫連線。 
+<span data-ttu-id="5e5a9-147">使用下列程式碼取代 `AzureApp.java` 中目前的主要方法，並為 `dbPassword` 變數設定實際的值。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-147">Replace the current main method in `AzureApp.java` with the code below, setting a real value for the `dbPassword` variable.</span></span>
+<span data-ttu-id="5e5a9-148">此程式碼會使用允許遠端存取的防火牆規則來建立新的 SQL 資料庫，然後使用 SQL Database JBDC 驅動程式來與該資料庫連線。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-148">This code creates a new SQL database with a firewall rule allowing remote access,  and then connects to it using the SQL Database JBDC driver.</span></span> 
 
 ```java
 
@@ -333,21 +333,21 @@ az group delete --name sampleWebResourceGroup
         }
     }
 ```
-從命令列執行範例：
+<span data-ttu-id="5e5a9-149">從命令列執行範例：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-149">Run the sample from the command line:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-然後使用 CLI 清除資源：
+<span data-ttu-id="5e5a9-150">然後使用 CLI 清除資源：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-150">Then clean up the resources using the CLI:</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleSqlResourceGroup
 ```
 
-## <a name="write-a-blob-into-a-new-storage-account"></a>將 blob 寫入到新的儲存體帳戶
+## <a name="write-a-blob-into-a-new-storage-account"></a><span data-ttu-id="5e5a9-151">將 blob 寫入到新的儲存體帳戶</span><span class="sxs-lookup"><span data-stu-id="5e5a9-151">Write a blob into a new storage account</span></span>
 
-使用下列程式碼取代 `AzureApp.java` 中目前的主要方法。 此程式碼會建立 [Azure 儲存體帳戶](https://docs.microsoft.com/azure/storage/storage-introduction)，然後使用適用於 Java 的 Azure 儲存體程式庫在雲端建立新的文字檔。
+<span data-ttu-id="5e5a9-152">使用下列程式碼取代 `AzureApp.java` 中目前的主要方法。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-152">Replace the current main method in `AzureApp.java` with the code below.</span></span> <span data-ttu-id="5e5a9-153">此程式碼會建立 [Azure 儲存體帳戶](https://docs.microsoft.com/azure/storage/storage-introduction)，然後使用適用於 Java 的 Azure 儲存體程式庫在雲端建立新的文字檔。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-153">This code creates an [Azure storage account](https://docs.microsoft.com/azure/storage/storage-introduction) and then uses the Azure Storage libraries for Java to create a new text file in the cloud.</span></span>
 
 ```java
     public static void main(String[] args) {
@@ -400,28 +400,28 @@ az group delete --name sampleSqlResourceGroup
 }
 ```
 
-從命令列執行範例：
+<span data-ttu-id="5e5a9-154">從命令列執行範例：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-154">Run the sample from the command line:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-您可以透過 Azure 入口網站或 [Azure 儲存體總管](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs) 來瀏覽儲存體帳戶中的 `helloazure.txt` 檔案。
+<span data-ttu-id="5e5a9-155">您可以透過 Azure 入口網站或 [Azure 儲存體總管](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs) 來瀏覽儲存體帳戶中的 `helloazure.txt` 檔案。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-155">You can browse for the `helloazure.txt` file in your storage account through the Azure portal or with [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span></span>
 
-使用 CLI 清除儲存體帳戶：
+<span data-ttu-id="5e5a9-156">使用 CLI 清除儲存體帳戶：</span><span class="sxs-lookup"><span data-stu-id="5e5a9-156">Clean up the storage account using the CLI:</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleStorageResourceGroup
 ```
 
-## <a name="explore-more-samples"></a>探索更多範例
+## <a name="explore-more-samples"></a><span data-ttu-id="5e5a9-157">探索更多範例</span><span class="sxs-lookup"><span data-stu-id="5e5a9-157">Explore more samples</span></span>
 
-若要深入了解如何使用適用於 Java 的 Azure 管理程式庫來管理資源和自動執行工作，請參閱我們針對[虛擬機器](java-sdk-azure-virtual-machine-samples.md)、[Web 應用程式](java-sdk-azure-web-apps-samples.md)和 [SQL 資料庫](java-sdk-azure-sql-database-samples.md)所提供的程式碼範例。
+<span data-ttu-id="5e5a9-158">若要深入了解如何使用適用於 Java 的 Azure 管理程式庫來管理資源和自動執行工作，請參閱我們針對[虛擬機器](java-sdk-azure-virtual-machine-samples.md)、[Web 應用程式](java-sdk-azure-web-apps-samples.md)和 [SQL 資料庫](java-sdk-azure-sql-database-samples.md)所提供的程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-158">To learn more about how to use the Azure management libraries for Java to manage resources and automate tasks, see our sample code for [virtual machines](java-sdk-azure-virtual-machine-samples.md), [web apps](java-sdk-azure-web-apps-samples.md) and [SQL database](java-sdk-azure-sql-database-samples.md).</span></span>
 
-## <a name="reference-and-release-notes"></a>參考資料和版本資訊
+## <a name="reference-and-release-notes"></a><span data-ttu-id="5e5a9-159">參考資料和版本資訊</span><span class="sxs-lookup"><span data-stu-id="5e5a9-159">Reference and release notes</span></span>
 
-我們針對所有套件提供了[參考資料](http://docs.microsoft.com/java/api)。
+<span data-ttu-id="5e5a9-160">我們針對所有套件提供了[參考資料](http://docs.microsoft.com/java/api)。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-160">A [reference](http://docs.microsoft.com/java/api) is available for all packages.</span></span>
 
-## <a name="get-help-and-give-feedback"></a>獲得協助及提供意見
+## <a name="get-help-and-give-feedback"></a><span data-ttu-id="5e5a9-161">獲得協助及提供意見</span><span class="sxs-lookup"><span data-stu-id="5e5a9-161">Get help and give feedback</span></span>
 
-您可以在 [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java) 的社群中張貼問題。 若要針對適用於 Java 的 Azure 程式庫回報錯誤和建立問題，請至 [GitHub 專案](https://github.com/Azure/azure-sdk-for-java)。
+<span data-ttu-id="5e5a9-162">您可以在 [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java) 的社群中張貼問題。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-162">Post questions to the community on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span></span> <span data-ttu-id="5e5a9-163">若要針對適用於 Java 的 Azure 程式庫回報錯誤和建立問題，請至 [GitHub 專案](https://github.com/Azure/azure-sdk-for-java)。</span><span class="sxs-lookup"><span data-stu-id="5e5a9-163">Report bugs and open issues against the Azure libraries for Java on the [project GitHub](https://github.com/Azure/azure-sdk-for-java).</span></span>

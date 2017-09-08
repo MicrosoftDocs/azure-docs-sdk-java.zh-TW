@@ -17,19 +17,19 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
 ---
-# <a name="azure-application-insights-libraries-for-java"></a>適用於 Java 的 Azure Application Insights 程式庫
+# <a name="azure-application-insights-libraries-for-java"></a><span data-ttu-id="3102c-104">適用於 Java 的 Azure Application Insights 程式庫</span><span class="sxs-lookup"><span data-stu-id="3102c-104">Azure Application Insights libraries for Java</span></span>
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a><span data-ttu-id="3102c-105">概觀</span><span class="sxs-lookup"><span data-stu-id="3102c-105">Overview</span></span>
 
-使用 [Application Insights](/azure/application-insights/app-insights-overview) 偵測、分級和診斷 Web Apps 和服務的問題。
+<span data-ttu-id="3102c-106">使用 [Application Insights](/azure/application-insights/app-insights-overview) 偵測、分級和診斷 Web Apps 和服務的問題。</span><span class="sxs-lookup"><span data-stu-id="3102c-106">Detect, triage, and diagnose issues in your web apps and services with [Application Insights](/azure/application-insights/app-insights-overview).</span></span>
 
-若要開始使用 Application Insights，請參閱[在 Java Web 專案中開始使用 Application Insights](/azure/application-insights/app-insights-java-get-started)。
+<span data-ttu-id="3102c-107">若要開始使用 Application Insights，請參閱[在 Java Web 專案中開始使用 Application Insights](/azure/application-insights/app-insights-java-get-started)。</span><span class="sxs-lookup"><span data-stu-id="3102c-107">To get started with Application Insights, see [Get started with Application Insights in a Java web project](/azure/application-insights/app-insights-java-get-started).</span></span>
 
-## <a name="client-library"></a>用戶端程式庫
+## <a name="client-library"></a><span data-ttu-id="3102c-108">用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="3102c-108">Client library</span></span>
 
-使用 Application Insights 用戶端程式庫來新增遙測，以追蹤應用程式中的事件、例外狀況和使用者計量。
+<span data-ttu-id="3102c-109">使用 Application Insights 用戶端程式庫來新增遙測，以追蹤應用程式中的事件、例外狀況和使用者計量。</span><span class="sxs-lookup"><span data-stu-id="3102c-109">Add telemetry to track events, exceptions, and user metrics in your apps with the Application Insights client library.</span></span>
 
-[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端程式庫。
+<span data-ttu-id="3102c-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端程式庫。</span><span class="sxs-lookup"><span data-stu-id="3102c-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
 
 ```XML
 <dependency>
@@ -39,9 +39,9 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```   
 
-### <a name="example"></a>範例
+### <a name="example"></a><span data-ttu-id="3102c-111">範例</span><span class="sxs-lookup"><span data-stu-id="3102c-111">Example</span></span>
 
-建立新的計量項目並記錄其值。
+<span data-ttu-id="3102c-112">建立新的計量項目並記錄其值。</span><span class="sxs-lookup"><span data-stu-id="3102c-112">Create a new metric entry and record a value for it.</span></span>
 
 ```java
     MetricTelemetry sample = new MetricTelemetry();
@@ -51,8 +51,8 @@ ms.lasthandoff: 08/28/2017
 ```
 
 > [!div class="nextstepaction"]
-> [探索用戶端 API](/java/api/overview/azure/appinsights/clientlibrary)
+> [<span data-ttu-id="3102c-113">探索用戶端 API</span><span class="sxs-lookup"><span data-stu-id="3102c-113">Explore the Client APIs</span></span>](/java/api/overview/azure/appinsights/clientlibrary)
 
-## <a name="samples"></a>範例
+## <a name="samples"></a><span data-ttu-id="3102c-114">範例</span><span class="sxs-lookup"><span data-stu-id="3102c-114">Samples</span></span>
 
-深入探索可在應用程式中使用的 [Application Insights Java 程式碼範例](https://azure.microsoft.com/en-us/resources/samples/?term=insights&platform=java)。
+<span data-ttu-id="3102c-115">深入探索可在應用程式中使用的 [Application Insights Java 程式碼範例](https://azure.microsoft.com/en-us/resources/samples/?term=insights&platform=java)。</span><span class="sxs-lookup"><span data-stu-id="3102c-115">Explore more [sample Java code for Application Insights](https://azure.microsoft.com/en-us/resources/samples/?term=insights&platform=java) you can use in your apps.</span></span>

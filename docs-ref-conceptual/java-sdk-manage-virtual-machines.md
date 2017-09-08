@@ -16,13 +16,13 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
 ---
-# <a name="manage-azure-virtual-machines-from-your-java-applications"></a>從 Java 應用程式管理 Azure 虛擬機器
+# <a name="manage-azure-virtual-machines-from-your-java-applications"></a><span data-ttu-id="fd5bc-103">從 Java 應用程式管理 Azure 虛擬機器</span><span class="sxs-lookup"><span data-stu-id="fd5bc-103">Manage Azure virtual machines from your Java applications</span></span>
 
-[此範例](https://github.com/Azure-Samples/compute-java-manage-vm/)使用[適用於 Java 的 Azure 管理程式庫](https://github.com/Azure/azure-sdk-for-java)來建立和使用 Azure 虛擬機器。
+<span data-ttu-id="fd5bc-104">[此範例](https://github.com/Azure-Samples/compute-java-manage-vm/)使用[適用於 Java 的 Azure 管理程式庫](https://github.com/Azure/azure-sdk-for-java)來建立和使用 Azure 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-104">[This sample](https://github.com/Azure-Samples/compute-java-manage-vm/) uses the [Azure management libraries for Java](https://github.com/Azure/azure-sdk-for-java) to create and work with Azure virtual machines.</span></span>
 
-## <a name="run-the-sample"></a>執行範例
+## <a name="run-the-sample"></a><span data-ttu-id="fd5bc-105">執行範例</span><span class="sxs-lookup"><span data-stu-id="fd5bc-105">Run the sample</span></span>
 
-建立[驗證檔案](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)，並使用電腦上檔案的完整路徑來設定 `AZURE_AUTH_LOCATION` 環境變數。 然後，執行：
+<span data-ttu-id="fd5bc-106">建立[驗證檔案](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)，並使用電腦上檔案的完整路徑來設定 `AZURE_AUTH_LOCATION` 環境變數。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-106">Create an [authentication file](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md) and set an environment variable `AZURE_AUTH_LOCATION` with the full path to the file on your computer.</span></span> <span data-ttu-id="fd5bc-107">然後，執行：</span><span class="sxs-lookup"><span data-stu-id="fd5bc-107">Then run:</span></span>
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-manage-vm.git
@@ -30,13 +30,13 @@ cd compute-java-manage-vm
 mvn clean compile exec:java
 ```
 
-檢視 [GitHub 上的完整程式碼範例](https://github.com/Azure-Samples/compute-java-manage-vm/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachine.java)。
+<span data-ttu-id="fd5bc-108">檢視 [GitHub 上的完整程式碼範例](https://github.com/Azure-Samples/compute-java-manage-vm/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachine.java)。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-108">View the [complete code sample on GitHub](https://github.com/Azure-Samples/compute-java-manage-vm/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachine.java).</span></span>
 
-## <a name="authenticate-with-azure"></a>使用 Azure 進行驗證
+## <a name="authenticate-with-azure"></a><span data-ttu-id="fd5bc-109">使用 Azure 進行驗證</span><span class="sxs-lookup"><span data-stu-id="fd5bc-109">Authenticate with Azure</span></span>
 
 [!INCLUDE [auth-include](includes/java-auth-include.md)]
 
-## <a name="create-a-windows-virtual-machine"></a>建立 Windows 虛擬機器
+## <a name="create-a-windows-virtual-machine"></a><span data-ttu-id="fd5bc-110">建立 Windows 虛擬機器</span><span class="sxs-lookup"><span data-stu-id="fd5bc-110">Create a Windows virtual machine</span></span>
 
 ```java
 // Prepare a data disk for VM
@@ -64,14 +64,14 @@ VirtualMachine windowsVM = azure.virtualMachines().define(windowsVmName)
             .create();
 ```
 
-此程式碼：   
+<span data-ttu-id="fd5bc-111">此程式碼：</span><span class="sxs-lookup"><span data-stu-id="fd5bc-111">This code:</span></span>   
 
-0. 定義可供使用隨機名稱建立 50 GB 大小的 `Disk`，以便用於虛擬機器。
-0. 使用 `azure.virtualMachines().define()..create()` 鏈結來建立 Windows Server 2012 虛擬機器。 API 會在建立虛擬機器的同時，建立上一個步驟所定義的 `Disk`。 此外，系統還會透過 `withNewDataDisk(10)` 將 10 GB 的資料磁碟連結到虛擬機器。
+0. <span data-ttu-id="fd5bc-112">定義可供使用隨機名稱建立 50 GB 大小的 `Disk`，以便用於虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-112">Defines a `Disk` Creatable with a 50GB size and random name for use with a virtual machine.</span></span>
+0. <span data-ttu-id="fd5bc-113">使用 `azure.virtualMachines().define()..create()` 鏈結來建立 Windows Server 2012 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-113">Uses the `azure.virtualMachines().define()..create()` chain to create the Windows Server 2012 virtual machine.</span></span> <span data-ttu-id="fd5bc-114">API 會在建立虛擬機器的同時，建立上一個步驟所定義的 `Disk`。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-114">The API creates the `Disk` defined in the previous step the same time as the virtual machine.</span></span> <span data-ttu-id="fd5bc-115">此外，系統還會透過 `withNewDataDisk(10)` 將 10 GB 的資料磁碟連結到虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-115">A 10GB data disk is also attached to the virtual machine through `withNewDataDisk(10)`.</span></span>
 
-深入了解如何使用[可建立的<T>物件](java-sdk-azure-concepts.md#Creatables)來定義資源在本機的代表，並只在其他 Azure 資源需要這些物件時才加以建立。
+<span data-ttu-id="fd5bc-116">深入了解如何使用[可建立的<T>物件](java-sdk-azure-concepts.md#Creatables)來定義資源在本機的代表，並只在其他 Azure 資源需要這些物件時才加以建立。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-116">Learn more about using [Creatable<T> objects](java-sdk-azure-concepts.md#Creatables) to define local representations of resources and create them just as other Azure resources need them.</span></span>
 
-## <a name="stop-start-and-restart-a-virtual-machine"></a>停止、啟動及重新啟動虛擬機器
+## <a name="stop-start-and-restart-a-virtual-machine"></a><span data-ttu-id="fd5bc-117">停止、啟動及重新啟動虛擬機器</span><span class="sxs-lookup"><span data-stu-id="fd5bc-117">Stop, start, and restart a virtual machine</span></span>
 
 ```java
 // look up a virtual machine by its ID and then restart, stop, and start it
@@ -82,9 +82,9 @@ azureVM.powerOff();
 azureVM.start();
 ```
 
-`powerOff()` 會停止虛擬機器的作業系統，但不會將其資源取消配置。
+<span data-ttu-id="fd5bc-118">`powerOff()` 會停止虛擬機器的作業系統，但不會將其資源取消配置。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-118">`powerOff()` stops the virtual machine operating system but does not deallocate its resources.</span></span>
 
-## <a name="add-a-virtual-machine-to-an-existing-network"></a>將虛擬機器新增至現有網路
+## <a name="add-a-virtual-machine-to-an-existing-network"></a><span data-ttu-id="fd5bc-119">將虛擬機器新增至現有網路</span><span class="sxs-lookup"><span data-stu-id="fd5bc-119">Add a virtual machine to an existing network</span></span>
 
 ```java
 // Get the virtual network the current virtual machine is using
@@ -105,10 +105,10 @@ VirtualMachine linuxVM = azure.virtualMachines().define(linuxVmName)
            .create();
 ```
 
-使用 `withPopularLinuxImage` 來定義 Linux VM 而非 Windows VM。
+<span data-ttu-id="fd5bc-120">使用 `withPopularLinuxImage` 來定義 Linux VM 而非 Windows VM。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-120">Use `withPopularLinuxImage` to define a Linux VM instead of a Windows one.</span></span>
 
 
-## <a name="list-virtual-machines"></a>列出虛擬機器
+## <a name="list-virtual-machines"></a><span data-ttu-id="fd5bc-121">列出虛擬機器</span><span class="sxs-lookup"><span data-stu-id="fd5bc-121">List virtual machines</span></span>
 
 ```java
 // get a list of VMs in the same resource group as an existing VM
@@ -123,9 +123,9 @@ for (VirtualMachine virtualMachine : azure.virtualMachines().listByResourceGroup
 }
 ```
 
-使用 `azure.virtualMachines().list()` 來列出訂用帳戶的所有虛擬機器，並逐一查看 `tags()` 所傳回的對應以便跨資源群組管理已標記的虛擬機器集合。
+<span data-ttu-id="fd5bc-122">使用 `azure.virtualMachines().list()` 來列出訂用帳戶的所有虛擬機器，並逐一查看 `tags()` 所傳回的對應以便跨資源群組管理已標記的虛擬機器集合。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-122">List all virtual machines for a subscription using `azure.virtualMachines().list()` and iterate through the Map returned by `tags()` to manage tagged collections of virtual machines across resource groups.</span></span>
 
-## <a name="update-a-virtual-machine"></a>更新虛擬機器
+## <a name="update-a-virtual-machine"></a><span data-ttu-id="fd5bc-123">更新虛擬機器</span><span class="sxs-lookup"><span data-stu-id="fd5bc-123">Update a virtual machine</span></span>
 
 ```java
 // add a 10GB data disk to the virtual machine
@@ -134,9 +134,9 @@ windowsVM.update()
      .apply();
 ```
 
-使用 `update()...apply()` 以及用來設定透過 `define()...create()` 所建立之虛擬機器時所使用的相同方法，來更新虛擬機器組態。
+<span data-ttu-id="fd5bc-124">使用 `update()...apply()` 以及用來設定透過 `define()...create()` 所建立之虛擬機器時所使用的相同方法，來更新虛擬機器組態。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-124">Update the virtual machine configuration using `update()...apply()` and the same methods used to configure the virtual machine when created through `define()...create()`.</span></span>
 
-## <a name="delete-a-virtual-machine"></a>刪除虛擬機器
+## <a name="delete-a-virtual-machine"></a><span data-ttu-id="fd5bc-125">刪除虛擬機器</span><span class="sxs-lookup"><span data-stu-id="fd5bc-125">Delete a virtual machine</span></span>
 
 ```java
 // delete by ID if you already are working with the VM object
@@ -146,22 +146,22 @@ azure.virtualMachines().deleteById(windowsVM.id());
 azure.virtualMachines().deleteByResourceGroup(rgName,windowsVmName);
 ```
 
-## <a name="sample-explanation"></a>範例的說明
+## <a name="sample-explanation"></a><span data-ttu-id="fd5bc-126">範例的說明</span><span class="sxs-lookup"><span data-stu-id="fd5bc-126">Sample explanation</span></span>
 
-[此程式碼範例](https://github.com/Azure-Samples/compute-java-manage-vm/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachine.java) 會建立具有 50 GB 資料磁碟的 Windows 虛擬機器。 此範例接著會建立第二個 10 GB 資料磁碟，然後將其連結到這個 Windows 虛擬機器。
-然後此範例會在 Windows 虛擬機器所在的相同虛擬網路中建立 Linux 虛擬機器。
+<span data-ttu-id="fd5bc-127">[此程式碼範例](https://github.com/Azure-Samples/compute-java-manage-vm/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachine.java) 會建立具有 50 GB 資料磁碟的 Windows 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-127">[The sample code](https://github.com/Azure-Samples/compute-java-manage-vm/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachine.java) creates a Windows virtual machine with a 50GB data disk.</span></span> <span data-ttu-id="fd5bc-128">此範例接著會建立第二個 10 GB 資料磁碟，然後將其連結到這個 Windows 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-128">The sample then creates a second 10GB data disk and attaches it to this Windows virtual machine.</span></span>
+<span data-ttu-id="fd5bc-129">然後此範例會在 Windows 虛擬機器所在的相同虛擬網路中建立 Linux 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-129">Then the sample creates a Linux virtual machine in the same virtual network as the Windows virtual machine.</span></span>
 
-此範例會記錄這兩個虛擬機器的相關資訊，並在兩者完成前將其同時刪除。
+<span data-ttu-id="fd5bc-130">此範例會記錄這兩個虛擬機器的相關資訊，並在兩者完成前將其同時刪除。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-130">The sample logs information about both virtual machines and deletes them both before completing.</span></span>
 
-| 範例中使用的類別 | 注意事項
+| <span data-ttu-id="fd5bc-131">範例中使用的類別</span><span class="sxs-lookup"><span data-stu-id="fd5bc-131">Class used in sample</span></span> | <span data-ttu-id="fd5bc-132">注意事項</span><span class="sxs-lookup"><span data-stu-id="fd5bc-132">Notes</span></span>
 |-------|-------|
-| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 查詢屬性並管理虛擬機器的狀態。 使用 `azure.virtualMachines().list()` 以清單形式擷取，或依名稱或識別碼 `azure.virtualMachines().getByResourceGroup()` 擷取
-| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | 對應至[虛擬機器大小選項](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)且具有靜態值的類別，可供 `withSize()` 方法用來定義配置給 VM 的資源。
-| [磁碟](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk) | 使用 `withData()` 建立磁碟來儲存資料，或在定義磁碟時使用適當的 `withLinux` 或 `withWindows` 方法建立作業系統映像。 在建立磁碟時將磁碟連結至虛擬機器 (`using withNewDataDisk` 或 `withExistingDataDisk`)，或在建立磁碟後透過 VirtualMachine 物件上的 `update()..apply()` 將磁碟連結至虛擬機器。
-| [DiskSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk_sku_types) | 具有靜態值的類別，用以定義具有標準或[進階](https://docs.microsoft.com/azure/storage/storage-premium-storage)儲存方案的磁碟。
-| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | 具有一組 Linux 虛擬機器選項，以便在定義虛擬機器時用於 `withPopularLinuxImage()` 方法的類別。
-| [KnownWindowsVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_windows_virtual_machine_image) | 具有一組 Windows 虛擬機器映像選項，以便在定義虛擬機器時用於 `withPopularWindowsImage()` 方法的類別。
+| [<span data-ttu-id="fd5bc-133">VirtualMachine</span><span class="sxs-lookup"><span data-stu-id="fd5bc-133">VirtualMachine</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | <span data-ttu-id="fd5bc-134">查詢屬性並管理虛擬機器的狀態。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-134">Query properties and manage state of virtual machines.</span></span> <span data-ttu-id="fd5bc-135">使用 `azure.virtualMachines().list()` 以清單形式擷取，或依名稱或識別碼 `azure.virtualMachines().getByResourceGroup()` 擷取</span><span class="sxs-lookup"><span data-stu-id="fd5bc-135">Retrieved in list form  with`azure.virtualMachines().list()` or by name or ID `azure.virtualMachines().getByResourceGroup()`</span></span>
+| [<span data-ttu-id="fd5bc-136">VirtualMachineSizeTypes</span><span class="sxs-lookup"><span data-stu-id="fd5bc-136">VirtualMachineSizeTypes</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | <span data-ttu-id="fd5bc-137">對應至[虛擬機器大小選項](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)且具有靜態值的類別，可供 `withSize()` 方法用來定義配置給 VM 的資源。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-137">Class with static values that map to [virtual machine size options](https://azure.microsoft.com/pricing/details/virtual-machines/linux/), used by the `withSize()` method to define the resources allocated to the VM.</span></span>
+| [<span data-ttu-id="fd5bc-138">磁碟</span><span class="sxs-lookup"><span data-stu-id="fd5bc-138">Disk</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk) | <span data-ttu-id="fd5bc-139">使用 `withData()` 建立磁碟來儲存資料，或在定義磁碟時使用適當的 `withLinux` 或 `withWindows` 方法建立作業系統映像。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-139">Create a disk to store data using `withData()` or operating system image using the appropriate `withLinux` or `withWindows` method when defining the disk.</span></span> <span data-ttu-id="fd5bc-140">在建立磁碟時將磁碟連結至虛擬機器 (`using withNewDataDisk` 或 `withExistingDataDisk`)，或在建立磁碟後透過 VirtualMachine 物件上的 `update()..apply()` 將磁碟連結至虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-140">Attach disks to virtual machines either at the time of creation (`using withNewDataDisk` or `withExistingDataDisk`) or after creation by `update()..apply()` on the VirtualMachine object.</span></span>
+| [<span data-ttu-id="fd5bc-141">DiskSkuTypes</span><span class="sxs-lookup"><span data-stu-id="fd5bc-141">DiskSkuTypes</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk_sku_types) | <span data-ttu-id="fd5bc-142">具有靜態值的類別，用以定義具有標準或[進階](https://docs.microsoft.com/azure/storage/storage-premium-storage)儲存方案的磁碟。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-142">Class with static values to define a disk with a standard or [premium](https://docs.microsoft.com/azure/storage/storage-premium-storage) storage plan.</span></span>
+| [<span data-ttu-id="fd5bc-143">KnownLinuxVirtualMachineImage</span><span class="sxs-lookup"><span data-stu-id="fd5bc-143">KnownLinuxVirtualMachineImage</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | <span data-ttu-id="fd5bc-144">具有一組 Linux 虛擬機器選項，以便在定義虛擬機器時用於 `withPopularLinuxImage()` 方法的類別。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-144">Class with a set of Linux virtual machine options for use with the `withPopularLinuxImage()` method when defining a virtual machine.</span></span>
+| [<span data-ttu-id="fd5bc-145">KnownWindowsVirtualMachineImage</span><span class="sxs-lookup"><span data-stu-id="fd5bc-145">KnownWindowsVirtualMachineImage</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_windows_virtual_machine_image) | <span data-ttu-id="fd5bc-146">具有一組 Windows 虛擬機器映像選項，以便在定義虛擬機器時用於 `withPopularWindowsImage()` 方法的類別。</span><span class="sxs-lookup"><span data-stu-id="fd5bc-146">Class with a set of Windows virtual machine image options for use with the `withPopularWindowsImage()` method when defining a virtual machine.</span></span>
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a><span data-ttu-id="fd5bc-147">後續步驟</span><span class="sxs-lookup"><span data-stu-id="fd5bc-147">Next steps</span></span>
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]
