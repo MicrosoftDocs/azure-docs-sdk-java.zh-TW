@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
-ms.openlocfilehash: 332bfa45b41f7b183e5c35ec9a1f3537f7d849ba
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 4c16d602d33b8d2c75e2b9de8f5f11ace138c25d
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="azure-sql-database-libraries-for-java"></a>適用於 Java 的 Azure SQL Database 程式庫
 
@@ -64,12 +64,12 @@ try {
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-sql</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
 > [!div class="nextstepaction"]
-> [瀏覽管理 API](/java/api/overview/azure/sql/managementapi)
+> [探索管理 API](/java/api/overview/azure/sql/managementapi)
 
 ### <a name="example"></a>範例
 

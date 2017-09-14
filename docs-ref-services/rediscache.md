@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: redis-cache
-ms.openlocfilehash: 25c91e02d1ce52afab68286c89c859ab61da56fe
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 2bba290e16cac638685aa91b435876433fc1ea91
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="redis-cache-libraries-for-java"></a>適用於 Java 的 Redis 快取程式庫
 
@@ -59,7 +59,7 @@ JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-redis</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
@@ -75,7 +75,7 @@ RedisCache cache = azure.redisCaches().define(redisCacheName1)
 ```
 
 > [!div class="nextstepaction"]
-> [瀏覽管理 API](/java/api/overview/azure/rediscache/managementapi)
+> [探索管理 API](/java/api/overview/azure/rediscache/managementapi)
 
 ## <a name="samples"></a>範例
 

@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: b3aa5830b91f4a00da64db2656d024d3c4fc51f9
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 1e3ec9080da70477cd7d7bd966769c8d396abe9e
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="azure-resource-manager-libraries-for-java"></a>適用於 Java 的 Azure Resource Manager 程式庫
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/28/2017
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-resources</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
@@ -49,7 +49,7 @@ ResourceGroup resourceGroup = azure.resourceGroups().define("myResourceGroup")
 ```
 
 > [!div class="nextstepaction"]
-> [瀏覽管理 API](/java/api/overview/azure/resources/managementapi)
+> [探索管理 API](/java/api/overview/azure/resources/managementapi)
 
 ## <a name="samples"></a>範例
 
