@@ -11,37 +11,37 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: dns
-ms.openlocfilehash: 7b4f26fe6d99620207e3a53c8262180cccc66fd6
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 123f61004c473bc060f0360f0fcb027d1591523e
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
-# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="4d092-104">適用於 Java 的 Azure 流量管理員程式庫</span><span class="sxs-lookup"><span data-stu-id="4d092-104">Azure Traffic Manager libraries for Java</span></span>
+# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="29108-104">適用於 Java 的 Azure 流量管理員程式庫</span><span class="sxs-lookup"><span data-stu-id="29108-104">Azure Traffic Manager libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="4d092-105">概觀</span><span class="sxs-lookup"><span data-stu-id="4d092-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="29108-105">概觀</span><span class="sxs-lookup"><span data-stu-id="29108-105">Overview</span></span>
 
-<span data-ttu-id="4d092-106">透過 [Azure DNS](/azure/dns/dns-overview)，使用和其他 Azure 服務一樣的認證、API、工具和計費方式來提供網域名稱解析和管理 DNS 記錄。</span><span class="sxs-lookup"><span data-stu-id="4d092-106">Provide domain name resolution and manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services with [Azure DNS](/azure/dns/dns-overview).</span></span>
+<span data-ttu-id="29108-106">透過 [Azure DNS](/azure/dns/dns-overview)，使用和其他 Azure 服務一樣的認證、API、工具和計費方式來提供網域名稱解析和管理 DNS 記錄。</span><span class="sxs-lookup"><span data-stu-id="29108-106">Provide domain name resolution and manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services with [Azure DNS](/azure/dns/dns-overview).</span></span>
 
-<span data-ttu-id="4d092-107">若要開始使用 Azure DNS，請參閱[利用 Azure CLI 2.0 開始使用 Azure DNS](/azure/dns/dns-getstarted-cli)。</span><span class="sxs-lookup"><span data-stu-id="4d092-107">To get started with Azure DNS, see [Get started with Azure DNS using the Azure CLI 2.0](/azure/dns/dns-getstarted-cli).</span></span>
+<span data-ttu-id="29108-107">若要開始使用 Azure DNS，請參閱[利用 Azure CLI 2.0 開始使用 Azure DNS](/azure/dns/dns-getstarted-cli)。</span><span class="sxs-lookup"><span data-stu-id="29108-107">To get started with Azure DNS, see [Get started with Azure DNS using the Azure CLI 2.0](/azure/dns/dns-getstarted-cli).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="4d092-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="4d092-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="29108-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="29108-108">Management API</span></span>
 
-<span data-ttu-id="4d092-109">使用管理 API 建立 DNS 區域，並將記錄新增至區域。</span><span class="sxs-lookup"><span data-stu-id="4d092-109">Create DNS zones and add records to zones with the management API.</span></span>
+<span data-ttu-id="29108-109">使用管理 API 建立 DNS 區域，並將記錄新增至區域。</span><span class="sxs-lookup"><span data-stu-id="29108-109">Create DNS zones and add records to zones with the management API.</span></span>
 
-<span data-ttu-id="4d092-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端程式庫。</span><span class="sxs-lookup"><span data-stu-id="4d092-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
+<span data-ttu-id="29108-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端程式庫。</span><span class="sxs-lookup"><span data-stu-id="29108-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-dns</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="4d092-111">範例</span><span class="sxs-lookup"><span data-stu-id="4d092-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="29108-111">範例</span><span class="sxs-lookup"><span data-stu-id="29108-111">Example</span></span>
 
-<span data-ttu-id="4d092-112">建立根 DNS 區域並在現有資源群組中新增 `www` CNAME 記錄。</span><span class="sxs-lookup"><span data-stu-id="4d092-112">Create a root DNS zone and add a `www` CNAME record in an existing resource group.</span></span>
+<span data-ttu-id="29108-112">建立根 DNS 區域並在現有資源群組中新增 `www` CNAME 記錄。</span><span class="sxs-lookup"><span data-stu-id="29108-112">Create a root DNS zone and add a `www` CNAME record in an existing resource group.</span></span>
 
 ```java
 DnsZone rootDnsZone = azure.dnsZones().define("contoso.com")
@@ -53,10 +53,10 @@ rootDnsZone = rootDnsZone.update()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="4d092-113">瀏覽管理 API</span><span class="sxs-lookup"><span data-stu-id="4d092-113">Explore the Management APIs</span></span>](/java/api/overview/azure/dns/managementapi)
+> [<span data-ttu-id="29108-113">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="29108-113">Explore the Management APIs</span></span>](/java/api/overview/azure/dns/managementapi)
 
-## <a name="samples"></a><span data-ttu-id="4d092-114">範例</span><span class="sxs-lookup"><span data-stu-id="4d092-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="29108-114">範例</span><span class="sxs-lookup"><span data-stu-id="29108-114">Samples</span></span>
 
-[<span data-ttu-id="4d092-115">使用 Azure DNS 裝載和管理網域</span><span class="sxs-lookup"><span data-stu-id="4d092-115">Host and manage your domains with Azure DNS</span></span>](https://github.com/Azure-Samples/dns-java-host-and-manage-your-domains)
+[<span data-ttu-id="29108-115">使用 Azure DNS 裝載和管理網域</span><span class="sxs-lookup"><span data-stu-id="29108-115">Host and manage your domains with Azure DNS</span></span>](https://github.com/Azure-Samples/dns-java-host-and-manage-your-domains)
 
-<span data-ttu-id="4d092-116">深入探索可在應用程式中使用的 [Azure DNS Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=dns)。</span><span class="sxs-lookup"><span data-stu-id="4d092-116">Explore more [sample Java code for Azure DNS](https://azure.microsoft.com/resources/samples/?platform=java&term=dns) you can use in your apps.</span></span>
+<span data-ttu-id="29108-116">深入探索可在應用程式中使用的 [Azure DNS Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=dns)。</span><span class="sxs-lookup"><span data-stu-id="29108-116">Explore more [sample Java code for Azure DNS](https://azure.microsoft.com/resources/samples/?platform=java&term=dns) you can use in your apps.</span></span>

@@ -11,40 +11,40 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: appservice
-ms.openlocfilehash: 03ca1c4d73015b4ca7abbadf95609e32dfc82c66
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: e5d2a66dc984d34fb9a6668d2ea3bf1ee6164e70
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
-# <a name="azure-app-service-libraries-for-java"></a><span data-ttu-id="ac414-104">適用於 Java 的 Azure App Service 程式庫</span><span class="sxs-lookup"><span data-stu-id="ac414-104">Azure App Service libraries for Java</span></span>
+# <a name="azure-app-service-libraries-for-java"></a><span data-ttu-id="05384-104">適用於 Java 的 Azure App Service 程式庫</span><span class="sxs-lookup"><span data-stu-id="05384-104">Azure App Service libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="ac414-105">概觀</span><span class="sxs-lookup"><span data-stu-id="ac414-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="05384-105">概觀</span><span class="sxs-lookup"><span data-stu-id="05384-105">Overview</span></span>
 
-<span data-ttu-id="ac414-106">使用 [Azure App Service](/azure/app-service) 部署和管理網站、Web 應用程式和 REST API。</span><span class="sxs-lookup"><span data-stu-id="ac414-106">Deploy and manage websites, web applications, and REST APIs with [Azure App Service](/azure/app-service).</span></span>
+<span data-ttu-id="05384-106">使用 [Azure App Service](/azure/app-service) 部署和管理網站、Web 應用程式和 REST API。</span><span class="sxs-lookup"><span data-stu-id="05384-106">Deploy and manage websites, web applications, and REST APIs with [Azure App Service](/azure/app-service).</span></span>
 
-<span data-ttu-id="ac414-107">若要開始使用 Azure App Service，請參閱[在 Azure 中建立第一個 Java Web 應用程式](/azure/app-service-web/app-service-web-get-started-java)。</span><span class="sxs-lookup"><span data-stu-id="ac414-107">To get started with Azure App Service, see [Create your first Java web app in Azure](/azure/app-service-web/app-service-web-get-started-java).</span></span>
+<span data-ttu-id="05384-107">若要開始使用 Azure App Service，請參閱[在 Azure 中建立第一個 Java Web 應用程式](/azure/app-service-web/app-service-web-get-started-java)。</span><span class="sxs-lookup"><span data-stu-id="05384-107">To get started with Azure App Service, see [Create your first Java web app in Azure](/azure/app-service-web/app-service-web-get-started-java).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="ac414-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="ac414-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="05384-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="05384-108">Management API</span></span>
 
-<span data-ttu-id="ac414-109">使用管理 API 在 Azure App Service 中部署、調整和設定應用程式。</span><span class="sxs-lookup"><span data-stu-id="ac414-109">Deploy, scale, and configure applications in Azure App Service with the management API.</span></span>
+<span data-ttu-id="05384-109">使用管理 API 在 Azure App Service 中部署、調整和設定應用程式。</span><span class="sxs-lookup"><span data-stu-id="05384-109">Deploy, scale, and configure applications in Azure App Service with the management API.</span></span>
 
-<span data-ttu-id="ac414-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="ac414-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="05384-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="05384-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-appservice</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```   
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="ac414-111">瀏覽管理 API</span><span class="sxs-lookup"><span data-stu-id="ac414-111">Explore the Management APIs</span></span>](/java/api/overview/azure)
+> [<span data-ttu-id="05384-111">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="05384-111">Explore the Management APIs</span></span>](/java/api/overview/azure)
 
-### <a name="example"></a><span data-ttu-id="ac414-112">範例</span><span class="sxs-lookup"><span data-stu-id="ac414-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="05384-112">範例</span><span class="sxs-lookup"><span data-stu-id="05384-112">Example</span></span>
 
-<span data-ttu-id="ac414-113">將 webapp 從 Docker 映像部署到在 Linux 上執行的 Azure Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="ac414-113">Deploy a webapp from a Docker image into an Azure Web App running on Linux.</span></span>
+<span data-ttu-id="05384-113">將 webapp 從 Docker 映像部署到在 Linux 上執行的 Azure Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="05384-113">Deploy a webapp from a Docker image into an Azure Web App running on Linux.</span></span>
 
 ```java
 WebApp app = azure.webApps().define("newLinuxWebApp")
@@ -56,14 +56,14 @@ WebApp app = azure.webApps().define("newLinuxWebApp")
     .create();
 ```
 
-## <a name="samples"></a><span data-ttu-id="ac414-114">範例</span><span class="sxs-lookup"><span data-stu-id="ac414-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="05384-114">範例</span><span class="sxs-lookup"><span data-stu-id="05384-114">Samples</span></span>
 
-<span data-ttu-id="ac414-115">[從 FTP 或 GitHub 部署 Web 應用程式][1]</span><span class="sxs-lookup"><span data-stu-id="ac414-115">[Deploy a web app from FTP or GitHub][1]</span></span>  
-<span data-ttu-id="ac414-116">[使用部署位置在應用程式版本之間交換][2]</span><span class="sxs-lookup"><span data-stu-id="ac414-116">[Swap between app versions with deployment slots][2]</span></span>  
-<span data-ttu-id="ac414-117">[設定自訂網域][3] </span><span class="sxs-lookup"><span data-stu-id="ac414-117">[Configure a custom domain][3] </span></span>  
-<span data-ttu-id="ac414-118">[跨多個區域調整 Web 應用程式][4]</span><span class="sxs-lookup"><span data-stu-id="ac414-118">[Scale a web app across multiple regions][4]</span></span>   
+<span data-ttu-id="05384-115">[從 FTP 或 GitHub 部署 Web 應用程式][1]</span><span class="sxs-lookup"><span data-stu-id="05384-115">[Deploy a web app from FTP or GitHub][1]</span></span>  
+<span data-ttu-id="05384-116">[使用部署位置在應用程式版本之間交換][2]</span><span class="sxs-lookup"><span data-stu-id="05384-116">[Swap between app versions with deployment slots][2]</span></span>  
+<span data-ttu-id="05384-117">[設定自訂網域][3] </span><span class="sxs-lookup"><span data-stu-id="05384-117">[Configure a custom domain][3] </span></span>  
+<span data-ttu-id="05384-118">[跨多個區域調整 Web 應用程式][4]</span><span class="sxs-lookup"><span data-stu-id="05384-118">[Scale a web app across multiple regions][4]</span></span>   
 
-<span data-ttu-id="ac414-119">深入探索可在應用程式中使用的 [Azure App Service Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=appservice)。</span><span class="sxs-lookup"><span data-stu-id="ac414-119">Explore more [sample Java code for Azure App Service](https://azure.microsoft.com/resources/samples/?platform=java&term=appservice) you can use in your apps.</span></span>
+<span data-ttu-id="05384-119">深入探索可在應用程式中使用的 [Azure App Service Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=appservice)。</span><span class="sxs-lookup"><span data-stu-id="05384-119">Explore more [sample Java code for Azure App Service](https://azure.microsoft.com/resources/samples/?platform=java&term=appservice) you can use in your apps.</span></span>
 
 [1]: ../docs-ref-conceptual/java-sdk-configure-webapp-sources.md
 [2]: https://azure.microsoft.com/resources/samples/app-service-java-manage-staging-and-production-slots-for-web-apps/

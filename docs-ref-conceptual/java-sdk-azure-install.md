@@ -10,48 +10,48 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 10073a1b2250a37347128dd9c8faf1375b2ab6ae
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 02500ff538402b39a74d032584ac4c0898f60cda
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
-# <a name="azure-libraries-for-java"></a><span data-ttu-id="4056b-104">適用於 Java 的 Azure 程式庫</span><span class="sxs-lookup"><span data-stu-id="4056b-104">Azure libraries for Java</span></span>
+# <a name="azure-libraries-for-java"></a><span data-ttu-id="d03b6-104">適用於 Java 的 Azure 程式庫</span><span class="sxs-lookup"><span data-stu-id="d03b6-104">Azure libraries for Java</span></span>
 
-<span data-ttu-id="4056b-105">Azure 程式庫可協助您使用原生介面在 Java 應用程式中取用 Azure 服務。</span><span class="sxs-lookup"><span data-stu-id="4056b-105">Azure libraries help you consume Azure services in your Java apps using native interfaces.</span></span> <span data-ttu-id="4056b-106">每個程式庫都是獨立的，因此可以與其他程式庫分開使用。</span><span class="sxs-lookup"><span data-stu-id="4056b-106">Each library is independent and can be used separately from the others another.</span></span>
+<span data-ttu-id="d03b6-105">Azure 程式庫可協助您使用原生介面在 Java 應用程式中取用 Azure 服務。</span><span class="sxs-lookup"><span data-stu-id="d03b6-105">Azure libraries help you consume Azure services in your Java apps using native interfaces.</span></span> <span data-ttu-id="d03b6-106">每個程式庫都是獨立的，因此可以與其他程式庫分開使用。</span><span class="sxs-lookup"><span data-stu-id="d03b6-106">Each library is independent and can be used separately from the others another.</span></span>
 
 | | | | |
 |:-------------:|:----------:|:----:|:---:|
-| [<span data-ttu-id="4056b-107">Azure 儲存體</span><span class="sxs-lookup"><span data-stu-id="4056b-107">Azure Storage</span></span>](#azure-storage) | [<span data-ttu-id="4056b-108">SQL Database</span><span class="sxs-lookup"><span data-stu-id="4056b-108">SQL Database</span></span>](#sql-database)  | [<span data-ttu-id="4056b-109">Redis 快取</span><span class="sxs-lookup"><span data-stu-id="4056b-109">Redis Cache</span></span>](#redis-cache)   | [<span data-ttu-id="4056b-110">DocumentDB</span><span class="sxs-lookup"><span data-stu-id="4056b-110">DocumentDB</span></span>](#documentdb) |
-| [<span data-ttu-id="4056b-111">服務匯流排</span><span class="sxs-lookup"><span data-stu-id="4056b-111">Service Bus</span></span>](#servicebus)  | [<span data-ttu-id="4056b-112">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="4056b-112">Azure Active Directory</span></span>](#azuread) | [<span data-ttu-id="4056b-113">金鑰保存庫</span><span class="sxs-lookup"><span data-stu-id="4056b-113">Key Vault</span></span>](#keyvault)  | [<span data-ttu-id="4056b-114">事件中樞</span><span class="sxs-lookup"><span data-stu-id="4056b-114">Event Hub</span></span>](#eventhub)
-| [<span data-ttu-id="4056b-115">IoT 服務</span><span class="sxs-lookup"><span data-stu-id="4056b-115">IoT Service</span></span>](#iotservice) | [<span data-ttu-id="4056b-116">IoT 裝置</span><span class="sxs-lookup"><span data-stu-id="4056b-116">IoT Device</span></span>](#iotdevice) | [<span data-ttu-id="4056b-117">Data Lake</span><span class="sxs-lookup"><span data-stu-id="4056b-117">Data Lake</span></span>](#datalake)  | [<span data-ttu-id="4056b-118">AppInsights</span><span class="sxs-lookup"><span data-stu-id="4056b-118">AppInsights</span></span>](#appinsights) | 
-| [<span data-ttu-id="4056b-119">批次</span><span class="sxs-lookup"><span data-stu-id="4056b-119">Batch</span></span>](#batch) | [<span data-ttu-id="4056b-120">管理 Azure 資源</span><span class="sxs-lookup"><span data-stu-id="4056b-120">Manage Azure resources</span></span>](#management) |
+| [<span data-ttu-id="d03b6-107">Azure 儲存體</span><span class="sxs-lookup"><span data-stu-id="d03b6-107">Azure Storage</span></span>](#azure-storage) | [<span data-ttu-id="d03b6-108">SQL Database</span><span class="sxs-lookup"><span data-stu-id="d03b6-108">SQL Database</span></span>](#sql-database)  | [<span data-ttu-id="d03b6-109">Redis 快取</span><span class="sxs-lookup"><span data-stu-id="d03b6-109">Redis Cache</span></span>](#redis-cache)   | [<span data-ttu-id="d03b6-110">DocumentDB</span><span class="sxs-lookup"><span data-stu-id="d03b6-110">DocumentDB</span></span>](#documentdb) |
+| [<span data-ttu-id="d03b6-111">服務匯流排</span><span class="sxs-lookup"><span data-stu-id="d03b6-111">Service Bus</span></span>](#servicebus)  | [<span data-ttu-id="d03b6-112">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="d03b6-112">Azure Active Directory</span></span>](#azuread) | [<span data-ttu-id="d03b6-113">金鑰保存庫</span><span class="sxs-lookup"><span data-stu-id="d03b6-113">Key Vault</span></span>](#keyvault)  | [<span data-ttu-id="d03b6-114">事件中樞</span><span class="sxs-lookup"><span data-stu-id="d03b6-114">Event Hub</span></span>](#eventhub)
+| [<span data-ttu-id="d03b6-115">IoT 服務</span><span class="sxs-lookup"><span data-stu-id="d03b6-115">IoT Service</span></span>](#iotservice) | [<span data-ttu-id="d03b6-116">IoT 裝置</span><span class="sxs-lookup"><span data-stu-id="d03b6-116">IoT Device</span></span>](#iotdevice) | [<span data-ttu-id="d03b6-117">Data Lake</span><span class="sxs-lookup"><span data-stu-id="d03b6-117">Data Lake</span></span>](#datalake)  | [<span data-ttu-id="d03b6-118">AppInsights</span><span class="sxs-lookup"><span data-stu-id="d03b6-118">AppInsights</span></span>](#appinsights) | 
+| [<span data-ttu-id="d03b6-119">批次</span><span class="sxs-lookup"><span data-stu-id="d03b6-119">Batch</span></span>](#batch) | [<span data-ttu-id="d03b6-120">管理 Azure 資源</span><span class="sxs-lookup"><span data-stu-id="d03b6-120">Manage Azure resources</span></span>](#management) |
 
-## <a name="install-with-maven"></a><span data-ttu-id="4056b-121">使用 Maven 進行安裝</span><span class="sxs-lookup"><span data-stu-id="4056b-121">Install with Maven</span></span>
+## <a name="install-with-maven"></a><span data-ttu-id="d03b6-121">使用 Maven 進行安裝</span><span class="sxs-lookup"><span data-stu-id="d03b6-121">Install with Maven</span></span>
 
-<span data-ttu-id="4056b-122">在 `pom.xml` 中新增相依性項目，以將程式庫匯入 [Maven](https://maven.apache.org) 專案。</span><span class="sxs-lookup"><span data-stu-id="4056b-122">Add a dependency entry in your `pom.xml` to import a library into your [Maven](https://maven.apache.org) project.</span></span>
+<span data-ttu-id="d03b6-122">在 `pom.xml` 中新增相依性項目，以將程式庫匯入 [Maven](https://maven.apache.org) 專案。</span><span class="sxs-lookup"><span data-stu-id="d03b6-122">Add a dependency entry in your `pom.xml` to import a library into your [Maven](https://maven.apache.org) project.</span></span>
 
-<span data-ttu-id="4056b-123">例如，若要納入[適用於 Java 的 Azure 管理程式庫](#management)的最新版本：</span><span class="sxs-lookup"><span data-stu-id="4056b-123">For example, to include the latest version of the [Azure management libraries for Java](#management):</span></span>
+<span data-ttu-id="d03b6-123">例如，若要納入[適用於 Java 的 Azure 管理程式庫](#management)的最新版本：</span><span class="sxs-lookup"><span data-stu-id="d03b6-123">For example, to include the latest version of the [Azure management libraries for Java](#management):</span></span>
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
-<span data-ttu-id="4056b-124">Gradle 等其他 Java 建置工具也有受到支援，但本文未提供其安裝步驟。</span><span class="sxs-lookup"><span data-stu-id="4056b-124">Other Java build tools like Gradle are supported but the install steps are not provided in this article.</span></span> <span data-ttu-id="4056b-125">請檢閱建置工具的文件以了解如何取用 Maven 匯入。</span><span class="sxs-lookup"><span data-stu-id="4056b-125">Review the documentation for your build tool on how to consume Maven imports.</span></span>
+<span data-ttu-id="d03b6-124">Gradle 等其他 Java 建置工具也有受到支援，但本文未提供其安裝步驟。</span><span class="sxs-lookup"><span data-stu-id="d03b6-124">Other Java build tools like Gradle are supported but the install steps are not provided in this article.</span></span> <span data-ttu-id="d03b6-125">請檢閱建置工具的文件以了解如何取用 Maven 匯入。</span><span class="sxs-lookup"><span data-stu-id="d03b6-125">Review the documentation for your build tool on how to consume Maven imports.</span></span>
 
-## <a name="azure-service-libraries"></a><span data-ttu-id="4056b-126">Azure 服務程式庫</span><span class="sxs-lookup"><span data-stu-id="4056b-126">Azure service libraries</span></span>
+## <a name="azure-service-libraries"></a><span data-ttu-id="d03b6-126">Azure 服務程式庫</span><span class="sxs-lookup"><span data-stu-id="d03b6-126">Azure service libraries</span></span>
 
-<span data-ttu-id="4056b-127">整合 Azure 服務，以對使用這些程式庫的應用程式新增功能。</span><span class="sxs-lookup"><span data-stu-id="4056b-127">Integrate Azure services to add functionality to your apps using these libraries.</span></span> <span data-ttu-id="4056b-128">若要深入了解如何使用 Azure 服務來建置應用程式，請前往 [Java 開發人員中心](https://azure.microsoft.com/develop/java)。</span><span class="sxs-lookup"><span data-stu-id="4056b-128">Learn more about building apps with Azure services at the [Java developer center](https://azure.microsoft.com/develop/java).</span></span>
+<span data-ttu-id="d03b6-127">整合 Azure 服務，以對使用這些程式庫的應用程式新增功能。</span><span class="sxs-lookup"><span data-stu-id="d03b6-127">Integrate Azure services to add functionality to your apps using these libraries.</span></span> <span data-ttu-id="d03b6-128">若要深入了解如何使用 Azure 服務來建置應用程式，請前往 [Java 開發人員中心](https://azure.microsoft.com/develop/java)。</span><span class="sxs-lookup"><span data-stu-id="d03b6-128">Learn more about building apps with Azure services at the [Java developer center](https://azure.microsoft.com/develop/java).</span></span>
 
 <a name="azure-storage"></a>
 
-### <a name="azure-storageazurestoragestorage-introduction"></a>[<span data-ttu-id="4056b-129">Azure 儲存體</span><span class="sxs-lookup"><span data-stu-id="4056b-129">Azure Storage</span></span>](/azure/storage/storage-introduction)  
+### <a name="azure-storageazurestoragestorage-introduction"></a>[<span data-ttu-id="d03b6-129">Azure 儲存體</span><span class="sxs-lookup"><span data-stu-id="d03b6-129">Azure Storage</span></span>](/azure/storage/storage-introduction)  
 
-<span data-ttu-id="4056b-130">應用程式的資料儲存和傳訊。</span><span class="sxs-lookup"><span data-stu-id="4056b-130">Data storage and messaging for your applications.</span></span>
+<span data-ttu-id="d03b6-130">應用程式的資料儲存和傳訊。</span><span class="sxs-lookup"><span data-stu-id="d03b6-130">Data storage and messaging for your applications.</span></span>
 
 ```XML
 <dependency>
@@ -61,13 +61,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```   
 
-[<span data-ttu-id="4056b-131">範例](https://github.com/Azure/azure-storage-java/tree/master/microsoft-azure-storage-samples/src/com/microsoft/azure/storage) | [參考](/java/api/overview/azure/storage) | [GitHub](https://github.com/Azure/azure-storage-java)  | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-131">Samples](https://github.com/Azure/azure-storage-java/tree/master/microsoft-azure-storage-samples/src/com/microsoft/azure/storage) | [Reference](/java/api/overview/azure/storage) | [GitHub](https://github.com/Azure/azure-storage-java)  | [Release Notes</span></span>](https://github.com/Azure/azure-storage-java/blob/master/ChangeLog.txt)
+<span data-ttu-id="d03b6-131">[範例](https://github.com/Azure/azure-storage-java/tree/master/microsoft-azure-storage-samples/src/com/microsoft/azure/storage) | [參考](/java/api/overview/azure/storage) | [GitHub](https://github.com/Azure/azure-storage-java)  | [版本資訊](https://github.com/Azure/azure-storage-java/blob/master/ChangeLog.txt)</span><span class="sxs-lookup"><span data-stu-id="d03b6-131">[Samples](https://github.com/Azure/azure-storage-java/tree/master/microsoft-azure-storage-samples/src/com/microsoft/azure/storage) | [Reference](/java/api/overview/azure/storage) | [GitHub](https://github.com/Azure/azure-storage-java)  | [Release Notes](https://github.com/Azure/azure-storage-java/blob/master/ChangeLog.txt)</span></span>
 
 <a name="sql-database"></a>
 
-### <a name="sql-databaseazuresql-databasesql-database-technical-overview"></a>[<span data-ttu-id="4056b-132">SQL Database</span><span class="sxs-lookup"><span data-stu-id="4056b-132">SQL Database</span></span>](/azure/sql-database/sql-database-technical-overview)
+### <a name="sql-databaseazuresql-databasesql-database-technical-overview"></a>[<span data-ttu-id="d03b6-132">SQL Database</span><span class="sxs-lookup"><span data-stu-id="d03b6-132">SQL Database</span></span>](/azure/sql-database/sql-database-technical-overview)
 
-<span data-ttu-id="4056b-133">適用於 Azure SQL Database 的 JDBC 驅動程式。</span><span class="sxs-lookup"><span data-stu-id="4056b-133">JDBC driver for Azure SQL Database.</span></span>
+<span data-ttu-id="d03b6-133">適用於 Azure SQL Database 的 JDBC 驅動程式。</span><span class="sxs-lookup"><span data-stu-id="d03b6-133">JDBC driver for Azure SQL Database.</span></span>
 
 ```XML
 <dependency>
@@ -77,13 +77,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```
 
-[<span data-ttu-id="4056b-134">範例](/sql/connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java) | [參考](/java/api/overview/azure/sql) | [GitHub](https://github.com/Microsoft/mssql-jdbc)  | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-134">Samples](/sql/connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java) | [Reference](/java/api/overview/azure/sql) | [GitHub](https://github.com/Microsoft/mssql-jdbc)  | [Release Notes</span></span>](https://github.com/Microsoft/mssql-jdbc/blob/master/CHANGELOG.md)
+<span data-ttu-id="d03b6-134">[範例](/sql/connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java) | [參考](/java/api/overview/azure/sql) | [GitHub](https://github.com/Microsoft/mssql-jdbc)  | [版本資訊](https://github.com/Microsoft/mssql-jdbc/blob/master/CHANGELOG.md)</span><span class="sxs-lookup"><span data-stu-id="d03b6-134">[Samples](/sql/connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java) | [Reference](/java/api/overview/azure/sql) | [GitHub](https://github.com/Microsoft/mssql-jdbc)  | [Release Notes](https://github.com/Microsoft/mssql-jdbc/blob/master/CHANGELOG.md)</span></span>
 
 <a name="redis-cache"></a>
 
-### <a name="redis-cachehttpsazuremicrosoftcomservicescache"></a>[<span data-ttu-id="4056b-135">Redis 快取</span><span class="sxs-lookup"><span data-stu-id="4056b-135">Redis Cache</span></span>](https://azure.microsoft.com/services/cache/)
+### <a name="redis-cachehttpsazuremicrosoftcomservicescache"></a>[<span data-ttu-id="d03b6-135">Redis 快取</span><span class="sxs-lookup"><span data-stu-id="d03b6-135">Redis Cache</span></span>](https://azure.microsoft.com/services/cache/)
 
-<span data-ttu-id="4056b-136">低延遲、高效能的金鑰-值存放區。</span><span class="sxs-lookup"><span data-stu-id="4056b-136">Low-latency, high-performance key-value store.</span></span>
+<span data-ttu-id="d03b6-136">低延遲、高效能的金鑰-值存放區。</span><span class="sxs-lookup"><span data-stu-id="d03b6-136">Low-latency, high-performance key-value store.</span></span>
 
 ```XML
 <dependency>
@@ -95,13 +95,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```   
 
-[<span data-ttu-id="4056b-137">範例](/azure/redis-cache/cache-java-get-started) | [參考](http://xetorthio.github.io/jedis)  | [GitHub](https://github.com/xetorthio/jedis)  | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-137">Samples](/azure/redis-cache/cache-java-get-started) | [Reference](http://xetorthio.github.io/jedis)  | [GitHub](https://github.com/xetorthio/jedis)  | [Release Notes</span></span>](https://github.com/xetorthio/jedis/releases)  
+<span data-ttu-id="d03b6-137">[範例](/azure/redis-cache/cache-java-get-started) | [參考](http://xetorthio.github.io/jedis)  | [GitHub](https://github.com/xetorthio/jedis)  | [版本資訊](https://github.com/xetorthio/jedis/releases)</span><span class="sxs-lookup"><span data-stu-id="d03b6-137">[Samples](/azure/redis-cache/cache-java-get-started) | [Reference](http://xetorthio.github.io/jedis)  | [GitHub](https://github.com/xetorthio/jedis)  | [Release Notes](https://github.com/xetorthio/jedis/releases)</span></span>  
 
 <a name="documentdb"></a>
 
-### <a name="cosmos-dbazuredocumentdbdocumentdb-introduction"></a>[<span data-ttu-id="4056b-138">Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="4056b-138">Cosmos DB</span></span>](/azure/documentdb/documentdb-introduction)
+### <a name="cosmos-dbazuredocumentdbdocumentdb-introduction"></a>[<span data-ttu-id="d03b6-138">Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="d03b6-138">Cosmos DB</span></span>](/azure/documentdb/documentdb-introduction)
 
-<span data-ttu-id="4056b-139">可擴充的 NoSQL 資料庫，內含 JSON 文件和 SQL 或 JavaScript 查詢語法。</span><span class="sxs-lookup"><span data-stu-id="4056b-139">Scalable NoSQL database with JSON documents and a SQL or JavaScript query syntax.</span></span>   
+<span data-ttu-id="d03b6-139">可擴充的 NoSQL 資料庫，內含 JSON 文件和 SQL 或 JavaScript 查詢語法。</span><span class="sxs-lookup"><span data-stu-id="d03b6-139">Scalable NoSQL database with JSON documents and a SQL or JavaScript query syntax.</span></span>   
 
 ```XML
 <dependency>
@@ -111,13 +111,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```
 
-[<span data-ttu-id="4056b-140">範例](/azure/documentdb/documentdb-java-application) | [參考](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-140">Samples](/azure/documentdb/documentdb-java-application) | [Reference](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [Release Notes</span></span>](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
+<span data-ttu-id="d03b6-140">[範例](/azure/documentdb/documentdb-java-application) | [參考](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [版本資訊](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)</span><span class="sxs-lookup"><span data-stu-id="d03b6-140">[Samples](/azure/documentdb/documentdb-java-application) | [Reference](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [Release Notes](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)</span></span>
 
 <a name="servicebus"></a>
  
- ### <a name="servicebusazureservice-bus-messagingservice-bus-messaging-overview"></a>[<span data-ttu-id="4056b-141">ServiceBus</span><span class="sxs-lookup"><span data-stu-id="4056b-141">ServiceBus</span></span>](/azure/service-bus-messaging/service-bus-messaging-overview) 
+ ### <a name="servicebusazureservice-bus-messagingservice-bus-messaging-overview"></a>[<span data-ttu-id="d03b6-141">ServiceBus</span><span class="sxs-lookup"><span data-stu-id="d03b6-141">ServiceBus</span></span>](/azure/service-bus-messaging/service-bus-messaging-overview) 
     
- <span data-ttu-id="4056b-142">服務匯流排是企業級的交易傳訊平台服務。</span><span class="sxs-lookup"><span data-stu-id="4056b-142">Service Bus is an enterprise-class, transactional messaging platform service.</span></span>
+ <span data-ttu-id="d03b6-142">服務匯流排是企業級的交易傳訊平台服務。</span><span class="sxs-lookup"><span data-stu-id="d03b6-142">Service Bus is an enterprise-class, transactional messaging platform service.</span></span>
  
  ```XML
  <dependency> 
@@ -127,13 +127,13 @@ ms.lasthandoff: 08/28/2017
  </dependency>   
  ```
  
- [<span data-ttu-id="4056b-143">範例](https://github.com/Azure/azure-service-bus/tree/master/samples/Java) | [參考](https://docs.microsoft.com/java/api/overview/azure/servicebus) | [GitHub](https://github.com/azure/azure-service-bus-java)  | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-143">Samples](https://github.com/Azure/azure-service-bus/tree/master/samples/Java) | [Reference](https://docs.microsoft.com/java/api/overview/azure/servicebus) | [GitHub](https://github.com/azure/azure-service-bus-java)  | [Release Notes</span></span>](https://github.com/Azure/azure-service-bus-java)   
+ <span data-ttu-id="d03b6-143">[範例](https://github.com/Azure/azure-service-bus/tree/master/samples/Java) | [參考](https://docs.microsoft.com/java/api/overview/azure/servicebus) | [GitHub](https://github.com/azure/azure-service-bus-java)  | [版本資訊](https://github.com/Azure/azure-service-bus-java)</span><span class="sxs-lookup"><span data-stu-id="d03b6-143">[Samples](https://github.com/Azure/azure-service-bus/tree/master/samples/Java) | [Reference](https://docs.microsoft.com/java/api/overview/azure/servicebus) | [GitHub](https://github.com/azure/azure-service-bus-java)  | [Release Notes](https://github.com/Azure/azure-service-bus-java)</span></span>   
   
 <a name="azuread"></a>
 
-### <a name="azure-active-directoryazureactive-directoryactive-directory-whatis"></a>[<span data-ttu-id="4056b-144">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="4056b-144">Azure Active Directory</span></span>](/azure/active-directory/active-directory-whatis)   
+### <a name="azure-active-directoryazureactive-directoryactive-directory-whatis"></a>[<span data-ttu-id="d03b6-144">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="d03b6-144">Azure Active Directory</span></span>](/azure/active-directory/active-directory-whatis)   
 
-<span data-ttu-id="4056b-145">應用程式的身分識別管理和安全登入。</span><span class="sxs-lookup"><span data-stu-id="4056b-145">Identity management and secure sign-in for your applications.</span></span>
+<span data-ttu-id="d03b6-145">應用程式的身分識別管理和安全登入。</span><span class="sxs-lookup"><span data-stu-id="d03b6-145">Identity management and secure sign-in for your applications.</span></span>
 
 ```XML
 <dependency>
@@ -143,13 +143,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```
    
-[<span data-ttu-id="4056b-146">範例](https://github.com/Azure-Samples?utf8=%E2%9C%93&q=active%20directory%20&type=&language=java) | [參考](/java/api/overview/azure/activedirectory) | [GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-java) | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-146">Samples](https://github.com/Azure-Samples?utf8=%E2%9C%93&q=active%20directory%20&type=&language=java) | [Reference](/java/api/overview/azure/activedirectory) | [GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-java) | [Release Notes</span></span>](https://github.com/AzureAD/azure-activedirectory-library-for-javaT-)
+<span data-ttu-id="d03b6-146">[範例](https://github.com/Azure-Samples?utf8=%E2%9C%93&q=active%20directory%20&type=&language=java) | [參考](/java/api/overview/azure/activedirectory) | [GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-java) | [版本資訊](https://github.com/AzureAD/azure-activedirectory-library-for-javaT-)</span><span class="sxs-lookup"><span data-stu-id="d03b6-146">[Samples](https://github.com/Azure-Samples?utf8=%E2%9C%93&q=active%20directory%20&type=&language=java) | [Reference](/java/api/overview/azure/activedirectory) | [GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-java) | [Release Notes](https://github.com/AzureAD/azure-activedirectory-library-for-javaT-)</span></span>
  
 <a name="keyvault"></a>
 
-### <a name="key-vaultazurekey-vault"></a>[<span data-ttu-id="4056b-147">金鑰保存庫</span><span class="sxs-lookup"><span data-stu-id="4056b-147">Key Vault</span></span>](/azure/key-vault) 
+### <a name="key-vaultazurekey-vault"></a>[<span data-ttu-id="d03b6-147">金鑰保存庫</span><span class="sxs-lookup"><span data-stu-id="d03b6-147">Key Vault</span></span>](/azure/key-vault) 
 
-<span data-ttu-id="4056b-148">從應用程式安全地存取金鑰和祕密。</span><span class="sxs-lookup"><span data-stu-id="4056b-148">Safely access keys and secrets from your applications.</span></span> 
+<span data-ttu-id="d03b6-148">從應用程式安全地存取金鑰和祕密。</span><span class="sxs-lookup"><span data-stu-id="d03b6-148">Safely access keys and secrets from your applications.</span></span> 
 
 ```XML
 <dependency>
@@ -159,13 +159,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```
 
-[<span data-ttu-id="4056b-149">範例](https://github.com/Azure-Samples/key-vault-java-manage-key-vaults) | [參考](/java/api/overview/azure/keyvault) | [GitHub](https://github.com/Azure/azure-keyvault-java) | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-149">Samples](https://github.com/Azure-Samples/key-vault-java-manage-key-vaults) | [Reference](/java/api/overview/azure/keyvault) | [GitHub](https://github.com/Azure/azure-keyvault-java) | [Release Notes</span></span>](https://github.com/Azure/azure-keyvault-java) 
+<span data-ttu-id="d03b6-149">[範例](https://github.com/Azure-Samples/key-vault-java-manage-key-vaults) | [參考](/java/api/overview/azure/keyvault) | [GitHub](https://github.com/Azure/azure-keyvault-java) | [版本資訊](https://github.com/Azure/azure-keyvault-java)</span><span class="sxs-lookup"><span data-stu-id="d03b6-149">[Samples](https://github.com/Azure-Samples/key-vault-java-manage-key-vaults) | [Reference](/java/api/overview/azure/keyvault) | [GitHub](https://github.com/Azure/azure-keyvault-java) | [Release Notes](https://github.com/Azure/azure-keyvault-java)</span></span> 
 
 <a name="eventhub"></a>
 
-### <a name="event-hubazureevent-hubsevent-hubs-what-is-event-hubs"></a>[<span data-ttu-id="4056b-150">事件中樞</span><span class="sxs-lookup"><span data-stu-id="4056b-150">Event Hub</span></span>](/azure/event-hubs/event-hubs-what-is-event-hubs) 
+### <a name="event-hubazureevent-hubsevent-hubs-what-is-event-hubs"></a>[<span data-ttu-id="d03b6-150">事件中樞</span><span class="sxs-lookup"><span data-stu-id="d03b6-150">Event Hub</span></span>](/azure/event-hubs/event-hubs-what-is-event-hubs) 
    
-<span data-ttu-id="4056b-151">適用於檢測或 IoT 案例的高輸送量事件和遙測處理。</span><span class="sxs-lookup"><span data-stu-id="4056b-151">High-throughput event and telemetry handling for your instrumentation or IoT scenarios.</span></span>
+<span data-ttu-id="d03b6-151">適用於檢測或 IoT 案例的高輸送量事件和遙測處理。</span><span class="sxs-lookup"><span data-stu-id="d03b6-151">High-throughput event and telemetry handling for your instrumentation or IoT scenarios.</span></span>
 
 ```XML
 <dependency> 
@@ -175,13 +175,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>   
 ```
 
-[<span data-ttu-id="4056b-152">範例](https://github.com/Azure/azure-event-hubs/tree/master/samples#java) | [參考](/java/api/overview/azure/eventhub) | [GitHub](https://github.com/azure/azure-event-hubs-java)  | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-152">Samples](https://github.com/Azure/azure-event-hubs/tree/master/samples#java) | [Reference](/java/api/overview/azure/eventhub) | [GitHub](https://github.com/azure/azure-event-hubs-java)  | [Release Notes</span></span>](https://github.com/Azure/azure-event-hubs-java)
+<span data-ttu-id="d03b6-152">[範例](https://github.com/Azure/azure-event-hubs/tree/master/samples#java) | [參考](/java/api/overview/azure/eventhub) | [GitHub](https://github.com/azure/azure-event-hubs-java)  | [版本資訊](https://github.com/Azure/azure-event-hubs-java)</span><span class="sxs-lookup"><span data-stu-id="d03b6-152">[Samples](https://github.com/Azure/azure-event-hubs/tree/master/samples#java) | [Reference](/java/api/overview/azure/eventhub) | [GitHub](https://github.com/azure/azure-event-hubs-java)  | [Release Notes](https://github.com/Azure/azure-event-hubs-java)</span></span>
 
 <a name="iotservice"></a> 
 
-### <a name="iot-serviceazureiot-hub"></a>[<span data-ttu-id="4056b-153">IoT 服務</span><span class="sxs-lookup"><span data-stu-id="4056b-153">IoT Service</span></span>](/azure/iot-hub/)
+### <a name="iot-serviceazureiot-hub"></a>[<span data-ttu-id="d03b6-153">IoT 服務</span><span class="sxs-lookup"><span data-stu-id="d03b6-153">IoT Service</span></span>](/azure/iot-hub/)
 
-<span data-ttu-id="4056b-154">管理身分識別、傳送訊息，以及從已向 IoT 中樞註冊的裝置取得意見反應。</span><span class="sxs-lookup"><span data-stu-id="4056b-154">Manage identities, send messages, and get feedback from devices registered with your IoT hub.</span></span>
+<span data-ttu-id="d03b6-154">管理身分識別、傳送訊息，以及從已向 IoT 中樞註冊的裝置取得意見反應。</span><span class="sxs-lookup"><span data-stu-id="d03b6-154">Manage identities, send messages, and get feedback from devices registered with your IoT hub.</span></span>
 
 ```XML
 <dependency>
@@ -191,13 +191,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```   
    
-[<span data-ttu-id="4056b-155">範例](https://github.com/Azure/azure-iot-sdk-java/tree/master/service/iot-service-samples) | [參考](/java/api/overview/azure/iot) | [GitHub](https://github.com/Azure/azure-iot-sdk-java) | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-155">Samples](https://github.com/Azure/azure-iot-sdk-java/tree/master/service/iot-service-samples) | [Reference](/java/api/overview/azure/iot) | [GitHub](https://github.com/Azure/azure-iot-sdk-java) | [Release Notes</span></span>](https://github.com/Azure/azure-iot-sdk-java/blob/master/readme.md)
+<span data-ttu-id="d03b6-155">[範例](https://github.com/Azure/azure-iot-sdk-java/tree/master/service/iot-service-samples) | [參考](/java/api/overview/azure/iot) | [GitHub](https://github.com/Azure/azure-iot-sdk-java) | [版本資訊](https://github.com/Azure/azure-iot-sdk-java/blob/master/readme.md)</span><span class="sxs-lookup"><span data-stu-id="d03b6-155">[Samples](https://github.com/Azure/azure-iot-sdk-java/tree/master/service/iot-service-samples) | [Reference](/java/api/overview/azure/iot) | [GitHub](https://github.com/Azure/azure-iot-sdk-java) | [Release Notes](https://github.com/Azure/azure-iot-sdk-java/blob/master/readme.md)</span></span>
 
 <a name="iotdevice"></a> 
 
-### <a name="iot-deviceazureiot-hubiot-hub-devguide"></a>[<span data-ttu-id="4056b-156">IoT 裝置</span><span class="sxs-lookup"><span data-stu-id="4056b-156">IoT Device</span></span>](/azure/iot-hub/iot-hub-devguide)
+### <a name="iot-deviceazureiot-hubiot-hub-devguide"></a>[<span data-ttu-id="d03b6-156">IoT 裝置</span><span class="sxs-lookup"><span data-stu-id="d03b6-156">IoT Device</span></span>](/azure/iot-hub/iot-hub-devguide)
 
-<span data-ttu-id="4056b-157">從裝置將訊息傳送到 IoT 中樞。</span><span class="sxs-lookup"><span data-stu-id="4056b-157">Send a message to an IoT hub from your device.</span></span>  
+<span data-ttu-id="d03b6-157">從裝置將訊息傳送到 IoT 中樞。</span><span class="sxs-lookup"><span data-stu-id="d03b6-157">Send a message to an IoT hub from your device.</span></span>  
 
 ```XML
 <dependency>
@@ -207,13 +207,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```  
 
-[<span data-ttu-id="4056b-158">範例](https://github.com/Azure/azure-iot-sdk-java/tree/master/device/iot-device-samples) | [參考](/java/api/overview/azure/iot) | [GitHub](https://github.com/Azure/azure-iot-sdk-java) | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-158">Samples](https://github.com/Azure/azure-iot-sdk-java/tree/master/device/iot-device-samples) | [Reference](/java/api/overview/azure/iot) | [GitHub](https://github.com/Azure/azure-iot-sdk-java) | [Release Notes</span></span>](https://github.com/Azure/azure-iot-sdk-java/blob/master/readme.md)
+<span data-ttu-id="d03b6-158">[範例](https://github.com/Azure/azure-iot-sdk-java/tree/master/device/iot-device-samples) | [參考](/java/api/overview/azure/iot) | [GitHub](https://github.com/Azure/azure-iot-sdk-java) | [版本資訊](https://github.com/Azure/azure-iot-sdk-java/blob/master/readme.md)</span><span class="sxs-lookup"><span data-stu-id="d03b6-158">[Samples](https://github.com/Azure/azure-iot-sdk-java/tree/master/device/iot-device-samples) | [Reference](/java/api/overview/azure/iot) | [GitHub](https://github.com/Azure/azure-iot-sdk-java) | [Release Notes](https://github.com/Azure/azure-iot-sdk-java/blob/master/readme.md)</span></span>
 
 <a name="datalake"></a> 
 
-### <a name="data-lake-storeazuredata-lake-storedata-lake-store-overview"></a>[<span data-ttu-id="4056b-159">Data Lake Store</span><span class="sxs-lookup"><span data-stu-id="4056b-159">Data Lake Store</span></span>](/azure/data-lake-store/data-lake-store-overview)   
+### <a name="data-lake-storeazuredata-lake-storedata-lake-store-overview"></a>[<span data-ttu-id="d03b6-159">Data Lake Store</span><span class="sxs-lookup"><span data-stu-id="d03b6-159">Data Lake Store</span></span>](/azure/data-lake-store/data-lake-store-overview)   
    
-<span data-ttu-id="4056b-160">將任何大小的資料和圖形擷取到單一位置以進行分析。</span><span class="sxs-lookup"><span data-stu-id="4056b-160">Capture data of any size and shape into a single location for performing analytics.</span></span>    
+<span data-ttu-id="d03b6-160">將任何大小的資料和圖形擷取到單一位置以進行分析。</span><span class="sxs-lookup"><span data-stu-id="d03b6-160">Capture data of any size and shape into a single location for performing analytics.</span></span>    
 
 ```XML
 <dependency>
@@ -223,13 +223,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```   
 
-[<span data-ttu-id="4056b-161">範例](https://github.com/Azure-Samples/data-lake-store-java-upload-download-get-started) | [參考](/java/api/overview/azure/datalakestore) | [GitHub](https://github.com/Azure/azure-data-lake-store-java) | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-161">Samples](https://github.com/Azure-Samples/data-lake-store-java-upload-download-get-started) | [Reference](/java/api/overview/azure/datalakestore) | [GitHub](https://github.com/Azure/azure-data-lake-store-java) | [Release Notes</span></span>](https://github.com/Azure/azure-data-lake-store-java/blob/master/CHANGES.md)
+<span data-ttu-id="d03b6-161">[範例](https://github.com/Azure-Samples/data-lake-store-java-upload-download-get-started) | [參考](/java/api/overview/azure/datalakestore) | [GitHub](https://github.com/Azure/azure-data-lake-store-java) | [版本資訊](https://github.com/Azure/azure-data-lake-store-java/blob/master/CHANGES.md)</span><span class="sxs-lookup"><span data-stu-id="d03b6-161">[Samples](https://github.com/Azure-Samples/data-lake-store-java-upload-download-get-started) | [Reference](/java/api/overview/azure/datalakestore) | [GitHub](https://github.com/Azure/azure-data-lake-store-java) | [Release Notes](https://github.com/Azure/azure-data-lake-store-java/blob/master/CHANGES.md)</span></span>
 
 <a name="appinsights"></a> 
 
-### <a name="appinsightsazureapplication-insightsapp-insights-overview"></a>[<span data-ttu-id="4056b-162">AppInsights</span><span class="sxs-lookup"><span data-stu-id="4056b-162">AppInsights</span></span>](/azure/application-insights/app-insights-overview)
+### <a name="appinsightsazureapplication-insightsapp-insights-overview"></a>[<span data-ttu-id="d03b6-162">AppInsights</span><span class="sxs-lookup"><span data-stu-id="d03b6-162">AppInsights</span></span>](/azure/application-insights/app-insights-overview)
 
-<span data-ttu-id="4056b-163">追蹤使用狀況、新增遙測並監視 Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="4056b-163">Track usage, add telemetry, and monitor your web apps.</span></span>
+<span data-ttu-id="d03b6-163">追蹤使用狀況、新增遙測並監視 Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="d03b6-163">Track usage, add telemetry, and monitor your web apps.</span></span>
 
 ```XML
 <dependency>
@@ -239,13 +239,13 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```
 
-[<span data-ttu-id="4056b-164">範例](/azure/application-insights/app-insights-java-get-started) | [參考](/java/api/overview/azure/appinsights) | [GitHub](https://github.com/Microsoft/ApplicationInsights-Java) | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-164">Samples](/azure/application-insights/app-insights-java-get-started) | [Reference](/java/api/overview/azure/appinsights) | [GitHub](https://github.com/Microsoft/ApplicationInsights-Java) | [Release Notes</span></span>](https://github.com/Microsoft/ApplicationInsights-Java#to-upgrade-to-the-latest-sdk)
+<span data-ttu-id="d03b6-164">[範例](/azure/application-insights/app-insights-java-get-started) | [參考](/java/api/overview/azure/appinsights) | [GitHub](https://github.com/Microsoft/ApplicationInsights-Java) | [版本資訊](https://github.com/Microsoft/ApplicationInsights-Java#to-upgrade-to-the-latest-sdk)</span><span class="sxs-lookup"><span data-stu-id="d03b6-164">[Samples](/azure/application-insights/app-insights-java-get-started) | [Reference](/java/api/overview/azure/appinsights) | [GitHub](https://github.com/Microsoft/ApplicationInsights-Java) | [Release Notes](https://github.com/Microsoft/ApplicationInsights-Java#to-upgrade-to-the-latest-sdk)</span></span>
 
 <a name="batch"></a>
 
-### <a name="batchazurebatch"></a>[<span data-ttu-id="4056b-165">批次</span><span class="sxs-lookup"><span data-stu-id="4056b-165">Batch</span></span>](/azure/batch)
+### <a name="batchazurebatch"></a>[<span data-ttu-id="d03b6-165">批次</span><span class="sxs-lookup"><span data-stu-id="d03b6-165">Batch</span></span>](/azure/batch)
 
-<span data-ttu-id="4056b-166">在雲端有效地執行大規模的平行和高效能計算應用程式。</span><span class="sxs-lookup"><span data-stu-id="4056b-166">Run large-scale parallel and high-performance computing applications efficiently in the cloud.</span></span>
+<span data-ttu-id="d03b6-166">在雲端有效地執行大規模的平行和高效能計算應用程式。</span><span class="sxs-lookup"><span data-stu-id="d03b6-166">Run large-scale parallel and high-performance computing applications efficiently in the cloud.</span></span>
 
 ```XML
 <dependency>
@@ -255,29 +255,29 @@ ms.lasthandoff: 08/28/2017
 </dependency>
 ```
 
-[<span data-ttu-id="4056b-167">範例](https://github.com/azure/azure-batch-samples) | [參考](/java/api/overview/azure/batch) | [GitHub](https://github.com/azure/azure-batch-sdk-for-java) | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-167">Samples](https://github.com/azure/azure-batch-samples) | [Reference](/java/api/overview/azure/batch) | [GitHub](https://github.com/azure/azure-batch-sdk-for-java) | [Release Notes</span></span>](https://github.com/Azure/azure-batch-sdk-for-java/blob/master/README.md)
+<span data-ttu-id="d03b6-167">[範例](https://github.com/azure/azure-batch-samples) | [參考](/java/api/overview/azure/batch) | [GitHub](https://github.com/azure/azure-batch-sdk-for-java) | [版本資訊](https://github.com/Azure/azure-batch-sdk-for-java/blob/master/README.md)</span><span class="sxs-lookup"><span data-stu-id="d03b6-167">[Samples](https://github.com/azure/azure-batch-samples) | [Reference](/java/api/overview/azure/batch) | [GitHub](https://github.com/azure/azure-batch-sdk-for-java) | [Release Notes](https://github.com/Azure/azure-batch-sdk-for-java/blob/master/README.md)</span></span>
 
 <a name="management"></a> 
 
-## <a name="manage-azure-resources"></a><span data-ttu-id="4056b-168">管理 Azure 資源</span><span class="sxs-lookup"><span data-stu-id="4056b-168">Manage Azure resources</span></span>
+## <a name="manage-azure-resources"></a><span data-ttu-id="d03b6-168">管理 Azure 資源</span><span class="sxs-lookup"><span data-stu-id="d03b6-168">Manage Azure resources</span></span>
 
-<span data-ttu-id="4056b-169">從應用程式程式碼建立、更新和刪除 Azure 資源。</span><span class="sxs-lookup"><span data-stu-id="4056b-169">Create, update, and delete Azure resources from your application code.</span></span>
+<span data-ttu-id="d03b6-169">從應用程式程式碼建立、更新和刪除 Azure 資源。</span><span class="sxs-lookup"><span data-stu-id="d03b6-169">Create, update, and delete Azure resources from your application code.</span></span>
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
-[<span data-ttu-id="4056b-170">範例](https://github.com/Azure/azure-sdk-for-java#sample-code) | [參考](https://docs.microsoft.com/java/api/overview/azure/) | [GitHub](https://github.com/Azure/azure-sdk-for-java) | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-170">Samples](https://github.com/Azure/azure-sdk-for-java#sample-code) | [Reference](https://docs.microsoft.com/java/api/overview/azure/) | [GitHub](https://github.com/Azure/azure-sdk-for-java) | [Release Notes</span></span>](java-sdk-azure-release-notes.md)
+<span data-ttu-id="d03b6-170">[範例](https://github.com/Azure/azure-sdk-for-java#sample-code) | [參考](https://docs.microsoft.com/java/api/overview/azure/) | [GitHub](https://github.com/Azure/azure-sdk-for-java) | [版本資訊](java-sdk-azure-release-notes.md)</span><span class="sxs-lookup"><span data-stu-id="d03b6-170">[Samples](https://github.com/Azure/azure-sdk-for-java#sample-code) | [Reference](https://docs.microsoft.com/java/api/overview/azure/) | [GitHub](https://github.com/Azure/azure-sdk-for-java) | [Release Notes](java-sdk-azure-release-notes.md)</span></span>
 
 <a name="servicebus"></a>
 
-### <a name="servicebushttpsdocsmicrosoftcomen-usazureservice-bus-messagingservice-bus-messaging-overview"></a>[<span data-ttu-id="4056b-171">ServiceBus</span><span class="sxs-lookup"><span data-stu-id="4056b-171">ServiceBus</span></span>](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview) 
+### <a name="servicebushttpsdocsmicrosoftcomen-usazureservice-bus-messagingservice-bus-messaging-overview"></a>[<span data-ttu-id="d03b6-171">ServiceBus</span><span class="sxs-lookup"><span data-stu-id="d03b6-171">ServiceBus</span></span>](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview) 
    
-<span data-ttu-id="4056b-172">服務匯流排是企業級的交易傳訊平台服務。</span><span class="sxs-lookup"><span data-stu-id="4056b-172">Service Bus is an enterprise-class, transactional messaging platform service.</span></span>
+<span data-ttu-id="d03b6-172">服務匯流排是企業級的交易傳訊平台服務。</span><span class="sxs-lookup"><span data-stu-id="d03b6-172">Service Bus is an enterprise-class, transactional messaging platform service.</span></span>
 
 ```XML
 <dependency> 
@@ -287,5 +287,5 @@ ms.lasthandoff: 08/28/2017
 </dependency>   
 ```
 
-[<span data-ttu-id="4056b-173">範例](https://github.com/Azure/azure-service-bus/tree/master/samples/Java) | [參考](https://docs.microsoft.com/java/api/overview/azure/servicebus) | [GitHub](https://github.com/azure/azure-service-bus-java)  | [版本資訊</span><span class="sxs-lookup"><span data-stu-id="4056b-173">Samples](https://github.com/Azure/azure-service-bus/tree/master/samples/Java) | [Reference](https://docs.microsoft.com/java/api/overview/azure/servicebus) | [GitHub](https://github.com/azure/azure-service-bus-java)  | [Release Notes</span></span>](https://github.com/Azure/azure-service-bus-java)
+<span data-ttu-id="d03b6-173">[範例](https://github.com/Azure/azure-service-bus/tree/master/samples/Java) | [參考](https://docs.microsoft.com/java/api/overview/azure/servicebus) | [GitHub](https://github.com/azure/azure-service-bus-java)  | [版本資訊](https://github.com/Azure/azure-service-bus-java)</span><span class="sxs-lookup"><span data-stu-id="d03b6-173">[Samples](https://github.com/Azure/azure-service-bus/tree/master/samples/Java) | [Reference](https://docs.microsoft.com/java/api/overview/azure/servicebus) | [GitHub](https://github.com/azure/azure-service-bus-java)  | [Release Notes](https://github.com/Azure/azure-service-bus-java)</span></span>
 
