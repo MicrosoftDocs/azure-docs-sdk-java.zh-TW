@@ -188,7 +188,7 @@ Azure 工具組會開始將您的 Web 應用程式部署至 Azure 中的 Docker 
 
 <!-- URL List -->
 
-[Docker 網站]: https://www.docker.com/
+[Docker 的官方網站]: https://www.docker.com/
 [設定構件]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->
