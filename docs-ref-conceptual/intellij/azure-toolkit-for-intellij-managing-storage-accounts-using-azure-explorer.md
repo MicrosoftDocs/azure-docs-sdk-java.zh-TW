@@ -32,7 +32,7 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
 若要使用 Azure Explorer 來建立儲存體帳戶，請執行下列作業︰
 
-1. 使用 [適用於 Eclipse 的 Azure 工具組的登入指示] 來登入您的 Azure 帳戶。 
+1. 使用 [適用於 IntelliJ 的 Azure 工具組登入指示] 來登入您的 Azure 帳戶。 
 
 2. 在 [Azure Explorer] 檢視中，展開 [Azure] 節點，以滑鼠右鍵按一下 [儲存體帳戶]，然後按一下 [建立儲存體帳戶]。
 
