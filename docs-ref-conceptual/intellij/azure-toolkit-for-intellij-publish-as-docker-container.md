@@ -26,7 +26,7 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
 
 > [!NOTE]
 >
-> Docker 的詳細資訊位於 [Docker 的官方網站]。
+> Docker websiteDocker 的詳細資訊位於 [Docker 的官方網站]。
 >
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
@@ -47,7 +47,7 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
 
       ![[發佈作為 Docker 容器] 命令][PUB01]
 
-   * 在 IntelliJ 工具列中按一下 [發佈群組] 按鈕，然後按一下 [發佈作為 Docker 容器]：
+   * 在 IntelliJ 工具列中按一下 發佈群組 按鈕，然後按一下發佈作為 Docker 容器：
 
       ![[發佈作為 Docker 容器] 命令][PUB02]  
     [在 Azure 上部署 Docker 容器] 精靈隨即開啟。
@@ -170,11 +170,11 @@ Azure 工具組會開始將您的 Web 應用程式部署至 Azure 中的 Docker 
 
    ![[專案結構] 命令][ART01]
 
-3. 若要新增構件，請按一下綠色加號 (**+**)，然後按一下 [Web 應用程式: 封存]。
+3. 若要新增構件，請按一下綠色加號 (**+**)，然後按一下Web 應用程式: 封存。
 
    ![[Web 應用程式: 封存] 命令][ART02]
 
-4. 在 [名稱] 方塊中，輸入構件的名稱 (請勿加上「.war」副檔名)，然後按一下 [確定]。
+4. 在 名稱 方塊中，輸入構件的名稱 (請勿加上「.war」副檔名)，然後按一下確定。
 
    ![構件的 [名稱] 方塊][ART03]
 
