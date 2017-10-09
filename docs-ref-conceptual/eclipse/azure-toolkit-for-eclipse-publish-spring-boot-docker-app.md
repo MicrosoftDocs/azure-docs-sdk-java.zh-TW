@@ -152,7 +152,7 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
 1. 在 Eclipse 專案總管中，選取 Maven 專案。
 
-1. 按一下 Azure [發佈] 功能表，然後按一下 [發佈為 Docker 容器]。
+1. 按一下 Azure 發佈 功能表，然後按一下發佈為 Docker 容器。
 
    ![[發佈為 Docker 容器] 命令][PU01]
 
@@ -180,7 +180,7 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
       ![指定 Docker 主機認證][PU05]
 
-1. 選取您的 Docker 主機，然後按一下 [下一步]。
+1. 選取您的 Docker 主機，然後按一下下一步。
 
    ![選取要使用的 Docker 主機][PU06]
 
