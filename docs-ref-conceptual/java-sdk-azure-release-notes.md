@@ -10,25 +10,25 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: c0d5c4b3702d3bee4e93de51cec36e72aeaf598f
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 015cb0615c28711ebb8feb5cea584a8a3779fa54
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="release-notes"></a>版本資訊 
 
-## <a name="june-30-2017---110"></a>2017 年 6 月 30 日 - 1.1.0 
+## <a name="october-5-2017---130"></a>2017 年 10 月 5 日 - 1.3.0 
 
-V1.1 可與 V1.0 中已達到正式運作 (穩定) 階段、且目的是要提供給大眾使用的 API 回溯相容。
+版本 1.3.0 向下相容於舊版的服務及功能，可達到與舊版相同的可用性 (穩定性)。
 
-V.0 中標記了 @Beta 註釋的 API 已導入一些重大變更
+所有針對舊版服務所進行的重大更新都會以 @Beta 標註。
 
-如果您要將程式碼移轉至 1.1.0，您可以使用[這些附註](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.1.0.md)來讓程式碼做好從 1.0.0 移轉至 1.1.0 的準備。
+如果您要將程式碼移轉至 1.3.0，可以使用[這些附註](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md)來讓現有程式碼做好移轉至版本 1.3 的準備。
 
-### <a name="generally-availabile-in-v11"></a>在 V1.1 中正式運作
+### <a name="generally-availabile-in-v13"></a>在 V1.3 中正式運作
 
-某些在 V1.0 中仍屬搶鮮版的 API 現已在 V1.1 中正式運作，尤其是：
+某些在舊版中仍屬搶鮮版 (Beta) 的 API 現已在 GA 中正式運作，尤其是：
 
 - 非同步方法
 - CDN 中先前屬於搶鮮版的所有方法
@@ -36,14 +36,16 @@ V.0 中標記了 @Beta 註釋的 API 已導入一些重大變更
 
  程式庫的某些部分仍處於預覽階段。 請參閱下表以了解程式庫的目前狀態：
 
-服務或功能 | 以正式運作版來提供 | 以預覽版來提供  | 敬請期待 |
----------|---------|---------|---------|
-計算  | 虛擬機器和 VM 擴充功能、虛擬機器擴展集、受控磁碟   | Azure Container Service、Azure Container Registry |    |
-儲存體   |  儲存體帳戶       |         |   加密      |
-SQL Database  | 資料庫、防火牆、彈性集區        |         |   更多功能      |
-網路    |  虛擬網路、網路介面、IP 位址、路由表、網路安全性群組、DNS、流量管理員、應用程式閘道  |    負載平衡器     |   VPN、網路監看員   |
-更多服務    |  Resource Manager、Key Vault、Redis、CDN、Batch       |  Web 應用程式、函式應用程式、服務匯流排、Graph RBAC、DocumentDB   | 監視、排程器、函式管理、搜尋、更多 Graph RBAC 功能        |
-基礎     |   驗證 - 核心、非同步方法       |      |         |
+服務或功能 | 以正式運作版來提供 | 以預覽版來提供 
+---------|---------|---------|-
+計算  | 虛擬機器和 VM 擴充功能、虛擬機器擴展集、受控磁碟   | Azure Container Service、Azure Container Registry 
+儲存體   |  儲存體帳戶       |    加密     
+SQL Database  | 資料庫、防火牆、彈性集區              
+網路    |  虛擬網路、網路介面、IP 位址、路由表、網路安全性群組、DNS、流量管理員、應用程式閘道  |    負載平衡器、對等互連、虛擬網路閘道、網路監看員 
+更多服務    |  Resource Manager、Key Vault、Redis、CDN、Batch       |  Web 應用程式、函式應用程式、服務匯流排、Graph RBAC、Cosmos DB、搜尋服務  
+基礎     |   驗證 - 核心、Async 方法、受管理服務識別      |      |
+
+> 預覽功能在會程式庫的類別、介面或方法層級中以 `@Beta` 標註。 這些功能可能會有所變更； 未來可能會以任何方式修改，或甚至移除。
 
 ### <a name="import-with-maven"></a>使用 Maven 來匯入
 
@@ -51,16 +53,12 @@ SQL Database  | 資料庫、防火牆、彈性集區        |         |   更多
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
 ### <a name="get-help-and-give-feedback"></a>獲得協助及提供意見
 
 查看 [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-java-sdk) 社群，以獲得在自己的程式碼中使用程式庫的說明。 如果您遇到任何錯誤，或是有可改善這些程式庫的建議，請透過 [GitHub](https://github.com/Azure/azure-sdk-for-java/issues) 提出問題。
-
-### <a name="migrate-from-previous-releases"></a>從先前版本移轉
-
-[從 1.0.0-beta5 移轉](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.0.0.md)  [從 1.1.0 移轉](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.1.0.md)
 
 
