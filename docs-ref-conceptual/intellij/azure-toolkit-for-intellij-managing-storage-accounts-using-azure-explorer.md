@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm
-ms.openlocfilehash: 44d2ade8a0900b60222f06dfb9f93c1df17228c8
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: cb79f4c10cdaf5597106590b7aaf36dec266391f
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>使用適用於 IntelliJ 的 Azure Explorer 來管理儲存體帳戶
 
@@ -34,7 +34,7 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
 1. 使用 [適用於 IntelliJ 的 Azure 工具組登入指示] 來登入您的 Azure 帳戶。 
 
-2. 在 Azure Explorer 檢視中，展開 Azure 節點，以滑鼠右鍵按一下 儲存體帳戶，然後按一下建立儲存體帳戶。
+2. 在 [Azure Explorer] 檢視中，展開 [Azure] 節點，以滑鼠右鍵按一下 [儲存體帳戶]，然後按一下 [建立儲存體帳戶]。
 
    ![[建立儲存體帳戶] 命令][CS01]
 
@@ -64,11 +64,11 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
 若要使用 Azure Explorer 來建立儲存體容器，請執行下列作業︰
 
-1. 在 Azure Explorer 檢視中，以滑鼠右鍵按一下您要在其中建立容器的儲存體帳戶，然後按一下建立 Blob 容器。
+1. 在 [Azure Explorer] 檢視中，以滑鼠右鍵按一下您要在其中建立容器的儲存體帳戶，然後按一下 [建立 Blob 容器]。
 
    ![[建立 Blob 容器] 命令][CC01]
 
-2. 在 建立 Blob 容器 對話方塊中指定容器名稱，然後按一下確定。 如需為儲存體容器命名的詳細資訊，請參閱[命名和參考容器、Blob 及中繼資料]。
+2. 在 [建立 Blob 容器] 對話方塊中指定容器名稱，然後按一下 [確定]。 如需為儲存體容器命名的詳細資訊，請參閱[命名和參考容器、Blob 及中繼資料]。
 
    ![[建立儲存體容器] 對話方塊][CC02]
 
@@ -76,7 +76,7 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
 若要使用 Azure Explorer 來刪除儲存體容器，請執行下列作業︰
 
-1. 在 Azure Explorer 檢視中，以滑鼠右鍵按一下儲存體容器，然後按一下刪除。
+1. 在 [Azure Explorer] 檢視中，以滑鼠右鍵按一下儲存體容器，然後按一下 [刪除]。
 
    ![[刪除儲存體容器] 命令][DC01]
 
