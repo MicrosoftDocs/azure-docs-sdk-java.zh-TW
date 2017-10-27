@@ -1,7 +1,7 @@
 ## <a name="prerequisites"></a>必要條件
-Azure Toolkit for IntelliJ 需要下列軟體元件：
+若要完成文章中的步驟，您需要下列軟體元件以安裝 Azure Toolkit for IntelliJ：
 
-* IntelliJ IDEA Ultimate Edition，可以從 [JetBrains website](https://www.jetbrains.com/idea/download/) 下載。
+* IntelliJ IDEA Ultimate Edition 或 Community Edition，可以從 [JetBrains 網站](https://www.jetbrains.com/idea/download/)下載。
 
 * Java Developer Kit (JDK) 1.8 版或更新版本。
 

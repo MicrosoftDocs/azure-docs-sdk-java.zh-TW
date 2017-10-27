@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 61cf858f2f118650c34c299634fc0c47c22fd6a5
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: dc93b0b490eb61baa2b7cf86c7df7ac13925305f
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ
 IntelliJ 的 Azure 工具組提供範本和功能，您可以使用這些範本和功能透過 IntelliJ 整合式開發環境 (IDE) 輕鬆地建立、開發、測試及部署 Azure 應用程式。 它是開放原始碼專案，您可以[從專案網站，透過 MIT License](https://github.com/microsoft/azure-tools-for-java) 取得其原始程式碼。
@@ -31,13 +31,11 @@ IntelliJ 的 Azure 工具組提供範本和功能，您可以使用這些範本�
 ## <a name="get-started-with-the-azure-toolkit-for-intellij"></a>開始使用 IntelliJ 的 Azure 工具組
 下列文章會協助您開始使用 IntelliJ 的 Azure 工具組：
 
-* [適用於 IntelliJ 的 Azure 工具組新增功能](azure-toolkit-for-intellij-whats-new.md)
-
 * [安裝 Azure Toolkit for IntelliJ](azure-toolkit-for-intellij-installation.md)
 
 * [適用於 IntelliJ 的 Azure 工具組登入指示](azure-toolkit-for-intellij-sign-in-instructions.md)
 
-* [在 IntelliJ 中建立 Azure Hello World Web 應用程式](/azure/app-service-web/app-service-web-intellij-create-hello-world-web-app)
+* [在 IntelliJ 中建立 Azure Hello World Web 應用程式](azure-toolkit-for-intellij-create-hello-world-web-app.md)
 
 ## <a name="use-the-azure-toolkit-for-intellij-with-your-java-projects"></a>使用適用於 IntelliJ 的 Azure 工具組進行 Java 專案
 下列文章會示範如何使用 Azure Toolkit for IntelliJ 將 Azure 的功能加入您的 Java 專案：
@@ -60,6 +58,12 @@ IntelliJ 的 Azure 工具組提供範本和功能，您可以使用這些範本�
 * [使用適用於 IntelliJ 的 Azure Explorer 來管理虛擬機器](azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md)
 
 ## <a name="next-steps"></a>後續步驟
+
+如需 Azure Toolkit for IntelliJ 的詳細資訊，請參閱下列頁面：如需 Azure Toolkit for Eclipse 的詳細資訊，請參閱下列頁面：
+
+* [Azure 工具組版本資訊](https://github.com/Microsoft/azure-tools-for-java/releases)
+
+* [JetBrains 外掛程式存放庫中的 Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij)
 
 如需有關使用 Java 搭配 Azure 的詳細資訊，請參閱 [Azure Java 開發人員中心](https://azure.microsoft.com/develop/java/)和[適用於 Visual Studio Team Services 的 Java 工具](https://java.visualstudio.com/)。
 

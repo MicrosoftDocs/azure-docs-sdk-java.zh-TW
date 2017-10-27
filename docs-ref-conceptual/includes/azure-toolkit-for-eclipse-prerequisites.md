@@ -1,5 +1,5 @@
 ## <a name="prerequisites"></a>必要條件
-Azure Toolkit for Eclipse 需要下列軟體元件：
+若要完成文章中的步驟，您需要下列軟體元件以安裝 Azure Toolkit for Eclipse：
 
 * Eclipse IDE for Java EE Developers、Mars 或更新版本。 您可以從 [Eclipse 網站](http://www.eclipse.org/downloads/)下載。
 

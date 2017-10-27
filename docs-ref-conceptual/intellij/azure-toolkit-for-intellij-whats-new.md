@@ -12,18 +12,23 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 861ceb148976faff1f40055094c463171bdfb4b0
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 3e3d22cc5720346e31a096adfd935b2712aac4e9
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>適用於 IntelliJ 的 Azure 工具組新增功能
 
 ## <a name="azure-toolkit-for-intellij-releases"></a>適用於 IntelliJ 的 Azure 工具組版本
 本文包含適用於 IntelliJ 的 Azure 工具組的各種版本和最新更新相關資訊。
+
+> [!NOTE]
+> 請參閱下列網頁，以取得最新的資訊：
+> 
+> <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE]
 > 另外還有適用於 Eclipse IDE 的 Azure 工具組。 如需詳細資訊，請參閱 [適用於 Eclipse 的 Azure 工具組]。

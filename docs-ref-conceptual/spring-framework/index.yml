@@ -1,0 +1,66 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Azure 上的 Spring Framework
+metadata:
+  document_id: null
+  title: Azure 上的 Spring Framework
+  description: 開始在 Microsoft Azure 上使用 Spring Framework。
+  keywords: 'Azure, Java, Maven, Spring, Boot'
+  author: rmcmurray
+  ms.author: robmcm
+  manager: routlaw
+  ms.date: 10/11/2017
+  ms.topic: article
+  ms.prod: azure
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+  - items:
+      - type: markdown
+        text: |
+          [Spring Framework](http://spring.io/) 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot](https://projects.spring.io/spring-boot/) 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 開發人員可以結合這些技術並搭配 Microsoft Azure，以建立功能強大的雲端型應用程式。
+          為了協助開發人員開始使用 Spring Boot，<https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
+  - title: 開始使用
+    items:
+      - type: paragraph
+        text: 開始使用下列資源，透過 Spring Framework 與 Microsoft Azure 開發應用程式。
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: deploy-spring-boot-java-web-app-on-azure.md
+            html: <p>將 Spring Boot 應用程式部署到 Azure App Service</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            title: 將 Spring Boot 應用程式部署到 Azure App Service
+          - href: 'https://spring.io/'
+            html: <p>Spring Framework</p>
+            image:
+              src: 'https://docs.microsoft.com/java/azure/spring-framework/media/index/i_spring_logo.png'
+            title: Spring Framework
+  - title: 官方 Spring 文件
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: 'https://spring.io/docs'
+            html: <p>了解 Spring</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
+            title: 了解 Spring
+          - href: 'https://spring.io/docs/reference'
+            html: <p>參考文件</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+            title: 參考文件
+  - title: 範例
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="https://github.com/spring-guides/">Spring 手冊 </a>'
+          - html: '<a href="https://github.com/Microsoft/azure-spring-boot/">適用於 Azure 的 Spring Boot 入門</a>'
