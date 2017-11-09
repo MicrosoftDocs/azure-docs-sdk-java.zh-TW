@@ -11,15 +11,15 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: iot-hub
-ms.openlocfilehash: b386612741e222fcaeb7b6c38753d0cb7d616239
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: c1af3dae0fe37eb4919db02da87beed193c547a7
+ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="azure-iot-libraries-for-java"></a>適用於 Java 的 Azure IoT 程式庫
 
-使用 [Azure IoT 中樞](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-what-is-iot-hub)來連線、監視及控制物聯網資產。
+使用 [Azure IoT 中樞](https://docs.microsoft.com/azure/iot-hub/iot-hub-what-is-iot-hub)來連線、監視及控制物聯網資產。
 
 若要開始使用 Azure IoT 中樞，請參閱[使用 Java 將您的裝置連線至 IoT 中樞](/azure/iot-hub/iot-hub-java-java-getstarted)。
 
