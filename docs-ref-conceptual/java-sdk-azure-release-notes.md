@@ -10,11 +10,11 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 015cb0615c28711ebb8feb5cea584a8a3779fa54
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 924ccf9bdaad4bc635f133adbcfcc8f797d06644
+ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="release-notes"></a>版本資訊 
 
@@ -45,7 +45,7 @@ SQL Database  | 資料庫、防火牆、彈性集區
 更多服務    |  Resource Manager、Key Vault、Redis、CDN、Batch       |  Web 應用程式、函式應用程式、服務匯流排、Graph RBAC、Cosmos DB、搜尋服務  
 基礎     |   驗證 - 核心、Async 方法、受管理服務識別      |      |
 
-> 預覽功能在會程式庫的類別、介面或方法層級中以 `@Beta` 標註。 這些功能可能會有所變更； 未來可能會以任何方式修改，或甚至移除。
+> 預覽功能在會程式庫的類別、介面或方法層級中以 `@Beta` 標註。 這些功能可能會有所變更。 未來可能會以任何方式修改，或甚至移除。
 
 ### <a name="import-with-maven"></a>使用 Maven 來匯入
 
