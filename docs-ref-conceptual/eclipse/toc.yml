@@ -1,0 +1,27 @@
+- name: 適用於 Eclipse 的 Azure 工具組
+  href: azure-toolkit-for-eclipse.md
+  items:
+    - name: Install
+      href: azure-toolkit-for-eclipse-installation.md
+    - name: 開始使用
+      href: /azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app
+    - name: 教學課程
+      items:
+        - name: 將容器部署到 Azure VM
+          href: azure-toolkit-for-eclipse-publish-as-docker-container.md
+        - name: 將 Web 應用程式部署至 Azure App Service
+          href: azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md
+    - name: 作法
+      items:
+        - name: 設定驗證
+          href: azure-toolkit-for-eclipse-sign-in-instructions.md
+        - name: 管理 Azure 資源
+          items:
+            - name: 虛擬機器
+              href: azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
+            - name: 儲存體帳戶
+              href: azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
+            - name: Azure Redis 快取
+              href: azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md
+    - name: 版本資訊
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
