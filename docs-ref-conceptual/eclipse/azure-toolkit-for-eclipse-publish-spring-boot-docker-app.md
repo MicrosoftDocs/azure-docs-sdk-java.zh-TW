@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 6894c319a74c3dba6972f2c78b597cd87b49cc66
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: a2aa6b0aa0689893143073be94539345e229e5f2
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>使用適用於 Eclipse 的 Azure 工具組，將 Spring Boot 應用程式發佈為 Docker 容器
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 ### <a name="import-the-public-repository"></a>匯入公用存放庫
 
-下列步驟會逐步引導您使用 IntelliJ 將 Spring Boot Docker 存放庫複製到本機電腦。 如果您想要使用命令列，請參閱[將 Spring Boot 應用程式部署到 Azure Container Service 中的 Linux][Deploy Spring Boot on Linux in ACS]。
+下列步驟會逐步引導您使用 IntelliJ 將 Spring Boot Docker 存放庫複製到本機電腦。 如果您想要使用命令列，請參閱[將 Spring Boot 應用程式部署到 Azure Container Service 中的 Linux][Deploy Spring Boot on Linux in AKS]。
 
 1. 開啟 Eclipse。
 
@@ -46,21 +46,21 @@ ms.lasthandoff: 09/13/2017
 
    a. 展開 [Git]。
 
-   b. 選取 [Projects from Git] \(Git 中的專案)。
+   b. 選取 [Projects from Git] (Git 中的專案)。
    
    c. 按一下 [下一步] 。
 
    ![匯入對話方塊][CL02]
 
-1. 在 [Select Repository Source] \(選取存放庫來源) 頁面上：
+1. 在 [Select Repository Source] (選取存放庫來源) 頁面上：
 
-   a. 選取 [Clone URI] \(複製 URI)。
+   a. 選取 [Clone URI] (複製 URI)。
    
    b. 按一下 [下一步] 。
 
    ![[選取存放庫來源] 頁面][CL03]
 
-1. 在 [Source Git Repository] \(來源 Git 存放庫) 頁面上：
+1. 在 [Source Git Repository] (來源 Git 存放庫) 頁面上：
 
    a. 針對 [URI]，輸入 `https://github.com/spring-guides/gs-spring-boot-docker.git`。 此步驟應該會自動填入 [主機] 和 [存放庫路徑] 欄位的正確值。
    
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/13/2017
 
    ![[分支選擇] 頁面][CL05]
 
-1. 在 [Local Destination] \(本機目的地) 頁面上：
+1. 在 [Local Destination] (本機目的地) 頁面上：
 
    a. 指定您想要放置本機存放庫的本機資料夾。
    
@@ -82,15 +82,15 @@ ms.lasthandoff: 09/13/2017
 
    ![[本機目的地] 頁面][CL06]
 
-1. 在 [Select a wizard to use for importing projects] \(選取要用於匯入專案的精靈) 頁面上：
+1. 在 [Select a wizard to use for importing projects] (選取要用於匯入專案的精靈) 頁面上：
 
-   a. 選取 [Import as a general project] \(匯入為一般專案)。
+   a. 選取 [Import as a general project] (匯入為一般專案)。
    
    b.這是另一個 C# 主控台應用程式。 按一下 [下一步] 。
 
    ![[選取要用於匯入專案的精靈] 頁面][CL07]
 
-1. 在 [Import Projects] \(匯入專案) 頁面上：
+1. 在 [Import Projects] (匯入專案) 頁面上：
 
    a. 指定專案名稱。
    
@@ -114,17 +114,17 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
    a. 展開 [Maven]。
    
-   b. 選取 [Existing Maven Projects] \(現有 Maven 專案)。
+   b. 選取 [Existing Maven Projects] (現有 Maven 專案)。
    
    c. 按一下 [下一步] 。
 
    ![匯入對話方塊][MV01]
 
-1. 在 [Maven Projects] \(Maven 專案) 頁面上：
+1. 在 [Maven Projects] (Maven 專案) 頁面上：
 
    a. 針對 [根目錄]，指定您本機存放庫中的 **complete** 資料夾。
    
-   b. 展開 [進階] 區段，然後在 [Name template] \(名稱範本) 中輸入自訂名稱。
+   b. 展開 [進階] 區段，然後在 [Name template] (名稱範本) 中輸入自訂名稱。
    
    c. 針對專案中的 **pom.xml** 檔案選取方塊。
    
@@ -152,7 +152,7 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
 1. 在 Eclipse 專案總管中，選取 Maven 專案。
 
-1. 按一下 Azure 發佈 功能表，然後按一下發佈為 Docker 容器。
+1. 按一下 Azure [發佈] 功能表，然後按一下 [發佈為 Docker 容器]。
 
    ![[發佈為 Docker 容器] 命令][PU01]
 
@@ -160,7 +160,7 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
    a. 輸入自訂 Docker 映像名稱。
    
-   b. 在 [Artifact to deploy] \(要部署的構件) 中，指定您剛剛建置之 **gs-spring-boot-docker-0.1.0.jar** 檔案的路徑。
+   b. 在 [Artifact to deploy] (要部署的構件) 中，指定您剛剛建置之 **gs-spring-boot-docker-0.1.0.jar** 檔案的路徑。
 
    ![Specify Docker options (指定 Docker 選項)][PU02]
 
@@ -180,7 +180,7 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
       ![指定 Docker 主機認證][PU05]
 
-1. 選取您的 Docker 主機，然後按一下下一步。
+1. 選取您的 Docker 主機，然後按一下 [下一步]。
 
    ![選取要使用的 Docker 主機][PU06]
 
@@ -204,12 +204,12 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
 如需適用於 Docker 的其他資源，請參閱 Docker 的官方網站。
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 
 [Azure Management Portal]: http://go.microsoft.com/fwlink/?LinkID=512959
-[Deploy Spring Boot on Linux in ACS]: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-linux
+[Deploy Spring Boot on Linux in AKS]: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-linux
 [Docker]: https://www.docker.com/
 [Publish Container with Azure Toolkit]: azure-toolkit-for-eclipse-publish-as-docker-container.md
 [Spring Boot]: http://projects.spring.io/spring-boot/

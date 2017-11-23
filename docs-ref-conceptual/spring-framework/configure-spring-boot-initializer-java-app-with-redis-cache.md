@@ -13,13 +13,13 @@ ms.workload: na
 ms.tgt_pltfrm: cache-redis
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: ce8202b48c6759a80560616492eab018434e9307
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: c5e9a9214762e014e463dd3277671fc56237d4a0
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>如何將 Spring Boot Initializer 應用程式設定為使用 Redis 快取
 
@@ -118,10 +118,19 @@ ms.lasthandoff: 10/24/2017
 
    ![編輯 application.properties 檔案][RE02]
 
-   > [!NOTE]
-   >
-   > 如果您使用 Jedis 等具備 SSL 的其他 Redis 用戶端，可以在 application.properties 檔案中指定連接埠 6380。 如需詳細資訊，請參閱[如何搭配使用 Azure Redis 快取與 Java][Redis Cache with Java]。
-   >
+   > [!NOTE] 
+   > 
+   > 如果您使用 Jedis 等具備 SSL 的其他 Redis 用戶端，可以在 application.properties 檔案中指定連接埠 6380。 例如：
+   > 
+   > ```yaml
+   > spring.redis.host=myspringbootcache.redis.cache.windows.net
+   > spring.redis.password=57686f6120447564652c2049495320526f636b73=
+   > spring.redis.ssl=true
+   > spring.redis.port=6380
+   > ```
+   > 
+   > 如需詳細資訊，請參閱[如何搭配使用 Azure Redis 快取與 Java][Redis Cache with Java]。 
+   > 
 
 1. 儲存並關閉 *application.properties* 檔案。
 

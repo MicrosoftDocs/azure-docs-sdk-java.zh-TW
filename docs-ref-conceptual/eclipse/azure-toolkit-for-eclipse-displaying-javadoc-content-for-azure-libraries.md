@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 04/14/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 2d1f03f993f0c88401efaa9985f773b9a4b92cc4
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 5862b6704fe485836ede773a9e2875a83192e3c7
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>在 Eclipse 中顯示 Azure Libraries for Java 封裝的 Javadoc 內容
 
@@ -54,7 +54,7 @@ Javadoc 內容與 Azure Libraries for Java 產生關聯時，即可在 Eclipse �
 
 ## <a name="next-steps"></a>後續步驟
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 
