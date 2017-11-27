@@ -12,20 +12,26 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 497aba02f55383bf0b32461752d6681867cdfac8
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: e15a03a7d10d67217565895103e5e58e807a3976
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>安裝 Azure Toolkit for IntelliJ
-Azure Toolkit for IntelliJ 提供範本和功能，可讓您輕鬆地使用 IntelliJ IDEA 開發環境來建立、開發、測試及部署 Azure 應用程式。 Azure Toolkit for IntelliJ 是開放原始碼專案，其來源程式碼可從 GitHub 上該專案網站的 MIT License 下取得，URL 如下：
 
-<https://github.com/microsoft/azure-tools-for-java>
+Azure Toolkit for IntelliJ 提供範本和功能，可讓您輕鬆地使用 IntelliJ IDEA 開發環境來建立、開發、測試及部署 Azure 應用程式。
 
-安裝 Azure Toolkit for IntelliJ 的方法有兩種，一種是從 [設定] 對話方塊，另一種是從啟動畫面上的 [設定] 功能表；下列步驟中將會示範這兩種安裝方法。
+> [!NOTE] 
+> 
+> Azure Toolkit for IntelliJ 是開放原始碼專案，其來源程式碼可從 GitHub 上該專案網站的 MIT License 下取得，URL 如下： 
+> 
+> <https://github.com/microsoft/azure-tools-for-java> 
+> 
+
+安裝適用於 IntelliJ 的 Azure 工具組有兩個方法：使用 [設定] 對話方塊，以及使用開始畫面上的 [設定] 功能表。 下列步驟會示範這兩種安裝方法。
 
 [!INCLUDE [azure-toolkit-for-IntelliJ-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
 
@@ -91,7 +97,7 @@ Azure Toolkit for IntelliJ 提供範本和功能，可讓您輕鬆地使用 Inte
 
 ## <a name="next-steps"></a>後續步驟
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 

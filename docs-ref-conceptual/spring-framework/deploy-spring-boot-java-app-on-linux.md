@@ -13,14 +13,14 @@ ms.workload: web
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: asirveda;robmcm
 ms.custom: mvc
-ms.openlocfilehash: 515192f2b8f7741f99ec86cda8584aecfdd28104
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 8f7b2cbf66c9ceda6f723a9c9d423d94586fc777
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>將 Spring Boot 應用程式部署到 Azure Container Service 中的 Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/24/2017
 
 **[Docker]** 是開放原始碼解決方案，可協助開發人員自動化部署、調整及管理容器中執行的應用程式。
 
-本教學課程會逐步引導您使用 Docker 來開發 Spring Boot 應用程式，並且將其部署至 [Azure Container Service (ACS)] 中的 Linux 主機。
+本教學課程會逐步引導您使用 Docker 來開發 Spring Boot 應用程式，並且將其部署至 [Azure Container Service (AKS)] 中的 Linux 主機。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -285,7 +285,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 <!-- URL List -->
 
 [Azure 命令列介面 (CLI)]: /cli/azure/overview
-[Azure Container Service (ACS)]: https://azure.microsoft.com/services/container-service/
+[Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Azure Java 開發人員中心]: https://azure.microsoft.com/develop/java/
 [Azure 入口網站]: https://portal.azure.com/
 [使用 Azure 入口網站建立私人 Docker 容器登錄]: /azure/container-registry/container-registry-get-started-portal
