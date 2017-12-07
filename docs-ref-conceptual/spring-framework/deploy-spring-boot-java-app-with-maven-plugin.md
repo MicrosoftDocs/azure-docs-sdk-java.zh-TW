@@ -6,31 +6,30 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Maven
 ms.assetid: 
 ms.service: app-service
 ms.workload: web
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 9711a14d7b671cb672f54b92415544378c90fd88
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 8e5ad501f5c00ee1265878a643793f6e9754bb68
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-to-azure"></a>如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Spring Boot 應用程式部署至 Azure
-
-針對 [Apache Maven](http://maven.apache.org/) 的[適用於 Azure Web 應用程式的 Maven 外掛程式](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin)提供 Azure App Service 到 Maven 專案的緊密整合，並且簡化開發人員將 Web 應用程式部署至 Azure App Service 的程序。
 
 本文示範如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將範例 Spring Boot 應用程式部署至 Azure App Services。
 
 > [!NOTE]
->
+> 
+> 針對 [Apache Maven](http://maven.apache.org/) 的[適用於 Azure Web 應用程式的 Maven 外掛程式](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin)提供 Azure App Service 到 Maven 專案的緊密整合，並且簡化開發人員將 Web 應用程式部署至 Azure App Service 的程序。
+> 
 > 適用於 Azure Web 應用程式的 Maven 外掛程式目前可供預覽。 雖然未來計劃有額外功能，但是現在僅支援 FTP 發佈。
->
+> 
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -269,7 +268,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 <!-- URL List -->
 
 [Azure 命令列介面 (CLI)]: /cli/azure/overview
-[Azure Java Developer Center]: https://azure.microsoft.com/develop/java/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure 入口網站]: https://portal.azure.com/
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/

@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: f7c2b1fd35fbb9dbdc782577c3464b7a38977254
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 6fccbc76a3600e2bbe43e4332c6146d2be81b6c9
+ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="service-bus-libraries-for-java"></a>適用於 Java 的服務匯流排程式庫
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 10/09/2017
 
 服務匯流排進階版是完全受管理的供應項目，其專門保留了容量供每個租用戶使用，因此相較於商業內部部署代理程式，您只要以極低的整體成本，即可透過簡單的容量導向計價模式產生可預測的效能。 對於許多客戶來說，服務匯流排進階版可取代現今的專用內部部署傳訊叢集，即使連結的工作負載不是在雲端執行也沒關係。 
 
-請到[傳訊文件章節](https://docs.microsoft.com/en-us/azure/service-bus-messaging/)深入了解服務匯流排的概念 
+請到[傳訊文件章節](https://docs.microsoft.com/azure/service-bus-messaging/)深入了解服務匯流排的概念 
 
 針對 Java 開發人員，服務匯流排會提供由 Microsoft 支援的原生 API，而且服務匯流排也可與符合 AMQP 1.0 標準的程式庫 (例如 Apache Qpid Proton 的 JMS 提供者) 搭配使用。
 
