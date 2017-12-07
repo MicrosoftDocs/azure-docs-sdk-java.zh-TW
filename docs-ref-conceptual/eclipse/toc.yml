@@ -4,7 +4,7 @@
     - name: Install
       href: azure-toolkit-for-eclipse-installation.md
     - name: 開始使用
-      href: /azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app
+      href: azure-toolkit-for-eclipse-create-hello-world-web-app.md
     - name: 教學課程
       items:
         - name: 將容器部署到 Azure VM
