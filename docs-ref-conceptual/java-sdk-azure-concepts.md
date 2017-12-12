@@ -1,6 +1,6 @@
 ---
-title: "適用於 Java 之 Azure 管理程式庫的使用概念和模式"
-description: 
+title: "適用於 Java 開發人員的 Azure 管理程式庫指南"
+description: "使用 Java 管理程式庫，以便讓 Java 可以管理 Azure 雲端資源的模式和概念。"
 keywords: "Azure, Java, SDK, API, Maven, Gradle, 驗證, active directory, 服務主體"
 author: rloutlaw
 ms.author: routlaw
@@ -12,13 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
-ms.openlocfilehash: 052c4de1e8f9ff0ece5f36d1c3514bad8c04cfec
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 8b52981ddfaadb7227cea4c7df014011196339cb
+ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="azure-management-library-concepts"></a>Azure 管理程式庫概念
+# <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>使用適用於 Java 的 Azure 程式庫來進行開發的模式和最佳做法 
+
+本文會列出一系列在專案中使用適用於 Java 的 Azure 程式庫的模式和最佳做法。 請使用這些模式和指導方針進行開發，以減少要維護的程式碼數量，並輕鬆地在未來的管理程式庫更新中新增或設定其他資源。
 
 ## <a name="build-resources-through-a-fluent-interface"></a>透過 Fluent 介面建置資源
 

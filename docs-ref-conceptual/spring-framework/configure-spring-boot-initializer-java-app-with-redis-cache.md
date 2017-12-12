@@ -6,38 +6,58 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Spring Starter, Redis Cache
 ms.assetid: 
 ms.service: cache
 ms.workload: na
 ms.tgt_pltfrm: cache-redis
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: c5e9a9214762e014e463dd3277671fc56237d4a0
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: e46a90413321845cb94d72fff893e42aa2353491
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>如何將 Spring Boot Initializer 應用程式設定為使用 Redis 快取
 
 ## <a name="overview"></a>概觀
 
-**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot，<https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
-
-本文將引導您透過 Azure 入口網站建立 Redis 快取、使用 **Spring Initializr** 建立自訂應用程式，及建立 Java Web 應用程式以使用 Redis 快取來儲存和擷取資料。
+本文將引導您透過 Azure 入口網站建立 Redis 快取、使用 **[Spring Initializr]** 建立自訂應用程式，及建立 Java Web 應用程式以使用 Redis 快取來儲存和擷取資料。
 
 ## <a name="prerequisites"></a>必要條件
 
 若要遵循本文中的步驟，需要具備下列必要條件：
 
 * Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。
-
 * [Java 開發套件 (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) \(英文\) 1.7 版或更新版本。
-
 * [Apache Maven](http://maven.apache.org/) \(英文\) 3.0 版或更新版本。
+
+## <a name="create-a-custom-application-using-the-spring-initializr"></a>使用 Spring Initializr 建立自訂應用程式
+
+1. 瀏覽至 <https://start.spring.io/>。
+
+1. 指定您想要使用 [Java] 產生 [Maven 專案]、輸入應用程式的 [群組] 和 [成品] 名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
+
+   ![Spring Initializr 的基本選項][SI01]
+
+   > [!NOTE]
+   >
+   > Spring Initializr 會使用 [群組] 和 [成品] 名稱來建立套件名稱；例如：com.contoso.myazuredemo。
+   >
+
+1. 向下捲動至 [Web] 區段，並核取 [Web] 方塊，然後向下捲動至 [NoSQL] 區段，並核取 [Redis] 方塊，然後捲動至頁面底部，並按一下按鈕以 [產生專案]。
+
+   ![Spring Initializr 的完整選項][SI02]
+
+1. 出現提示時，將專案下載至本機電腦上的路徑。
+
+   ![下載自訂的 Spring Boot 專案][SI03]
+
+1. 當您在本機系統上擷取檔案之後，就可以開始編輯自訂的 Spring Boot 應用程式。
+
+   ![自訂的 Spring Boot 專案檔][SI04]
 
 ## <a name="create-a-redis-cache-on-azure"></a>在 Azure 上建立 Redis 快取
 
@@ -71,31 +91,6 @@ ms.lasthandoff: 11/18/2017
 1. 顯示列出快取屬性清單的頁面時，請按一下 [存取金鑰]，並複製快取的存取金鑰。
 
    ![Azure 入口網站][AZ05]
-
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>使用 Spring Initializr 建立自訂應用程式
-
-1. 瀏覽至 <https://start.spring.io/>。
-
-1. 指定您想要使用 [Java] 產生 [Maven 專案]、輸入應用程式的 [群組] 和 [成品] 名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
-
-   ![Spring Initializr 的基本選項][SI01]
-
-   > [!NOTE]
-   >
-   > Spring Initializr 會使用 [群組] 和 [成品] 名稱來建立套件名稱；例如：com.contoso.myazuredemo。
-   >
-
-1. 向下捲動至 [Web] 區段，並核取 [Web] 方塊，然後向下捲動至 [NoSQL] 區段，並核取 [Redis] 方塊，然後捲動至頁面底部，並按一下按鈕以 [產生專案]。
-
-   ![Spring Initializr 的完整選項][SI02]
-
-1. 出現提示時，將專案下載至本機電腦上的路徑。
-
-   ![下載自訂的 Spring Boot 專案][SI03]
-
-1. 當您在本機系統上擷取檔案之後，就可以開始編輯自訂的 Spring Boot 應用程式。
-
-   ![自訂的 Spring Boot 專案檔][SI04]
 
 ## <a name="configure-your-custom-spring-boot-to-use-your-redis-cache"></a>將自訂 Spring Boot 設定為使用 Redis 快取
 
@@ -206,13 +201,15 @@ ms.lasthandoff: 11/18/2017
 
 * [在 Azure Container Service 的 Kubernetes 叢集上執行 Spring Boot 應用程式](deploy-spring-boot-java-app-on-kubernetes.md)
 
-如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱 [Azure Java 開發人員中心]和[適用於 Visual Studio Team Services 的 Java 工具]。
+如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
 
 如需有關在 Azure 上開始搭配使用 Redis 快取與 Java 的詳細資訊，請參閱[如何搭配使用 Azure Redis 快取與 Java][Redis Cache with Java]。
 
+**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot，<https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
+
 <!-- URL List -->
 
-[Azure Java 開發人員中心]: https://azure.microsoft.com/develop/java/
+[適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
 [適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

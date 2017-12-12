@@ -6,26 +6,23 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework
 ms.assetid: 
 ms.service: multiple
 ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: 7a4234aefd4eb33f80c1978fb84721f2dbcb2e4f
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>將 Spring Boot 應用程式部署到 Azure App Service
 
-**[Spring Framework]** 是協助 Java 開發人員建立企業級應用程式的開放原始碼解決方案，而且建置在該平台上的其中一個最熱門專案是 [Spring Boot]，它提供簡化的方法來建立獨立 Java 應用程式。
-
-本教學課程將引導您完成建立範例 Spring Boot Getting Started Web 應用程式，並將它部署到 [Azure App Service]。
+本教學課程將引導您完成建立範例 [Spring Boot] Getting Started Web 應用程式，並將它部署到 [Azure App Service]。
 
 ### <a name="prerequisites"></a>必要條件
 
@@ -199,7 +196,7 @@ ms.lasthandoff: 11/18/2017
 
 * [將 Spring Boot 應用程式部署到 Azure Container Service 中的 Kubernetes 叢集](deploy-spring-boot-java-app-on-kubernetes.md)
 
-如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱 [Azure Java 開發人員中心]和[適用於 Visual Studio Team Services 的 Java 工具]。
+如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
 
 如需使用 FTP 將 Web 應用程式部署到 Azure 的其他資訊，請參閱[使用 FTP/S 將您的應用程式部署至 Azure App Service]。
 
@@ -213,7 +210,7 @@ ms.lasthandoff: 11/18/2017
 
 [Azure App Service]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
-[Azure Java 開發人員中心]: https://azure.microsoft.com/develop/java/
+[適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
 [Azure 入口網站]: https://portal.azure.com/
 [在 Azure App Service 中設定 Web 應用程式]: /azure/app-service/web-sites-configure
 [使用 FTP/S 將您的應用程式部署至 Azure App Service]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp

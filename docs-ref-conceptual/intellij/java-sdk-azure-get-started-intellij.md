@@ -1,39 +1,37 @@
 ---
-title: "開始使用適用於 Java 的 Azure 程式庫"
-description: "了解如何建立 Azure 雲端資源，並在您的 Java 應用程式中連線及使用。"
+title: "使用 Intellij 來對 Java 開始使用 Azure"
+description: "使用自有 Azure 訂用帳戶開始進行適用於 Java 之 Azure 程式庫的基本使用。"
 keywords: "Azure, Java, SDK, API, 驗證, 開始使用"
-author: rloutlaw
-ms.author: routlaw
-manager: douge
-ms.date: 04/16/2017
+author: roygara
+ms.author: v-rogara
+manager: timlt
+ms.date: 10/30/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: multiple
-ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 69c75984f6274b5423614bd51c40957d3d509802
-ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
+ms.openlocfilehash: 1e10a7c5a46ed0e36143fd4a99decc037c04e1fe
+ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>開始使用適用於 Java 的 Azure 程式庫進行雲端開發
+# <a name="get-started-with-the-azure-libraries-using-intellij"></a>使用 Intellij 來開始使用 Azure 程式庫
 
-本指南會逐步引導您設定開發環境，以便在 Java 中進行 Azure 開發。 接著，您會建立一些 Azure 資源，並將它們連線以執行某些基本工作，例如上傳檔案或部署 Web 應用程式。 當您完成時，您就已做好準備可以開始在自有的 Java 應用程式中使用 Azure 服務。
+本指南會逐步引導您設定開發環境和使用適用於 Java 的 Azure 程式庫。 您會建立服務主體來使用 Azure 進行驗證，並執行某些程式碼範例以在訂用帳戶中建立及使用 Azure 資源。 在使用 Azure 開發 Java 時，您可以選擇使用 Intellij。 只要是具有 Maven 整合的 IDE 都能運作。 或者，如果您不想使用 IDE，則可以使用 Maven 從命令列執行程式碼。
 
 ## <a name="prerequisites"></a>必要條件
 
 - 一個 Azure 帳戶。 如果您沒有帳戶，請[取得免費試用帳戶](https://azure.microsoft.com/free/)
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) 或 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。
-- [Java 8](https://www.azul.com/downloads/zulu/) (包含在 Azure Cloud Shell 內)
-- [Maven 3](http://maven.apache.org/download.cgi) (包含在 Azure Cloud Shell 內)
+- 最新的 [Intellij](https://www.jetbrains.com/idea/) 穩定版
 
 ## <a name="set-up-authentication"></a>設定驗證
 
 Java 應用程式必須有 Azure 訂用帳戶的讀取和建立權限，才能在此教學課程中執行程式碼範例。 請建立服務主體，並將應用程式設定為使用其認證來執行。 服務主體可讓您建立與身分識別相關聯的非互動式帳戶，而且對於此身分識別，您只賦予它應用程式執行時所需的權限。
 
-[使用 Azure CLI 2.0 建立服務主體](/cli/azure/create-an-azure-service-principal-azure-cli)並擷取輸出。 在 password 引數中提供[安全的密碼](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)，而不是提供 `MY_SECURE_PASSWORD`。 密碼必須介於 8 到 16 個字元，而且至少符合下列 4 個準則中的其中 3 個：
+[建立服務主體](/cli/azure/create-an-azure-service-principal-azure-cli)來對程式碼授與權限，讓它不必直接使用帳戶認證，就能在訂用帳戶中建立和更新資源。 請務必要擷取輸出。 在 password 引數中提供[安全的密碼](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)，而不是提供 `MY_SECURE_PASSWORD`。 密碼必須介於 8 到 16 個字元，而且至少符合下列 4 個準則中的其中 3 個：
 
 * 包含小寫字元
 * 包含大寫字元
@@ -78,9 +76,9 @@ graphURL=https\://graph.windows.net/
 - key：使用從服務主體輸出所得到的 password 值。
 - tenant：使用從服務主體輸出所得到的 tenant 值。
 
-將此檔案儲存在系統上可供程式碼讀取且安全的位置。 您可以將此檔案用於日後撰寫的程式碼，因此建議您將其儲存在本文應用程式以外的位置。
+將此檔案儲存在系統上可供程式碼讀取且安全的位置。 您可以將此檔案用於日後撰寫的程式碼，因此建議您將其儲存在本文應用程式以外的位置。 
 
-在殼層中使用驗證檔案的完整路徑來設定環境變數 `AZURE_AUTH_LOCATION`。   
+在殼層中使用驗證檔案的完整路徑來設定環境變數 `AZURE_AUTH_LOCATION`。  
 
 ```bash
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
@@ -97,18 +95,16 @@ export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 > [!NOTE]
 > 本指南使用 Maven 建置工具來建置及執行程式碼範例，但 Gradle 等其他建置工具也能與適用於 Java 的 Azure 程式庫搭配運作。 
 
-透過命令列在系統上的新目錄中建立 Maven 專案：
+開啟 Intellij，選取 [檔案] > [新增] > [專案]...然後繼續進行下一個畫面。
 
-```
-mkdir java-azure-test
-cd java-azure-test
-mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \ 
--DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-```
+輸入 "com.fabrikam" 作為 groupID，並輸入您選擇的 artifactID。
 
-這會在 `testAzureApp` 資料夾內建立基本的 Maven 專案。 在 `pom.xml` 專案中新增下列項目以匯入本教學課程之程式碼範例所使用的程式庫。
+繼續進行最後一個畫面，並完成專案的建立。
+
+現在，開啟 pom.xml 檔案。 然後新增下列程式碼：
 
 ```XML
+<dependencies>
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
@@ -124,35 +120,34 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
     <artifactId>mssql-jdbc</artifactId>
     <version>6.2.1.jre8</version>
 </dependency>
+</dependencies>
 ```
 
-在最上層 `project` 元素底下新增 `build` 項目以使用 [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) 來執行這些範例：
-
-```XML
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <configuration>
-                <mainClass>com.fabrikam.testAzureApp.AzureApp</mainClass>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
- ```
+儲存 pom.xml。
    
+## <a name="install-the-azure-toolkit-for-intellij"></a>安裝 Azure Toolkit for Intellij
+
+如果您要以程式設計方式部署 Web 應用程式或 API，就必須要有 [Azure 工具組](azure-toolkit-for-intellij-installation.md)，但此工具組目前並未用於任何其他種類的開發。 以下是安裝程序的摘要。 如需詳細步驟，請瀏覽[安裝 Azure Toolkit for Intellij](azure-toolkit-for-intellij-installation.md)。
+
+選取 [檔案] 功能表，然後選取 [設定...]。 
+
+選取 [瀏覽存放庫...] 並搜尋 "Azure"，然後安裝 **Azure Toolkit for Intellij**。
+
+重新啟動 Intellij。
+
 ## <a name="create-a-linux-virtual-machine"></a>建立 Linux 虛擬機器
 
 在專案的 `src/main/java` 目錄中建立名為 `AzureApp.java` 的新檔案，然後貼上以下程式碼區塊。 使用機器的實際值來更新 `userName` 和 `sshKey` 變數。 此程式碼會在美國東部 Azure 區域執行的 `sampleResourceGroup` 資源群組中，建立名為 `testLinuxVM` 的新 Linux VM。
 
+若要建立 `sshkey`，請開啟 Azure Cloud Shell，然後輸入 `ssh-keygen -t rsa -b 2048`。 輸入檔案名稱，然後存取 .public 檔案以取得金鑰 (您會在下列程式碼中用到)，將其全數複製並貼到您的變數 `sshKey` 中。
+
 ```java
-package com.fabrikam.AzureApp;
 
 import com.microsoft.azure.management.Azure;
 import com.microsoft.azure.management.compute.VirtualMachine;
 import com.microsoft.azure.management.compute.KnownLinuxVirtualMachineImage;
 import com.microsoft.azure.management.compute.VirtualMachineSizeTypes;
+import com.microsoft.azure.management.appservice.PricingTier;
 import com.microsoft.azure.management.appservice.WebApp;
 import com.microsoft.azure.management.storage.StorageAccount;
 import com.microsoft.azure.management.storage.SkuName;
@@ -172,6 +167,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 
 public class AzureApp {
 
@@ -212,11 +208,6 @@ public class AzureApp {
 }
 ```
 
-從命令列執行範例：
-
-```
-mvn compile exec:java
-```
 
 您會在主控台中看到某些 REST 要求和回應，因為 SDK 會對 Azure REST API 進行基礎呼叫，以設定虛擬機器和其資源。 當程式完成時，請使用 Azure CLI 2.0 在訂用帳戶中確認虛擬機器：
 
@@ -266,16 +257,11 @@ az group delete --name sampleVmResourceGroup
 
 使用 Maven 如往常一樣地執行程式碼：
 
-```
-mvn clean compile exec:java
-```
-
 使用 CLI 開啟瀏覽器並讓其指向該應用程式：
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME
 ```
-
 確認過部署後，請從訂用帳戶中移除 Web 應用程式和方案。
 
 ```azurecli-interactive
@@ -417,10 +403,6 @@ public static void main(String[] args) {
 
 從命令列執行範例：
 
-```
-mvn clean compile exec:java
-```
-
 您可以透過 Azure 入口網站或 [Azure 儲存體總管](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs) 來瀏覽儲存體帳戶中的 `helloazure.txt` 檔案。
 
 使用 CLI 清除儲存體帳戶：
@@ -431,7 +413,7 @@ az group delete --name sampleStorageResourceGroup
 
 ## <a name="explore-more-samples"></a>探索更多範例
 
-若要深入了解如何使用適用於 Java 的 Azure 管理程式庫來管理資源和自動執行工作，請參閱我們針對[虛擬機器](java-sdk-azure-virtual-machine-samples.md)、[Web 應用程式](java-sdk-azure-web-apps-samples.md)和 [SQL 資料庫](java-sdk-azure-sql-database-samples.md)所提供的程式碼範例。
+若要深入了解如何使用適用於 Java 的 Azure 管理程式庫來管理資源和自動執行工作，請參閱我們針對[虛擬機器](../java-sdk-azure-virtual-machine-samples.md)、[Web 應用程式](../java-sdk-azure-web-apps-samples.md)和 [SQL 資料庫](../java-sdk-azure-sql-database-samples.md)所提供的程式碼範例。
 
 ## <a name="reference-and-release-notes"></a>參考資料和版本資訊
 

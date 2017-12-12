@@ -10,27 +10,13 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 4/10/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: ff3ea805daefb3c0a413b109e431d2235a5dc5b8
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 425d4c3a5a347e4706e9c37ebd7247cf0d8c9846
+ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="azure-tools-for-java-developers"></a>適用於 Java 開發人員的 Azure 工具
-
-## <a name="client-and-management-libraries"></a>用戶端和管理程式庫
-
-使用適用於 Java 的 Azure 程式庫從應用程式連線至服務並管理 Azure 資源。 將此相依性新增至 pom.xml 專案，以將管理程式庫匯入 Maven 專案中。
-
-```XML
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure</artifactId>
-    <version>1.3.0</version>
-</dependency>
-```
-
-檢視[完整的程式庫清單](java-sdk-azure-install.md)並[開始使用](java-sdk-azure-get-started.md)適用於 Java 的 Azure 程式庫。
 
 ## <a name="eclipse-and-intellij-plugins"></a>Eclipse 和 IntelliJ 外掛程式
 
@@ -39,6 +25,13 @@ ms.lasthandoff: 10/09/2017
 ![顯示 Azure Explorer 的 IntelliJ 工具組](media/intelliJ-azure-explorer.png)
 
 [開始使用適用於 Eclipse 的 Azure 工具組](https://docs.microsoft.com/azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app) | [開始使用適用於 IntelliJ 的 Azure 工具組](https://docs.microsoft.com/azure/app-service-web/app-service-web-intellij-create-hello-world-web-app) 
+
+## <a name="visual-studio-code"></a>Visual Studio Code
+
+VS Code 是適用於 MacOS、Windows 和 Linux 的程式碼編輯器，雖輕量卻功能強大。 VS Code 可透過一組延伸模組來支援簡單、新型的 Java 開發工作流程，這組延伸模組可提供專案支援、程式碼完成、偵錯、Linting 和瀏覽。
+
+[開始使用 VS Code 和 Java](https://code.visualstudio.com/docs/java)
+[適用於 VS Code 的 Java 延伸套件](https://code.visualstudio.com/docs/java/extensions)  
 
 ## <a name="azure-cli-20"></a>Azure CLI 2.0
 

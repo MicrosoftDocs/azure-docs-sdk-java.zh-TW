@@ -6,31 +6,30 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Maven
 ms.assetid: 
 ms.service: multiple
 ms.workload: web
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 548c294bd576b00b62994c09d82ec21ad72f4dbd
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 7fa375ca805ddd037173f9dbd26b6631021e60a3
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署至 Azure App Service
 
-**[Spring 架構]**是受歡迎的開放原始碼架構，可協助 Java 開發人員建立 Web、行動及 API 應用程式。 本教學課程使用以 [Spring Boot] 建立的範例應用程式，這是快速開始使用 Spring 的慣例方法。
-
-本文示範如何將範例 Spring Boot 應用程式部署至 Azure Container Registry，然後使用適用於 Azure Web 應用程式的 Maven 外掛程式，將應用程式部署至 Azure App Services。
+本文示範如何將範例 [Spring Boot] 應用程式部署至 Azure Container Registry，然後使用適用於 Azure Web 應用程式的 Maven 外掛程式，將應用程式部署至 Azure App Services。
 
 > [!NOTE]
->
+> 
+> 針對 [Apache Maven](http://maven.apache.org/) 的適用於 Azure Web 應用程式的 Maven 外掛程式提供 Azure App Service 到 Maven 專案的緊密整合，並且簡化開發人員將 Web 應用程式部署至 Azure App Service 的程序。
+> 
 > 適用於 Azure Web 應用程式的 Maven 外掛程式目前可供預覽。 雖然未來計劃有額外功能，但是現在僅支援 FTP 發佈。
->
+> 
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -94,7 +93,7 @@ ms.lasthandoff: 11/18/2017
 
 > [!NOTE]
 >
-> 當您在本機使用 Docker 時，可能會看到錯誤，指出您無法透過連接埠 2375 連線到 localhost。 如果發生這種情況，建議您在本機使用 Docker，無需使用 TLS。 若要這樣做，開啟您的 Docker 設定，然後勾選**不使用 TLS 在TCP://localhost:2375 上公開 Docker 精靈**選項。
+> 當您在本機使用 Docker 時，可能會看到錯誤，指出您無法透過連接埠 2375 連線到 localhost。 如果發生這種情況，建議您在本機使用 Docker，無需使用 TLS。 若要這樣做，開啟您的 Docker 設定，然後勾選 [不使用 TLS 在 TCP://localhost:2375 上公開精靈] 選項。
 >
 > ![在本機的 TCP 連接埠 2375 上公開 Docker 精靈][TL01]
 
@@ -383,7 +382,7 @@ Maven 會將您的 Web 應用程式部署至 Azure；如果 Web 應用程式不�
 
 [Azure 命令列介面 (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
-[Azure Java Developer Center]: https://azure.microsoft.com/develop/java/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure 入口網站]: https://portal.azure.com/
 [適用於 Azure Web 應用程式的 Maven 外掛程式]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
@@ -398,7 +397,7 @@ Maven 會將您的 Web 應用程式部署至 Azure；如果 Web 應用程式不�
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
-[Spring 架構]: https://spring.io/
+[Spring Framework]: https://spring.io/
 
 <!-- IMG List -->
 
