@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 69c75984f6274b5423614bd51c40957d3d509802
-ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
+ms.openlocfilehash: 2f40fa22244e5ffa3be76d4de579959dcb5591d6
+ms.sourcegitcommit: 0676cbb530207544090c1fd051a2f09760873cd8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>開始使用適用於 Java 的 Azure 程式庫進行雲端開發
 
@@ -135,7 +135,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
             <configuration>
-                <mainClass>com.fabrikam.testAzureApp.AzureApp</mainClass>
+                <mainClass>com.fabrikam.AzureApp</mainClass>
             </configuration>
         </plugin>
     </plugins>
@@ -144,10 +144,10 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
    
 ## <a name="create-a-linux-virtual-machine"></a>建立 Linux 虛擬機器
 
-在專案的 `src/main/java` 目錄中建立名為 `AzureApp.java` 的新檔案，然後貼上以下程式碼區塊。 使用機器的實際值來更新 `userName` 和 `sshKey` 變數。 此程式碼會在美國東部 Azure 區域執行的 `sampleResourceGroup` 資源群組中，建立名為 `testLinuxVM` 的新 Linux VM。
+在專案的 `src/main/java/com/fabirkam` 目錄中建立名為 `AzureApp.java` 的新檔案，然後貼上以下程式碼區塊。 使用機器的實際值來更新 `userName` 和 `sshKey` 變數。 此程式碼會在美國東部 Azure 區域執行的 `sampleResourceGroup` 資源群組中，建立名為 `testLinuxVM` 的新 Linux VM。
 
 ```java
-package com.fabrikam.AzureApp;
+package com.fabrikam;
 
 import com.microsoft.azure.management.Azure;
 import com.microsoft.azure.management.compute.VirtualMachine;
