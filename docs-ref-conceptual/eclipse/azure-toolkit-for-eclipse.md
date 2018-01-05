@@ -1,6 +1,6 @@
 ---
 title: "適用於 Eclipse 的 Azure 工具組"
-description: "了解 Azure Toolkit for Eclipse。"
+description: "了解適用於 Eclipse 的 Azure 工具組如何協助您建立雲端應用程式，並將其部署至 Azure。"
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,14 +14,15 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 1cd0430a6649b1c979da5650b4d817bfb35b5f8c
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 21b757f961096970b7560beac9f15f216f072516
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="azure-toolkit-for-eclipse"></a>適用於 Eclipse 的 Azure 工具組
-適用於 Eclipse 的 Azure 工具組提供範本和功能，您可以使用這些範本和功能透過 Eclipse 整合式開發環境 (IDE) 輕鬆地建立、開發、測試及部署 Azure 應用程式。
+
+適用於 Eclipse 的 Azure 工具組提供範本和功能，您可以使用這些範本和功能從 Eclipse 整合式開發環境 (IDE) 輕鬆地建立、開發、測試雲端應用程式，並將其部署至 Azure。
 
 > [!NOTE]
 > 

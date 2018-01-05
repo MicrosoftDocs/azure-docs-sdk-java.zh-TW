@@ -1,6 +1,6 @@
 ---
-title: "安裝 Azure Toolkit for Eclipse"
-description: "了解如何安裝 Azure Toolkit for Eclipse。"
+title: "安裝適用於 Eclipse 的 Azure 工具組"
+description: "了解如何安裝適用於 Eclipse 外掛程式的 Azure 工具組，以建立雲端應用程式並將其部署至 Azure。"
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,15 +14,15 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 1f06b02a4c0b23d98ecd394d42f41f7148b6c8e8
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.openlocfilehash: 54f636f1291832702bfed2b49888b531d358cb73
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="installing-the-azure-toolkit-for-eclipse"></a>安裝 Azure Toolkit for Eclipse
+# <a name="install-the-azure-toolkit-for-eclipse"></a>安裝適用於 Eclipse 的 Azure 工具組
 
-Azure Toolkit for Eclipse 提供範本和功能，可讓您輕鬆地使用 Eclipse 開發環境來建立、開發、測試及部署 Azure 應用程式。
+適用於 Eclipse 的 Azure 工具組提供範本和功能，可讓您輕鬆地從 Eclipse 開發環境來建立、開發、測試雲端應用程式並將其部署至 Azure 應用程式。
 
 > [!NOTE] 
 > 
@@ -61,7 +61,7 @@ Azure Toolkit for Eclipse 提供範本和功能，可讓您輕鬆地使用 Eclip
    | **適用於 SQL Server 的 Microsoft JDBC Driver 6.1** | 提供適用於 SQL Server 的 JDBC API 以及適用於 Java Platform Enterprise Edition 8 的 Microsoft Azure SQL Database。 | 
    | **適用於 Java 的 Microsoft Azure 程式庫的套件** | 提供用來存取 Microsoft Azure 服務 (例如儲存體、服務匯流排、服務執行階段等) 的 API。 | 
 
-1. 按一下 [下一步] 。 (如果您在安裝此工具組時遇到不尋常的延遲，請確認已取消勾選 [在安裝期間連絡所有更新網站來尋找必要軟體]。)
+1. 按 [下一步] 。 (如果您在安裝此工具組時遇到不尋常的延遲，請確認已取消勾選 [在安裝期間連絡所有更新網站來尋找必要軟體]。)
 
 1. 在 [安裝詳細資料] 對話方塊中，按 [下一步]。
    

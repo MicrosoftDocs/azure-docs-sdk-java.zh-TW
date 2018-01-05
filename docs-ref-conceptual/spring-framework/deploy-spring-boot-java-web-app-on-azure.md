@@ -1,6 +1,6 @@
 ---
-title: "將 Spring Boot 應用程式部署到 Azure App Service"
-description: "本教學課程將引導開發人員完成將 Spring Boot Getting Started Web 應用程式部署到 Azure App Service 的步驟。"
+title: "透過 Azure App Service 將 Spring Boot 應用程式部署至雲端"
+description: "本教學課程將逐步引導開發人員使用 Azure App Service 將 Spring Boot 入門 Web 應用程式部署至雲端。"
 services: app-service
 documentationcenter: java
 author: rmcmurray
@@ -14,17 +14,17 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 4dba6a6cbce2c8f6d4956717b3358c4e5b501e71
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>將 Spring Boot 應用程式部署到 Azure App Service
+# <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>透過 Azure App Service 將 Spring Boot 應用程式部署至雲端
 
 本教學課程將引導您完成建立範例 [Spring Boot] Getting Started Web 應用程式，並將它部署到 [Azure App Service]。
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>先決條件
 
 若要完成本教學課程中的步驟，您必須具備下列項目：
 
@@ -113,13 +113,13 @@ ms.lasthandoff: 12/06/2017
 
    a. 按一下 [應用程式設定] 功能表項目。
 
-   b.這是另一個 C# 主控台應用程式。 針對 Java 版本選擇 [Java 8]。
+   b. 針對 Java 版本選擇 [Java 8]。
 
    c. 針對 Java 次要版本選擇 [最新]。
 
    d. 針對 Web 容器選擇 [Newest Tomcat 8.5] \(最新的 Tomcat 8.5) (實際上不會使用此容器；Azure 將會使用您 Spring Boot 應用程式中的容器)。
 
-   e. 按一下 [儲存] 。
+   e. 按一下 [檔案] 。
 
    ![應用程式設定][AZ07]
 
@@ -127,9 +127,9 @@ ms.lasthandoff: 12/06/2017
 
    a. 按一下 [部署認證] 功能表項目。
 
-   b.這是另一個 C# 主控台應用程式。 指定您的使用者名稱和密碼。
+   b. 指定您的使用者名稱和密碼。
 
-   c. 按一下 [儲存] 。
+   c. 按一下 [檔案] 。
 
    ![指定部署認證][AZ08]
 
@@ -137,7 +137,7 @@ ms.lasthandoff: 12/06/2017
 
    a. 按一下 [部署認證] 功能表項目。
 
-   b.這是另一個 C# 主控台應用程式。 複製您完整的 FTP 使用者名稱和 URL，並加以儲存供本教學課程的下一節使用。
+   b. 複製您完整的 FTP 使用者名稱和 URL，並加以儲存供本教學課程的下一節使用。
 
    ![FTP URL 和認證][AZ09]
 
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/06/2017
    </configuration>
    ```
 
-1. 當您將 *web.config* 檔案儲存至系統之後，使用本教學課程上一節的 URL、使用者名稱和密碼透過 FTP 連線到您的 Web 應用程式。 例如：
+1. 當您將 *web.config* 檔案儲存至系統之後，使用本教學課程上一節的 URL、使用者名稱和密碼透過 FTP 連線到您的 Web 應用程式。 例如︰
    ```
    ftp
    open waws-prod-sn0-000.ftp.azurewebsites.windows.net
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/06/2017
    pass ********
    ```
 
-1. 將遠端目錄變更至您 Web 應用程式的根資料夾 (在 */site/wwwroot*中)，然後複製您 Spring Boot 應用程式中的 JAR 檔案和上述 *web.config*。 例如：
+1. 將遠端目錄變更至您 Web 應用程式的根資料夾 (在 */site/wwwroot*中)，然後複製您 Spring Boot 應用程式中的 JAR 檔案和上述 *web.config*。 例如︰
    ```
    cd site/wwwroot
    put gs-spring-boot-0.1.0.jar

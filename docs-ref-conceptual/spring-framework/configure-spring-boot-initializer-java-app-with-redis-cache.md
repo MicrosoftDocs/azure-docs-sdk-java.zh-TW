@@ -1,6 +1,6 @@
 ---
-title: "如何將 Spring Boot Initializer 應用程式設定為使用 Redis 快取"
-description: "了解如何將使用 Spring Initializr 所建立的 Spring Boot 應用程式設定為使用 Azure Redis 快取。"
+title: "將 Spring Boot Initializer 應用程式設定為使用 Azure Redis 快取"
+description: "將使用 Spring Initializr 所建立的 Spring Boot 應用程式設定為透過 Azure Redis Cache 在雲端使用 Redis。"
 services: redis-cache
 documentationcenter: java
 author: rmcmurray
@@ -14,19 +14,17 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: e46a90413321845cb94d72fff893e42aa2353491
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: c029a1518584a953c96870110f7ab3b79409f8ca
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>如何將 Spring Boot Initializer 應用程式設定為使用 Redis 快取
+# <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>將 Spring Boot Initializer 應用程式設定為透過 Azure Redis Cache 在雲端使用 Redis
 
-## <a name="overview"></a>概觀
+本文將引導您使用 Azure 入口網站在雲端建立 Redis 快取、使用 **[Spring Initializr]** 建立自訂應用程式，及建立 Java Web 應用程式以使用 Redis 快取來儲存和擷取資料。
 
-本文將引導您透過 Azure 入口網站建立 Redis 快取、使用 **[Spring Initializr]** 建立自訂應用程式，及建立 Java Web 應用程式以使用 Redis 快取來儲存和擷取資料。
-
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要遵循本文中的步驟，需要具備下列必要條件：
 
@@ -115,7 +113,7 @@ ms.lasthandoff: 12/06/2017
 
    > [!NOTE] 
    > 
-   > 如果您使用 Jedis 等具備 SSL 的其他 Redis 用戶端，可以在 application.properties 檔案中指定連接埠 6380。 例如：
+   > 如果您使用 Jedis 等具備 SSL 的其他 Redis 用戶端，可以在 application.properties 檔案中指定連接埠 6380。 例如︰
    > 
    > ```yaml
    > spring.redis.host=myspringbootcache.redis.cache.windows.net

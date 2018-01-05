@@ -1,6 +1,6 @@
 ---
-title: "使用適用於 IntelliJ 的 Azure 工具組，在 Linux 容器中執行 Hello World Web 應用程式"
-description: "了解如何在 Linux 容器中建立基本的 Hello World Web 應用程式，並使用適用於 IntelliJ 的 Azure 工具組將其發佈至 Azure。"
+title: "使用適用於 IntelliJ 的 Azure 工具組，在雲端中部署 Linux 容器中執行的 Hello World Web 應用程式"
+description: "使用適用於 IntelliJ 的 Azure 工具組，在 Linux 容器中執行基本的 Hello World Web 應用程式並部署到雲端。"
 services: app-service\web
 documentationcenter: java
 author: rmcmurray
@@ -14,13 +14,13 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 421241b12d8bd9027d4bef8564e1c1ab5a01993a
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: fdf41d6e8b23a6b7d6217ec626480e6c72e13969
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="run-a-hello-world-web-app-in-a-linux-container-by-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，在 Linux 容器中執行 Hello World Web 應用程式
+# <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，在雲端中將 Hello World Web 應用程式部署到 Linux 容器
 
 [Docker] 容器是部署 Web 應用程式的常用方法。 藉由使用 Docker 容器，開發人員可將所有的專案檔和相依性合併至單一套件，以供部署至伺服器。 適用於 IntelliJ 的 Azure 工具組在部署容器至 Microsoft Azure 方面新增了功能，藉此為 Java 開發人員簡化部署程序。
 
