@@ -7,7 +7,7 @@
       "docset_name": "AzureJava",
       "build_source_folder": ".",
       "build_output_subfolder": "azure/sdk/java",
-      "locale": "zh-TW",
+      "locale": "zh-tw",
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -41,9 +41,18 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.zh-TW",
+      "url": "https://github.com/Microsoft/templates.docs.msft.zh-tw",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_repo.en-us",
+      "url": "https://github.com/azure/azure-docs-sdk-java",
+      "branch": "live",
+      "branch_mapping": {
+        "live": "live",
+        "master": "master"
+      }
     }
   ],
   "dependent_packages": [
