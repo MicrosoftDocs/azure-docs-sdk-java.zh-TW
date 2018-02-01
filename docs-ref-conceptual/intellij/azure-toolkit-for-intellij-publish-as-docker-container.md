@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 3db8bf06892ca6c53cf93ee4ce151549044806d1
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: ed63d73e8a0c89af14613b1b1a880f1d40495b8d
+ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，將 Web 應用程式發佈作為 Docker 容器
 
@@ -58,7 +58,7 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
 
    a. 在 [Docker 映像名稱] 方塊中，輸入 Docker 主機的唯一名稱  (精靈會自動建立一個名稱，但您可以修改)。 
 
-   b.這是另一個 C# 主控台應用程式。 [主機] 區域會顯示您已建立的任何 Docker 主機。 執行下列其中一個動作： 
+   b. [主機] 區域會顯示您已建立的任何 Docker 主機。 執行下列其中一個動作： 
       * 如果您有現存的 Docker 主機，您可以對該主機部署 Web 應用程式。
       * 若要建立 Docker 主機，則請按一下綠色加號 (**+**)。  
        [建立 Docker 主機] 對話方塊會隨即開啟。 
@@ -69,7 +69,7 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
 
    a. 在 [名稱] 方塊中，輸入 Docker 主機的唯一名稱  (此名稱與您稍早指定的 Docker 映像名稱不同)。 
     
-   b.這是另一個 C# 主控台應用程式。 在 [訂用帳戶] 方塊中，輸入您為主機使用的 Azure 訂用帳戶。 
+   b. 在 [訂用帳戶] 方塊中，輸入您為主機使用的 Azure 訂用帳戶。 
       
    c. 在 [區域] 方塊中，輸入主機所在的地理區域。
       
@@ -89,7 +89,7 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
       * **新的儲存體帳戶**︰為主機建立儲存體帳戶。
       * **現有的儲存體帳戶**︰指定 Azure 帳戶中的現有儲存體帳戶。
        
-5. 按一下 [下一步] 。  
+5. 按 [下一步] 。  
      [設定登入認證和連接埠設定] 視窗隨即開啟。
 
       ![[設定登入認證和連接埠設定] 視窗][PUB05]
@@ -112,25 +112,25 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
                   * *id_rsa*: Contains the RSA identification for a user.
                   * *id_rsa.pub*: Contains the RSA public key that is used for authentication.
             
-        b.這是另一個 C# 主控台應用程式。 在 [Docker 精靈存取] 索引標籤上，提供下列資訊︰
+        b. 在 [Docker 精靈存取] 索引標籤上，提供下列資訊︰
 
-          ![建立 Docker 主機][PUB06]
+         ![建立 Docker 主機][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+           * **Docker 精靈連接埠**︰輸入 Docker 主機的唯一 TCP 通訊埠。
+           * **TLS 安全性**︰輸入 Docker 主機的傳輸層安全性設定。 您可選擇下列選項：
+                * [無]︰將虛擬機器指定為不允許 TLS 連線。
+                * **自動產生**︰自動建立透過 TLS 連線的必要設定。
+                * **從目錄匯入**︰指定內含一組先前儲存之 TLS 設定的目錄。 該目錄必須包含下列六個檔案︰ 
+                   * ca.pem 和 ca key.pem︰包含 TLS 憑證授權單位的憑證和公開金鑰。
+                   * cert.pem 和 key.pem︰包含 TLS 驗證使用的用戶端憑證和公開金鑰。
+                   * server.pem 和 server-key.pem︰包含用於 TLS 驗證使用的用戶端憑證和公開金鑰。
 
 7. 在輸入必要資訊之後，按一下 [完成]。  
     [在 Azure 上部署 Docker 容器] 精靈隨即重新開啟。
 
    ![[在 Azure 上部署 Docker 容器] 精靈][PUB07]
 
-8. 按一下 [下一步] 。  
+8. 按 [下一步] 。  
     [設定要建立的 Docker 容器] 視窗隨即開啟。
 
    ![[設定要建立的 Docker 容器] 視窗][PUB08]
@@ -139,7 +139,7 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
 
    a. 在 [Docker 容器名稱] 方塊中，輸入 Docker 容器的唯一名稱。
 
-   b.這是另一個 C# 主控台應用程式。 選擇下列其中一個 Docker 映像： 
+   b. 選擇下列其中一個 Docker 映像： 
 
       * **預先定義的 Docker 映像**︰指定 Azure 中的既存 Docker 映像。 
 
