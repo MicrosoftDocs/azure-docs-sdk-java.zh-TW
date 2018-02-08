@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: a2aa6b0aa0689893143073be94539345e229e5f2
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: b54c10dc33324d902a0e778770df8ec4d71dc9a1
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>使用適用於 Eclipse 的 Azure 工具組，將 Spring Boot 應用程式發佈為 Docker 容器
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 
    b. 選取 [Projects from Git] (Git 中的專案)。
    
-   c. 按一下 [下一步] 。
+   c. 按 [下一步] 。
 
    ![匯入對話方塊][CL02]
 
@@ -56,17 +56,17 @@ ms.lasthandoff: 11/21/2017
 
    a. 選取 [Clone URI] (複製 URI)。
    
-   b. 按一下 [下一步] 。
+   b. 按 [下一步] 。
 
    ![[選取存放庫來源] 頁面][CL03]
 
-1. 在 [Source Git Repository] (來源 Git 存放庫) 頁面上：
+1. 在 [Source Git Repository] \(來源 Git 存放庫) 頁面上：
 
    a. 針對 [URI]，輸入 `https://github.com/spring-guides/gs-spring-boot-docker.git`。 此步驟應該會自動填入 [主機] 和 [存放庫路徑] 欄位的正確值。
    
    b. Spring Boot 是公用存放庫，因此您不應該輸入 Git 使用者名稱和密碼。
    
-   c. 按一下 [下一步] 。
+   c. 按 [下一步] 。
 
    ![[來源 Git 存放庫] 頁面][CL04]
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 
    a. 指定您想要放置本機存放庫的本機資料夾。
    
-   b.這是另一個 C# 主控台應用程式。 按一下 [下一步] 。
+   b. 按 [下一步] 。
 
    ![[本機目的地] 頁面][CL06]
 
@@ -86,11 +86,11 @@ ms.lasthandoff: 11/21/2017
 
    a. 選取 [Import as a general project] (匯入為一般專案)。
    
-   b.這是另一個 C# 主控台應用程式。 按一下 [下一步] 。
+   b. 按 [下一步] 。
 
    ![[選取要用於匯入專案的精靈] 頁面][CL07]
 
-1. 在 [Import Projects] (匯入專案) 頁面上：
+1. 在 [Import Projects] \(匯入專案) 頁面上：
 
    a. 指定專案名稱。
    
@@ -116,7 +116,7 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
    
    b. 選取 [Existing Maven Projects] (現有 Maven 專案)。
    
-   c. 按一下 [下一步] 。
+   c. 按 [下一步] 。
 
    ![匯入對話方塊][MV01]
 

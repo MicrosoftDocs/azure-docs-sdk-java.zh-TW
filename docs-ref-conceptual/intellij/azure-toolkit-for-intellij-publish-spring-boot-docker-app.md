@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 65fbdc32824c2b6312929f4888844d1673101ac8
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 4228352efa4354bfe4969c1a5ecd3f3b40483f85
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，將 Spring Boot 應用程式發佈為 Docker 容器
 
@@ -150,7 +150,7 @@ IntelliJ 會匯入 Spring Boot 應用程式作為專案，並且在匯入完成�
 
       ![指定主要類別][ART04d]
 
-1. 按一下 [確定] 。
+1. 按一下 [SERVICEPRINCIPAL] 。
 
    ![關閉 [專案結構] 對話方塊][ART05]
 

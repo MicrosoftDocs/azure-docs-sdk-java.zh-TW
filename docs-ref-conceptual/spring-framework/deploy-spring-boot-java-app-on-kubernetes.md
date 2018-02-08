@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: asirveda;robmcm
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: ee8d5fecc31df427645c1552e27996592eaf27af
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 9eb37f302835ea40e92b5212d5bbc305d1311bc4
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-container-service"></a>將 Spring Boot 應用程式部署到 Azure Container Service 中的 Kubernetes 叢集
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/06/2017
 
 本教學課程會逐步引導您結合這兩項受歡迎的開放原始碼技術，以開發 Spring Boot 應用程式並把它部署到 Microsoft Azure。 更具體來說，您使用 *[Spring Boot]* 開發應用程式、用 *[Kubernetes]* 部署容器，以及用 [Azure Container Service (AKS)] 裝載應用程式。
 
-### <a name="prerequisites"></a>必要條件
+### <a name="prerequisites"></a>先決條件
 
 * Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。
 * [Azure 命令列介面 (CLI)]。
@@ -112,8 +112,8 @@ ms.lasthandoff: 12/06/2017
 
    ```json
    {
-  "name": "password",
-  "value": "AbCdEfGhIjKlMnOpQrStUvWxYz"
+     "name": "password",
+     "value": "AbCdEfGhIjKlMnOpQrStUvWxYz"
    }
    ```
 
@@ -227,7 +227,7 @@ ms.lasthandoff: 12/06/2017
 
    a. 選取 [Specify app details below] (指定以下的應用程式詳細資料)。
 
-   b.這是另一個 C# 主控台應用程式。 在 [應用程式名稱] 中輸入您的 Spring Boot 應用程式名稱，例如："*gs-spring-boot-docker*"。
+   b. 在 [應用程式名稱] 中輸入您的 Spring Boot 應用程式名稱，例如："*gs-spring-boot-docker*"。
 
    c. 在 [容器映像] 中輸入先前的登入伺服器和容器映像，例如："*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"。
 
@@ -257,7 +257,7 @@ ms.lasthandoff: 12/06/2017
 
 1. 開啟命令提示字元。
 
-1. 使用 `kubectl run` 命令在 Kubernetes 叢集中執行容器。 為您在 Kubernetes 中的應用程式提供服務名稱和完整的映像名稱。 例如：
+1. 使用 `kubectl run` 命令在 Kubernetes 叢集中執行容器。 為您在 Kubernetes 中的應用程式提供服務名稱和完整的映像名稱。 例如︰
    ```
    kubectl run gs-spring-boot-docker --image=wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest
    ```
@@ -267,7 +267,7 @@ ms.lasthandoff: 12/06/2017
 
    * `--image` 參數指定合併的登入伺服器和映像名稱為 `wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest`
 
-1. 使用 `kubectl expose` 命令向外部公開您的 Kubernetes 叢集。 指定您的服務名稱、用來存取應用程式的公開 TCP 通訊埠，以及應用程式接聽的內部目標連接埠。 例如：
+1. 使用 `kubectl expose` 命令向外部公開您的 Kubernetes 叢集。 指定您的服務名稱、用來存取應用程式的公開 TCP 通訊埠，以及應用程式接聽的內部目標連接埠。 例如︰
    ```
    kubectl expose deployment gs-spring-boot-docker --type=LoadBalancer --port=80 --target-port=8080
    ```

@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: cosmos-db
-ms.workload: data-services
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;yungez;kevinzha
-ms.openlocfilehash: 06553920aebb5f27e4d02279e7024d6766e0be94
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: cosmos-db
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: data-services
+ms.openlocfilehash: 8190a7c45443ead9855d5a62194e02d7e9a919ee
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-azure-cosmos-db-documentdb-api"></a>如何搭配 Azure Cosmos DB DocumentDB API 使用 Spring Boot Starter
 
@@ -28,7 +28,7 @@ Azure Cosmos DB 是一個橫跨全球的分散式資料庫服務，讓開發人�
 
 本文將示範如何使用 Azure 入口網站建立 Azure Cosmos DB，接著使用 **[Spring Initializr]** 建立自訂的 Java 應用程式，然後將 Spring Boot Starter 功能新增到您的自訂應用程式，以使用 DocumentDB API 將資料儲存於您的 Azure Cosmos DB 以及從中擷取資料。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要遵循本文中的步驟，需要具備下列必要條件：
 

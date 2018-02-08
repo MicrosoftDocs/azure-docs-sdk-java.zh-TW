@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: 4dba6a6cbce2c8f6d4956717b3358c4e5b501e71
-ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: adf779e2ba6ca73ea3a2406613f9622cc9ecbf99
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>透過 Azure App Service 將 Spring Boot 應用程式部署至雲端
 
@@ -177,7 +177,7 @@ ms.lasthandoff: 01/04/2018
 
 1. 當您將 JAR 和 *web.config* 檔案部署到 Web 應用程式之後，您必須使用 Azure 入口網站重新啟動 Web 應用程式：
 
-   ![][AZ10]
+   ![重新啟動您的 Web 應用程式][AZ10]
 
 1. 使用網頁瀏覽器瀏覽至 Web 應用程式的 URL 來測試 Web 應用程式；如果有可用的 curl，請使用類似下列範例的語法：
    ```

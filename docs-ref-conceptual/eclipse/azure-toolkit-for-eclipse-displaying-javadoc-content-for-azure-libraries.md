@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 30f8b6a1-1d76-4d1c-861b-1db478c46e6b
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 5862b6704fe485836ede773a9e2875a83192e3c7
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 6f1edcc1411e8ec716dbfe41271d21d2397515c5
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>在 Eclipse 中顯示 Azure Libraries for Java 封裝的 Javadoc 內容
 
@@ -46,7 +46,7 @@ Javadoc 內容與 Azure Libraries for Java 產生關聯時，即可在 Eclipse �
 
 1. 選擇性步驟：按一下 [驗證]。 這裡可能會顯示 Javadoc JAR 可能發生的問題。
 
-1. 按一下 [確定] 。
+1. 按一下 [SERVICEPRINCIPAL] 。
 
 與程式庫產生關聯後，Javadoc 內容隨即會顯示在 Eclipse 整合式開發環境 (IDE) 中。 例如，如果 `blob` 在程式碼中定義為 `CloudBlockBlob` 類型，以下為您在程式碼中輸入 `blob.acquireLease` 時，會顯示的 Javadoc 內容的範例：
 

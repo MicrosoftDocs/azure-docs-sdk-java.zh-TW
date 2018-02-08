@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: ed63d73e8a0c89af14613b1b1a880f1d40495b8d
-ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: f92040b34b9897d9feea8d2ec5e8748e75fff7f7
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，將 Web 應用程式發佈作為 Docker 容器
 
@@ -114,16 +114,16 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
             
         b. 在 [Docker 精靈存取] 索引標籤上，提供下列資訊︰
 
-         ![建立 Docker 主機][PUB06]
+          ![建立 Docker 主機][PUB06]
     
-           * **Docker 精靈連接埠**︰輸入 Docker 主機的唯一 TCP 通訊埠。
-           * **TLS 安全性**︰輸入 Docker 主機的傳輸層安全性設定。 您可選擇下列選項：
-                * [無]︰將虛擬機器指定為不允許 TLS 連線。
-                * **自動產生**︰自動建立透過 TLS 連線的必要設定。
-                * **從目錄匯入**︰指定內含一組先前儲存之 TLS 設定的目錄。 該目錄必須包含下列六個檔案︰ 
-                   * ca.pem 和 ca key.pem︰包含 TLS 憑證授權單位的憑證和公開金鑰。
-                   * cert.pem 和 key.pem︰包含 TLS 驗證使用的用戶端憑證和公開金鑰。
-                   * server.pem 和 server-key.pem︰包含用於 TLS 驗證使用的用戶端憑證和公開金鑰。
+             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
+             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
+                * **None**: Specifies that your virtual machine does not allow TLS connections.
+                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
+                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
+                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
+                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
+                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
 
 7. 在輸入必要資訊之後，按一下 [完成]。  
     [在 Azure 上部署 Docker 容器] 精靈隨即重新開啟。

@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 41bb9b8009c0cbae01fec42c56d6a74d84cc166b
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: a02f8d02f8c5c32091dd106e036b636b1d11cff0
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>使用 Azure Explorer for Eclipse 來管理虛擬機器
 
@@ -58,7 +58,7 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
    ![選取虛擬機器映像視窗][CR03]
 
-1. 按一下 [下一步] 。
+1. 按 [下一步] 。
 
 1. 在 [虛擬機器基本設定] 視窗中，輸入下列資訊︰
 
@@ -72,7 +72,7 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
    ![虛擬機器基本設定視窗][CR04]
 
-1. 按一下 [下一步] 。
+1. 按 [下一步] 。
 
 1. 在 [建立新的儲存體帳戶] 視窗中輸入下列資訊：
 

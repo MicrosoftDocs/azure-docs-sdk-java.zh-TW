@@ -7,18 +7,18 @@ author: selvasingh
 manager: routlaw
 editor: 
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/15/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 7b82be727798a1edb58d99fe0d6b43e498e22a92
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: bec94e65951330c933e0173fd580c3578e759c18
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>使用 Eclipse 建立 Azure 的 Hello World Web 應用程式
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/18/2017
 
    ![選取 JSP 範本][select-jsp-template]
 
-7. 當 index.jsp 檔案在 Eclipse 中開啟時，新增文字以動態顯示 **Hello World!** (在現有 `<body>` 元素內)。 您已更新的 `<body>` 內容看起來應該與下列範例類似：
+7. 當 index.jsp 檔案在 Eclipse 中開啟時，新增文字以動態顯示 **Hello World!** (在現有的 `<body>` 元素內加入)。 您已更新的 `<body>` 內容看起來應該與下列範例類似：
    
    ```jsp
    <body><b><% out.println("Hello World!"); %></b></body>

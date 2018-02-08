@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: storage
-ms.workload: storage
-ms.tgt_pltfrm: na
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yungez;robmcm
-ms.openlocfilehash: 0979c810711a01464c0b2c6e12a582a3f5eefef1
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: storage
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.workload: storage
+ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>如何對 Azure 儲存體使用 Spring Boot Starter
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/06/2017
 
 本文會逐步引導您使用 **Spring Initializr** 建立自訂應用程式，然後使用該應用程式存取 Azure 儲存體。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要遵循本文中的步驟，需要具備下列必要條件：
 

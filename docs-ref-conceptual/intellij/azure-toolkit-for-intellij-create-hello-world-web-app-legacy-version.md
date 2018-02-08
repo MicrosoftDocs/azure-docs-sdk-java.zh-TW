@@ -7,18 +7,18 @@ author: selvasingh
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/15/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: aa0db81ffc9ff3fe44cf3d58a5b77ee447cdb1d1
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: ebe98a604b52dc9a4b5a47cbf65a4c68a5c86fe3
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>使用 IntelliJ 的舊版工具組建立 Azure 的 Hello World Web 應用程式
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 11/18/2017
 
       * 在 [名稱] 文字方塊中，為新的資源群組指定名稱。
       * 在 [區域] 下拉式功能表中，為資源群組選取適當的 Azure 資料中心位置。
-      * 按一下 [確定] 。
+      * 按一下 [SERVICEPRINCIPAL] 。
 
    g. [App Service 方案]  下拉式功能表會列出與您選取之資源群組相關聯的應用程式服務方案。 (App Service 方案會指定特定資訊，例如您 Web 應用程式的位置、定價層以及計算執行個體大小。 單一 App Service 方案可用於多個 Web Apps，這也就是要與特定 Web 應用程式部署分開維護的原因。)
       
@@ -156,7 +156,7 @@ ms.lasthandoff: 11/18/2017
       * 在 [位置] 下拉式功能表中，為該方案選取適當的 Azure 資料中心位置。
       * 在 [定價層] 下拉式功能表中，為方案選取適當的價格。 針對測試用途，您可以選擇 [免費] 。
       * 在 [執行個體大小] 下拉式功能表中，為方案選取適當的執行個體大小。 針對測試用途，您可以選擇 [小型] 。
-      * 按一下 [確定] 。
+      * 按一下 [SERVICEPRINCIPAL] 。
 
    h. (選擇性) 根據預設，Azure 會自動將最新的 Java 8 散發套件部署到 Web 應用程式容器，成為您的 JVM。 不過，您可以選取不同的 JVM 版本和散發套件。 若要這樣做，請使用下列步驟：
       

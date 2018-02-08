@@ -7,25 +7,25 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: container-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: asirveda;robmcm
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: container-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 65e127e43c457b0ff92478f002065bb9d928f270
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: c3a10a0d6029ba31b13f82907311d9182f98acb6
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>將 Spring Boot 應用程式部署到 Azure Container Service 中的 Linux
 
 本教學課程會逐步引導您使用 [Docker] 來開發 [Spring Boot] 應用程式，並且將其部署至 [Azure Container Service (AKS)] 中的 Linux 主機。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要完成本教學課程中的步驟，您必須具備下列必要條件：
 
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/06/2017
    </properties>
    ```
 
-1. 更新 pom.xml 檔案中的 `<plugins>` 集合，以便 `<plugin>` 可包含本教學課程上一節的登入伺服器位址和 Azure Container Registry 的登錄名稱。 例如：
+1. 更新 pom.xml 檔案中的 `<plugins>` 集合，以便 `<plugin>` 可包含本教學課程上一節的登入伺服器位址和 Azure Container Registry 的登錄名稱。 例如︰
 
    ```xml
    <plugin>
@@ -200,7 +200,7 @@ ms.lasthandoff: 12/06/2017
 
    a. 為 [應用程式名稱] 輸入唯一名稱；例如："wingtiptoyslinux"。
 
-   b.這是另一個 C# 主控台應用程式。 從下拉式清單選擇 [訂用帳戶]。
+   b. 從下拉式清單選擇 [訂用帳戶]。
 
    c. 選擇現有 [資源群組]，或指定名稱以建立新的資源群組。
 
@@ -218,7 +218,7 @@ ms.lasthandoff: 12/06/2017
 
    ![設定 Web 應用程式設定][LX02]
 
-1. 按一下 [建立] 。
+1. 按一下頁面底部的 [新增] 。
 
 > [!NOTE]
 >
@@ -234,7 +234,7 @@ ms.lasthandoff: 12/06/2017
 >
 > 5. 在 [應用程式設定] 區段中，新增名為 **PORT** 的新環境變數，並輸入值的自訂連接埠號碼。 (下列映像中的項目 #4。)
 >
-> 6. 按一下 [儲存] 。 (下列映像中的項目 #5。)
+> 6. 按一下 [檔案] 。 (下列映像中的項目 #5。)
 >
 > ![在 Azure 入口網站中儲存自訂連接埠號碼][LX03]
 >
