@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm
-ms.openlocfilehash: a999e33674ea01e776db10186e8af83ce157ef20
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: active-directory
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: identity
+ms.openlocfilehash: cf1cad0b87626058f7204a6565d09fb8901b7ce4
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>如何對 Azure Active Directory 使用 Spring Boot Starter
 
@@ -26,9 +26,9 @@ ms.lasthandoff: 12/06/2017
 
 本文示範如何使用 **[Spring Initializr]** (適用於 Azure Active Directory (Azure AD) 的 Spring Boot Starter) 建立應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-若要遵循本文中的步驟，需要具備下列必要條件：
+請務必具備下列必要條件，以便本文中說明的步驟：
 
 * Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。
 * [Java 開發套件 (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) \(英文\) 1.7 版或更新版本。
@@ -144,11 +144,11 @@ ms.lasthandoff: 12/06/2017
    azure.activedirectory.activeDirectoryGroups=Users
    ```
    其中：
-   參數 | 說明
-   ---|---|---
-   `azure.activedirectory.clientId` | 包含您稍早取得的**應用程式識別碼**。
-   `azure.activedirectory.clientSecret` | 包含您稍早完成之應用程式註冊所得到的金鑰值。
-   `azure.activedirectory.activeDirectoryGroups` | 包含要用於驗證的 Active Directory 群組清單。
+   | 參數 | 說明 |
+   |---|---|
+   | `azure.activedirectory.clientId` | 包含您稍早取得的**應用程式識別碼**。 |
+   | `azure.activedirectory.clientSecret` | 包含您稍早完成之應用程式註冊所得到的金鑰值。 |
+   | `azure.activedirectory.activeDirectoryGroups` | 包含要用於驗證的 Active Directory 群組清單。 |
 
 
 1. 儲存並關閉 application.properties 檔案。
@@ -222,7 +222,7 @@ ms.lasthandoff: 12/06/2017
    mvn clean package
    ```
 
-   ![][build-application]
+   ![建置應用程式][build-application]
 
 1. 使用 Maven 建置 Spring Boot 應用程式並加以執行；例如：
 
@@ -230,8 +230,6 @@ ms.lasthandoff: 12/06/2017
    mvn clean package
    mvn spring-boot:run
    ```
-
-
 
 1. 在 Maven 建置並啟動您的應用程式之後，請在網頁瀏覽器中開啟 <http://localhost:8080>。
 

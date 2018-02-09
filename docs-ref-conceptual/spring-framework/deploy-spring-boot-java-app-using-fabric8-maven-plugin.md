@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yuwzho;robmcm
-ms.openlocfilehash: 6e33c43d3fb4b63cff1f1c7c04cbf9523aa97770
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>使用 Fabric8 Maven 外掛程式部署 Spring Boot 應用程式
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/06/2017
 
 本教學課程會逐步引導您使用適用於 Maven 的 Fabric8 外掛程式來開發應用程式以部署至 [Azure Container Service (AKS)] 中的 Linux 主機。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要完成本教學課程中的步驟，您必須具備下列必要條件：
 
@@ -253,10 +253,12 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
-   其中：  
-      * *wingtiptoys-kubernetes* 是本文先前所提及之您的資源群組名稱  
-      * *wingtiptoysregistry* 是您私人登錄的唯一名稱
-      * *westeurope* 是您應用程式的適當地理位置  
+   其中：
+   | 參數 | 說明 |
+   |---|---|
+   | `wingtiptoys-kubernetes` | 使用本文先前所提及的資源群組來指定名稱。 |
+   | `wingtiptoysregistry` | 指定私人登錄的唯一名稱。 |
+   | `westeurope` | 指定適當的應用程式地理位置。 |
 
    Azure CLI 將會顯示建立登錄的結果，例如：  
 

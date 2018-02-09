@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: key-vault
-ms.workload: identity
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/29/2017
 ms.author: robmcm
-ms.openlocfilehash: 165a108147ef5ef7575820bbb6c2ee526888f722
-ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: key-vault
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: identity
+ms.openlocfilehash: 52e7dc3f84ea96f22d8e478a597452c76ed8bf22
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>如何對 Azure Key Vault 使用 Spring Boot Starter
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="prerequisites"></a>先決條件
 
-若要遵循本文中的步驟，需要具備下列必要條件：
+請務必具備下列必要條件，以便本文中說明的步驟：
 
 * Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。
 * [Java 開發套件 (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) \(英文\) 1.7 版或更新版本。
@@ -85,9 +85,8 @@ ms.lasthandoff: 02/01/2018
        }
      }
    ]
-   ```
 
-1. 指定您希望在 Azure 中使用的帳戶 GUID，例如：
+1. Specify the GUID for the account you want to use with Azure; for example:
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
@@ -124,9 +123,10 @@ ms.lasthandoff: 02/01/2018
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
+   其中：
    | 參數 | 說明 |
    |---|---|
-   | `id` | 指定從您稍早的應用程式註冊取得的 GUID。 |
+   | `name` | 指定 Azure 服務主體的名稱。 |
 
    Azure CLI 會傳回 JSON 狀態訊息，其中包含 appId 和 password，可供您稍候用來作為用戶端識別碼和用戶端密碼；例如：
 
@@ -170,7 +170,7 @@ ms.lasthandoff: 02/01/2018
    |---|---|
    | `name` | 指定您稍早取得的金鑰保存庫名稱。 |
    | `secret-permission` | 指定金鑰保存庫的[安全性原則](https://docs.microsoft.com/en-us/cli/azure/keyvault)。 |
-   | `object-id` | 指定您稍早取得的應用程式註冊 GUID。 |
+   | `spn` | 指定您稍早取得的應用程式註冊 GUID。 |
 
    Azure CLI 會顯示安全性原則的建立結果；例如：  
 

@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 7fa375ca805ddd037173f9dbd26b6631021e60a3
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: 8e8e1b5d599f77edf227d2c187225f6ac530b62b
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署至 Azure App Service
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/06/2017
 > 適用於 Azure Web 應用程式的 Maven 外掛程式目前可供預覽。 雖然未來計劃有額外功能，但是現在僅支援 FTP 發佈。
 > 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 若要完成本教學課程中的步驟，您必須具備下列必要條件：
 
@@ -113,7 +113,11 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
-   其中 `uuuuuuuu` 是使用者名稱，`pppppppp` 是服務主體的密碼。
+   其中：
+   | 參數 | 說明 |
+   |---|---|
+   | `uuuuuuuu` | 指定服務主體的使用者名稱。 |
+   | `pppppppp` | 指定服務主體的密碼。 |
 
 1. Azure 使用 JSON 回應，類似下列範例：
    ```json
@@ -184,11 +188,11 @@ ms.lasthandoff: 12/06/2017
    </servers>
    ```
    其中：
-   元素 | 說明
-   ---|---|---
-   `<id>` | 包含私用 Azure Container Registry 名稱。
-   `<username>` | 包含私用 Azure Container Registry 名稱。
-   `<password>` | 包含您在這篇文章上一節擷取的密碼。
+   | 元素 | 說明 |
+   |---|---|
+   | `<id>` | 包含私用 Azure Container Registry 名稱。 |
+   | `<username>` | 包含私用 Azure Container Registry 名稱。 |
+   | `<password>` | 包含您在這篇文章上一節擷取的密碼。 |
 
 1. 將這篇文章稍早章節的 Azure 服務主體設定新增至 settings.xml 檔案中的 `<servers>` 集合；例如：
 
@@ -206,13 +210,13 @@ ms.lasthandoff: 12/06/2017
    </servers>
    ```
    其中：
-   元素 | 說明
-   ---|---|---
-   `<id>` | 指定將您的 Web 應用程式部署至 Azure 時，Maven 用來查閱安全性設定的唯一名稱。
-   `<client>` | 包含服務主體的 `appId` 值。
-   `<tenant>` | 包含服務主體的 `tenant` 值。
-   `<key>` | 包含服務主體的 `password` 值。
-   `<environment>` | 定義目標 Azure 雲端環境，也就是此範例中的 `AZURE`。 (環境的完整清單可於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件中取得)
+   | 元素 | 說明 |
+   |---|---|
+   | `<id>` | 指定將您的 Web 應用程式部署至 Azure 時，Maven 用來查閱安全性設定的唯一名稱。 |
+   | `<client>` | 包含服務主體的 `appId` 值。 |
+   | `<tenant>` | 包含服務主體的 `tenant` 值。 |
+   | `<key>` | 包含服務主體的 `password` 值。 |
+   | `<environment>` | 定義目標 Azure 雲端環境，也就是此範例中的 `AZURE`。 (環境的完整清單可於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件中取得) |
 
 1. 儲存並關閉 settings.xml 檔案。
 
@@ -231,12 +235,12 @@ ms.lasthandoff: 12/06/2017
    </properties>
    ```
    其中：
-   元素 | 說明
-   ---|---|---
-   `<azure.containerRegistry>` | 指定私用 Azure Container Registry 名稱。
-   `<docker.image.prefix>` | 指定私用 Azure Container Registry 的 URL，它是藉由將 ".azurecr.io" 附加至私用容器登錄的名稱來衍生。
+   | 元素 | 說明 |
+   |---|---|
+   | `<azure.containerRegistry>` | 指定私用 Azure Container Registry 名稱。 |
+   | `<docker.image.prefix>` | 指定私用 Azure Container Registry 的 URL，它是藉由將 ".azurecr.io" 附加至私用容器登錄的名稱來衍生。 |
 
-1. 確認 pom.xml 檔案中 Docker 外掛程式的 `<plugin>`，包含本教學課程上一個步驟中伺服器位址和登錄名稱的正確屬性。 例如：
+1. 確認 pom.xml 檔案中 Docker 外掛程式的 `<plugin>`，包含本教學課程上一個步驟中伺服器位址和登錄名稱的正確屬性。 例如︰
 
    ```xml
    <plugin>
@@ -259,10 +263,10 @@ ms.lasthandoff: 12/06/2017
    </plugin>
    ```
    其中：
-   元素 | 說明
-   ---|---|---
-   `<serverId>` | 指定屬性，該屬性包含私用 Azure Container Registry 的名稱。
-   `<registryUrl>` | 指定屬性，該屬性包含私用 Azure Container Registry 的 URL。
+   | 元素 | 說明 |
+   |---|---|
+   | `<serverId>` | 指定屬性，該屬性包含私用 Azure Container Registry 的名稱。 |
+   | `<registryUrl>` | 指定屬性，該屬性包含私用 Azure Container Registry 的 URL。 |
 
 1. 瀏覽至您 Spring Boot 應用程式的已完成專案目錄，然後執行下列命令來重建應用程式，並將容器推送到您的 Azure Container Registry：
 
@@ -307,15 +311,15 @@ ms.lasthandoff: 12/06/2017
 
 您可以為 Maven 外掛程式修改數個值，這些元素的詳細描述可於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件中取得。 也就是說，有數個值值得在這篇文章中反白顯示：
 
-元素 | 說明
----|---|---
-`<version>` | 指定[適用於 Azure Web 應用程式的 Maven 外掛程式]版本。 您應該檢查 [Maven 中央存放庫](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)中所列的版本，確定您使用最新版本。
-`<authentication>` | 指定 Azure 的驗證資訊，在此範例中包含 `<serverId>` 元素，其中包含 `azure-auth`，Maven 使用該值來查閱 Maven settings.xml 檔案 (您在本文稍早章節中定義) 中的 Azure 服務主體值。
-`<resourceGroup>` | 指定目標資源群組，也就是此範例中的 `wingtiptoysresources`。 如果該資源群組不存在，則系統會在部署期間建立它。
-`<appName>` | 指定 Web 應用程式的目標名稱。 在此範例中，目標名稱是 `maven-linux-app-${maven.build.timestamp}`，在此範例中會附加 `${maven.build.timestamp}` 尾碼以避免發生衝突。 (時間戳記是選擇性的；您可以為應用程式名稱指定任何唯一的字串。)
-`<region>` | 指定目標區域，在此範例中是 `westus`。 (完整清單位於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件。)
-`<containerSettings>` | 指定屬性，該屬性包含容器的名稱和 URL。
-`<appSettings>` | 指定將您的 Web 應用程式部署至 Azure 時，Maven 使用的任何唯一設定。 在此範例中，`<property>` 元素包含子元素的名稱/值組，指定應用程式的連接埠。
+| 元素 | 說明 |
+|---|---|
+| `<version>` | 指定[適用於 Azure Web 應用程式的 Maven 外掛程式]版本。 您應該檢查 [Maven 中央存放庫](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)中所列的版本，確定您使用最新版本。 |
+| `<authentication>` | 指定 Azure 的驗證資訊，在此範例中包含 `<serverId>` 元素，其中包含 `azure-auth`，Maven 使用該值來查閱 Maven settings.xml 檔案 (您在本文稍早章節中定義) 中的 Azure 服務主體值。 |
+| `<resourceGroup>` | 指定目標資源群組，也就是此範例中的 `wingtiptoysresources`。 如果該資源群組不存在，則系統會在部署期間建立它。 |
+| `<appName>` | 指定 Web 應用程式的目標名稱。 在此範例中，目標名稱是 `maven-linux-app-${maven.build.timestamp}`，在此範例中會附加 `${maven.build.timestamp}` 尾碼以避免發生衝突。 (時間戳記是選擇性的；您可以為應用程式名稱指定任何唯一的字串。) |
+| `<region>` | 指定目標區域，在此範例中是 `westus`。 (完整清單位於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件。) |
+| `<containerSettings>` | 指定屬性，該屬性包含容器的名稱和 URL。 |
+| `<appSettings>` | 指定將您的 Web 應用程式部署至 Azure 時，Maven 使用的任何唯一設定。 在此範例中，`<property>` 元素包含子元素的名稱/值組，指定應用程式的連接埠。 |
 
 > [!NOTE]
 >
