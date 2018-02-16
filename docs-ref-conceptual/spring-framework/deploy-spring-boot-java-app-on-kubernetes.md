@@ -223,9 +223,9 @@ ms.lasthandoff: 02/03/2018
 
    ![Kubernetes 設定網站][KB01]
 
-1. 當 [Deploy a containerized app] (部署容器化應用程式) 頁面出現時，請指定下列選項：
+1. 當 [Deploy a containerized app] \(部署容器化應用程式) 頁面出現時，請指定下列選項：
 
-   a. 選取 [Specify app details below] (指定以下的應用程式詳細資料)。
+   a. 選取 [Specify app details below] \(指定以下的應用程式詳細資料)。
 
    b. 在 [應用程式名稱] 中輸入您的 Spring Boot 應用程式名稱，例如："*gs-spring-boot-docker*"。
 
