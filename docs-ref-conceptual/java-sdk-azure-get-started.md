@@ -12,17 +12,17 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 2f40fa22244e5ffa3be76d4de579959dcb5591d6
-ms.sourcegitcommit: 0676cbb530207544090c1fd051a2f09760873cd8
+ms.openlocfilehash: f069183c96cdc42d590d2e58a5a6a500be5ab69a
+ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>開始使用適用於 Java 的 Azure 程式庫進行雲端開發
 
 本指南會逐步引導您設定開發環境，以便在 Java 中進行 Azure 開發。 接著，您會建立一些 Azure 資源，並將它們連線以執行某些基本工作，例如上傳檔案或部署 Web 應用程式。 當您完成時，您就已做好準備可以開始在自有的 Java 應用程式中使用 Azure 服務。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - 一個 Azure 帳戶。 如果您沒有帳戶，請[取得免費試用帳戶](https://azure.microsoft.com/free/)
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) 或 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。
@@ -86,10 +86,10 @@ graphURL=https\://graph.windows.net/
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-如果您是在 Windows 環境中工作，請在系統屬性中新增該變數。 開啟 PowerShell，並在以檔案路徑取代第二個變數之後，輸入下列命令：
+如果您是在 Windows 環境中工作，請在系統屬性中新增該變數。 以系統管理員權限開啟 PowerShell 視窗，並在以檔案路徑取代第二個變數之後，輸入下列命令：
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
+setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
 ## <a name="create-a-new-maven-project"></a>建立新的 Maven 專案

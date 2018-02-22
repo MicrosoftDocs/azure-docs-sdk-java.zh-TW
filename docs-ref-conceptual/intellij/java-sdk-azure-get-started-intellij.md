@@ -15,11 +15,11 @@ ms.prod: azure
 ms.service: multiple
 ms.topic: get-started-article
 ms.technology: azure
-ms.openlocfilehash: 0a059366f7cdc139dcb5a8e7e9ca78254384d19e
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 5c122b09d9d431ddcec667e61230eb53968c52e7
+ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a>使用 Intellij 來開始使用 Azure 程式庫
 
@@ -88,10 +88,10 @@ graphURL=https\://graph.windows.net/
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-如果您是在 Windows 環境中工作，請在系統屬性中新增該變數。 開啟 PowerShell，並在以檔案路徑取代第二個變數之後，輸入下列命令：
+如果您是在 Windows 環境中工作，請在系統屬性中新增該變數。 以系統管理員權限開啟 PowerShell 視窗，並在以檔案路徑取代第二個變數之後，輸入下列命令：
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
+setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
 ## <a name="create-a-new-maven-project"></a>建立新的 Maven 專案
