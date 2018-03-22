@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure 事件中樞程式庫"
-description: "Java 事件中樞程式庫的參考文件"
-keywords: "Azure, Java, SDK, API, 事件中樞, IoT, 串流處理"
+title: 適用於 Java 的 Azure 事件中樞程式庫
+description: Java 事件中樞程式庫的參考文件
+keywords: Azure, Java, SDK, API, 事件中樞, IoT, 串流處理
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: event-hub
-ms.openlocfilehash: 8e5b032624862ffbef18c718abf4fa29359b3e67
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 076906ff3cafcb4eba97b0a022e5214d7834517c
+ms.sourcegitcommit: 02b70b9f5d34415c337601f0b818f7e0985fd884
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="azure-event-hub-libraries-for-java"></a>適用於 Java 的 Azure 事件中樞程式庫
 
@@ -54,7 +54,7 @@ ehClient.sendSync(sendEvent);
 ```
 
 > [!div class="nextstepaction"]
-> [探索用戶端 API](/java/api/overview/azure/eventhub/clientlibrary)
+> [探索用戶端 API](/java/api/overview/azure/eventhub/client)
 
 
 ## <a name="samples"></a>範例
