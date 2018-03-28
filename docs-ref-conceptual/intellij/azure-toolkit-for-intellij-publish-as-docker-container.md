@@ -1,12 +1,12 @@
 ---
-title: "使用適用於 IntelliJ 的 Azure 工具組來發佈 Docker 容器"
-description: "了解如何使用適用於 IntelliJ 的 Azure 工具組，將 Web 應用程式發佈至 Microsoft Azure 作為 Docker 容器。"
-services: 
+title: 使用適用於 IntelliJ 的 Azure 工具組來發佈 Docker 容器
+description: 了解如何使用適用於 IntelliJ 的 Azure 工具組，將 Web 應用程式發佈至 Microsoft Azure 作為 Docker 容器。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f92040b34b9897d9feea8d2ec5e8748e75fff7f7
-ms.sourcegitcommit: 381a865f2849be8e3044d24cd4b3b54e9bbb7abc
+ms.openlocfilehash: 64cefc1ace5d0377dea25fdbdc83d8dada31ddf7
+ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，將 Web 應用程式發佈作為 Docker 容器
 
@@ -103,27 +103,43 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
 
       * **新的登入認證**︰建立一組新的登入認證。 如果您選取此選項，請執行下列作業︰
 
-        a. 在 **VM 認證** 索引標籤上提供下列資訊，以供 Docker 主機的虛擬機器登入認證使用︰ * **使用者名稱** ︰ 輸入虛擬機器登入認證的使用者名稱。
-             * **密碼**和**確認**︰輸入虛擬機器登入認證的密碼。
-             * **SSH**︰輸入 Docker 主機的安全殼層 (SSH) 設定。 您可以選取下列其中一個選項： * **無** ︰ 將虛擬機器指定為不允許 SSH 連線。
-                * **自動產生**︰自動建立透過 SSH 連線的必要設定。
-                * **從目錄匯入**︰可讓您指定內含一組先前儲存之 SSH 設定的目錄。 此目錄必須包含下列兩個檔案︰
-                
-                  * *id_rsa*: Contains the RSA identification for a user.
-                  * *id_rsa.pub*: Contains the RSA public key that is used for authentication.
-            
-        b. 在 [Docker 精靈存取] 索引標籤上，提供下列資訊︰
+    a. 在 [VM 認證] 索引標籤上，提供下列 Docker 主機虛擬機器登入認證的資訊：
 
-          ![建立 Docker 主機][PUB06]
+    * [使用者名稱]︰輸入虛擬機器登入認證的使用者名稱。
+
+    * [密碼] 和 [確認]︰輸入虛擬機器登入認證的密碼。
+
+    * **SSH**︰輸入 Docker 主機的安全殼層 (SSH) 設定。 您可以選取下列其中一個選項︰
+
+        * [無]︰將虛擬機器指定為不允許 SSH 連線。
+
+        * **自動產生**︰自動建立透過 SSH 連線的必要設定。
+
+        * [從目錄匯入]︰可讓您指定包含一組先前儲存之 SSH 設定的目錄。 此目錄必須包含下列兩個檔案︰
+
+            * id_rsa︰包含使用者的 RSA 識別。
+
+            * id_rsa.pub︰包含用於驗證的 RSA 公開金鑰。
+
+    b. 在 [Docker 精靈存取] 索引標籤上，提供下列資訊︰
+
+    ![建立 Docker 主機][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+    * **Docker 精靈連接埠**︰輸入 Docker 主機的唯一 TCP 通訊埠。
+    
+    * **TLS 安全性**︰輸入 Docker 主機的傳輸層安全性設定。 您可選擇下列選項：
+    
+        * [無]︰將虛擬機器指定為不允許 TLS 連線。
+        
+        * **自動產生**︰自動建立透過 TLS 連線的必要設定。
+        
+        * **從目錄匯入**︰指定內含一組先前儲存之 TLS 設定的目錄。 該目錄必須包含下列六個檔案︰
+        
+            * ca.pem 和 ca key.pem︰包含 TLS 憑證授權單位的憑證和公開金鑰。
+            
+            * cert.pem 和 key.pem︰包含 TLS 驗證使用的用戶端憑證和公開金鑰。
+            
+            * server.pem 和 server-key.pem︰包含用於 TLS 驗證使用的用戶端憑證和公開金鑰。
 
 7. 在輸入必要資訊之後，按一下 [完成]。  
     [在 Azure 上部署 Docker 容器] 精靈隨即重新開啟。
