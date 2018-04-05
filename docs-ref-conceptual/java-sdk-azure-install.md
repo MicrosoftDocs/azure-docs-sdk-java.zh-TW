@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 開發人員的 Azure Microsoft Docs"
-description: "適用於 Azure 的 Java SDK 和 API 參考"
-keywords: "Azure Java, Azure Java API 參考, Azure Java 類別庫, Azure SDK"
+title: 適用於 Java 開發人員的 Azure Microsoft Docs
+description: 適用於 Azure 的 Java SDK 和 API 參考
+keywords: Azure Java, Azure Java API 參考, Azure Java 類別庫, Azure SDK
 author: routlaw
 manager: douge
 ms.assetid: 7b92e776-959b-4632-8b1d-047ce1417616
@@ -10,11 +10,11 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 570f820e1349e1dfd01a6c7f323b5312c14c40c6
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: 5c8bb4b81080461285551573eefc0d76b47b2d3d
+ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="azure-libraries-for-java"></a>適用於 Java 的 Azure 程式庫
 
@@ -22,10 +22,10 @@ Azure 程式庫可協助您使用原生介面在 Java 應用程式中取用 Azur
 
 | | | | |
 |:-------------:|:----------:|:----:|:---:|
-| [Azure 儲存體](#azure-storage) | [SQL Database](#sql-database)  | [Redis 快取](#redis-cache)   | [DocumentDB](#documentdb) |
+| [Azure 儲存體](#azure-storage) | [SQL Database](#sql-database)  | [Redis 快取](#redis-cache)   | [Azure Cosmos DB](#cosmos-db) |
 | [服務匯流排](#servicebus)  | [Azure Active Directory](#azuread) | [金鑰保存庫](#keyvault)  | [事件中樞](#eventhub)
 | [IoT 服務](#iotservice) | [IoT 裝置](#iotdevice) | [Data Lake](#datalake)  | [AppInsights](#appinsights) | 
-| [批次](#batch) | [管理 Azure 資源](#management) |
+| [Batch](#batch) | [管理 Azure 資源](#management) |
 
 ## <a name="install-with-maven"></a>使用 Maven 進行安裝
 
@@ -97,9 +97,9 @@ Gradle 等其他 Java 建置工具也有受到支援，但本文未提供其安�
 
 [範例](/azure/redis-cache/cache-java-get-started) | [參考](http://xetorthio.github.io/jedis)  | [GitHub](https://github.com/xetorthio/jedis)  | [版本資訊](https://github.com/xetorthio/jedis/releases)  
 
-<a name="documentdb"></a>
+<a name="cosmos-db"></a>
 
-### <a name="cosmos-dbazuredocumentdbdocumentdb-introduction"></a>[Cosmos DB](/azure/documentdb/documentdb-introduction)
+### <a name="azure-cosmos-dbazurecosmos-dbintroduction"></a>[Azure Cosmos DB](/azure/cosmos-db/introduction)
 
 可擴充的 NoSQL 資料庫，內含 JSON 文件和 SQL 或 JavaScript 查詢語法。   
 
@@ -111,7 +111,7 @@ Gradle 等其他 Java 建置工具也有受到支援，但本文未提供其安�
 </dependency>
 ```
 
-[範例](/azure/documentdb/documentdb-java-application) | [參考](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [版本資訊](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
+[範例](/azure/cosmos-db/sql-api-java-application) | [參考](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [版本資訊](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
 
 <a name="servicebus"></a>
  
@@ -243,7 +243,7 @@ Gradle 等其他 Java 建置工具也有受到支援，但本文未提供其安�
 
 <a name="batch"></a>
 
-### <a name="batchazurebatch"></a>[批次](/azure/batch)
+### <a name="batchazurebatch"></a>[Batch](/azure/batch)
 
 在雲端有效地執行大規模的平行和高效能計算應用程式。
 
