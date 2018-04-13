@@ -1,12 +1,12 @@
 ---
-title: "如何搭配 Azure Cosmos DB DocumentDB API 使用 Spring Boot Starter"
-description: "了解如何設定搭配 Azure Cosmos DB DocumentDB API 使用 Spring Boot Initializer 建立的應用程式。"
+title: 如何搭配 Azure Cosmos DB SQL API 使用 Spring Boot Starter
+description: 了解如何設定搭配 Azure Cosmos DB SQL API 使用 Spring Boot Initializer 建立的應用程式。
 services: cosmos-db
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;yungez;kevinzha
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,19 +14,19 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 8190a7c45443ead9855d5a62194e02d7e9a919ee
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 85494fc310e2bb31cfe8636b5e866bb3f4856cd4
+ms.sourcegitcommit: 3a746e8ae9ef0e6e82fccf9aca54eae8c9c1cdca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/08/2018
 ---
-# <a name="how-to-use-the-spring-boot-starter-with-azure-cosmos-db-documentdb-api"></a>如何搭配 Azure Cosmos DB DocumentDB API 使用 Spring Boot Starter
+# <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>如何搭配 Azure Cosmos DB SQL API 使用 Spring Boot Starter
 
 ## <a name="overview"></a>概觀
 
-Azure Cosmos DB 是一個橫跨全球的分散式資料庫服務，讓開發人員能夠利用各種不同的標準 API (例如 DocumentDB、MongoDB、圖形和資料表 API) 來使用資料。 Microsoft 的 Spring Boot Starter 讓開發人員能夠使用 Spring Boot 應用程式，藉由使用 DocumentDB API 來輕鬆地與 Azure Cosmos DB 整合。
+Azure Cosmos DB 是一個橫跨全球的分散式資料庫服務，讓開發人員能夠利用各種不同的標準 API (例如 SQL、MongoDB、圖形和資料表 API) 來使用資料。 Microsoft 的 Spring Boot Starter 讓開發人員能夠使用 Spring Boot 應用程式，藉由使用 SQL API 來輕鬆地與 Azure Cosmos DB 整合。
 
-本文將示範如何使用 Azure 入口網站建立 Azure Cosmos DB，接著使用 **[Spring Initializr]** 建立自訂的 Java 應用程式，然後將 Spring Boot Starter 功能新增到您的自訂應用程式，以使用 DocumentDB API 將資料儲存於您的 Azure Cosmos DB 以及從中擷取資料。
+本文將示範如何使用 Azure 入口網站建立 Azure Cosmos DB，接著使用 **[Spring Initializr]** 建立自訂的 Java 應用程式，然後將 Spring Boot Starter 功能新增到您的自訂應用程式，以使用 SQL API 將資料儲存於您的 Azure Cosmos DB 以及從中擷取資料。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -38,7 +38,7 @@ Azure Cosmos DB 是一個橫跨全球的分散式資料庫服務，讓開發人�
 
 ## <a name="create-an-azure-cosmos-db-by-using-the-azure-portal"></a>使用 Azure 入口網站建立 Azure Cosmos DB
 
-1. 瀏覽至 <https://portal.azure.com/> 上的 Azure 入口網站，然後按一下 [+新增]。
+1. 瀏覽至 Azure 入口網站 <https://portal.azure.com/>，然後按一下 [+ 新增]。
 
    ![Azure 入口網站][AZ01]
 
@@ -295,7 +295,7 @@ Azure Cosmos DB 是一個橫跨全球的分散式資料庫服務，讓開發人�
 
 * [Azure Cosmos DB 文件]。
 
-* [Azure Cosmos DB︰使用 Java 和 Azure 入口網站建置 DocumentDB API 應用程式][Build a DocumentDB API app with Java]
+* [Azure Cosmos DB︰使用 Java 和 Azure 入口網站建立文件資料庫][Build a SQL API app with Java]
 
 如需在 Azure 上使用 Spring Boot 應用程式的詳細資訊，請參閱下列文章：
 
@@ -313,7 +313,7 @@ Azure Cosmos DB 是一個橫跨全球的分散式資料庫服務，讓開發人�
 
 [Azure Cosmos DB 文件]: /azure/cosmos-db/
 [適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
-[Build a DocumentDB API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-documentdb-java
+[Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
 [適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
