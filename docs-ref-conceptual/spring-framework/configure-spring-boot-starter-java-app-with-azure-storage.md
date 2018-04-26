@@ -1,12 +1,12 @@
 ---
-title: "如何對 Azure 儲存體使用 Spring Boot Starter"
-description: "了解如何使用 Azure 儲存體 Starter 來設定 Spring Boot Initializer 應用程式。"
+title: 如何對 Azure 儲存體使用 Spring Boot Starter
+description: 了解如何使用 Azure 儲存體 Starter 來設定 Spring Boot Initializer 應用程式。
 services: storage
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: yungez;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,11 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>如何對 Azure 儲存體使用 Spring Boot Starter
 
@@ -93,8 +93,9 @@ ms.lasthandoff: 02/03/2018
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. 指定您希望在 Azure 中使用的帳戶 GUID，例如：
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss

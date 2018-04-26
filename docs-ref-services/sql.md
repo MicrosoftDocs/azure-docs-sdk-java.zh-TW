@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure SQL Database 程式庫"
-description: "使用管理 API 透過 JDBC 驅動程式或管理 Azure SQL Database 執行個體來連線到 Azure SQL Database。"
-keywords: "Azure, Java, SDK, API, SQL, 資料庫, JDBC"
+title: 適用於 Java 的 Azure SQL Database 程式庫
+description: 使用管理 API 透過 JDBC 驅動程式或管理 Azure SQL Database 執行個體來連線到 Azure SQL Database。
+keywords: Azure, Java, SDK, API, SQL, 資料庫, JDBC
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
-ms.openlocfilehash: 3ae4015ae57e5eac4dafb30f4a42881986501853
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 37f7d3caf10e6b709cee2452c63a543d49e0ead8
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-sql-database-libraries-for-java"></a>適用於 Java 的 Azure SQL Database 程式庫
 
@@ -69,7 +69,7 @@ try {
 ```
 
 > [!div class="nextstepaction"]
-> [探索管理 API](/java/api/overview/azure/sql/managementapi)
+> [探索管理 API](/java/api/overview/azure/sql/management)
 
 ### <a name="example"></a>範例
 

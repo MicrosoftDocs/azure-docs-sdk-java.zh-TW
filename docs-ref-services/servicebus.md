@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的服務匯流排程式庫"
-description: "適用於服務匯流排之 Java 用戶端和管理程式庫的參考文件"
-keywords: "Azure, Java, SDK, API, 傳訊, amqp, qpid, JMS, pubsub, pub-sub, 訊息代理程式"
+title: 適用於 Java 的服務匯流排程式庫
+description: 適用於服務匯流排之 Java 用戶端和管理程式庫的參考文件
+keywords: Azure, Java, SDK, API, 傳訊, amqp, qpid, JMS, pubsub, pub-sub, 訊息代理程式
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: 6fccbc76a3600e2bbe43e4332c6146d2be81b6c9
-ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
+ms.openlocfilehash: 7468d9b920debc778e7e3d298fbcb913add6afdd
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="service-bus-libraries-for-java"></a>適用於 Java 的服務匯流排程式庫
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/01/2017
 
 服務匯流排進階版將焦點放在高度可用且可靠耐用的傳訊技術，即使是具有大量本機資料中心的部署，也能提供具競爭力的輸送量效能，而且您也不必經歷硬體的選取和採購過程、不必規劃和執行部署，也沒有永無止盡的效能最佳化工作階段。 
 
-服務匯流排進階版是完全受管理的供應項目，其專門保留了容量供每個租用戶使用，因此相較於商業內部部署代理程式，您只要以極低的整體成本，即可透過簡單的容量導向計價模式產生可預測的效能。 對於許多客戶來說，服務匯流排進階版可取代現今的專用內部部署傳訊叢集，即使連結的工作負載不是在雲端執行也沒關係。 
+服務匯流排進階版是完全受控的供應項目，其專門保留了容量供每個租用戶使用，因此相較於商業內部部署代理程式，您只要以極低的整體成本，即可透過簡單的容量導向計價模式產生可預測的效能。 對於許多客戶來說，服務匯流排進階版可取代現今的專用內部部署傳訊叢集，即使連結的工作負載不是在雲端執行也沒關係。 
 
 請到[傳訊文件章節](https://docs.microsoft.com/azure/service-bus-messaging/)深入了解服務匯流排的概念 
 
@@ -116,7 +116,7 @@ public class BasicSendReceiveWithQueueClient {
 ```
 
 > [!div class="nextstepaction"]
-> [探索用戶端 API](/java/api/overview/azure/servicebus/clientlibrary)
+> [探索用戶端 API](/java/api/overview/azure/servicebus/client)
 
 ## <a name="management-api"></a>管理 API
 
@@ -133,7 +133,7 @@ public class BasicSendReceiveWithQueueClient {
 ```
 
 > [!div class="nextstepaction"]
-> [探索管理 API](/java/api/overview/azure/servicebus/managementapi)
+> [探索管理 API](/java/api/overview/azure/servicebus/management)
 
 
 ## <a name="examples"></a>範例
