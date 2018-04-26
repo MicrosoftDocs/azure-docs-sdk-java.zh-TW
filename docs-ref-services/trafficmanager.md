@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure 流量管理員程式庫"
-description: "Java 流量管理員管理程式庫的參考文件"
-keywords: "Azure, Java, SDK, API, 負載平衡, 負載分散, 網路, 流量管理員"
+title: 適用於 Java 的 Azure 流量管理員程式庫
+description: Java 流量管理員管理程式庫的參考文件
+keywords: Azure, Java, SDK, API, 負載平衡, 負載分散, 網路, 流量管理員
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,25 +11,25 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: traffic-manager
-ms.openlocfilehash: 9e13f97c6ddb763fb162b3de0c8d09c77eae1ccb
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: fd78402f50df16ad7d57c0ca67815bfad5b18d51
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="4ba91-104">適用於 Java 的 Azure 流量管理員程式庫</span><span class="sxs-lookup"><span data-stu-id="4ba91-104">Azure Traffic Manager libraries for Java</span></span>
+# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="88dca-104">適用於 Java 的 Azure 流量管理員程式庫</span><span class="sxs-lookup"><span data-stu-id="88dca-104">Azure Traffic Manager libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="4ba91-105">概觀</span><span class="sxs-lookup"><span data-stu-id="4ba91-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="88dca-105">概觀</span><span class="sxs-lookup"><span data-stu-id="88dca-105">Overview</span></span>
 
-<span data-ttu-id="4ba91-106">使用 [Azure 流量管理員](/azure/traffic-manager/traffic-manager-overview)控制不同資料中心之服務端點的使用者流量散佈情況。</span><span class="sxs-lookup"><span data-stu-id="4ba91-106">Control the distribution of user traffic for service endpoints in different datacenters with [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview).</span></span>
+<span data-ttu-id="88dca-106">使用 [Azure 流量管理員](/azure/traffic-manager/traffic-manager-overview)控制不同資料中心之服務端點的使用者流量散佈情況。</span><span class="sxs-lookup"><span data-stu-id="88dca-106">Control the distribution of user traffic for service endpoints in different datacenters with [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview).</span></span>
 
-<span data-ttu-id="4ba91-107">若要開始使用 Azure 流量管理員，請參閱[建立流量管理員設定檔](/azure/traffic-manager/traffic-manager-create-profile)。</span><span class="sxs-lookup"><span data-stu-id="4ba91-107">To get started with Azure Traffic Manager, see [Create a Traffic Manager profile](/azure/traffic-manager/traffic-manager-create-profile).</span></span>
+<span data-ttu-id="88dca-107">若要開始使用 Azure 流量管理員，請參閱[建立流量管理員設定檔](/azure/traffic-manager/traffic-manager-create-profile)。</span><span class="sxs-lookup"><span data-stu-id="88dca-107">To get started with Azure Traffic Manager, see [Create a Traffic Manager profile](/azure/traffic-manager/traffic-manager-create-profile).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="4ba91-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="4ba91-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="88dca-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="88dca-108">Management API</span></span>
 
-<span data-ttu-id="4ba91-109">使用管理 API 建立流量管理員設定檔、定義端點，並變更路由方法。</span><span class="sxs-lookup"><span data-stu-id="4ba91-109">Create Traffic Manager profiles, define endpoints, and change the routing method with the management API.</span></span> 
+<span data-ttu-id="88dca-109">使用管理 API 建立流量管理員設定檔、定義端點，並變更路由方法。</span><span class="sxs-lookup"><span data-stu-id="88dca-109">Create Traffic Manager profiles, define endpoints, and change the routing method with the management API.</span></span> 
 
-<span data-ttu-id="4ba91-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="4ba91-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="88dca-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="88dca-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -39,9 +39,9 @@ ms.lasthandoff: 10/09/2017
 </dependency>
 ```   
 
-## <a name="example"></a><span data-ttu-id="4ba91-111">範例</span><span class="sxs-lookup"><span data-stu-id="4ba91-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="88dca-111">範例</span><span class="sxs-lookup"><span data-stu-id="88dca-111">Example</span></span>
 
-<span data-ttu-id="4ba91-112">建立流量管理員設定檔，並指派單一端點。</span><span class="sxs-lookup"><span data-stu-id="4ba91-112">Create a Traffic Manager profile and assign a single endpoint.</span></span>
+<span data-ttu-id="88dca-112">建立流量管理員設定檔，並指派單一端點。</span><span class="sxs-lookup"><span data-stu-id="88dca-112">Create a Traffic Manager profile and assign a single endpoint.</span></span>
 
 ```java
 TrafficManagerProfile tmProfile = azure.trafficManagerProfiles().define("testTMProfile")
@@ -56,10 +56,10 @@ TrafficManagerProfile tmProfile = azure.trafficManagerProfiles().define("testTMP
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="4ba91-113">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="4ba91-113">Explore the Management APIs</span></span>](/java/api/overview/azure/trafficmanager/managementapi)
+> [<span data-ttu-id="88dca-113">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="88dca-113">Explore the Management APIs</span></span>](/java/api/overview/azure/trafficmanager/management)
 
-## <a name="samples"></a><span data-ttu-id="4ba91-114">範例</span><span class="sxs-lookup"><span data-stu-id="4ba91-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="88dca-114">範例</span><span class="sxs-lookup"><span data-stu-id="88dca-114">Samples</span></span>
 
-[<span data-ttu-id="4ba91-115">跨多個區域平衡 Web 應用程式流量</span><span class="sxs-lookup"><span data-stu-id="4ba91-115">Balance web app traffic across multiple regions</span></span>](https://github.com/Azure-Samples/traffic-manager-java-manage-profiles)
+[<span data-ttu-id="88dca-115">跨多個區域平衡 Web 應用程式流量</span><span class="sxs-lookup"><span data-stu-id="88dca-115">Balance web app traffic across multiple regions</span></span>](https://github.com/Azure-Samples/traffic-manager-java-manage-profiles)
 
-<span data-ttu-id="4ba91-116">深入探索可在應用程式中使用的 [Azure 流量管理員 Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic)。</span><span class="sxs-lookup"><span data-stu-id="4ba91-116">Explore more [sample Java code for Azure Traffic Manager](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic) you can use in your apps.</span></span>
+<span data-ttu-id="88dca-116">深入探索可在應用程式中使用的 [Azure 流量管理員 Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic)。</span><span class="sxs-lookup"><span data-stu-id="88dca-116">Explore more [sample Java code for Azure Traffic Manager](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic) you can use in your apps.</span></span>

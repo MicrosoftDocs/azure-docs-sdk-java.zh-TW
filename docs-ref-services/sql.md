@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure SQL Database 程式庫"
-description: "使用管理 API 透過 JDBC 驅動程式或管理 Azure SQL Database 執行個體來連線到 Azure SQL Database。"
-keywords: "Azure, Java, SDK, API, SQL, 資料庫, JDBC"
+title: 適用於 Java 的 Azure SQL Database 程式庫
+description: 使用管理 API 透過 JDBC 驅動程式或管理 Azure SQL Database 執行個體來連線到 Azure SQL Database。
+keywords: Azure, Java, SDK, API, SQL, 資料庫, JDBC
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,25 +11,25 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
-ms.openlocfilehash: 3ae4015ae57e5eac4dafb30f4a42881986501853
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 37f7d3caf10e6b709cee2452c63a543d49e0ead8
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="azure-sql-database-libraries-for-java"></a><span data-ttu-id="7098e-104">適用於 Java 的 Azure SQL Database 程式庫</span><span class="sxs-lookup"><span data-stu-id="7098e-104">Azure SQL Database libraries for Java</span></span>
+# <a name="azure-sql-database-libraries-for-java"></a><span data-ttu-id="975fa-104">適用於 Java 的 Azure SQL Database 程式庫</span><span class="sxs-lookup"><span data-stu-id="975fa-104">Azure SQL Database libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="7098e-105">概觀</span><span class="sxs-lookup"><span data-stu-id="7098e-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="975fa-105">概觀</span><span class="sxs-lookup"><span data-stu-id="975fa-105">Overview</span></span>
 
-<span data-ttu-id="7098e-106">[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) 是使用 Microsoft SQL Server 引擎的關聯式資料庫服務，可支援資料表、JSON、空間和 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="7098e-106">[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) is a relational database service using the Microsoft SQL Server engine that supports table, JSON, spatial, and XML data.</span></span> 
+<span data-ttu-id="975fa-106">[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) 是使用 Microsoft SQL Server 引擎的關聯式資料庫服務，可支援資料表、JSON、空間和 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="975fa-106">[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) is a relational database service using the Microsoft SQL Server engine that supports table, JSON, spatial, and XML data.</span></span> 
 
-<span data-ttu-id="7098e-107">若要開始使用 Azure SQL Database，請參閱 [Azure SQL Database：使用 Java 連線及查詢資料](/azure/sql-database/sql-database-connect-query-java)。</span><span class="sxs-lookup"><span data-stu-id="7098e-107">To get started with Azure SQL Database, see [Azure SQL Database: Use Java to connect and query data](/azure/sql-database/sql-database-connect-query-java).</span></span>
+<span data-ttu-id="975fa-107">若要開始使用 Azure SQL Database，請參閱 [Azure SQL Database：使用 Java 連線及查詢資料](/azure/sql-database/sql-database-connect-query-java)。</span><span class="sxs-lookup"><span data-stu-id="975fa-107">To get started with Azure SQL Database, see [Azure SQL Database: Use Java to connect and query data](/azure/sql-database/sql-database-connect-query-java).</span></span>
 
-## <a name="client-jdbc-driver"></a><span data-ttu-id="7098e-108">用戶端 JDBC 驅動程式</span><span class="sxs-lookup"><span data-stu-id="7098e-108">Client JDBC driver</span></span>
+## <a name="client-jdbc-driver"></a><span data-ttu-id="975fa-108">用戶端 JDBC 驅動程式</span><span class="sxs-lookup"><span data-stu-id="975fa-108">Client JDBC driver</span></span>
 
-<span data-ttu-id="7098e-109">使用 [SQL Database JDBC 驅動程式](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server)從應用程式連線到 Azure SQL Database。</span><span class="sxs-lookup"><span data-stu-id="7098e-109">Connect to Azure SQL Database from your applications using the [SQL Database JDBC driver](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server).</span></span> <span data-ttu-id="7098e-110">您可以使用 [Java JDBC API](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) 直接與資料庫連線，或使用資料存取架構透過 JDBC (例如 [Hibernate](http://hibernate.org/)) 與資料庫互動。</span><span class="sxs-lookup"><span data-stu-id="7098e-110">You can use the [Java JDBC API](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) to directly connect with the database or use data access frameworks that interact with the database through JDBC such as [Hibernate](http://hibernate.org/).</span></span>
+<span data-ttu-id="975fa-109">使用 [SQL Database JDBC 驅動程式](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server)從應用程式連線到 Azure SQL Database。</span><span class="sxs-lookup"><span data-stu-id="975fa-109">Connect to Azure SQL Database from your applications using the [SQL Database JDBC driver](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server).</span></span> <span data-ttu-id="975fa-110">您可以使用 [Java JDBC API](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) 直接與資料庫連線，或使用資料存取架構透過 JDBC (例如 [Hibernate](http://hibernate.org/)) 與資料庫互動。</span><span class="sxs-lookup"><span data-stu-id="975fa-110">You can use the [Java JDBC API](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) to directly connect with the database or use data access frameworks that interact with the database through JDBC such as [Hibernate](http://hibernate.org/).</span></span>
 
-<span data-ttu-id="7098e-111">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端 JDBC 驅動程式。</span><span class="sxs-lookup"><span data-stu-id="7098e-111">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client JDBC driver in your project.</span></span>
+<span data-ttu-id="975fa-111">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端 JDBC 驅動程式。</span><span class="sxs-lookup"><span data-stu-id="975fa-111">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client JDBC driver in your project.</span></span>
 
 
 ```XML
@@ -40,9 +40,9 @@ ms.lasthandoff: 10/09/2017
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="7098e-112">範例</span><span class="sxs-lookup"><span data-stu-id="7098e-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="975fa-112">範例</span><span class="sxs-lookup"><span data-stu-id="975fa-112">Example</span></span>
 
-<span data-ttu-id="7098e-113">使用 JDBC 連線到 SQL 資料庫並選取資料表中的所有記錄。</span><span class="sxs-lookup"><span data-stu-id="7098e-113">Connect to SQL database and select all records in a table using JDBC.</span></span>
+<span data-ttu-id="975fa-113">使用 JDBC 連線到 SQL 資料庫並選取資料表中的所有記錄。</span><span class="sxs-lookup"><span data-stu-id="975fa-113">Connect to SQL database and select all records in a table using JDBC.</span></span>
 
 ```java
 String connectionString = "jdbc:sqlserver://fabrikam.database.windows.net:1433;database=fiber;user=raisa;password=testpass;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
@@ -53,11 +53,11 @@ try {
 }  
 ```
 
-## <a name="management-api"></a><span data-ttu-id="7098e-114">管理 API</span><span class="sxs-lookup"><span data-stu-id="7098e-114">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="975fa-114">管理 API</span><span class="sxs-lookup"><span data-stu-id="975fa-114">Management API</span></span>
 
-<span data-ttu-id="7098e-115">使用管理 API 在訂用帳戶中建立和管理 Azure SQL Database 資源。</span><span class="sxs-lookup"><span data-stu-id="7098e-115">Create and manage Azure SQL Database resources in your subscription with the management API.</span></span>   
+<span data-ttu-id="975fa-115">使用管理 API 在訂用帳戶中建立和管理 Azure SQL Database 資源。</span><span class="sxs-lookup"><span data-stu-id="975fa-115">Create and manage Azure SQL Database resources in your subscription with the management API.</span></span>   
 
-<span data-ttu-id="7098e-116">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="7098e-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="975fa-116">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="975fa-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 
 ```XML
@@ -69,11 +69,11 @@ try {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="7098e-117">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="7098e-117">Explore the Management APIs</span></span>](/java/api/overview/azure/sql/managementapi)
+> [<span data-ttu-id="975fa-117">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="975fa-117">Explore the Management APIs</span></span>](/java/api/overview/azure/sql/management)
 
-### <a name="example"></a><span data-ttu-id="7098e-118">範例</span><span class="sxs-lookup"><span data-stu-id="7098e-118">Example</span></span>
+### <a name="example"></a><span data-ttu-id="975fa-118">範例</span><span class="sxs-lookup"><span data-stu-id="975fa-118">Example</span></span>
 
-<span data-ttu-id="7098e-119">建立 SQL Database 資源，並使用防火牆規則限制只能存取某個 IP 位址範圍。</span><span class="sxs-lookup"><span data-stu-id="7098e-119">Create a SQL Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
+<span data-ttu-id="975fa-119">建立 SQL Database 資源，並使用防火牆規則限制只能存取某個 IP 位址範圍。</span><span class="sxs-lookup"><span data-stu-id="975fa-119">Create a SQL Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
 
 ```java
 SqlServer sqlServer = azure.sqlServers().define(sqlDbName)
@@ -85,8 +85,8 @@ SqlServer sqlServer = azure.sqlServers().define(sqlDbName)
                     .create();
 ```
 
-## <a name="samples"></a><span data-ttu-id="7098e-120">範例</span><span class="sxs-lookup"><span data-stu-id="7098e-120">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="975fa-120">範例</span><span class="sxs-lookup"><span data-stu-id="975fa-120">Samples</span></span>
 
 [!INCLUDE [java-sql-samples](../docs-ref-conceptual/includes/sql.md)]
 
-<span data-ttu-id="7098e-121">深入探索可在應用程式中使用的 [Azure SQL Database Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=SQL)。</span><span class="sxs-lookup"><span data-stu-id="7098e-121">Explore more [sample Java code for Azure SQL Database](https://azure.microsoft.com/resources/samples/?platform=java&term=SQL) you can use in your apps.</span></span>
+<span data-ttu-id="975fa-121">深入探索可在應用程式中使用的 [Azure SQL Database Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=SQL)。</span><span class="sxs-lookup"><span data-stu-id="975fa-121">Explore more [sample Java code for Azure SQL Database](https://azure.microsoft.com/resources/samples/?platform=java&term=SQL) you can use in your apps.</span></span>
