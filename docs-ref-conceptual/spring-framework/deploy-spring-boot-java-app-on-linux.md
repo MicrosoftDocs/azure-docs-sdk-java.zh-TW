@@ -1,12 +1,12 @@
 ---
-title: "在 Azure Container Service 的 Linux 上部署 Spring Boot Web 應用程式"
-description: "本教學課程會逐步引導您將 Spring Boot 應用程式部署為 Microsoft Azure 上之 Linux Web 應用程式的步驟。"
+title: 在 Azure Container Service 的 Linux 上部署 Spring Boot Web 應用程式
+description: 本教學課程會逐步引導您將 Spring Boot 應用程式部署為 Microsoft Azure 上之 Linux Web 應用程式的步驟。
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java

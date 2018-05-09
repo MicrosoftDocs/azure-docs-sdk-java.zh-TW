@@ -1,11 +1,11 @@
 ---
-title: "適用於 IntelliJ 的 Azure 工具組新增功能"
-description: "了解適用於 IntelliJ 的 Azure 工具組最新功能。"
-services: 
+title: 適用於 IntelliJ 的 Azure 工具組新增功能
+description: 了解適用於 IntelliJ 的 Azure 工具組最新功能。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 46ed791f-df59-416a-809e-f52345ad973c
 ms.author: robmcm;asirveda;martinsawicki
 ms.date: 02/01/2018

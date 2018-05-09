@@ -1,11 +1,11 @@
 ---
-title: "使用 IntelliJ 建立 Azure 的 Hello World Web 應用程式"
-description: "本教學課程將示範如何使用適用於 IntelliJ 的 Azure 工具組來建立 Azure 的 Hello World Web 應用程式。"
+title: 使用 IntelliJ 建立 Azure 的 Hello World Web 應用程式
+description: 本教學課程將示範如何使用適用於 IntelliJ 的 Azure 工具組來建立 Azure 的 Hello World Web 應用程式。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 75ce7b36-e3ae-491d-8305-4b42ce37db4e
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018

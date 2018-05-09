@@ -1,12 +1,12 @@
 ---
-title: "透過 Maven 和 Azure 將 Spring Boot 應用程式部署到雲端"
-description: "了解如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Spring Boot 應用程式部署至雲端。"
+title: 透過 Maven 和 Azure 將 Spring Boot 應用程式部署到雲端
+description: 了解如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Spring Boot 應用程式部署至雲端。
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;kevinzha
 ms.date: 02/01/2018
 ms.devlang: java

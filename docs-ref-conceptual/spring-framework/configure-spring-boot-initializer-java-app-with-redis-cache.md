@@ -1,12 +1,12 @@
 ---
-title: "將 Spring Boot Initializer 應用程式設定為使用 Azure Redis 快取"
-description: "將使用 Spring Initializr 所建立的 Spring Boot 應用程式設定為透過 Azure Redis Cache 在雲端使用 Redis。"
+title: 將 Spring Boot Initializer 應用程式設定為使用 Azure Redis 快取
+description: 將使用 Spring Initializr 所建立的 Spring Boot 應用程式設定為透過 Azure Redis Cache 在雲端使用 Redis。
 services: redis-cache
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;zhijzhao;yidon
 ms.date: 02/01/2018
 ms.devlang: java

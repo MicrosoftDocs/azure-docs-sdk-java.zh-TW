@@ -1,11 +1,11 @@
 ---
-title: "適用於 Eclipse 的 Azure 工具組"
-description: "了解適用於 Eclipse 的 Azure 工具組如何協助您建立雲端應用程式，並將其部署至 Azure。"
-services: 
+title: 適用於 Eclipse 的 Azure 工具組
+description: 了解適用於 Eclipse 的 Azure 工具組如何協助您建立雲端應用程式，並將其部署至 Azure。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: ef2f3839-2549-4471-9b53-0deb7f4c128b
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018

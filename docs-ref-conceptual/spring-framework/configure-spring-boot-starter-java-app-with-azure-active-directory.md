@@ -1,12 +1,12 @@
 ---
-title: "如何對 Azure Active Directory 使用 Spring Boot Starter"
-description: "了解如何使用 Azure Active Directory Starter 來設定 Spring Boot Initializer 應用程式。"
+title: 如何對 Azure Active Directory 使用 Spring Boot Starter
+description: 了解如何使用 Azure Active Directory Starter 來設定 Spring Boot Initializer 應用程式。
 services: active-directory
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java

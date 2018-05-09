@@ -1,12 +1,12 @@
 ---
-title: "使用 Fabric8 Maven 外掛程式部署 Spring Boot 應用程式"
-description: "本教學課程將會逐步引導您使用適用於 Apache Maven 的 Fabric8 外掛程式在 Microsoft Azure 上部署 Spring Boot 應用程式。"
+title: 使用 Fabric8 Maven 外掛程式部署 Spring Boot 應用程式
+description: 本教學課程將會逐步引導您使用適用於 Apache Maven 的 Fabric8 外掛程式在 Microsoft Azure 上部署 Spring Boot 應用程式。
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: yuwzho;robmcm
 ms.date: 02/01/2018
 ms.devlang: java

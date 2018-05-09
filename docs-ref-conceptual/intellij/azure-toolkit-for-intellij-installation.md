@@ -1,11 +1,11 @@
 ---
-title: "安裝 Azure Toolkit for IntelliJ"
-description: "了解如何安裝適用於 intelliJ 的 Azure 工具組，以建立雲端應用程式並將其部署至 Azure。"
-services: 
+title: 安裝 Azure Toolkit for IntelliJ
+description: 了解如何安裝適用於 intelliJ 的 Azure 工具組，以建立雲端應用程式並將其部署至 Azure。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: c6817c7b-f28c-4c06-8216-41c7a8117de3
 ms.author: robmcm
 ms.date: 02/01/2018

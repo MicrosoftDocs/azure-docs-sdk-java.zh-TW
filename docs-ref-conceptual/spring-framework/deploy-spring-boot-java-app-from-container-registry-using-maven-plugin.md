@@ -1,12 +1,12 @@
 ---
-title: "如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署至 Azure App Service"
-description: "本教學課程將逐步引導您藉由使用 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署到 Azure App Service。"
+title: 如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署至 Azure App Service
+description: 本教學課程將逐步引導您藉由使用 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署到 Azure App Service。
 services: container-registry
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;kevinzha
 ms.date: 02/01/2018
 ms.devlang: java

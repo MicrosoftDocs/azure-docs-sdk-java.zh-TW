@@ -1,12 +1,12 @@
 ---
-title: "使用適用於 IntelliJ 的 Azure Explorer 來管理 Redis 快取"
-description: "了解如何使用適用於 IntelliJ 的 Azure Explorer 來管理 Azure Redis 快取。"
-services: 
+title: 使用適用於 IntelliJ 的 Azure Explorer 來管理 Redis 快取
+description: 了解如何使用適用於 IntelliJ 的 Azure Explorer 來管理 Azure Redis 快取。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java

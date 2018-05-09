@@ -1,12 +1,12 @@
 ---
-title: "適用於 Azure 的 Spring Boot Starter"
-description: "本文說明適用於 Azure 的各種 Spring Boot Starter。"
-services: 
+title: 適用於 Azure 的 Spring Boot Starter
+description: 本文說明適用於 Azure 的各種 Spring Boot Starter。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java

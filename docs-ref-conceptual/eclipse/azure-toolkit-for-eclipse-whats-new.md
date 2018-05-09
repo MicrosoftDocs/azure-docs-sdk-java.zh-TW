@@ -1,11 +1,11 @@
 ---
-title: "適用於 Eclipse 的 Azure 工具組的新功能"
-description: "了解適用於 Eclipse 的 Azure 工具組中的最新功能。"
-services: 
+title: 適用於 Eclipse 的 Azure 工具組的新功能
+description: 了解適用於 Eclipse 的 Azure 工具組中的最新功能。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 16b066ea-aae7-4c30-9a12-fa0c3711b93e
 ms.author: robmcm;asirveda;martinsawicki
 ms.date: 02/01/2018

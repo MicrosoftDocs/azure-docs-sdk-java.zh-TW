@@ -1,12 +1,12 @@
 ---
-title: "使用 Azure Explorer for Eclipse 來管理虛擬機器"
-description: "了解如何使用適用於 Eclipse 的 Azure 工具組來管理 Azure 虛擬機器。"
-services: 
+title: 使用 Azure Explorer for Eclipse 來管理虛擬機器
+description: 了解如何使用適用於 Eclipse 的 Azure 工具組來管理 Azure 虛擬機器。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
