@@ -1,12 +1,12 @@
 ---
-title: "使用適用於 Eclipse 的 Azure 工具組來發佈 Docker 容器"
-description: "了解如何使用適用於 Eclipse 的 Azure 工具組，將 Web 應用程式發佈至 Microsoft Azure 作為 Docker 容器。"
-services: 
+title: 使用適用於 Eclipse 的 Azure 工具組來發佈 Docker 容器
+description: 了解如何使用適用於 Eclipse 的 Azure 工具組，將 Web 應用程式發佈至 Microsoft Azure 作為 Docker 容器。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -164,6 +164,7 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Docker 網站]: https://www.docker.com/
+[Docker website]: https://www.docker.com/
 
 <!-- IMG List -->
 

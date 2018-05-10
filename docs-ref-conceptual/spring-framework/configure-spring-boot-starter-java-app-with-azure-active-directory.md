@@ -1,12 +1,12 @@
 ---
-title: "如何對 Azure Active Directory 使用 Spring Boot Starter"
-description: "了解如何使用 Azure Active Directory Starter 來設定 Spring Boot Initializer 應用程式。"
+title: 如何對 Azure Active Directory 使用 Spring Boot Starter
+description: 了解如何使用 Azure Active Directory Starter 來設定 Spring Boot Initializer 應用程式。
 services: active-directory
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -252,11 +252,16 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure Active Directory 文件]: /azure/active-directory/
+[Azure Active Directory Documentation]: /azure/active-directory/
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/

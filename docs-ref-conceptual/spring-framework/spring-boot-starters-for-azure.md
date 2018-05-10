@@ -1,12 +1,12 @@
 ---
-title: "適用於 Azure 的 Spring Boot Starter"
-description: "本文說明適用於 Azure 的各種 Spring Boot Starter。"
-services: 
+title: 適用於 Azure 的 Spring Boot Starter
+description: 本文說明適用於 Azure 的各種 Spring Boot Starter。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -237,9 +237,12 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Azure 上的 Spring]: https://docs.microsoft.com/java/azure/spring-framework/
+[Spring on Azure]: https://docs.microsoft.com/java/azure/spring-framework/
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 
