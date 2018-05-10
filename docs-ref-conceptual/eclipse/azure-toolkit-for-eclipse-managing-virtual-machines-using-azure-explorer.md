@@ -1,12 +1,12 @@
 ---
-title: "使用 Azure Explorer for Eclipse 來管理虛擬機器"
-description: "了解如何使用適用於 Eclipse 的 Azure 工具組來管理 Azure 虛擬機器。"
-services: 
+title: 使用 Azure Explorer for Eclipse 來管理虛擬機器
+description: 了解如何使用適用於 Eclipse 的 Azure 工具組來管理 Azure 虛擬機器。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -156,9 +156,13 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure 中的 Windows 虛擬機器大小]: /azure/virtual-machines/virtual-machines-windows-sizes
+[Sizes for Windows virtual machines in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure 中的 Linux 虛擬機器大小]: /azure/virtual-machines/virtual-machines-linux-sizes
+[Sizes for Linux virtual machines in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
 [Windows 虛擬機器定價]: /pricing/details/virtual-machines/windows/
+[Windows virtual-machine pricing]: /pricing/details/virtual-machines/windows/
 [Linux 虛擬機器定價]: /pricing/details/virtual-machines/linux/
+[Linux virtual-machine pricing]: /pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

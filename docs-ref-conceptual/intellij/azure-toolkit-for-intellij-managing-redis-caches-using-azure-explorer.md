@@ -1,12 +1,12 @@
 ---
-title: "使用適用於 IntelliJ 的 Azure Explorer 來管理 Redis 快取"
-description: "了解如何使用適用於 IntelliJ 的 Azure Explorer 來管理 Azure Redis 快取。"
-services: 
+title: 使用適用於 IntelliJ 的 Azure Explorer 來管理 Redis 快取
+description: 了解如何使用適用於 IntelliJ 的 Azure Explorer 來管理 Azure Redis 快取。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -101,10 +101,15 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Redis 快取定價]: https://azure.microsoft.com/pricing/details/cache/
+[Redis Cache Pricing]: https://azure.microsoft.com/pricing/details/cache/
 [Azure Redis 快取]: https://azure.microsoft.com/services/cache/
+[Azure Redis Cache]: https://azure.microsoft.com/services/cache/
 [Redis 快取文件]: /azure/redis-cache
+[Redis Cache Documentation]: /azure/redis-cache
 [如何設定 Azure Redis 快取]: /azure/redis-cache/cache-configure
+[How to configure Azure Redis Cache]: /azure/redis-cache/cache-configure
 [適用於 IntelliJ 的 Azure 工具組登入指示]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign In Instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 
 <!-- IMG List -->
 

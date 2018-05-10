@@ -1,12 +1,12 @@
 ---
-title: 
-description: "本教學課程示範如何使用適用於 Eclipse 的 3.0.6 版 (或舊版) Azure 工具組來建立 Azure 的 Hello World Web 應用程式。"
+title: ''
+description: 本教學課程示範如何使用適用於 Eclipse 的 3.0.6 版 (或舊版) Azure 工具組來建立 Azure 的 Hello World Web 應用程式。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
 ms.devlang: java
@@ -210,9 +210,12 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [適用於 Eclipse 的 Azure 工具組]: azure-toolkit-for-eclipse.md
+[Azure Toolkit for Eclipse]: azure-toolkit-for-eclipse.md
 [適用於 IntelliJ 的 Azure 工具組]: ../intellij/azure-toolkit-for-intellij.md
+[Azure Toolkit for IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Web 應用程式概觀]: /azure/app-service/app-service-web-overview
+[Web Apps Overview]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
 [Updated Version]: azure-toolkit-for-eclipse-create-hello-world-web-app.md

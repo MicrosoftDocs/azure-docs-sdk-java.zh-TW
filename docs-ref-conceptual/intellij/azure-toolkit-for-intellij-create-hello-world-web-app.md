@@ -1,11 +1,11 @@
 ---
-title: "使用 IntelliJ 建立 Azure 的 Hello World Web 應用程式"
-description: "本教學課程將示範如何使用適用於 IntelliJ 的 Azure 工具組來建立 Azure 的 Hello World Web 應用程式。"
+title: 使用 IntelliJ 建立 Azure 的 Hello World Web 應用程式
+description: 本教學課程將示範如何使用適用於 IntelliJ 的 Azure 工具組來建立 Azure 的 Hello World Web 應用程式。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 75ce7b36-e3ae-491d-8305-4b42ce37db4e
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -119,9 +119,12 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure Toolkit for IntelliJ (適用於 IntelliJ 的 Azure 工具組)]: azure-toolkit-for-intellij.md
+[Azure Toolkit for IntelliJ]: azure-toolkit-for-intellij.md
 [適用於 Eclipse 的 Azure 工具組]: ../eclipse/azure-toolkit-for-eclipse.md
+[Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Web 應用程式概觀]: /azure/app-service/app-service-web-overview
+[Web Apps Overview]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
 [Legacy Version]: azure-toolkit-for-intellij-create-hello-world-web-app-legacy-version.md

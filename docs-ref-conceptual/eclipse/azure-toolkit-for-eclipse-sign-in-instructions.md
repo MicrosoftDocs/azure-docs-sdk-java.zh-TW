@@ -1,12 +1,12 @@
 ---
-title: "適用於 Eclipse 的 Azure 工具組登入指示"
-description: "了解如何使用適用於 Eclipse 的 Azure 工具組登入 Microsoft Azure。"
-services: 
+title: 適用於 Eclipse 的 Azure 工具組登入指示
+description: 了解如何使用適用於 Eclipse 的 Azure 工具組登入 Microsoft Azure。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
