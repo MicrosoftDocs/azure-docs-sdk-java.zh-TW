@@ -46,7 +46,7 @@ Javadoc 內容與 Azure Libraries for Java 產生關聯時，即可在 Eclipse �
 
 1. 選擇性步驟：按一下 [驗證]。 這裡可能會顯示 Javadoc JAR 可能發生的問題。
 
-1. 按一下 [SERVICEPRINCIPAL] 。
+1. 按一下 [確定]。
 
 與程式庫產生關聯後，Javadoc 內容隨即會顯示在 Eclipse 整合式開發環境 (IDE) 中。 例如，如果 `blob` 在程式碼中定義為 `CloudBlockBlob` 類型，以下為您在程式碼中輸入 `blob.acquireLease` 時，會顯示的 Javadoc 內容的範例：
 
