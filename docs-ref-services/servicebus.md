@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: 7468d9b920debc778e7e3d298fbcb913add6afdd
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: ed830b4f7ffa104174205f75ea2923235029ea80
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="service-bus-libraries-for-java"></a>適用於 Java 的服務匯流排程式庫
 
@@ -33,15 +33,18 @@ ms.lasthandoff: 04/26/2018
 
 針對 Java 開發人員，服務匯流排會提供由 Microsoft 支援的原生 API，而且服務匯流排也可與符合 AMQP 1.0 標準的程式庫 (例如 Apache Qpid Proton 的 JMS 提供者) 搭配使用。
 
-官方版的服務匯流排用戶端可於 [GitHub 上的原始程式碼](https://github.com/azure/azure-service-bus-java)取得，至於二進位檔和封裝的來源則可於 [Maven 中心](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22)取得。 
-
-
 ## <a name="client-library"></a>用戶端程式庫
 
+官方版的服務匯流排用戶端可於 [GitHub 上的原始程式碼](https://github.com/azure/azure-service-bus-java)取得，至於二進位檔和封裝的來源則可於 [Maven 中心](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22)取得。
+
+**[範例程式碼存放庫](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)包含以下範例：**
+* 如何使用 [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java)
+* 如何使用 [TopicClient and SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java)
+* 如何使用來自服務匯流排的 [MessageSender 和 MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) 訊息。
 
 將相依性新增至 Maven 專案的 `pom.xml` 檔案，以在您自己的專案中使用程式庫。 指定所需的版本。
 
-[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端程式庫。   
+[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端程式庫。
 
 ```XML
 <dependency>
@@ -50,11 +53,6 @@ ms.lasthandoff: 04/26/2018
     <version>1.0.0</version>
 </dependency>
 ```
-
-## <a name="examples"></a>範例
-
-[程式碼範例存放庫](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)中所含的範例會說明如何從服務匯流排 [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java) 和 [TopicClient 與 SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java) 以及 [MessageSender 與 MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) 訊息。
-
 
 ```java
 public class BasicSendReceiveWithQueueClient {
@@ -117,11 +115,18 @@ public class BasicSendReceiveWithQueueClient {
 
 > [!div class="nextstepaction"]
 > [探索用戶端 API](/java/api/overview/azure/servicebus/client)
+> [在此尋找更多範例 (另請參閱上述資訊以取得詳細資料)](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)
 
 ## <a name="management-api"></a>管理 API
 
 使用管理 API 建立和管理命名空間、主題、佇列和訂用帳戶。
 
+**請在此此尋找更多範例：**
+* [管理服務匯流排佇列](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
+* [建立和訂閱服務匯流排主題](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)
+
+**在專案中使用管理 API：**
+\
 [新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。  
 
 ```XML
@@ -134,11 +139,5 @@ public class BasicSendReceiveWithQueueClient {
 
 > [!div class="nextstepaction"]
 > [探索管理 API](/java/api/overview/azure/servicebus/management)
-
-
-## <a name="examples"></a>範例
-
-[管理服務匯流排佇列](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
-[建立和訂閱服務匯流排主題](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)
 
 深入探索可在應用程式中使用的 [Azure 服務匯流排 Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=bus)。

@@ -1,12 +1,12 @@
 ---
-title: "使用適用於 IntelliJ 的 Azure 工具組，在雲端中部署 Linux 容器中執行的 Hello World Web 應用程式"
-description: "使用適用於 IntelliJ 的 Azure 工具組，在 Linux 容器中執行基本的 Hello World Web 應用程式並部署到雲端。"
+title: 使用適用於 IntelliJ 的 Azure 工具組，在雲端中部署 Linux 容器中執行的 Hello World Web 應用程式
+description: 使用適用於 IntelliJ 的 Azure 工具組，在 Linux 容器中執行基本的 Hello World Web 應用程式並部署到雲端。
 services: app-service\web
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: c430581a9a67365430d87c1af925c1f4d27eca2b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，在雲端中將 Hello World Web 應用程式部署到 Linux 容器
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="create-a-new-web-app-project"></a>建立新的 Web 應用程式專案
 
-1. 使用 [適用於 IntelliJ 的 Azure 工具組登入指示] 文章中的步驟來啟動 IntelliJ 並登入您的 Azure 帳戶。
+1. 使用[適用於 IntelliJ 的 Azure 工具組登入指示](https://docs.microsoft.com/java/azure/intellij/azure-toolkit-for-intellij-sign-in-instructions)文章中的步驟，來啟動 IntelliJ 並登入您的 Azure 帳戶。
 
 1. 按一下 [檔案] 功能表，按一下 [新增]，然後按一下 [專案]。
    

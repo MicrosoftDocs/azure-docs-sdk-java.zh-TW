@@ -1,11 +1,11 @@
 ---
-title: "安裝適用於 Eclipse 的 Azure 工具組"
-description: "了解如何安裝適用於 Eclipse 外掛程式的 Azure 工具組，以建立雲端應用程式並將其部署至 Azure。"
-services: 
+title: 安裝適用於 Eclipse 的 Azure 工具組
+description: 了解如何安裝適用於 Eclipse 外掛程式的 Azure 工具組，以建立雲端應用程式並將其部署至 Azure。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 9e93ff6a-f42b-4d99-b55b-624136b4a730
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 81a784a09c07e0ace4d12989c745c80f55cd70cd
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d5f685fa62ad74c8b8cd842b3667f8161e7c5760
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a>安裝適用於 Eclipse 的 Azure 工具組
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/03/2018
 
 1. 在 [可用軟體] 對話方塊的 [使用] 文字方塊中，鍵入 `http://dl.microsoft.com/eclipse/`，然後按一下 **Enter** 鍵。
 
-1. 在 [名稱] 窗格中，核取 [Azure Toolkit for Eclipse]，然後取消核取 [在安裝期間連絡所有更新網站來尋找必要軟體]。 您的畫面看起來應該像下面這樣：
+1. 在 [名稱] 窗格中，核取 [Azure Toolkit for Java]，然後取消核取 [在安裝期間連絡所有更新網站來尋找必要軟體]。 您的畫面看起來應該像下面這樣：
    
    ![安裝 Azure Toolkit for Eclipse][02]
 
