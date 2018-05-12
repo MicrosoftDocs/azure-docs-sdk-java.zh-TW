@@ -1,11 +1,11 @@
 ---
-title: "使用 Eclipse 建立 Azure 的 Hello World Web 應用程式"
-description: "本教學課程將示範如何使用適用於 Eclipse 的 Azure 工具組來建立 Azure Hello World Web 應用程式。"
+title: 使用 Eclipse 建立 Azure 的 Hello World Web 應用程式
+description: 本教學課程將示範如何使用適用於 Eclipse 的 Azure 工具組來建立 Azure Hello World Web 應用程式。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -14,11 +14,11 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: bec94e65951330c933e0173fd580c3578e759c18
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 5e025c90c2619ec72ffddf5815fd49c3ac59c00f
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>使用 Eclipse 建立 Azure 的 Hello World Web 應用程式
 
@@ -98,7 +98,7 @@ ms.lasthandoff: 02/03/2018
 
    ![部署 App Service][deploy-app-service]
 
-1. 工具組成功部署 Web 應用程式時，會顯示「已發佈」狀態 **Azure 活動記錄**，這是已部署 Web 應用程式 URL 的超連結。
+1. 當系統成功地部署您的 Web 應用程式之後，工具組會在 **Azure 活動記錄** 標籤下顯示**已發佈**狀態，並提供已部署 Web 應用程式的超連結。
 
    ![發佈狀態][publish-status]
 
