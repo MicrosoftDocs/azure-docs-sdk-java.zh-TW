@@ -1,1 +1,1 @@
-<span data-ttu-id="4e239-101">如需在 Azure 上建立及部署 Java 應用程式的詳細資訊，請瀏覽 [Java 開發人員中心](https://docs.microsoft.com/java/api)。</span><span class="sxs-lookup"><span data-stu-id="4e239-101">For more information on creating and deploying Java apps on Azure, visit the [Java developer center](https://docs.microsoft.com/java/api).</span></span>
+如需在 Azure 上建立及部署 Java 應用程式的詳細資訊，請瀏覽 [Java 開發人員中心](https://docs.microsoft.com/java/api)。
