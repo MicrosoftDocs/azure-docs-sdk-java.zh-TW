@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: 3808c6d56b04f28c84a89a25219e4ec523f87964
-ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
+ms.openlocfilehash: 1d556955fcc5b73f1ba099a0b846b571ba64ccff
+ms.sourcegitcommit: 107c3c5ed8c6991c751f95bcaf3757220940df9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>使用適用於 Java 的 Azure 程式庫來進行驗證 
 
@@ -90,7 +90,7 @@ Azure azure = Azure
 
 `client`、`tenant` 和 `key` 是用於[檔案型驗證](#mgmt-file)的相同服務主體值。 `AzureEnvironment.AZURE` 值會對 Azure 公用雲端建立認證。 如果您需要存取其他雲端，請將此值變更為不同的值 (例如，`AzureEnvironment.AZURE_GERMANY`)。  
 
- 從環境變數或祕密管理存放區 (如 [Key Vault](/azure/key-vault/key-vault-whatis.md)) 讀取服務主體值。 請避免在程式碼中將這些值設定為純文字字串，以免不小心地在版本控制記錄中公開認證。   
+ 從環境變數或祕密管理存放區 (如 [Key Vault](/azure/key-vault/key-vault-whatis)) 讀取服務主體值。 請避免在程式碼中將這些值設定為純文字字串，以免不小心地在版本控制記錄中公開認證。   
 
 <a name="mgmt-file"></a>
 
