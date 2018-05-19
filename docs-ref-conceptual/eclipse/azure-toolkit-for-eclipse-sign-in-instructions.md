@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 498a22c455e54b8038169cf4e9f6ac7d7287c0bb
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: eb6099ab0c19bf3588cb7fd668f070771e58fe74
+ms.sourcegitcommit: 8230cf6b15ac51a9f8a209e9b76411a0385029aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>適用於 Eclipse 的 Azure 工具組的 Azure 登入指示
 
@@ -91,7 +91,7 @@ ms.lasthandoff: 02/03/2018
 
    ![[登入] 對話方塊][A02]
 
-1. 當 [選取驗證檔案] 對話方塊出現時，請選取您稍早建立的認證檔案，然後按一下 [選取]。
+1. 當 [選取已驗證檔案] 對話方塊出現時，請選取您稍早建立的認證檔案，接著按一下 [開啟]。
 
    ![[登入] 對話方塊][A08]
 
