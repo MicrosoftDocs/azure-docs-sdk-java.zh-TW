@@ -14,11 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 17c358317d1b96521de87f263a92fa2d7c0ff26c
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 82cb0da3ce49fa77f888808af14455bf226d5cb0
+ms.sourcegitcommit: 024b3127daf396a17bd43d57642e3534ae87f120
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34462748"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-web-apps"></a>使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Spring Boot 應用程式部署至雲端
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="clone-the-sample-spring-boot-web-app"></a>複製範例 Spring Boot Web 應用程式
 
-在本節中，您會在本機複製已完成 Spring Boot 應用程式，並且進行測試。
+在本節中，您會在本機複製已完成的 Spring Boot 應用程式，並且進行測試。
 
 1. 開啟命令提示字元或終端機視窗，並建立本機目錄來保存您的 Spring Boot 應用程式，然後變更至該目錄；例如：
    ```shell
@@ -85,7 +86,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="create-an-azure-service-principal"></a>建立 Azure 服務主體
 
-在本節中，您建立 Azure 服務主體，Maven 外掛程式會在將您的 Web 應用程式部署至 Azure 時使用該服務主體。
+在本節中，您會建立 Azure 服務主體，Maven 外掛程式會在將您的 Web 應用程式部署至 Azure 時使用該服務主體。
 
 1. 開啟命令提示字元。
 
@@ -122,7 +123,7 @@ ms.lasthandoff: 02/03/2018
 
 在本節中，您使用 Azure 服務主體的值，設定將您的 Web 應用程式部署至 Azure 時，Maven 使用的驗證。
 
-1. 在文字編輯器中開啟您的 Maven`settings.xml` 檔案，這個檔案可能在如下列範例的路徑中：
+1. 在文字編輯器中開啟 Maven `settings.xml` 檔案。 這個檔案可能在類似下列範例的路徑中：
    * `/etc/maven/settings.xml`
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
@@ -149,7 +150,7 @@ ms.lasthandoff: 02/03/2018
    | `<client>` | 包含服務主體的 `appId` 值。 |
    | `<tenant>` | 包含服務主體的 `tenant` 值。 |
    | `<key>` | 包含服務主體的 `password` 值。 |
-   | `<environment>` | 定義目標 Azure 雲端環境，也就是此範例中的 `AZURE`。 (環境的完整清單可於[適用於 Azure Web Apps 的 Maven 外掛程式]文件中取得)。 |
+   | `<environment>` | 定義目標 Azure 雲端環境，也就是此範例中的 `AZURE`。 (環境的完整清單可於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件中取得)。 |
 
 1. 儲存並關閉 settings.xml 檔案。
 
@@ -191,16 +192,16 @@ ms.lasthandoff: 02/03/2018
    </plugin>
    ```
 
-您可以為 Maven 外掛程式修改數個值，這些元素的詳細描述可於[適用於 Azure Web Apps 的 Maven 外掛程式]文件中取得。 也就是說，有數個值值得在這篇文章中反白顯示：
+您可以為 Maven 外掛程式修改數個值，這些元素的詳細描述可於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件中取得。 也就是說，有數個值值得在這篇文章中反白顯示：
 
 | 元素 | 說明 |
 |---|---|
-| `<version>` | 指定[適用於 Azure Web Apps 的 Maven 外掛程式]版本。 您應該檢查 [Maven 中央存放庫](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)中所列的版本，確定您使用最新版本。 |
+| `<version>` | 指定[適用於 Azure Web 應用程式的 Maven 外掛程式]版本。 請檢查 [Maven 中央存放庫](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)中所列的版本，確定您使用的是最新版本。 |
 | `<authentication>` | 指定 Azure 的驗證資訊，在此範例中包含 `<serverId>` 元素，其中包含 `azure-auth`，Maven 使用該值來查閱 Maven settings.xml 檔案 (您在本文稍早章節中定義) 中的 Azure 服務主體值。 |
 | `<resourceGroup>` | 指定目標資源群組，也就是此範例中的 `maven-plugin`。 如果該資源群組不存在，則系統會在部署期間建立它。 |
 | `<appName>` | 指定 Web 應用程式的目標名稱。 在此範例中，目標名稱是 `maven-web-app-${maven.build.timestamp}`，在此範例中會附加 `${maven.build.timestamp}` 尾碼以避免發生衝突。 (時間戳記是選擇性的；您可以為應用程式名稱指定任何唯一的字串。) |
-| `<region>` | 指定目標區域，在此範例中是 `westus`。 (完整清單位於[適用於 Azure Web Apps 的 Maven 外掛程式]文件。) |
-| `<javaVersion>` | 指定 Web 應用程式的 Java 執行階段版本。 (完整清單位於[適用於 Azure Web Apps 的 Maven 外掛程式]文件。) |
+| `<region>` | 指定目標區域，在此範例中是 `westus`。 (完整清單位於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件。) |
+| `<javaVersion>` | 指定 Web 應用程式的 Java 執行階段版本。 (完整清單位於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件。) |
 | `<deploymentType>` | 指定 Web 應用程式的部署類型。 雖然其他部署類型的支援正在開發中，現在只有 `ftp` 受到支援。 |
 | `<resources>` | 指定當 Maven 將 Web 應用程式部署至 Azure 時使用的資源和目標目的地。 在此範例中，兩個 `<resource>` 元素會指定 Maven 將會部署 Web 應用程式的 JAR 檔案和 Spring Boot 專案的 web.config 檔案。 |
 
@@ -255,7 +256,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 如需本文所討論之各種技術的詳細資訊，請參閱下列文章：
 
-* [適用於 Azure Web Apps 的 Maven 外掛程式]
+* [適用於 Azure Web 應用程式的 Maven 外掛程式]
 
 * [從 Azure CLI 登入 Azure](/azure/xplat-cli-connect)
 
@@ -279,7 +280,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot Getting Started]: https://github.com/microsoft/gs-spring-boot
 [Spring Framework]: https://spring.io/
-[適用於 Azure Web Apps 的 Maven 外掛程式]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
+[適用於 Azure Web 應用程式的 Maven 外掛程式]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 
 <!-- IMG List -->
 
