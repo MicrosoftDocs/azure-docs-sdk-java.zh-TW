@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954839"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>使用適用於 IntelliJ 的 Azure Explorer 來管理儲存體帳戶
 

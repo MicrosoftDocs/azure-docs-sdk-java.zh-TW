@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823761"
 ---
 # <a name="azure-application-insights-libraries-for-java"></a>適用於 Java 的 Azure Application Insights 程式庫
 

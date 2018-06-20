@@ -1,12 +1,12 @@
 ---
-title: "透過 Azure App Service 將 Spring Boot 應用程式部署至雲端"
-description: "本教學課程將逐步引導開發人員使用 Azure App Service 將 Spring Boot 入門 Web 應用程式部署至雲端。"
+title: 透過 Azure App Service 將 Spring Boot 應用程式部署至雲端
+description: 本教學課程將逐步引導開發人員使用 Azure App Service 將 Spring Boot 入門 Web 應用程式部署至雲端。
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954521"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>透過 Azure App Service 將 Spring Boot 應用程式部署至雲端
 

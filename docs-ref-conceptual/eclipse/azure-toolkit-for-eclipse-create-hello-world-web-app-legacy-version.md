@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954739"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>使用 Eclipse 的舊版工具組建立 Azure 的 Hello World Web 應用程式
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 02/03/2018
       * 選擇性︰根據預設，Azure 會自動將最新的 Java 8 散發套件部署到 Web 應用程式容器，成為 JVM。 不過，如果 Web 應用程式需要的話，您也可以指定 JVM 的其他版本和散發套件。 若要指定 Web 應用程式的 JDK，請按一下 [JDK]  索引標籤，然後選取下列選項之一︰
          * **部署 Azure Web Apps 服務提供的預設 JDK**︰這個選項會部署最新的 Java 8 散發套件。
          * **部署 Azure 提供的第三方 JDK**：這個選項可讓您從 Microsoft Azure 提供的 JDK 清單中選擇。
-         * **從這個下載位置部署自己的 JDK：**這個選項可讓您指定自己的 JDK 散發套件。您必須將它封裝為 ZIP 檔案，再上傳到公開使用的下載位置，或您擁有存取權限的 Azure 儲存體帳戶。
+         * **從這個下載位置部署自己的 JDK：** 這個選項可讓您指定自己的 JDK 散發套件。您必須將它封裝為 ZIP 檔案，再上傳到公開使用的下載位置，或您擁有存取權限的 Azure 儲存體帳戶。
           
          ![[新增 Web 應用程式容器] 對話方塊][07b]
 

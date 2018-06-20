@@ -1,13 +1,13 @@
 ---
-title: "使用 Intellij 來對 Java 開始使用 Azure"
-description: "使用自有 Azure 訂用帳戶開始進行適用於 Java 之 Azure 程式庫的基本使用。"
-keywords: "Azure, Java, SDK, API, 驗證, 開始使用"
-services: 
+title: 使用 Intellij 來對 Java 開始使用 Azure
+description: 使用自有 Azure 訂用帳戶開始進行適用於 Java 之 Azure 程式庫的基本使用。
+keywords: Azure, Java, SDK, API, 驗證, 開始使用
+services: ''
 documentationcenter: java
 author: roygara
 manager: timlt
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: v-rogara
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065495"
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a>使用 Intellij 來開始使用 Azure 程式庫
 

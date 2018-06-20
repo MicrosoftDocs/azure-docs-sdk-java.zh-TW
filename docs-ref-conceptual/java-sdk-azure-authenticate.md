@@ -17,6 +17,7 @@ ms.sourcegitcommit: 107c3c5ed8c6991c751f95bcaf3757220940df9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34050725"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>使用適用於 Java 的 Azure 程式庫來進行驗證 
 

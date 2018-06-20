@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283012"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>使用適用於 Eclipse 的 Azure Explorer 來管理儲存體帳戶
 

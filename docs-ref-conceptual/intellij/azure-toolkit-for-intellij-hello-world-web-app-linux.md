@@ -19,6 +19,7 @@ ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887091"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，在雲端中將 Hello World Web 應用程式部署到 Linux 容器
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954679"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>如何對 Azure Active Directory 使用 Spring Boot Starter
 

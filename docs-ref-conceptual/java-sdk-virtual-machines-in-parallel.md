@@ -1,6 +1,6 @@
 ---
-title: "跨區域平行建立 VM | Microsoft Docs"
-description: "使用 Azure SDK for Java 跨不同 Azure 區域平行建立虛擬機器的程式碼範例"
+title: 跨區域平行建立 VM | Microsoft Docs
+description: 使用 Azure SDK for Java 跨不同 Azure 區域平行建立虛擬機器的程式碼範例
 author: rloutlaw
 manager: douge
 ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931194"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>從 Java 應用程式跨多個區域建立虛擬機器
 

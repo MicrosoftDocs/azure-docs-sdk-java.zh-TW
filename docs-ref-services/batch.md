@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823591"
 ---
 # <a name="azure-batch-libraries-for-java"></a>適用於 Java 的 Azure Batch 程式庫
 

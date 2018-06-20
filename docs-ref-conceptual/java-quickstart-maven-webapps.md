@@ -1,11 +1,11 @@
 ---
-title: "在 5 分鐘內使用 Maven 將 Java Web 應用程式部署到 Azure | Microsoft Docs"
-description: "建立以 Maven 建置的 Java 應用程式並部署到 Azure"
+title: 在 5 分鐘內使用 Maven 將 Java Web 應用程式部署到 Azure | Microsoft Docs
+description: 建立以 Maven 建置的 Java 應用程式並部署到 Azure
 services: app-service\web
-documentationcenter: 
+documentationcenter: ''
 author: rloutlaw
 manager: douge
-editor: 
+editor: ''
 ms.service: app-service-web
 ms.workload: web
 ms.tgt_pltfrm: na
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/12/2017
+ms.locfileid: "22033630"
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a>使用 Maven 建立 Java 應用程式並部署到 Azure
 

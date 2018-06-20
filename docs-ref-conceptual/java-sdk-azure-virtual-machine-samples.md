@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure 管理程式庫虛擬機器範例"
-description: "取得程式碼範例，以使用適用於 Java 的 Azure 管理程式庫來建立和更新 Azure 虛擬機器"
-keywords: "Azure, Java, SDK, API, Maven, Gradle, 虛擬機器"
+title: 適用於 Java 的 Azure 管理程式庫虛擬機器範例
+description: 取得程式碼範例，以使用適用於 Java 的 Azure 管理程式庫來建立和更新 Azure 虛擬機器
+keywords: Azure, Java, SDK, API, Maven, Gradle, 虛擬機器
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930804"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-virtual-machines"></a>針對虛擬機器所提供之適用於 Java 的 Azure 管理程式庫範例
 

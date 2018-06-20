@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure Database for MySQL 程式庫"
-description: "適用於 Azure Database for MySQL 之 Java 用戶端程式庫的參考文件"
-keywords: "Azure, Java, SDK, API, SQL, 資料庫, PostGres, MySQL"
+title: 適用於 Java 的 Azure Database for MySQL 程式庫
+description: 適用於 Azure Database for MySQL 之 Java 用戶端程式庫的參考文件
+keywords: Azure, Java, SDK, API, SQL, 資料庫, PostGres, MySQL
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931014"
 ---
 # <a name="azure-database-for-mysql-libraries-for-java"></a>適用於 Java 的 Azure Database for MySQL 程式庫
 

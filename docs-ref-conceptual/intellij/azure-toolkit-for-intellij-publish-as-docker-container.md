@@ -19,6 +19,7 @@ ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30223375"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，將 Web 應用程式發佈作為 Docker 容器
 
