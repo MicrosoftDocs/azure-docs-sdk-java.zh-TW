@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954779"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a><span data-ttu-id="cef54-103">使用 IntelliJ 的舊版工具組建立 Azure 的 Hello World Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="cef54-103">Create a Hello World web app for Azure using the legacy toolkit for IntelliJ</span></span>
 

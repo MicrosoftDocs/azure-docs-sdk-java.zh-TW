@@ -19,6 +19,7 @@ ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887748"
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="1a5c5-103">安裝適用於 Eclipse 的 Azure 工具組</span><span class="sxs-lookup"><span data-stu-id="1a5c5-103">Install the Azure Toolkit for Eclipse</span></span>
 

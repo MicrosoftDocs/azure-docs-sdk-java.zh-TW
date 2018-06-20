@@ -1,6 +1,6 @@
 ---
-title: "使用 Java 來管理 Azure 虛擬機器 | Microsoft Docs"
-description: "使用適用於 Java 的 Azure SDK 來管理 Azure 虛擬機器的程式碼範例"
+title: 使用 Java 來管理 Azure 虛擬機器 | Microsoft Docs
+description: 使用適用於 Java 的 Azure SDK 來管理 Azure 虛擬機器的程式碼範例
 author: rloutlaw
 manager: douge
 ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931164"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a><span data-ttu-id="fd5bc-103">從 Java 應用程式管理 Azure 虛擬機器</span><span class="sxs-lookup"><span data-stu-id="fd5bc-103">Manage Azure virtual machines from your Java applications</span></span>
 

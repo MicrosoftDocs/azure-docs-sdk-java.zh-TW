@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823721"
 ---
 # <a name="azure-data-lake-store-libraries-for-java"></a><span data-ttu-id="1eff1-104">適用於 Java 的 Azure Data Lake Store 程式庫</span><span class="sxs-lookup"><span data-stu-id="1eff1-104">Azure Data Lake Store libraries for Java</span></span>
 

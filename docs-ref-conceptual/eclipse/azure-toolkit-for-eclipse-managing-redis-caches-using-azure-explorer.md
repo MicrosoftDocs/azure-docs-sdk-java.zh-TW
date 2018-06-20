@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954819"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a><span data-ttu-id="d6613-103">使用適用於 Eclipse 的 Azure Explorer 來管理 Redis 快取</span><span class="sxs-lookup"><span data-stu-id="d6613-103">Managing Redis Caches using the Azure Explorer for Eclipse</span></span>
 

@@ -1,6 +1,6 @@
 ---
-title: "使用 Java 管理 SQL 資料庫彈性集區 | Microsoft Docs"
-description: "使用適用於 Java 的 Azure SDK 來建立及設定 Azure SQL 資料庫的程式碼範例"
+title: 使用 Java 管理 SQL 資料庫彈性集區 | Microsoft Docs
+description: 使用適用於 Java 的 Azure SDK 來建立及設定 Azure SQL 資料庫的程式碼範例
 author: rloutlaw
 manager: douge
 ms.assetid: 9b461de8-46bc-4650-8e9e-59531f4e2a53
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931114"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a><span data-ttu-id="60ad1-103">從 Java 應用程式管理彈性集區中的 Azure SQL 資料庫</span><span class="sxs-lookup"><span data-stu-id="60ad1-103">Manage Azure SQL databases in elastic pools from your Java applications</span></span>
 

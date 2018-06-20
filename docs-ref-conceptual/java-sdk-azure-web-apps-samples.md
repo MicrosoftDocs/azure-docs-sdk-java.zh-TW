@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure 管理程式庫 Web 應用程式範例"
-description: "取得程式碼範例，以使用適用於 Java 的 Azure 管理程式庫來建立和更新裝載於 App Service 中的 Azure Web 應用程式"
-keywords: "Azure, Java, SDK, API, Maven, Gradle, Web 應用程式, app service"
+title: 適用於 Java 的 Azure 管理程式庫 Web 應用程式範例
+description: 取得程式碼範例，以使用適用於 Java 的 Azure 管理程式庫來建立和更新裝載於 App Service 中的 Azure Web 應用程式
+keywords: Azure, Java, SDK, API, Maven, Gradle, Web 應用程式, app service
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930894"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-web-apps"></a><span data-ttu-id="4e64a-104">針對 Web 應用程式所提供之適用於 Java 的 Azure 管理程式庫範例</span><span class="sxs-lookup"><span data-stu-id="4e64a-104">Azure management libraries for Java samples for web apps</span></span>
 

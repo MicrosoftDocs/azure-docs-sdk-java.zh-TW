@@ -19,6 +19,7 @@ ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30223375"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="8531f-103">使用適用於 IntelliJ 的 Azure 工具組，將 Web 應用程式發佈作為 Docker 容器</span><span class="sxs-lookup"><span data-stu-id="8531f-103">Publish a web app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>
 
@@ -205,7 +206,9 @@ ms.lasthandoff: 03/28/2018
 <!-- URL List -->
 
 [Docker 網站]: https://www.docker.com/
+[Docker website]: https://www.docker.com/
 [設定構件]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
+[Configuring artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->
 

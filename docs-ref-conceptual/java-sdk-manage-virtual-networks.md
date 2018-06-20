@@ -1,6 +1,6 @@
 ---
-title: "使用 Java 來管理 Azure 虛擬網路 | Microsoft Docs"
-description: "用來管理 Java 程式碼中 Azure 虛擬網路的程式碼範例"
+title: 使用 Java 來管理 Azure 虛擬網路 | Microsoft Docs
+description: 用來管理 Java 程式碼中 Azure 虛擬網路的程式碼範例
 author: rloutlaw
 manager: douge
 ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931084"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a><span data-ttu-id="b2ed7-103">從 Java 應用程式建立和管理 Azure 虛擬網路</span><span class="sxs-lookup"><span data-stu-id="b2ed7-103">Create and manage Azure virtual networks from your Java apps</span></span>
 

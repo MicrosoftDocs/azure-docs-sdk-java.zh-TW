@@ -15,6 +15,7 @@ ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/03/2018
+ms.locfileid: "30302546"
 ---
 # <a name="azure-libraries-for-java"></a><span data-ttu-id="1b857-104">適用於 Java 的 Azure 程式庫</span><span class="sxs-lookup"><span data-stu-id="1b857-104">Azure libraries for Java</span></span>
 

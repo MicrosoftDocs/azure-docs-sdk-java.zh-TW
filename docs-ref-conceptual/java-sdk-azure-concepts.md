@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 開發人員的 Azure 管理程式庫指南"
-description: "使用 Java 管理程式庫，以便讓 Java 可以管理 Azure 雲端資源的模式和概念。"
-keywords: "Azure, Java, SDK, API, Maven, Gradle, 驗證, active directory, 服務主體"
+title: 適用於 Java 開發人員的 Azure 管理程式庫指南
+description: 使用 Java 管理程式庫，以便讓 Java 可以管理 Azure 雲端資源的模式和概念。
+keywords: Azure, Java, SDK, API, Maven, Gradle, 驗證, active directory, 服務主體
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26184642"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a><span data-ttu-id="c199c-104">使用適用於 Java 的 Azure 程式庫來進行開發的模式和最佳做法</span><span class="sxs-lookup"><span data-stu-id="c199c-104">Patterns and best practices for development with the Azure libraries for Java</span></span> 
 

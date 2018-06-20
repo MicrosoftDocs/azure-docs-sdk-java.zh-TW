@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954789"
 ---
 # <a name="azure-toolkit-for-intellij"></a><span data-ttu-id="7a641-103">Azure Toolkit for IntelliJ</span><span class="sxs-lookup"><span data-stu-id="7a641-103">Azure Toolkit for IntelliJ</span></span>
 <span data-ttu-id="7a641-104">IntelliJ 的 Azure 工具組提供範本和功能，您可以使用這些範本和功能透過 IntelliJ 整合式開發環境 (IDE) 輕鬆地建立、開發、測試及部署 Azure 應用程式。</span><span class="sxs-lookup"><span data-stu-id="7a641-104">The Azure Toolkit for IntelliJ provides templates and functionality that you can use to easily create, develop, test, and deploy Azure applications by using the IntelliJ integrated development environment (IDE).</span></span>

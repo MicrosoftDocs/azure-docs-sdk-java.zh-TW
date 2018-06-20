@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954579"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a><span data-ttu-id="59ed4-103">將 Spring Boot Initializer 應用程式設定為透過 Azure Redis Cache 在雲端使用 Redis</span><span class="sxs-lookup"><span data-stu-id="59ed4-103">Configure a Spring Boot Initializer app to use Redis in the cloud with Azure Redis Cache</span></span>
 

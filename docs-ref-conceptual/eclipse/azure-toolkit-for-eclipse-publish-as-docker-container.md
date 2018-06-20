@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954769"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="18334-103">使用 Azure Toolkit for Eclipse 將 Web 應用程式發佈作為 Docker 容器</span><span class="sxs-lookup"><span data-stu-id="18334-103">Publish a web app as a Docker container by using the Azure Toolkit for Eclipse</span></span>
 

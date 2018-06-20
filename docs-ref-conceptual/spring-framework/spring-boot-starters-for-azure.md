@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954439"
 ---
 # <a name="spring-boot-starters-for-azure"></a><span data-ttu-id="885bd-103">適用於 Azure 的 Spring Boot Starter</span><span class="sxs-lookup"><span data-stu-id="885bd-103">Spring Boot Starters for Azure</span></span>
 

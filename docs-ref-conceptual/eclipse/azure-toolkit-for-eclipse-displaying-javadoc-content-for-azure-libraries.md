@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954499"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a><span data-ttu-id="a5c7f-103">在 Eclipse 中顯示 Azure Libraries for Java 封裝的 Javadoc 內容</span><span class="sxs-lookup"><span data-stu-id="a5c7f-103">Displaying Javadoc Content in Eclipse for the Azure Libraries Package for Java</span></span>
 

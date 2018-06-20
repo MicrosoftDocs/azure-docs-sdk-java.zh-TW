@@ -1,7 +1,7 @@
 ---
-title: "適用於 Azure Container Service 的 JAVA 範例"
-description: "取得程式碼範例，以從 Java 應用程式使用 Azure Container Service。"
-keywords: "Azure, Java, SDK, API, Kubernetes, 容器, Docker, ACS, 登錄, 映像"
+title: 適用於 Azure Container Service 的 JAVA 範例
+description: 取得程式碼範例，以從 Java 應用程式使用 Azure Container Service。
+keywords: Azure, Java, SDK, API, Kubernetes, 容器, Docker, ACS, 登錄, 映像
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930824"
 ---
 # <a name="java-samples-for-azure-container-service"></a><span data-ttu-id="c37ac-104">適用於 Azure Container Service 的 JAVA 範例</span><span class="sxs-lookup"><span data-stu-id="c37ac-104">Java samples for Azure Container Service</span></span>
 

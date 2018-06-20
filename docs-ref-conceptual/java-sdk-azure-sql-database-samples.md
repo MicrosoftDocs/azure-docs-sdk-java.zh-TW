@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure 管理程式庫 SQL 資料庫範例"
-description: "取得程式碼範例，以使用適用於 Java 的 Azure 管理程式庫來建立和更新 Azure SQL 資料庫"
-keywords: "Azure, Java, SDK, API, Maven, Gradle, SQL 資料庫"
+title: 適用於 Java 的 Azure 管理程式庫 SQL 資料庫範例
+description: 取得程式碼範例，以使用適用於 Java 的 Azure 管理程式庫來建立和更新 Azure SQL 資料庫
+keywords: Azure, Java, SDK, API, Maven, Gradle, SQL 資料庫
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930774"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-sql-database"></a><span data-ttu-id="61edd-104">針對 SQL 資料庫所提供之適用於 Java 的 Azure 管理程式庫範例</span><span class="sxs-lookup"><span data-stu-id="61edd-104">Azure management libraries for Java samples for SQL Database</span></span>
 

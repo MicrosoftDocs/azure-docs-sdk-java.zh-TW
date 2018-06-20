@@ -1,12 +1,12 @@
 ---
-title: "透過 Azure App Service 將 Spring Boot 應用程式部署至雲端"
-description: "本教學課程將逐步引導開發人員使用 Azure App Service 將 Spring Boot 入門 Web 應用程式部署至雲端。"
+title: 透過 Azure App Service 將 Spring Boot 應用程式部署至雲端
+description: 本教學課程將逐步引導開發人員使用 Azure App Service 將 Spring Boot 入門 Web 應用程式部署至雲端。
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954521"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a><span data-ttu-id="f1207-103">透過 Azure App Service 將 Spring Boot 應用程式部署至雲端</span><span class="sxs-lookup"><span data-stu-id="f1207-103">Deploy a Spring Boot application to the cloud with Azure App Service</span></span>
 
@@ -211,15 +212,23 @@ ms.lasthandoff: 02/03/2018
 [Azure App Service]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
 [適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure 入口網站]: https://portal.azure.com/
+[Azure portal]: https://portal.azure.com/
 [在 Azure App Service 中設定 Web 應用程式]: /azure/app-service/web-sites-configure
+[Configure web apps in Azure App Service]: /azure/app-service/web-sites-configure
 [使用 FTP/S 將您的應用程式部署至 Azure App Service]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
+[Deploy your app to Azure App Service using FTP/S]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java 開發工具組 (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
+[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot Getting Started]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/

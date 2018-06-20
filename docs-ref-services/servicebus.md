@@ -16,6 +16,7 @@ ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887758"
 ---
 # <a name="service-bus-libraries-for-java"></a><span data-ttu-id="d262c-104">適用於 Java 的服務匯流排程式庫</span><span class="sxs-lookup"><span data-stu-id="d262c-104">Service Bus libraries for Java</span></span>
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954669"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="9b114-103">適用於 Eclipse 的 Azure 工具組的新功能</span><span class="sxs-lookup"><span data-stu-id="9b114-103">What's new in the Azure Toolkit for Eclipse</span></span>
 

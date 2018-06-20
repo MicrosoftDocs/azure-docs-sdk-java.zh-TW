@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954729"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="d088e-103">使用適用於 IntelliJ 的 Azure 工具組，將 Spring Boot 應用程式發佈為 Docker 容器</span><span class="sxs-lookup"><span data-stu-id="d088e-103">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>
 

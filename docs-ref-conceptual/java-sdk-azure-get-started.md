@@ -1,7 +1,7 @@
 ---
-title: "開始使用適用於 Java 的 Azure 程式庫"
-description: "了解如何建立 Azure 雲端資源，並在您的 Java 應用程式中連線及使用。"
-keywords: "Azure, Java, SDK, API, 驗證, 開始使用"
+title: 開始使用適用於 Java 的 Azure 程式庫
+description: 了解如何建立 Azure 雲端資源，並在您的 Java 應用程式中連線及使用。
+keywords: Azure, Java, SDK, API, 驗證, 開始使用
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065525"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a><span data-ttu-id="5a327-104">開始使用適用於 Java 的 Azure 程式庫進行雲端開發</span><span class="sxs-lookup"><span data-stu-id="5a327-104">Get started with cloud development using the Azure libraries for Java</span></span>
 

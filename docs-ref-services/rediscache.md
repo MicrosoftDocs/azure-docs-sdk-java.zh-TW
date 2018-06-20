@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823621"
 ---
 # <a name="redis-cache-libraries-for-java"></a><span data-ttu-id="ecd7d-104">適用於 Java 的 Redis 快取程式庫</span><span class="sxs-lookup"><span data-stu-id="ecd7d-104">Redis Cache libraries for Java</span></span>
 

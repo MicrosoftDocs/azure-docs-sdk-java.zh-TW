@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954399"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a><span data-ttu-id="ac3d5-103">適用於 IntelliJ 的 Azure 工具組新增功能</span><span class="sxs-lookup"><span data-stu-id="ac3d5-103">What's New in the Azure Toolkit for IntelliJ</span></span>
 

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823611"
 ---
 # <a name="azure-iot-libraries-for-java"></a><span data-ttu-id="ddde1-104">適用於 Java 的 Azure IoT 程式庫</span><span class="sxs-lookup"><span data-stu-id="ddde1-104">Azure IoT libraries for Java</span></span>
 

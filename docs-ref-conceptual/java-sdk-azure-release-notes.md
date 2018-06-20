@@ -1,7 +1,7 @@
 ---
-title: "適用於 Java 的 Azure 管理程式庫版本資訊 | Microsoft Docs"
-description: "了解適用於 Java 之 Azure 管理程式庫的最新消息和重大變更"
-keywords: "Azure, Java, API, 參考, 附註, 更新, 取代"
+title: 適用於 Java 的 Azure 管理程式庫版本資訊 | Microsoft Docs
+description: 了解適用於 Java 之 Azure 管理程式庫的最新消息和重大變更
+keywords: Azure, Java, API, 參考, 附註, 更新, 取代
 author: routlaw
 manager: douge
 ms.assetid: 1f128cf9-f747-4344-84e1-f9964709deb8
@@ -15,6 +15,7 @@ ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/03/2017
+ms.locfileid: "23982160"
 ---
 # <a name="release-notes"></a><span data-ttu-id="17c1b-104">版本資訊</span><span class="sxs-lookup"><span data-stu-id="17c1b-104">Release Notes</span></span> 
 
