@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 64cefc1ace5d0377dea25fdbdc83d8dada31ddf7
-ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
+ms.openlocfilehash: 05fb81466202547cb1bad34caae0f94f16a9d21b
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30223375"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090662"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，將 Web 應用程式發佈作為 Docker 容器
 
@@ -27,7 +27,7 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
 
 > [!NOTE]
 >
-> Docker 的詳細資訊位於 [Docker 網站]。
+> Docker 的詳細資訊位於 [Docker 的官方網站]。
 >
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
@@ -60,11 +60,11 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
    a. 在 [Docker 映像名稱] 方塊中，輸入 Docker 主機的唯一名稱  (精靈會自動建立一個名稱，但您可以修改)。 
 
    b. [主機] 區域會顯示您已建立的任何 Docker 主機。 執行下列其中一個動作： 
-      * 如果您有現存的 Docker 主機，您可以對該主機部署 Web 應用程式。
-      * 若要建立 Docker 主機，則請按一下綠色加號 (**+**)。  
-       [建立 Docker 主機] 對話方塊會隨即開啟。 
+   * 如果您有現存的 Docker 主機，您可以對該主機部署 Web 應用程式。
+   * 若要建立 Docker 主機，則請按一下綠色加號 (**+**)。  
+     [建立 Docker 主機] 對話方塊會隨即開啟。 
 
-      ![[在 Azure 上部署 Docker 容器] 精靈][PUB04a]
+     ![[在 Azure 上部署 Docker 容器] 精靈][PUB04a]
 
 4. 在 [設定新的虛擬機器] 視窗中，提供下列有關 Docker 主機的資訊  (精靈會自動為您產生大部分的資訊，但您可以對這些資訊進行修改)。 
 
@@ -97,50 +97,50 @@ Docker 容器是常見的 Web 應用程式部署方法。 藉由使用 Docker �
 
 6. 選取下列其中一個選項：
 
-      * **從 Azure Key Vault 匯入認證**︰指定先前儲存的一組認證，這些認證儲存在 Azure 訂用帳戶中。
+   * **從 Azure Key Vault 匯入認證**︰指定先前儲存的一組認證，這些認證儲存在 Azure 訂用帳戶中。
 
-          > [!NOTE]
-          > 使用特定帳戶或服務主體所建立的 Azure Key Vault，無法供另一個共用該訂用帳戶的帳戶或服務主體自動存取。 若要讓另一個帳戶或服務主體使用 Key Vault，您必須使用 Azure 入口網站來新增該帳戶或服務主體。
+       > [!NOTE]
+       > 使用特定帳戶或服務主體所建立的 Azure Key Vault，無法供另一個共用該訂用帳戶的帳戶或服務主體自動存取。 若要讓另一個帳戶或服務主體使用 Key Vault，您必須使用 Azure 入口網站來新增該帳戶或服務主體。
 
-      * **新的登入認證**︰建立一組新的登入認證。 如果您選取此選項，請執行下列作業︰
+   * **新的登入認證**︰建立一組新的登入認證。 如果您選取此選項，請執行下列作業︰
 
-    a. 在 [VM 認證] 索引標籤上，提供下列 Docker 主機虛擬機器登入認證的資訊：
+     a. 在 [VM 認證] 索引標籤上，提供下列 Docker 主機虛擬機器登入認證的資訊：
 
-    * [使用者名稱]︰輸入虛擬機器登入認證的使用者名稱。
+     * [使用者名稱]︰輸入虛擬機器登入認證的使用者名稱。
 
-    * [密碼] 和 [確認]︰輸入虛擬機器登入認證的密碼。
+     * [密碼] 和 [確認]︰輸入虛擬機器登入認證的密碼。
 
-    * **SSH**︰輸入 Docker 主機的安全殼層 (SSH) 設定。 您可以選取下列其中一個選項︰
+     * **SSH**︰輸入 Docker 主機的安全殼層 (SSH) 設定。 您可以選取下列其中一個選項︰
 
-        * [無]︰將虛擬機器指定為不允許 SSH 連線。
+     * [無]︰將虛擬機器指定為不允許 SSH 連線。
 
-        * **自動產生**︰自動建立透過 SSH 連線的必要設定。
+     * **自動產生**︰自動建立透過 SSH 連線的必要設定。
 
-        * [從目錄匯入]︰可讓您指定包含一組先前儲存之 SSH 設定的目錄。 此目錄必須包含下列兩個檔案︰
+     * [從目錄匯入]︰可讓您指定包含一組先前儲存之 SSH 設定的目錄。 此目錄必須包含下列兩個檔案︰
 
-            * id_rsa︰包含使用者的 RSA 識別。
+         * id_rsa︰包含使用者的 RSA 識別。
 
-            * id_rsa.pub︰包含用於驗證的 RSA 公開金鑰。
+         * id_rsa.pub︰包含用於驗證的 RSA 公開金鑰。
 
-    b. 在 [Docker 精靈存取] 索引標籤上，提供下列資訊︰
+     b. 在 [Docker 精靈存取] 索引標籤上，提供下列資訊︰
 
-    ![建立 Docker 主機][PUB06]
+     ![建立 Docker 主機][PUB06]
     
-    * **Docker 精靈連接埠**︰輸入 Docker 主機的唯一 TCP 通訊埠。
+     * **Docker 精靈連接埠**︰輸入 Docker 主機的唯一 TCP 通訊埠。
     
-    * **TLS 安全性**︰輸入 Docker 主機的傳輸層安全性設定。 您可選擇下列選項：
+     * **TLS 安全性**︰輸入 Docker 主機的傳輸層安全性設定。 您可選擇下列選項：
     
-        * [無]︰將虛擬機器指定為不允許 TLS 連線。
+     * [無]︰將虛擬機器指定為不允許 TLS 連線。
         
-        * **自動產生**︰自動建立透過 TLS 連線的必要設定。
+     * **自動產生**︰自動建立透過 TLS 連線的必要設定。
         
-        * **從目錄匯入**︰指定內含一組先前儲存之 TLS 設定的目錄。 該目錄必須包含下列六個檔案︰
+     * **從目錄匯入**︰指定內含一組先前儲存之 TLS 設定的目錄。 該目錄必須包含下列六個檔案︰
         
-            * ca.pem 和 ca key.pem︰包含 TLS 憑證授權單位的憑證和公開金鑰。
+         * ca.pem 和 ca key.pem︰包含 TLS 憑證授權單位的憑證和公開金鑰。
             
-            * cert.pem 和 key.pem︰包含 TLS 驗證使用的用戶端憑證和公開金鑰。
+         * cert.pem 和 key.pem︰包含 TLS 驗證使用的用戶端憑證和公開金鑰。
             
-            * server.pem 和 server-key.pem︰包含用於 TLS 驗證使用的用戶端憑證和公開金鑰。
+         * server.pem 和 server-key.pem︰包含用於 TLS 驗證使用的用戶端憑證和公開金鑰。
 
 7. 在輸入必要資訊之後，按一下 [完成]。  
     [在 Azure 上部署 Docker 容器] 精靈隨即重新開啟。
@@ -199,13 +199,13 @@ Azure 工具組會開始將您的 Web 應用程式部署至 Azure 中的 Docker 
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 Docker 的其他資源，請參閱 [Docker 網站]。
+如需 Docker 的其他資源，請參閱 [Docker 的官方網站]。
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 
-[Docker 網站]: https://www.docker.com/
+[Docker 的官方網站]: https://www.docker.com/
 [設定構件]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->

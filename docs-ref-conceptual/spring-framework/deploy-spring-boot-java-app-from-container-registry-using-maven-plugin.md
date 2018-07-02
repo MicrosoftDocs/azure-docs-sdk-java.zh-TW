@@ -14,11 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 8e8e1b5d599f77edf227d2c187225f6ac530b62b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 88eb64c07ad4f480dc2d2c2869e710c0ae910c4d
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090791"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署至 Azure App Service
 
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/03/2018
 
 1. 將 [Spring Boot on Docker Getting Started] 範例專案複製到您所建立的目錄中；例如：
    ```shell
-   git clone -b private-registry https://github.com/Microsoft/gs-spring-boot-docker
+   git clone -b private-registry https://github.com/spring-guides/gs-spring-boot-docker
    ```
 
 1. 將目錄變更至已完成的專案；例如：
@@ -103,23 +104,25 @@ ms.lasthandoff: 02/03/2018
 
 1. 開啟命令提示字元。
 
-1. 使用 Azure CLI 登入您的 Azure 帳戶：
+2. 使用 Azure CLI 登入您的 Azure 帳戶：
    ```azurecli
    az login
    ```
    依照指示完成登入程序。
 
-1. 建立 Azure 服務主體：
+3. 建立 Azure 服務主體：
    ```azurecli
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
    其中：
-   | 參數 | 說明 |
-   |---|---|
-   | `uuuuuuuu` | 指定服務主體的使用者名稱。 |
-   | `pppppppp` | 指定服務主體的密碼。 |
 
-1. Azure 使用 JSON 回應，類似下列範例：
+   | 參數  |                    說明                     |
+   |------------|----------------------------------------------------|
+   | `uuuuuuuu` | 指定服務主體的使用者名稱。 |
+   | `pppppppp` | 指定服務主體的密碼。  |
+
+
+4. Azure 使用 JSON 回應，類似下列範例：
    ```json
    {
       "appId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -176,7 +179,7 @@ ms.lasthandoff: 02/03/2018
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
 
-1. 將這篇文章上一節的 Azure Container Registry 存取設定新增至 settings.xml 檔案中的 `<servers>` 集合；例如：
+2. 將這篇文章上一節的 Azure Container Registry 存取設定新增至 settings.xml 檔案中的 `<servers>` 集合；例如：
 
    ```xml
    <servers>
@@ -188,13 +191,15 @@ ms.lasthandoff: 02/03/2018
    </servers>
    ```
    其中：
-   | 元素 | 說明 |
-   |---|---|
-   | `<id>` | 包含私用 Azure Container Registry 名稱。 |
-   | `<username>` | 包含私用 Azure Container Registry 名稱。 |
+
+   |   元素    |                                 說明                                  |
+   |--------------|------------------------------------------------------------------------------|
+   |    `<id>`    |         包含私用 Azure Container Registry 名稱。          |
+   | `<username>` |         包含私用 Azure Container Registry 名稱。          |
    | `<password>` | 包含您在這篇文章上一節擷取的密碼。 |
 
-1. 將這篇文章稍早章節的 Azure 服務主體設定新增至 settings.xml 檔案中的 `<servers>` 集合；例如：
+
+3. 將這篇文章稍早章節的 Azure 服務主體設定新增至 settings.xml 檔案中的 `<servers>` 集合；例如：
 
    ```xml
    <servers>
@@ -210,21 +215,23 @@ ms.lasthandoff: 02/03/2018
    </servers>
    ```
    其中：
-   | 元素 | 說明 |
-   |---|---|
-   | `<id>` | 指定將您的 Web 應用程式部署至 Azure 時，Maven 用來查閱安全性設定的唯一名稱。 |
-   | `<client>` | 包含服務主體的 `appId` 值。 |
-   | `<tenant>` | 包含服務主體的 `tenant` 值。 |
-   | `<key>` | 包含服務主體的 `password` 值。 |
+
+   |     元素     |                                                                                   說明                                                                                   |
+   |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |     `<id>`      |                                指定將您的 Web 應用程式部署至 Azure 時，Maven 用來查閱安全性設定的唯一名稱。                                |
+   |   `<client>`    |                                                             包含服務主體的 `appId` 值。                                                             |
+   |   `<tenant>`    |                                                            包含服務主體的 `tenant` 值。                                                             |
+   |     `<key>`     |                                                           包含服務主體的 `password` 值。                                                            |
    | `<environment>` | 定義目標 Azure 雲端環境，也就是此範例中的 `AZURE`。 (環境的完整清單可於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件中取得) |
 
-1. 儲存並關閉 settings.xml 檔案。
+
+4. 儲存並關閉 settings.xml 檔案。
 
 ## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a>建置您的 Docker 容器映像，並將它推送到您的 Azure Container Registry
 
 1. 瀏覽至 Spring Boot 應用程式的已完成專案目錄 (例如，"*C:\SpringBoot\gs-spring-boot-docker\complete*" 或 "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*")，並使用文字編輯器開啟 pom.xml 檔案。
 
-1. 使用本教學課程上一節的 Azure Container Registry 登入伺服器值來更新 pom.xml 檔案中的 `<properties>` 集合；例如：
+2. 使用本教學課程上一節的 Azure Container Registry 登入伺服器值來更新 pom.xml 檔案中的 `<properties>` 集合；例如：
 
    ```xml
    <properties>
@@ -235,12 +242,14 @@ ms.lasthandoff: 02/03/2018
    </properties>
    ```
    其中：
-   | 元素 | 說明 |
-   |---|---|
-   | `<azure.containerRegistry>` | 指定私用 Azure Container Registry 名稱。 |
-   | `<docker.image.prefix>` | 指定私用 Azure Container Registry 的 URL，它是藉由將 ".azurecr.io" 附加至私用容器登錄的名稱來衍生。 |
 
-1. 確認 pom.xml 檔案中 Docker 外掛程式的 `<plugin>`，包含本教學課程上一個步驟中伺服器位址和登錄名稱的正確屬性。 例如︰
+   |           元素           |                                                                       說明                                                                       |
+   |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+   | `<azure.containerRegistry>` |                                              指定私用 Azure Container Registry 名稱。                                               |
+   |   `<docker.image.prefix>`   | 指定私用 Azure Container Registry 的 URL，它是藉由將 ".azurecr.io" 附加至私用容器登錄的名稱來衍生。 |
+
+
+3. 確認 pom.xml 檔案中 Docker 外掛程式的 `<plugin>`，包含本教學課程上一個步驟中伺服器位址和登錄名稱的正確屬性。 例如︰
 
    ```xml
    <plugin>
@@ -263,18 +272,20 @@ ms.lasthandoff: 02/03/2018
    </plugin>
    ```
    其中：
-   | 元素 | 說明 |
-   |---|---|
-   | `<serverId>` | 指定屬性，該屬性包含私用 Azure Container Registry 的名稱。 |
+
+   |     元素     |                                       說明                                       |
+   |-----------------|-----------------------------------------------------------------------------------------|
+   |  `<serverId>`   |  指定屬性，該屬性包含私用 Azure Container Registry 的名稱。   |
    | `<registryUrl>` | 指定屬性，該屬性包含私用 Azure Container Registry 的 URL。 |
 
-1. 瀏覽至您 Spring Boot 應用程式的已完成專案目錄，然後執行下列命令來重建應用程式，並將容器推送到您的 Azure Container Registry：
+
+4. 瀏覽至您 Spring Boot 應用程式的已完成專案目錄，然後執行下列命令來重建應用程式，並將容器推送到您的 Azure Container Registry：
 
    ```
    mvn package docker:build -DpushImage 
    ```
 
-1. 選擇性：瀏覽至 [Azure 入口網站]，並確認在容器登錄中有名為 **gs-spring-boot-docker** 的 Docker 容器映像。
+5. 選擇性：瀏覽至 [Azure 入口網站]，並確認在容器登錄中有名為 **gs-spring-boot-docker** 的 Docker 容器映像。
 
    ![確認在 Azure 入口網站中的容器][CR01]
 

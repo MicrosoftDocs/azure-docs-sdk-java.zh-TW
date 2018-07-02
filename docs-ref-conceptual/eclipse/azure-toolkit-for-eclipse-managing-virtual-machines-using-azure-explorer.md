@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: ec67ed44ec570da7b826c12a9f8a24a5b0170e99
-ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
+ms.openlocfilehash: c04f5225f0bb99898f69b26a4782aa57d75c4f22
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283046"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090659"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>使用 Azure Explorer for Eclipse 來管理虛擬機器
 
@@ -35,17 +35,17 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
 1. 使用 [Azure Toolkit for Eclipse 的登入指示](https://docs.microsoft.com/java/azure/eclipse/azure-toolkit-for-eclipse-sign-in-instructions) 來登入您的 Azure 帳戶。
 
-1. 在 [Azure Explorer] 檢視中，展開 [Azure] 節點，以滑鼠右鍵按一下 [虛擬機器]，然後按一下 [建立 VM]。
+2. 在 [Azure Explorer] 檢視中，展開 [Azure] 節點，以滑鼠右鍵按一下 [虛擬機器]，然後按一下 [建立 VM]。
 
    ![建立 VM 命令][CR01]  
 
    [建立新的虛擬機器] 精靈隨即開啟。
 
-1. 在 [選擇訂用帳戶] 視窗中選取您的訂用帳戶，然後按 [下一步]。
+3. 在 [選擇訂用帳戶] 視窗中選取您的訂用帳戶，然後按 [下一步]。
 
    ![選擇訂用帳戶視窗][CR02]
 
-1. 在 [選取虛擬機器映像] 視窗中，輸入下列資訊︰
+4. 在 [選取虛擬機器映像] 視窗中，輸入下列資訊︰
 
    * **位置**︰指定要建立虛擬機器的位置 (例如「美國西部」)。
 
@@ -59,9 +59,9 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
    ![選取虛擬機器映像視窗][CR03]
 
-1. 按 [下一步] 。
+5. 按 [下一步] 。
 
-1. 在 [虛擬機器基本設定] 視窗中，輸入下列資訊︰
+6. 在 [虛擬機器基本設定] 視窗中，輸入下列資訊︰
 
    * **虛擬機器名稱**：指定您新虛擬機器的名稱，其必須以字母開頭，且只能包含字母、數字及連字號。
 
@@ -73,15 +73,15 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
    ![虛擬機器基本設定視窗][CR04]
 
-1. 按 [下一步] 。
+7. 按 [下一步] 。
 
-1. 在 [建立新的儲存體帳戶] 視窗中輸入下列資訊：
+8. 在 [建立新的儲存體帳戶] 視窗中輸入下列資訊：
 
    * **資源群組**︰指定虛擬機器的資源群組。 選取下列其中一個選項：
-      * **新建**：指定您想要建立新的資源群組。
-      * **使用現有項目**︰指定您要選取已與您 Azure 帳戶相關聯的資源群組。
+     * **新建**：指定您想要建立新的資源群組。
+     * **使用現有項目**︰指定您要選取已與您 Azure 帳戶相關聯的資源群組。
 
-      ![新建儲存體帳戶對話方塊][CR05]
+       ![新建儲存體帳戶對話方塊][CR05]
 
    * **儲存體帳戶**︰指定要用來儲存虛擬機器的儲存體帳戶。 您可以使用現有的儲存體帳戶或建立新帳戶。
 
@@ -89,7 +89,7 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
       ![新建虛擬網路對話方塊][CR06]
 
-1. 在 [相關聯的資源] 視窗中，輸入下列資訊：
+9. 在 [相關聯的資源] 視窗中，輸入下列資訊：
 
    * **公用 IP 位址**︰指定虛擬機器的對外 IP 位址。 您可以選擇建立新的 IP 位址，但如果虛擬機器不會有公用 IP 位址，您也可以選取 [(無)]。
 
@@ -99,11 +99,11 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
    ![相關聯的資源視窗][CR07]
 
-1. 按一下 [完成] 。  
+10. 按一下 [完成] 。  
 
-   Azure Explorer 工具視窗中便會顯示新的虛擬機器。
+    Azure Explorer 工具視窗中便會顯示新的虛擬機器。
 
-   ![新虛擬機器][CR08]
+    ![新虛擬機器][CR08]
 
 ## <a name="restart-a-virtual-machine-in-eclipse"></a>在 Eclipse 中重新啟動虛擬機器
 

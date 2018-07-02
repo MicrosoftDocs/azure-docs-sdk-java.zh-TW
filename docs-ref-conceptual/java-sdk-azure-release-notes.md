@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 924ccf9bdaad4bc635f133adbcfcc8f797d06644
-ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
+ms.openlocfilehash: 0aaa83ceb42192441decb5972baae56fed337fb2
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2017
-ms.locfileid: "23982160"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090681"
 ---
 # <a name="release-notes"></a>版本資訊 
 
@@ -35,16 +35,16 @@ ms.locfileid: "23982160"
 - CDN 中先前屬於搶鮮版的所有方法
 - 應用程式閘道中先前屬於搶鮮版的所有方法和介面
 
- 程式庫的某些部分仍處於預覽階段。 請參閱下表以了解程式庫的目前狀態：
+  程式庫的某些部分仍處於預覽階段。 請參閱下表以了解程式庫的目前狀態：
 
 服務或功能 | 以正式運作版來提供 | 以預覽版來提供 
 ---------|---------|---------|-
 計算  | 虛擬機器和 VM 擴充功能、虛擬機器擴展集、受控磁碟   | Azure Container Service、Azure Container Registry 
 儲存體   |  儲存體帳戶       |    加密     
 SQL Database  | 資料庫、防火牆、彈性集區              
-網路    |  虛擬網路、網路介面、IP 位址、路由表、網路安全性群組、DNS、流量管理員、應用程式閘道  |    負載平衡器、對等互連、虛擬網路閘道、網路監看員 
+網路功能    |  虛擬網路、網路介面、IP 位址、路由表、網路安全性群組、DNS、流量管理員、應用程式閘道  |    負載平衡器、對等互連、虛擬網路閘道、網路監看員 
 更多服務    |  Resource Manager、Key Vault、Redis、CDN、Batch       |  Web 應用程式、函式應用程式、服務匯流排、Graph RBAC、Cosmos DB、搜尋服務  
-基礎     |   驗證 - 核心、Async 方法、受管理服務識別      |      |
+基礎     |   驗證 - 核心、Async 方法、受控服務識別      |      |
 
 > 預覽功能在會程式庫的類別、介面或方法層級中以 `@Beta` 標註。 這些功能可能會有所變更。 未來可能會以任何方式修改，或甚至移除。
 

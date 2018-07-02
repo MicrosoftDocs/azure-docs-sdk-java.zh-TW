@@ -14,20 +14,20 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: ebe98a604b52dc9a4b5a47cbf65a4c68a5c86fe3
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954779"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090781"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>使用 IntelliJ 的舊版工具組建立 Azure 的 Hello World Web 應用程式
 
-本教學課程示範如何使用 3.0.6 版 (或舊版) [適用於 IntelliJ 的 Azure 工具組]，建立基本的 Hello World 應用程式，並部署到 Azure 作為 Web 應用程式。
+本教學課程示範如何使用 3.0.6 版 (或舊版) [Azure Toolkit for IntelliJ]，建立基本的 Hello World 應用程式，並部署到 Azure 作為 Web 應用程式。
 
 > [!NOTE]
 >
-> 如需使用[適用於 Eclipse 的 Azure 工具組]的此文章版本，請參閱[使用 Eclipse 建立 Azure 的 Hello World Web 應用程式][eclipse-hello-world]。
+> 如需使用[Azure Toolkit for Eclipse]的此文章版本，請參閱[使用 Eclipse 建立 Azure 的 Hello World Web 應用程式][eclipse-hello-world]。
 >
 
 > [!IMPORTANT]
@@ -142,7 +142,7 @@ ms.locfileid: "28954779"
 
       * 在 [名稱] 文字方塊中，為新的資源群組指定名稱。
       * 在 [區域] 下拉式功能表中，為資源群組選取適當的 Azure 資料中心位置。
-      * 按一下 [SERVICEPRINCIPAL] 。
+      * 按一下 [確定]。
 
    g. [App Service 方案]  下拉式功能表會列出與您選取之資源群組相關聯的應用程式服務方案。 (App Service 方案會指定特定資訊，例如您 Web 應用程式的位置、定價層以及計算執行個體大小。 單一 App Service 方案可用於多個 Web Apps，這也就是要與特定 Web 應用程式部署分開維護的原因。)
       
@@ -157,18 +157,18 @@ ms.locfileid: "28954779"
       * 在 [位置] 下拉式功能表中，為該方案選取適當的 Azure 資料中心位置。
       * 在 [定價層] 下拉式功能表中，為方案選取適當的價格。 針對測試用途，您可以選擇 [免費] 。
       * 在 [執行個體大小] 下拉式功能表中，為方案選取適當的執行個體大小。 針對測試用途，您可以選擇 [小型] 。
-      * 按一下 [SERVICEPRINCIPAL] 。
+      * 按一下 [確定]。
 
    h. (選擇性) 根據預設，Azure 會自動將最新的 Java 8 散發套件部署到 Web 應用程式容器，成為您的 JVM。 不過，您可以選取不同的 JVM 版本和散發套件。 若要這樣做，請使用下列步驟：
       
-      * 在 [新增 Web 應用程式容器] 對話方塊中，按一下 [JDK] 索引標籤。
-      * 您可以選擇下列其中一個選項：
+   * 在 [新增 Web 應用程式容器] 對話方塊中，按一下 [JDK] 索引標籤。
+   * 您可以選擇下列其中一個選項：
         
-         * 部署 Azure 所提供的預設 JDK
-         * 從 Azure 提供的其他 JDK 下接式清單中部署協力廠商 JDK
-         * 部署自訂 JDK，這必須封裝為 ZIP 檔案，而且公開可用或位於您的 Azure 儲存體帳戶中
+      * 部署 Azure 所提供的預設 JDK
+      * 從 Azure 提供的其他 JDK 下接式清單中部署協力廠商 JDK
+      * 部署自訂 JDK，這必須封裝為 ZIP 檔案，而且公開可用或位於您的 Azure 儲存體帳戶中
         
-      ![新增應用程式容器 JDK 索引標籤][11b]
+     ![新增應用程式容器 JDK 索引標籤][11b]
 
    i. 一旦您完成所有上述步驟之後，[New Web App Container] \(新增 Web 應用程式容器) 對話方塊看起來應該如下圖所示：
       
@@ -241,8 +241,8 @@ ms.locfileid: "28954779"
 
 <!-- URL List -->
 
-[適用於 IntelliJ 的 Azure 工具組]: azure-toolkit-for-intellij.md
-[適用於 Eclipse 的 Azure 工具組]: ../eclipse/azure-toolkit-for-eclipse.md
+[Azure Toolkit for IntelliJ]: azure-toolkit-for-intellij.md
+[Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Web 應用程式概觀]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/

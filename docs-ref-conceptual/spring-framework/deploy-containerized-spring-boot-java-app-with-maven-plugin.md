@@ -14,11 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 515cf350f32fc8252644e7022846cc2c9d264ed0
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d9f2cf5c15bb8f990c8e82fddd6455ecbf8cc02c
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090761"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將容器化 Spring Boot 應用程式部署至 Azure
 
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/03/2018
 
 1. 將 [Spring Boot on Docker Getting Started] 範例專案複製到您所建立的目錄中；例如：
    ```shell
-   git clone https://github.com/microsoft/gs-spring-boot-docker
+   git clone https://github.com/spring-guides/gs-spring-boot-docker
    ```
 
 1. 將目錄變更至已完成的專案；例如：
@@ -95,23 +96,25 @@ ms.lasthandoff: 02/03/2018
 
 1. 開啟命令提示字元。
 
-1. 使用 Azure CLI 登入您的 Azure 帳戶：
+2. 使用 Azure CLI 登入您的 Azure 帳戶：
    ```shell
    az login
    ```
    依照指示完成登入程序。
 
-1. 建立 Azure 服務主體：
+3. 建立 Azure 服務主體：
    ```shell
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
    其中：
-   | 參數 | 說明 |
-   |---|---|
-   | `uuuuuuuu` | 指定服務主體的使用者名稱。 |
-   | `pppppppp` | 指定服務主體的密碼。 |
 
-1. Azure 使用 JSON 回應，類似下列範例：
+   | 參數  |                    說明                     |
+   |------------|----------------------------------------------------|
+   | `uuuuuuuu` | 指定服務主體的使用者名稱。 |
+   | `pppppppp` | 指定服務主體的密碼。  |
+
+
+4. Azure 使用 JSON 回應，類似下列範例：
    ```json
    {
       "appId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -137,7 +140,7 @@ ms.lasthandoff: 02/03/2018
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
 
-1. 將本教學課程上一節的 Azure 服務主體設定新增至 settings.xml 檔案中的 `<servers>` 集合；例如：
+2. 將本教學課程上一節的 Azure 服務主體設定新增至 settings.xml 檔案中的 `<servers>` 集合；例如：
 
    ```xml
    <servers>
@@ -153,15 +156,17 @@ ms.lasthandoff: 02/03/2018
    </servers>
    ```
    其中：
-   | 元素 | 說明 |
-   |---|---|
-   | `<id>` | 指定將您的 Web 應用程式部署至 Azure 時，Maven 用來查閱安全性設定的唯一名稱。 |
-   | `<client>` | 包含服務主體的 `appId` 值。 |
-   | `<tenant>` | 包含服務主體的 `tenant` 值。 |
-   | `<key>` | 包含服務主體的 `password` 值。 |
+
+   |     元素     |                                                                                   說明                                                                                   |
+   |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |     `<id>`      |                                指定將您的 Web 應用程式部署至 Azure 時，Maven 用來查閱安全性設定的唯一名稱。                                |
+   |   `<client>`    |                                                             包含服務主體的 `appId` 值。                                                             |
+   |   `<tenant>`    |                                                            包含服務主體的 `tenant` 值。                                                             |
+   |     `<key>`     |                                                           包含服務主體的 `password` 值。                                                            |
    | `<environment>` | 定義目標 Azure 雲端環境，也就是此範例中的 `AZURE`。 (環境的完整清單可於[適用於 Azure Web 應用程式的 Maven 外掛程式]文件中取得) |
 
-1. 儲存並關閉 settings.xml 檔案。
+
+3. 儲存並關閉 settings.xml 檔案。
 
 ## <a name="optional-deploy-your-local-docker-file-to-docker-hub"></a>選擇性：將您的本機 Docker 檔案部署到 Docker Hub
 
@@ -185,7 +190,7 @@ ms.lasthandoff: 02/03/2018
       mvn clean package docker:build
       docker push
       ```
-   
+
    * 如果您已安裝[適用於 Maven 的 Docker 外掛程式]，您可以使用 `-DpushImage` 參數，自動建置您的容器映像並將其推送至 Docker Hub：
       ```shell
       mvn clean package docker:build -DpushImage

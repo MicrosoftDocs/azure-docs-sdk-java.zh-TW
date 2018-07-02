@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 1dda697cac80a6cad3ebbbbf8a5a4f18b515dfd8
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883681"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090711"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>如何對 Azure Key Vault 使用 Spring Boot Starter
 
@@ -101,6 +101,7 @@ ms.locfileid: "33883681"
    az group create --name wingtiptoysresources --location westus
    ```
    其中：
+
    | 參數 | 說明 |
    |---|---|
    | `name` | 指定資源群組的唯一名稱。 |
@@ -121,11 +122,12 @@ ms.locfileid: "33883681"
    }
    ```
 
-1. 從應用程式註冊建立 Azure 服務主體；例如：
+2. 從應用程式註冊建立 Azure 服務主體；例如：
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
    其中：
+
    | 參數 | 說明 |
    |---|---|
    | `name` | 指定 Azure 服務主體的名稱。 |
@@ -142,11 +144,12 @@ ms.locfileid: "33883681"
    }
    ```
 
-1. 在資源群組中建立新的金鑰保存庫；例如：
+3. 在資源群組中建立新的金鑰保存庫；例如：
    ```azurecli
    az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
    其中：
+
    | 參數 | 說明 |
    |---|---|
    | `name` | 指定金鑰保存庫的唯一名稱。 |
@@ -163,11 +166,12 @@ ms.locfileid: "33883681"
    "https://wingtiptoyskeyvault.vault.azure.net"
    ```
 
-1. 設定您稍早建立之 Azure 服務主體的存取原則；例如：
+4. 設定您稍早建立之 Azure 服務主體的存取原則；例如：
    ```azurecli
    az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
    其中：
+
    | 參數 | 說明 |
    |---|---|
    | `name` | 指定您稍早取得的金鑰保存庫名稱。 |
@@ -192,11 +196,12 @@ ms.locfileid: "33883681"
    }
    ```
 
-1. 將祕密儲存在您的新金鑰保存庫中；例如：
+5. 將祕密儲存在您的新金鑰保存庫中；例如：
    ```azurecli
    az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
    其中：
+
    | 參數 | 說明 |
    |---|---|
    | `vault-name` | 指定您稍早取得的金鑰保存庫名稱。 |
@@ -230,24 +235,26 @@ ms.locfileid: "33883681"
 
 1. 從您稍早下載至目錄的 Spring Boot 專案封存檔解壓縮檔案。
 
-1. 瀏覽至專案中的 src/main/resources 資料夾，然後在文字編輯器中開啟 application.properties 檔案。
+2. 瀏覽至專案中的 src/main/resources 資料夾，然後在文字編輯器中開啟 application.properties 檔案。
 
-1. 使用您稍早在本教學課程中完成步驟所得到的值，為金鑰保存庫新增值；例如：
+3. 使用您稍早在本教學課程中完成步驟所得到的值，為金鑰保存庫新增值；例如：
    ```yaml
    azure.keyvault.uri=https://wingtiptoyskeyvault.vault.azure.net/
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
    其中：
-   | 參數 | 說明 |
-   |---|---|
-   | `azure.keyvault.uri` | 指定您在建立金鑰保存庫時所得到的 URI。 |
-   | `azure.keyvault.client-id` | 指定您在建立服務主體時所得到的 appId GUID。 |
+
+   |          參數          |                                 說明                                 |
+   |-----------------------------|-----------------------------------------------------------------------------|
+   |    `azure.keyvault.uri`     |           指定您在建立金鑰保存庫時所得到的 URI。           |
+   | `azure.keyvault.client-id`  |  指定您在建立服務主體時所得到的 appId GUID。   |
    | `azure.keyvault.client-key` | 指定您在建立服務主體時所得到的 password GUID。 |
 
-1. 瀏覽至專案的主要原始程式碼檔案；例如：/src/main/java/com/wingtiptoys/secrets。
 
-1. 在文字編輯器中開啟應用程式的主要 Java 檔案；例如 SecretsApplication.java，並在該檔案中新增下列幾行：
+4. 瀏覽至專案的主要原始程式碼檔案；例如：/src/main/java/com/wingtiptoys/secrets。
+
+5. 在文字編輯器中開啟應用程式的主要 Java 檔案；例如 SecretsApplication.java，並在該檔案中新增下列幾行：
 
    ```java
    package com.wingtiptoys.secrets;
@@ -274,7 +281,7 @@ ms.locfileid: "33883681"
    ```
    此程式碼範例會從金鑰保存庫擷取連接字串，並將它顯示在命令列中。
 
-1. 儲存並關閉 Java 檔案。
+6. 儲存並關閉 Java 檔案。
 
 ## <a name="build-and-test-your-app"></a>建置及測試您的應用程式
 
