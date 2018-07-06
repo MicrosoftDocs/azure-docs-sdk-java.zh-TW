@@ -11,6 +11,8 @@
           href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
         - name: Azure 金鑰保存庫
           href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+        - name: Azure App Insights
+          href: configure-spring-boot-java-applicationinsights.md
     - name: 教學課程
       items:
         - name: Azure Redis 快取

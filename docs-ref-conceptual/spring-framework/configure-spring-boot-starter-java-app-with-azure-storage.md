@@ -14,11 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 2f9381fce2fee207360287c57443b56eb5128e42
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090691"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>如何對 Azure 儲存體使用 Spring Boot Starter
 
@@ -39,13 +40,13 @@ ms.lasthandoff: 04/26/2018
 
 1. 瀏覽至 <https://start.spring.io/>。
 
-1. 指定您想要使用 [Java] 產生 [Maven 專案]、輸入應用程式的 [群組] 和 [成品] 名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
+1. 指定您想要使用 **JAVA** 產生 **Maven** 專案、輸入應用程式的**群組**和**成品**名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
 
    ![Spring Initializr 的基本選項](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-basic.png)
 
    > [!NOTE]
    >
-   > Spring Initializr 會使用 [群組] 和 [成品] 名稱來建立套件名稱；例如：com.contoso.wingtiptoysdemo。
+   > Spring Initializr 會使用**群組**和**成品**名稱來建立套件名稱；例如：com.contoso.wingtiptoysdemo。
    >
 
 1. 向下捲動至 [Azure] 區段，然後核取 [Azure 儲存體] 的方塊。
@@ -108,6 +109,7 @@ ms.lasthandoff: 04/26/2018
    az group create --name wingtiptoysresources --location westus
    ```
    其中：
+
    | 參數 | 說明 |
    |---|---|
    | `name` | 指定資源群組的唯一名稱。 |
@@ -128,11 +130,12 @@ ms.lasthandoff: 04/26/2018
    }
    ```
 
-1. 在 Spring Boot 應用程式的資源群組中建立 Azure 儲存體帳戶；例如：
+2. 在 Spring Boot 應用程式的資源群組中建立 Azure 儲存體帳戶；例如：
    ```azurecli
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
    其中：
+
    | 參數 | 說明 |
    |---|---|
    | `name` | 指定儲存體帳戶的唯一名稱。 |
@@ -141,7 +144,7 @@ ms.lasthandoff: 04/26/2018
    | `sku` | 指定下列其中之一：`Premium_LRS`、`Standard_GRS`、`Standard_LRS`、`Standard_RAGRS`、`Standard_ZRS`。 |
 
    Azure 會傳回 JSON 長字串，其中包含佈建狀態；例如：|
-   
+
    ```json
    {
      "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
@@ -157,11 +160,12 @@ ms.lasthandoff: 04/26/2018
    }
    ```
 
-1. 擷取儲存體帳戶的連接字串；例如：
+3. 擷取儲存體帳戶的連接字串；例如：
    ```azurecli
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
    其中：
+
    | 參數 | 說明 |
    | ---|---|
    | `name` | 指定您在先前的步驟中建立的儲存體帳戶唯一名稱。 |
@@ -270,7 +274,7 @@ ms.lasthandoff: 04/26/2018
    ```shell
    mvn clean package spring-boot:run
    ```
-   
+
    應用程式會建立容器，並將 Blob 形式的文字檔上傳至容器，其將會列在您於 [Azure 入口網站](https://portal.azure.com)的儲存體帳戶底下。
 
    ![在 Azure 入口網站中列出 Blob](media/configure-spring-boot-starter-java-app-with-azure-storage/list-blobs-in-portal.png)

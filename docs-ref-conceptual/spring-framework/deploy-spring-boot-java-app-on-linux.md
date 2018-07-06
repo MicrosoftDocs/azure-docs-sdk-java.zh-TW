@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: c3a10a0d6029ba31b13f82907311d9182f98acb6
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 49d94d11ad6a4e103ded849e477d99f01955c693
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954749"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090861"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>將 Spring Boot 應用程式部署到 Azure Container Service 中的 Linux
 
@@ -193,11 +193,11 @@ ms.locfileid: "28954749"
 
 1. 瀏覽至 [Azure 入口網站]並登入。
 
-1. 依序按一下功能表的 [+ 新增] 圖示、[Web + 行動]，以及 [Linux 上的 Web 應用程式]。
+2. 依序按一下功能表的 [+ 新增] 圖示、[Web + 行動]，以及 [Linux 上的 Web 應用程式]。
    
    ![在 Azure 入口網站中建立新的 Web 應用程式][LX01]
 
-1. 當 [Linux 上的 Web 應用程式] 頁面顯示時，輸入下列資訊：
+3. 當 [Linux 上的 Web 應用程式] 頁面顯示時，輸入下列資訊：
 
    a. 為 [應用程式名稱] 輸入唯一名稱；例如："wingtiptoyslinux"。
 
@@ -207,19 +207,19 @@ ms.locfileid: "28954749"
 
    d. 按一下 [設定容器]，並輸入下列資訊：
 
-      * 選擇 [私人登錄]。
+   * 選擇 [私人登錄]。
 
-      * **映像和選擇性標記**：從先前指定的容器名稱，例如："wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest"
+   * **映像和選擇性標記**：從先前指定的容器名稱，例如："wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest"
 
-      * **伺服器 URL**：從先前指定的容器登錄 URL，例如："https://wingtiptoysregistry.azurecr.io"
+   * **伺服器 URL**：指定您先前的登錄 URL，例如："*<https://wingtiptoysregistry.azurecr.io>*"
 
-      * **登入使用者名稱**和**密碼**：從您在先前步驟中使用的**存取金鑰**指定您的登入認證。
+   * **登入使用者名稱**和**密碼**：從您在先前步驟中使用的**存取金鑰**指定您的登入認證。
    
    e. 一旦您輸入上述所有資訊後，按一下 [確定]。
 
    ![設定 Web 應用程式設定][LX02]
 
-1. 按一下頁面底部的 [新增] 。
+4. 按一下頁面底部的 [新增] 。
 
 > [!NOTE]
 >
@@ -272,9 +272,9 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 如需 Spring Boot on Docker 範例專案的進一步詳細資訊，請參閱 [Spring Boot on Docker Getting Started]。
 
-如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr** (網址為 https://start.spring.io/)。
+如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr**，網址為 https://start.spring.io/。
 
-如需開始建立簡單 Spring Boot 應用程式的相關詳細資訊，請參閱 Spring Initializr (網址為 https://start.spring.io/)。
+如需開始建立簡單 Spring Boot 應用程式的相關詳細資訊，請參閱 Spring Initializr，網址為 https://start.spring.io/。
 
 如需如何搭配 Azure 使用自訂 Docker 映像的其他範例，請參閱[針對 Linux 上的 Azure Web 應用程式使用自訂 Docker 映像]。
 

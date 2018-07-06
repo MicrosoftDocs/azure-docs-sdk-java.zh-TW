@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954889"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090811"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>使用 Fabric8 Maven 外掛程式部署 Spring Boot 應用程式
 
@@ -96,7 +96,7 @@ ms.locfileid: "28954889"
    az login
    ```
    依照指示完成登入程序
-   
+
    Azure CLI 將會顯示您的帳戶清單，例如：
 
    ```json
@@ -255,6 +255,7 @@ ms.locfileid: "28954889"
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
    其中：
+
    | 參數 | 說明 |
    |---|---|
    | `wingtiptoys-kubernetes` | 使用本文先前所提及的資源群組來指定名稱。 |
@@ -285,7 +286,7 @@ ms.locfileid: "28954889"
    }
    ```
 
-1. 從 Azure CLI 擷取容器登錄的密碼。
+2. 從 Azure CLI 擷取容器登錄的密碼。
    ```azurecli
    az acr credential show --name wingtiptoysregistry --query passwords[0]
    ```
@@ -299,10 +300,10 @@ ms.locfileid: "28954889"
    }
    ```
 
-1. 巡覽至您 Maven 安裝的設定目錄 (預設為 ~/.m2/ 或 C:\Users\使用者名稱\.m2)，並使用文字編輯器開啟 *settings.xml* 檔案。
+3. 巡覽至您 Maven 安裝的設定目錄 (預設為 ~/.m2/ 或 C:\Users\使用者名稱\.m2)，並使用文字編輯器開啟 *settings.xml* 檔案。
 
-1. 將您的 Azure Container Registry URL、使用者名稱和密碼新增至 *settings.xml* 檔案的新 `<server>` 集合中。
-`id` 和 `username` 是登錄的名稱。 使用上一個命令的 `password` 值 (不含引號)。
+4. 將您的 Azure Container Registry URL、使用者名稱和密碼新增至 *settings.xml* 檔案的新 `<server>` 集合中。
+   `id` 和 `username` 是登錄的名稱。 使用上一個命令的 `password` 值 (不含引號)。
 
    ```xml
    <servers>
@@ -314,9 +315,9 @@ ms.locfileid: "28954889"
    </servers>
    ```
 
-1. 瀏覽至 Spring Boot 應用程式的已完成專案目錄 (例如，"*C:\SpringBoot\gs-spring-boot-docker\complete*" 或 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*")，並使用文字編輯器開啟 *pom.xml* 檔案。
+5. 瀏覽至 Spring Boot 應用程式的已完成專案目錄 (例如，"*C:\SpringBoot\gs-spring-boot-docker\complete*" 或 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*")，並使用文字編輯器開啟 *pom.xml* 檔案。
 
-1. 使用 Azure Container Registry 的登入伺服器值來更新 *pom.xml* 檔案中的 `<properties>` 集合。
+6. 使用 Azure Container Registry 的登入伺服器值來更新 *pom.xml* 檔案中的 `<properties>` 集合。
 
    ```xml
    <properties>
@@ -325,7 +326,7 @@ ms.locfileid: "28954889"
    </properties>
    ```
 
-1. 更新 *pom.xml* 檔案中的 `<plugins>` 集合，以便 `<plugin>` 包含 Azure Container Registry 的登入伺服器位址和登錄名稱。
+7. 更新 *pom.xml* 檔案中的 `<plugins>` 集合，以便 `<plugin>` 包含 Azure Container Registry 的登入伺服器位址和登錄名稱。
 
    ```xml
    <plugin>
@@ -340,7 +341,7 @@ ms.locfileid: "28954889"
    </plugin>
    ```
 
-1. 瀏覽至 Spring Boot 應用程式的已完成專案目錄，然後執行下列 Maven 命令來建置 Docker 容器，並將映像推送到您的登錄：
+8. 瀏覽至 Spring Boot 應用程式的已完成專案目錄，然後執行下列 Maven 命令來建置 Docker 容器，並將映像推送到您的登錄：
 
    ```shell
    mvn package dockerfile:build -DpushImage
@@ -485,13 +486,13 @@ ms.locfileid: "28954889"
    ```
 
    `kubectl` 將會顯示您的內部和外部 IP 位址，例如：
-   
+
    ```shell
    NAME                    CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
    kubernetes              10.0.0.1     <none>        443/TCP        19h
    gs-spring-boot-docker   10.0.242.8   13.65.196.3   80:31215/TCP   3m
    ```
-   
+
    您可以使用外部 IP 位址來在網頁瀏覽器中開啟應用程式。
 
    ![以外部方式瀏覽範例應用程式][SB02]
@@ -516,9 +517,9 @@ ms.locfileid: "28954889"
 
 如需 Spring Boot on Docker 範例專案的進一步詳細資訊，請參閱 [Spring Boot on Docker Getting Started]。
 
-如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr** (網址為 <https://start.spring.io/> \(英文\))。
+如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr**，網址為 <https://start.spring.io/>。
 
-如需開始建立簡單 Spring Boot 應用程式的相關詳細資訊，請參閱 Spring Initializr (網址為 <https://start.spring.io/> \(英文\))。
+如需開始建立簡單 Spring Boot 應用程式的相關詳細資訊，請參閱 Spring Initializr，網址為 <https://start.spring.io/>。
 
 如需如何搭配 Azure 使用自訂 Docker 映像的其他範例，請參閱[針對 Linux 上的 Azure Web 應用程式使用自訂 Docker 映像]。
 
