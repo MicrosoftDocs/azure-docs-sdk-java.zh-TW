@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4edb8c1ceef508dd251db693ccc3b98d77ec452b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954839"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075427"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>使用適用於 IntelliJ 的 Azure Explorer 來管理儲存體帳戶
 

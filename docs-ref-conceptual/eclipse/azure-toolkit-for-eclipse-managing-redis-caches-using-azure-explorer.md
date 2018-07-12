@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 2d3f2363bd0b41808cd409417327b924cb86d85b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075417"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>使用適用於 Eclipse 的 Azure Explorer 來管理 Redis 快取
 

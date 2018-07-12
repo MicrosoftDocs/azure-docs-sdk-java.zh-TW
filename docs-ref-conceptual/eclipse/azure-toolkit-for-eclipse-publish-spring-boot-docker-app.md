@@ -14,11 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: b54c10dc33324d902a0e778770df8ec4d71dc9a1
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: c116e0712afd8e48983f946f43eddfd0c79c0ba8
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075468"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>使用適用於 Eclipse 的 Azure 工具組，將 Spring Boot 應用程式發佈為 Docker 容器
 
@@ -46,15 +47,15 @@ ms.lasthandoff: 02/03/2018
 
    a. 展開 [Git]。
 
-   b. 選取 [Projects from Git] \(Git 中的專案)。
+   b. 選取 [Projects from Git] (Git 中的專案)。
    
    c. 按 [下一步] 。
 
    ![匯入對話方塊][CL02]
 
-1. 在 [Select Repository Source] \(選取存放庫來源) 頁面上：
+1. 在 [Select Repository Source] (選取存放庫來源) 頁面上：
 
-   a. 選取 [Clone URI] \(複製 URI)。
+   a. 選取 [Clone URI] (複製 URI)。
    
    b. 按 [下一步] 。
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 02/03/2018
 
    ![[分支選擇] 頁面][CL05]
 
-1. 在 [Local Destination] \(本機目的地) 頁面上：
+1. 在 [Local Destination] (本機目的地) 頁面上：
 
    a. 指定您想要放置本機存放庫的本機資料夾。
    
@@ -82,9 +83,9 @@ ms.lasthandoff: 02/03/2018
 
    ![[本機目的地] 頁面][CL06]
 
-1. 在 [Select a wizard to use for importing projects] \(選取要用於匯入專案的精靈) 頁面上：
+1. 在 [Select a wizard to use for importing projects] (選取要用於匯入專案的精靈) 頁面上：
 
-   a. 選取 [Import as a general project] \(匯入為一般專案)。
+   a. 選取 [Import as a general project] (匯入為一般專案)。
    
    b. 按 [下一步] 。
 
@@ -114,17 +115,17 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
    a. 展開 [Maven]。
    
-   b. 選取 [Existing Maven Projects] \(現有 Maven 專案)。
+   b. 選取 [Existing Maven Projects] (現有 Maven 專案)。
    
    c. 按 [下一步] 。
 
    ![匯入對話方塊][MV01]
 
-1. 在 [Maven Projects] \(Maven 專案) 頁面上：
+1. 在 [Maven Projects] (Maven 專案) 頁面上：
 
    a. 針對 [根目錄]，指定您本機存放庫中的 **complete** 資料夾。
    
-   b. 展開 [進階] 區段，然後在 [Name template] \(名稱範本) 中輸入自訂名稱。
+   b. 展開 [進階] 區段，然後在 [Name template] (名稱範本) 中輸入自訂名稱。
    
    c. 針對專案中的 **pom.xml** 檔案選取方塊。
    
@@ -160,7 +161,7 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
    a. 輸入自訂 Docker 映像名稱。
    
-   b. 在 [Artifact to deploy] \(要部署的構件) 中，指定您剛剛建置之 **gs-spring-boot-docker-0.1.0.jar** 檔案的路徑。
+   b. 在 [Artifact to deploy] (要部署的構件) 中，指定您剛剛建置之 **gs-spring-boot-docker-0.1.0.jar** 檔案的路徑。
 
    ![Specify Docker options (指定 Docker 選項)][PU02]
 
@@ -202,7 +203,7 @@ Spring Boot Docker 存放庫包含將用於此教學課程的已完成 Maven 專
 
 ## <a name="next-steps"></a>後續步驟
 
-如需適用於 Docker 的其他資源，請參閱 Docker 的官方網站。
+如需 Docker 的其他資源，請參閱 [Docker 的官方網站](https://www.docker.com/)。
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 

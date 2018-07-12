@@ -11,14 +11,14 @@ ms.workload: na
 ms.tgt_pltfrm: na
 ms.devlang: Java
 ms.topic: article
-ms.date: 05/23/2018
+ms.date: 07/02/2018
 ms.author: robmcm
-ms.openlocfilehash: 29b2b598968c9a3a896fffee3ce56f9b0cb4b1ee
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 3f2de63f7eb1422ff1dd6db45d68e02f4af188b8
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090731"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37864038"
 ---
 # <a name="adding-a-root-certificate-to-the-java-ca-certificates-store"></a>新增根憑證至 Java CA 憑證存放區
 
@@ -70,10 +70,10 @@ Baltimore 憑證可能已安裝在您的 cacerts 存放區中，因此您需要�
 
    |  參數   |                              說明                               |
    |--------------|------------------------------------------------------------------------|
-   |  `keystore`  |                    指定憑證存放區。                    |
-   | `importcert` |            指定您正在匯入憑證。             |
-   |   `alias`    |                指定憑證別名。                 |
-   |    `file`    | 指定您正在匯入的根憑證檔案名稱。 |
+   | `keystore`   | 指定憑證存放區。                                       |
+   | `importcert` | 指定您正在匯入憑證。                        |
+   | `alias`      | 指定憑證別名。                                |
+   | `file`       | 指定您正在匯入的根憑證檔案名稱。 |
 
 
 3. 如果系統提示您信任憑證，請以 `d4:de:20:d0:5e:66:fc:53:fe:1a:50:88:2c:78:db:28:52:ca:e4:74` 驗證指紋，如果指紋正確則輸入 **y**。
@@ -90,6 +90,6 @@ Baltimore 憑證可能已安裝在您的 cacerts 存放區中，因此您需要�
 
 如需關於 keytool 公用程式的詳細資訊，請參閱 <http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html>。
 
-如需 Azure 所用根憑證的詳細資訊，請參閱 [Azure 根憑證移轉](http://blogs.msdn.com/b/windowsazure/archive/2013/03/15/windows-azure-root-certificate-migration.aspx)。
-
 如需 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure](/java/azure)。
+
+<!-- For more information about the root certificates used by Azure, see [Azure Root Certificate Migration](http://blogs.msdn.com/b/windowsazure/archive/2013/03/15/windows-azure-root-certificate-migration.aspx). -->
