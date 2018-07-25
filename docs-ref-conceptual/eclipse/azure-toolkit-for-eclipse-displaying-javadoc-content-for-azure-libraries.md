@@ -37,7 +37,7 @@ Javadoc 內容與 Azure Libraries for Java 產生關聯時，即可在 Eclipse �
 
 1. 您可以指定 [Javadoc URL]或 [封存檔案中的 Javadoc]。
 
-   * 如果您選擇指定 [Javadoc URL]，請使用 URL，例如 **http://dl.windowsazure.com/javadoc** 或 **http://dl.windowsazure.com/storage/javadoc**。
+   * 如果您選擇指定 [Javadoc URL]，請使用 URL，例如 **http://dl.windowsazure.com/javadoc** 或 **http://dl.windowsazure.com/storage/javadoc** 。
 
    * 若選擇使用 **封存檔案中的 Javadoc**，可以指定外部檔案或工作區檔案。
 
