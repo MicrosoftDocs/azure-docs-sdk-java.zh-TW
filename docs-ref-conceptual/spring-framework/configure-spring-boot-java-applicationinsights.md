@@ -64,7 +64,7 @@ ms.locfileid: "37090771"
 
    ![Azure 入口網站][AZ01]
 
-1. 按一下 [管理工具]，然後按一下 [Application Insights]。
+1. 按一下 **管理工具** ，然後按一下 **Application Insights** 。
 
    ![Azure 入口網站][AZ02]
 

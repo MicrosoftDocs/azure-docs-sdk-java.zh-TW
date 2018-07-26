@@ -51,7 +51,7 @@ ms.locfileid: "28954729"
 
       ![用於輸入 GitHub 權杖的對話方塊][CL02b]
 
-1. 針對存放庫 URL 輸入 **https://github.com/spring-guides/gs-spring-boot-docker.git**，指定您的本機路徑和資料夾資訊，然後按一下 [複製]。
+1. 針對存放庫 URL 輸入 **https://github.com/spring-guides/gs-spring-boot-docker.git** ，指定您的本機路徑和資料夾資訊，然後按一下 **[複製]** 。
 
    ![[複製存放庫] 對話方塊][CL03]
 
