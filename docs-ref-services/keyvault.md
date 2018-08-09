@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: 396d02b8bba5878ffb24f5f8994ae29aef36cfdc
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 1fd03fb772b6411985f99b5e7cce3918e79496b1
+ms.sourcegitcommit: dad28b332346dfa9af249b5a64e042cbb1eb90d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823821"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625014"
 ---
 # <a name="azure-key-vault-libraries-for-java"></a>適用於 Java 的 Azure Key Vault 程式庫
 
@@ -88,9 +88,5 @@ vault1 = vault1.update()
 
 
 ## <a name="samples"></a>範例
-
-[管理 Key Vault][1]   
-
-[1]: https://github.com/Azure-Samples/key-vault-java-manage-key-vaults
 
 深入探索可在應用程式中使用的 [Azure Key Vault Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=key+vault)。
