@@ -12,18 +12,18 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: f069183c96cdc42d590d2e58a5a6a500be5ab69a
-ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
+ms.openlocfilehash: dee41f08dc303fc95fcfa6a585a5d1a06726f2ef
+ms.sourcegitcommit: dad28b332346dfa9af249b5a64e042cbb1eb90d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "29065525"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625034"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>開始使用適用於 Java 的 Azure 程式庫進行雲端開發
 
 本指南會逐步引導您設定開發環境，以便在 Java 中進行 Azure 開發。 接著，您會建立一些 Azure 資源，並將它們連線以執行某些基本工作，例如上傳檔案或部署 Web 應用程式。 當您完成時，您就已做好準備可以開始在自有的 Java 應用程式中使用 Azure 服務。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 一個 Azure 帳戶。 如果您沒有帳戶，請[取得免費試用帳戶](https://azure.microsoft.com/free/)
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) 或 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。
@@ -93,7 +93,9 @@ export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
-## <a name="create-a-new-maven-project"></a>建立新的 Maven 專案
+## <a name="tooling"></a>工具
+
+### <a name="create-a-new-maven-project"></a>建立新的 Maven 專案
 
 > [!NOTE]
 > 本指南使用 Maven 建置工具來建置及執行程式碼範例，但 Gradle 等其他建置工具也能與適用於 Java 的 Azure 程式庫搭配運作。 
@@ -142,7 +144,27 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
     </plugins>
 </build>
  ```
-   
+
+### <a name="install-the-azure-toolkit-for-intellij"></a>安裝 Azure Toolkit for Intellij
+
+如果您要以程式設計方式部署 Web 應用程式或 API，就必須要有 [Azure 工具組](intellij/azure-toolkit-for-intellij-installation.md)，但此工具組目前並未用於任何其他種類的開發。 以下是安裝程序的摘要。 如需詳細步驟，請瀏覽[安裝 Azure Toolkit for Intellij](intellij/azure-toolkit-for-intellij-installation.md)。
+
+選取 [檔案] 功能表，然後選取 [設定...]。 
+
+選取 [瀏覽存放庫...] 並搜尋 "Azure"，然後安裝 **Azure Toolkit for Intellij**。
+
+重新啟動 Intellij。
+
+### <a name="install-the-azure-toolkit-for-eclipse"></a>安裝適用於 Eclipse 的 Azure 工具組
+
+如果您要以程式設計方式部署 Web 應用程式或 API，就必須要有 [Azure 工具組](eclipse/azure-toolkit-for-eclipse.md)，但此工具組目前並未用於任何其他種類的開發。 以下是安裝程序的摘要。 如需詳細步驟，請瀏覽[安裝 Azure Toolkit for Eclipse](eclipse/azure-toolkit-for-eclipse.md)。
+
+選取 [說明] 功能表，然後選取 [安裝新軟體]。
+
+在 [使用:] 欄位中輸入 `http://dl.microsoft.com/eclipse`，然後按 Enter 鍵。
+
+然後，選取 [Azure Toolkit for Java] 旁的核取方塊，然後取消核取 [在安裝期間連絡所有更新網站來尋找必要軟體] 的核取方塊。 然後，選取 [下一步]。
+
 ## <a name="create-a-linux-virtual-machine"></a>建立 Linux 虛擬機器
 
 在專案的 `src/main/java/com/fabirkam` 目錄中建立名為 `AzureApp.java` 的新檔案，然後貼上以下程式碼區塊。 使用機器的實際值來更新 `userName` 和 `sshKey` 變數。 此程式碼會在美國東部 Azure 區域執行的 `sampleResourceGroup` 資源群組中，建立名為 `testLinuxVM` 的新 Linux VM。
