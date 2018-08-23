@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 3610312ed17301131967bd2c047c86656de070e7
-ms.sourcegitcommit: f313c14e92f38c54a3a583270ee85cc928cd39d7
+ms.openlocfilehash: d58cafe3456150069ec8572c101c62d1b2c29c5d
+ms.sourcegitcommit: e1a5d9687e006e8bf12d11747d45cf130a2c82af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689421"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "42703339"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a>使用適用於 Azure App Service 的 Maven 外掛程式，將 Spring Boot 應用程式部署至雲端
 
@@ -31,7 +31,7 @@ ms.locfileid: "34689421"
 
 在使用 Maven 外掛程式之前，請在 Maven Central 上檢查外掛程式的最新可用版本：[![Maven Central](https://img.shields.io/maven-central/v/com.microsoft.azure/azure-webapp-maven-plugin.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.microsoft.azure%22%20AND%20a%3A%22azure-webapp-maven-plugin%22) 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 若要完成本教學課程中的步驟，您必須具備下列必要條件：
 
@@ -163,9 +163,11 @@ ms.locfileid: "34689421"
 讓 Maven 外掛程式部署 Spring Boot 應用程式最簡單且最輕鬆的方式是使用 [Azure CLI](https://docs.microsoft.com/cli/azure/)。 請確認您已進行安裝。
 
 1. 使用 Azure CLI 登入您的 Azure 帳戶：
+   
    ```shell
    az login
    ```
+   
    依照指示完成登入程序。
 
 ## <a name="optionally-customize-pomxml-before-deploying"></a>(選擇性) 在部署之前自訂 pom.xml
