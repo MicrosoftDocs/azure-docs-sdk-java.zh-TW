@@ -13,12 +13,12 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 03/17/2017
 ms.author: routlaw
-ms.openlocfilehash: 1adc0a104ba22bcd353664e68323165890e46c64
-ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
+ms.openlocfilehash: 70b508118c50b75693e2d746dc1e2919c827cb29
+ms.sourcegitcommit: 0f38ef9ad64cffdb7b2e9e966224dfd0af251b0f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2017
-ms.locfileid: "22033630"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703541"
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a>使用 Maven 建立 Java 應用程式並部署到 Azure
 
@@ -53,7 +53,7 @@ mvn package
 mvn tomcat7:run-war
 ```
 
-開啟網頁瀏覽器並瀏覽至 http://localhost:8080 以預覽應用程式：
+開啟網頁瀏覽器，然後巡覽至 http://localhost:8080 以預覽應用程式：
 
   ![Java 應用程式範例的 Hello World 輸出](media/maven-quickstart/java-app-hello-world-output.png)
 
@@ -236,7 +236,7 @@ mvn install -s az-settings.xml
 
 移至 Azure 入口網站，查看您剛建立的 Web 應用程式。
 
-若要這麼做，請登入 [https://portal.azure.com](https://portal.azure.com)。
+若要這樣做，請登入 [https://portal.azure.com](https://portal.azure.com)。
 
 按一下左側功能表中的 [App Service]，然後按一下 Azure Web 應用程式的名稱。
 
