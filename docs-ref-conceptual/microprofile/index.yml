@@ -1,0 +1,60 @@
+### YamlMime:YamlDocument
+ms.openlocfilehash: a2677c06a1d295d6b5ed5142d26cf16a1c591dbd
+ms.sourcegitcommit: 3d0896f821907278547c283c54b53fbd7f4f30f0
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43153906"
+documentType: LandingData
+title: Azure 上的 Eclipse MicroProfile
+metadata:
+  document_id: 
+  title: Azure 上的 Eclipse MicroProfile
+  description: 開始使用 Eclipse MicroProfile 在 Azure 上開發應用程式。
+  keywords: Azure, Java, Maven, MicroProfile, Jakarta EE, Java EE, Eclipse
+  author: brborges
+  ms.author: brborges
+  manager: brborges
+  ms.date: 02/01/2018
+  ms.topic: landing-page
+  ms.prod: azure
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+- items:
+  - type: markdown
+    text: >
+      [MicroProfile](http://microprofile.io/) 是 Eclipse Foundation 專案，目的是透過在多個實作上不斷創新，以及在想要參與的共同區域上共同作業來達到標準化目標，以對分散式微服務架構運用和發展 Java EE 等企業 Java 技術。
+- title: 入門指南
+  items:
+  - type: list
+    style: icon48
+    items:
+    - image:
+        src: https://docs.microsoft.com/en-us/azure/media/index/ContainerInstances.svg
+      text: 部署至 Azure 容器執行個體
+      href: deploy-microprofile-to-container-instances.md
+    - image:
+        src: https://docs.microsoft.com/en-us/azure/media/index/AppService.svg
+      text: 部署至 Azure Web Apps
+      href: deploy-microprofile-to-web-app-for-containers.md
+    - image:
+        src: https://docs.microsoft.com/en-us/azure/media/index/keyvault.svg
+      text: Azure Key Vault 的組態來源
+      href: configure-microprofile-with-keyvault.md
+- title: Azure 的範例
+  items:
+  - type: list
+    style: unordered
+    className: spaced noBullet
+    items:
+    - html: <a href="https://github.com/search?q=topic%3Amicroprofile+org%3AAzure-Samples+fork%3Atrue">適用於 Azure 的 MicroProfile 範例</a>
+- title: 參考
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: MicroProfile 專案
+      html: <p><a href="https://microprofile.io/">MicroProfile.io</a></p><p><a href="http://microprofile.io/project/eclipse/microprofile-samples">MicroProfile.io 的範例</a></p>
