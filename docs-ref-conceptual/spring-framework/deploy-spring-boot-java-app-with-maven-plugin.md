@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d58cafe3456150069ec8572c101c62d1b2c29c5d
-ms.sourcegitcommit: e1a5d9687e006e8bf12d11747d45cf130a2c82af
+ms.openlocfilehash: ca788354d26964bd9f1e21a0d3a8005ff65ce4bc
+ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "42703339"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43324344"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a>使用適用於 Azure App Service 的 Maven 外掛程式，將 Spring Boot 應用程式部署至雲端
 
@@ -129,6 +129,7 @@ ms.locfileid: "42703339"
            return application.sources(Application.class);
        }
    ```
+1. 組織您的匯入項目，確保 `SpringApplicationBuilder` 和 `SpringBootServletInitializer` 已正確匯入。
 
 您的應用程式現在已準備好部署到 Tomcat，和任何其他 Servlet 執行階段 (例如 Jetty)。
 
