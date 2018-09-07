@@ -3,9 +3,9 @@ title: 使用 Docker 與 Azure 將 MicroProfile 應用程式部署到雲端
 description: 了解如何使用 Docker 和 Azure 容器執行個體將 MicroProfile 應用程式部署至雲端。
 services: container-instances;container-retistry
 documentationcenter: java
-author: brborges
+author: brunoborges
 manager: routlaw
-editor: brborges
+editor: brunoborges
 ms.assetid: ''
 ms.author: brborges
 ms.date: 07/30/2018
@@ -14,12 +14,12 @@ ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c6254d11ee1596a23076931c9a2a2370b5f52409
-ms.sourcegitcommit: 3d0896f821907278547c283c54b53fbd7f4f30f0
+ms.openlocfilehash: 336af51bbdf5d2f843c3868ebc2358e128daaeaa
+ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43153857"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43324324"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>使用 Docker 與 Azure 將 MicroProfile 應用程式部署到雲端
 
@@ -35,7 +35,7 @@ ms.locfileid: "43153857"
 
 * Azure 訂用帳戶；如果您沒有 Azure 訂用帳戶，可以註冊[免費的 Azure 帳戶]。
 * [Azure 命令列介面 (CLI)]。
-* 最新的 [Java 開發套件] \(JDK\)，1.8 版或更新版本。
+* 最新的 [Java 開發套件 (JDK)]，1.8 版或更新版本。
 * Apache 的 [Maven] 建置工具 (第 3 版以上)。
 * [Git] 用戶端。
 
@@ -66,7 +66,7 @@ Hello, Azure!
 
 ## <a name="deploy-to-azure"></a>部署至 Azure
 
-現在讓我們使用 [Azure 容器執行個體] 和 [Azure Container Registry] 服務來將此應用程式帶入雲端。
+現在讓我們使用 [Azure 容器執行個體]和 [Azure Container Registry] 服務來將此應用程式帶入雲端。
 
 ### <a name="build-a-docker-image"></a>建置 Docker 映像
 
@@ -157,7 +157,7 @@ curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 
 <!-- URL List -->
 
-[Azure Container Registry Build]: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-build-overview
+[Azure Container Registry Build]: https://docs.microsoft.com/azure/container-registry/container-registry-build-overview
 [MicroProfile.io]: https://microprofile.io
 [Azure 命令列介面 (CLI)]: /cli/azure/overview
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
@@ -165,3 +165,6 @@ curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Maven]: http://maven.apache.org/
+[Java 開發套件 (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[Azure 容器執行個體]: https://docs.microsoft.com/azure/container-instances/
+[Azure Container Registry]:  https://docs.microsoft.com/azure/container-registry
