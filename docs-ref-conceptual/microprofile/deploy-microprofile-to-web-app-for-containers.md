@@ -14,12 +14,12 @@ ms.service: container-registry;app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 323ae247c3df8c7d7b180d9d60b9014e4e2d7382
-ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.openlocfilehash: 1eb0e7d7a718a1c106adebbf89011f6e3fa1504e
+ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240958"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040246"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>將 Java 型 MicroProfile 服務部署至用於容器的 Azure Web App
 
@@ -137,7 +137,7 @@ public class API {
 現在，我們已在本機電腦上成功建置與執行 MicroProfile 應用程式，下一步就是將此容器推送至容器登錄。 在本教學課程中，我們會使用 Azure Container Registry，但您可以使用任何容器登錄 (前提是要將 `pom.xml` 檔案編輯為指向相關位置)。
 
 1. 執行 `mvn clean package` 來清除、編譯及建立本機 Docker 映像。
-2. 執行 `mvn dockerfile:push` 來推送至 Azure Container Repository。
+2. 執行 `mvn dockerfile:push` 來推送至 Azure Container Registry。
 
 在這個階段中，您已經將 Docker 容器映像上傳至 Azure Container Registry 中，但它尚未執行，因為我們現在必須將其部署到用於容器的 Azure Web App 執行個體。 我們現在要進行此操作。
 

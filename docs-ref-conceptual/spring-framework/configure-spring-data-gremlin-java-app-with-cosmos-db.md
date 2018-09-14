@@ -7,19 +7,18 @@ author: rmcmurray
 manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm
 ms.date: 08/20/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 0976f4b0c13ce5c577458f2974f5dce123bf7e59
-ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.openlocfilehash: 4e0138e3cc474b4c47d3bf492e696ec49ea3ef37
+ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43241130"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040266"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>如何搭配 Azure Cosmos DB SQL API 使用 Spring Data Gremlin Starter
 
@@ -85,7 +84,7 @@ Spring Data Gremlin Starter 可為 Apache 中的 Gremlin 查詢語言提供 Spri
    * 為資料庫指定唯一的**資料庫識別碼**。
    * 為圖表指定唯一的**圖表識別碼**。
    * 您可以選擇指定 [儲存體容量]，或是接受預設值。
-   * 指定您的 [輸送量]，在此範例中，您可以選擇 400 個要求單位 (RU)。
+   * 指定您的**輸送量**；在此範例中，您可以選擇 400 個要求單位 (RU)。
    
    當您指定這些選項之後，按一下 [確認] 以建立您的圖表。
 

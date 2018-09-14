@@ -12,14 +12,14 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: dee41f08dc303fc95fcfa6a585a5d1a06726f2ef
-ms.sourcegitcommit: dad28b332346dfa9af249b5a64e042cbb1eb90d7
+ms.openlocfilehash: fdf0334a8796d636a1968943cc34d7ae98d6361c
+ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39625034"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040256"
 ---
-# <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>開始使用適用於 Java 的 Azure 程式庫進行雲端開發
+# <a name="get-started-with-cloud-development-using-java-on-azure"></a>開始使用 Azure 上的 Java 進行雲端開發
 
 本指南會逐步引導您設定開發環境，以便在 Java 中進行 Azure 開發。 接著，您會建立一些 Azure 資源，並將它們連線以執行某些基本工作，例如上傳檔案或部署 Web 應用程式。 當您完成時，您就已做好準備可以開始在自有的 Java 應用程式中使用 Azure 服務。
 
