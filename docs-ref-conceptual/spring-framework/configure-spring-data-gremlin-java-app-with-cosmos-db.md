@@ -13,12 +13,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 4e0138e3cc474b4c47d3bf492e696ec49ea3ef37
-ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
+ms.openlocfilehash: 3e7ec1a2f6b15ec9444dc6ee8d8f2d0f779b1f10
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040266"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639791"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>如何搭配 Azure Cosmos DB SQL API 使用 Spring Data Gremlin Starter
 
@@ -163,9 +163,11 @@ Spring Data Gremlin Starter 可為 Apache 中的 Gremlin 查詢語言提供 Spri
       password: 57686f6120447564652c20426f6220526f636b73==
       telemetryAllowed: false
    ```
+   
    其中：
+   
    | 欄位 | 說明 |
-   | ---|---|
+   |---|---|
    | `endpoint` | 指定您資料庫的 Gremlin URI，其衍生自稍早在本教學課程中建立 Azure Cosmos DB 時指定的**識別碼**。 |
    | `port` | 指定 TCP/IP 連接埠，其應該是用於 HTTPS 的 **443**。 |
    | `username` | 指定唯一**資料庫識別碼**和**圖表識別碼**，也就是您稍早在本教學課程中新增圖表時使用的識別碼；這必須使用下列語法來輸入："/dbs/**{Database id}**/colls/**{Graph id}**"。 |

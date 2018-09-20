@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 78b7a9a2e26168b19dc8a1d12e47456752b57ffc
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090711"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639771"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>如何對 Azure Key Vault 使用 Spring Boot Starter
 
@@ -27,7 +27,7 @@ ms.locfileid: "37090711"
 
 本文示範如何使用 **[Spring Initializr]** 建立應用程式，Spring Initializr 會使用適用於 Azure Key Vault 的 Spring Boot Starter，來擷取在金鑰保存庫中儲存作為祕密的連接字串。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 請務必具備下列必要條件，以便本文中說明的步驟：
 
@@ -37,7 +37,7 @@ ms.locfileid: "37090711"
 
 ## <a name="create-an-app-using-the-spring-initialzr"></a>使用 Spring Initialzr 建立應用程式
 
-1. 瀏覽至 <https://start.spring.io/>。
+1. 瀏覽至 <https://start.spring.io/> 。
 
 1. 指定您想要使用 [Java] 產生 [Maven 專案]、輸入應用程式的 [群組] 和 [成品] 名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
 
@@ -154,10 +154,10 @@ ms.locfileid: "37090711"
    |---|---|
    | `name` | 指定金鑰保存庫的唯一名稱。 |
    | `location` | 指定要裝載資源群組的 [Azure 區域](https://azure.microsoft.com/regions/)。 |
-   | `enabled-for-deployment` | 指定[金鑰保存庫部署選項](https://docs.microsoft.com/en-us/cli/azure/keyvault)。 |
-   | `enabled-for-disk-encryption` | 指定[金鑰保存庫加密選項](https://docs.microsoft.com/en-us/cli/azure/keyvault)。 |
-   | `enabled-for-template-deployment` | 指定[金鑰保存庫加密選項](https://docs.microsoft.com/en-us/cli/azure/keyvault)。 |
-   | `sku` | 指定[金鑰保存庫 SKU 選項](https://docs.microsoft.com/en-us/cli/azure/keyvault)。 |
+   | `enabled-for-deployment` | 指定[金鑰保存庫部署選項](https://docs.microsoft.com/cli/azure/keyvault)。 |
+   | `enabled-for-disk-encryption` | 指定[金鑰保存庫加密選項](https://docs.microsoft.com/cli/azure/keyvault)。 |
+   | `enabled-for-template-deployment` | 指定[金鑰保存庫加密選項](https://docs.microsoft.com/cli/azure/keyvault)。 |
+   | `sku` | 指定[金鑰保存庫 SKU 選項](https://docs.microsoft.com/cli/azure/keyvault)。 |
    | `query` | 指定要從回應擷取的值，也就是要完成本教學課程所必須擁有的金鑰保存庫 URI。 |
 
    Azure CLI 會顯示您稍候會用到的金鑰保存庫 URI；例如：  
@@ -175,7 +175,7 @@ ms.locfileid: "37090711"
    | 參數 | 說明 |
    |---|---|
    | `name` | 指定您稍早取得的金鑰保存庫名稱。 |
-   | `secret-permission` | 指定金鑰保存庫的[安全性原則](https://docs.microsoft.com/en-us/cli/azure/keyvault)。 |
+   | `secret-permission` | 指定金鑰保存庫的[安全性原則](https://docs.microsoft.com/cli/azure/keyvault)。 |
    | `spn` | 指定您稍早取得的應用程式註冊 GUID。 |
 
    Azure CLI 會顯示安全性原則的建立結果；例如：  

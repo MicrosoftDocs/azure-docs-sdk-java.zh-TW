@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: cb83a7d6ec3a9a83fbfd3b2e34e5a4e498aa36d3
-ms.sourcegitcommit: 51dc05a96a8cbc8a6c9b45e094d8f3cfec16a607
+ms.openlocfilehash: 546aa2dc18143ca173d72198ea8e6c30bda3c97f
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2018
-ms.locfileid: "39189668"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639721"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>在 Azure Kubernetes Service 中的 Kubernetes 叢集上部署 Spring Boot 應用程式
 
@@ -321,7 +321,7 @@ ms.locfileid: "39189668"
 
 下列連結提供以 Azure 使用 Kubernetes 的其他資訊：
 
-* [在 Azure Kubernetes Service 中開始使用 Kubernetes 叢集](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+* [在 Azure Kubernetes Service 中開始使用 Kubernetes 叢集](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 如需使用 Kubernetes 命令列介面的詳細資訊，請參閱 **kubectl** 使用者指南，網址為 <https://kubernetes.io/docs/user-guide/kubectl/> 。
 
@@ -358,7 +358,7 @@ Kubernetes 網站有幾篇文章討論在私用登錄中使用映像：
 [從私用登錄提取映像]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 
 <!-- Newly added -->
-[從 Azure Kubernetes Service 對 Azure Container Registry 進行驗證]: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-aks/
+[從 Azure Kubernetes Service 對 Azure Container Registry 進行驗證]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
 [Visual Studio Code Java 教學課程]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

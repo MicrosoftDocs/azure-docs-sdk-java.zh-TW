@@ -14,12 +14,12 @@ ms.service: Azure Monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 0e57bfb304185b8b98dedfdecb2e0374c4a72fe5
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: e78987a05527aef739bc1467511381665513a3ab
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090771"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639731"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>將 Spring Boot Initializer 應用程式設定為使用 Application Insights
 
@@ -29,7 +29,7 @@ ms.locfileid: "37090771"
 > 
 > *此簡易版目前為 *BETA 版 (公開預覽)<em>。</em>
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 請務必具備下列必要條件，以便本文中說明的步驟：
 
@@ -91,7 +91,7 @@ ms.locfileid: "37090771"
  <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>applicationinsights-spring-boot-starter</artifactId>
-    <version>1.0.0-BETA</version>
+    <version>1.0.1-BETA</version>
 </dependency>
 ```
 
@@ -222,7 +222,7 @@ ms.locfileid: "37090771"
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-spring-boot-starter</artifactId>
-        <version>1.0.0-BETA</version>
+        <version>1.0.1-BETA</version>
     </dependency>
 
     <dependency>
@@ -278,7 +278,7 @@ ms.locfileid: "37090771"
 
 * [在 Azure Container Service 的 Kubernetes 叢集上執行 Spring Boot 應用程式](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Application Insights 支援自動收集外部相依性，及其與連入要求的相互關聯。 我們目前支援 Oracle、MsSQL、MySQL 和 Redis 的自動集合。 如需啟用自動集合的詳細資訊，請遵循[如何使用 Application Insights JAVA 代理程式](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-java-agent)一文。
+Application Insights 支援自動收集外部相依性，及其與連入要求的相互關聯。 我們目前支援 Oracle、MsSQL、MySQL 和 Redis 的自動集合。 如需啟用自動集合的詳細資訊，請遵循[如何使用 Application Insights JAVA 代理程式](https://docs.microsoft.com/azure/application-insights/app-insights-java-agent)一文。
 
 如需 Azure Application Insights 及其監控功能的詳細資訊，請參閱 **[Application Insights]** 首頁。
 
@@ -300,7 +300,7 @@ Application Insights 支援自動收集外部相依性，及其與連入要求�
 [Spring Boot 設定檔特定屬性]: https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-profile-specific-properties
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
-[Application Insights]: https://docs.microsoft.com/en-us/azure/application-insights/
+[Application Insights]: https://docs.microsoft.com/azure/application-insights/
 
 <!-- IMG List -->
 
