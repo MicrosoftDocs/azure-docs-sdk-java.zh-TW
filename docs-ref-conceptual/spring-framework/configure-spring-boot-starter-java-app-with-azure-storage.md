@@ -7,27 +7,27 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: ''
-ms.author: yungez;robmcm
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 09/10/2018
 ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 2f9381fce2fee207360287c57443b56eb5128e42
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 1a219a066f0f89adbf3f541856b36b842520bfbb
+ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090691"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46505916"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>如何對 Azure 儲存體使用 Spring Boot Starter
 
 ## <a name="overview"></a>概觀
 
-本文會逐步引導您使用 **Spring Initializr** 建立自訂應用程式，然後使用該應用程式存取 Azure 儲存體。
+本文將逐步引導您使用 **Spring Initializr** 建立自訂應用程式，並將 Azure 儲存體 Starter 新增至您的應用程式，然後使用您的應用程式將 Blob 上傳至 Azure 儲存體帳戶。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 若要遵循本文中的步驟，需要具備下列必要條件：
 
@@ -36,41 +36,114 @@ ms.locfileid: "37090691"
 * 最新的 [Java 開發套件 (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) 1.7 版或更新版本。
 * Apache 的 [Maven](http://maven.apache.org/) 3.0 版或更新版本。
 
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>使用 Spring Initializr 建立自訂應用程式
+> [!IMPORTANT]
+>
+> 您需要 Spring Boot 2.0 版或更新版本才能完成本文中的步驟。
+>
 
-1. 瀏覽至 <https://start.spring.io/>。
+## <a name="create-an-azure-storage-account-and-blob-container-for-your-application"></a>為您的應用程式建立 Azure 儲存體帳戶和 Blob 容器
 
-1. 指定您想要使用 **JAVA** 產生 **Maven** 專案、輸入應用程式的**群組**和**成品**名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
+1. 從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站並登入。
 
-   ![Spring Initializr 的基本選項](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-basic.png)
+1. 依序按一下 [+ 建立資源]、[儲存體] 和 [儲存體帳戶]。
+
+   ![建立 Azure 儲存體帳戶][IMG01]
+
+1. 在 [建立命名空間] 頁面上，輸入下列資訊：
+
+   * 輸入唯一**名稱**，這將成為儲存體帳戶 URI 的一部分。 例如：如果您輸入 **wingtiptoysstorage** 作為**名稱**，則 URI 會是 wingtiptoysstorage.core.windows.net。
+   * 選擇 [Blob 儲存體] 作為 [帳戶種類]。
+   * 指定儲存體帳戶的**位置**。
+   * 選取您想要用於儲存體帳戶的**訂用帳戶**。
+   * 指定是否要為儲存體帳戶建立新的**資源群組**，或選擇現有的資源群組。
+   
+   ![指定 Azure 儲存體帳戶選項][IMG02]
+
+1. 當您指定上面列出的選項之後，按一下 [建立] 以建立您的儲存體帳戶。
+
+1. 在 Azure 入口網站建立儲存體帳戶之後，按一下 [Blob]，然後按一下 [+ 容器]。
+
+   ![建立 Blob 容器][IMG03]
+
+1. 請輸入 Blob 容器的**名稱**，然後按一下 [確定]。
+
+   ![指定 Blob 容器選項][IMG04]
+
+1. Blob 容器會在建好後出現在 Azure 入口網站中。
+
+   ![檢視 Blob 容器的清單][IMG05]
+
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>使用 Spring Initializr 建立簡單的 Spring Boot 應用程式
+
+1. 瀏覽至 <https://start.spring.io/> 。
+
+1. 指定下列選項：
+
+   * 以 **Java** 產生 **Maven** 專案。
+   * 指定 **Spring Boot** 版本，應等於或大於 2.0。
+   * 指定應用程式的**群組**和**成品**名稱。
+   * 新增 **Web** 相依性。
+
+      ![Spring Initializr 的基本選項][SI01]
 
    > [!NOTE]
    >
-   > Spring Initializr 會使用**群組**和**成品**名稱來建立套件名稱；例如：com.contoso.wingtiptoysdemo。
+   > Spring Initializr 會使用**群組**和**成品**名稱來建立套件名稱；例如：com.wingtiptoys.storage。
    >
 
-1. 向下捲動至 [Azure] 區段，然後核取 [Azure 儲存體] 的方塊。
-
-   ![Spring Initializr 的完整選項](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-advanced.png)
-
-1. 捲動到頁面底部，然後按一下按鈕以**產生專案**。
-
-   ![Spring Initializr 的完整選項](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-generate.png)
+1. 當您指定上面列出的選項之後，按一下 [產生專案]。
 
 1. 出現提示時，將專案下載至本機電腦上的路徑。
 
-   ![下載自訂的 Spring Boot 專案](media/configure-spring-boot-starter-java-app-with-azure-storage/download-app.png)
+   ![下載 Spring 專案][SI02]
 
-## <a name="sign-into-azure-and-select-the-subscription-to-use"></a>登入 Azure，並選取要使用的訂用帳戶
+1. 當您在本機系統上擷取檔案之後，就可以開始編輯簡單的 Spring Boot 應用程式。
+
+## <a name="configure-your-spring-boot-app-to-use-the-azure-storage-starter"></a>設定 Spring Boot 應用程式以使用 Azure Storage Starter
+
+1. 在應用程式的根目錄中尋找 pom.xml 檔案；例如：
+
+   `C:\SpringBoot\storage\pom.xml`
+
+   -或-
+
+   `/users/example/home/storage/pom.xml`
+
+1. 在文字編輯器中開啟 pom.xml 檔案，並將 Spring Cloud Azure 儲存體 Starter 新增至 `<dependencies>` 的清單中：
+
+   ```xml
+   <dependency>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>spring-azure-starter-storage</artifactId>
+      <version>1.0.0.M2</version>
+   </dependency>
+   ```
+
+   ![編輯 pom.xml 檔案][SI03]
+
+1. 儲存並關閉 *pom.xml* 檔案。
+
+## <a name="create-an-azure-credential-file"></a>建立 Azure 認證檔案
 
 1. 開啟命令提示字元。
 
-1. 使用 Azure CLI 登入您的 Azure 帳戶：
+1. 瀏覽至 Spring Boot 應用程式的 resources 目錄；例如：
+
+   ```shell
+   cd C:\SpringBoot\storage\src\main\resources
+   ```
+
+   -或-
+
+   ```shell
+   cd /users/example/home/storage/src/main/resources
+   ```
+
+1. 登入您的 Azure 帳戶：
 
    ```azurecli
    az login
    ```
-   依照指示完成登入程序。
 
 1. 列出您的訂用帳戶：
 
@@ -83,237 +156,194 @@ ms.locfileid: "37090691"
    [
      {
        "cloudName": "AzureCloud",
-       "id": "ssssssss-ssss-ssss-ssss-ssssssssssss",
+       "id": "11111111-1111-1111-1111-111111111111",
        "isDefault": true,
        "name": "Converted Windows Azure MSDN - Visual Studio Ultimate",
        "state": "Enabled",
-       "tenantId": "tttttttt-tttt-tttt-tttt-tttttttttttt",
+       "tenantId": "22222222-2222-2222-2222-222222222222",
        "user": {
-         "name": "contoso@microsoft.com",
+         "name": "gena.soto@wingtiptoys.com",
          "type": "user"
        }
      }
    ]
-   ```
 
-1. 指定您希望在 Azure 中使用的帳戶 GUID，例如：
+1. Specify the GUID for the subscription you want to use with Azure; for example:
 
    ```azurecli
-   az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
+   az account set -s 11111111-1111-1111-1111-111111111111
    ```
 
-## <a name="create-an-azure-storage-account"></a>建立 Azure 儲存體帳戶
+1. 建立 Azure 認證檔案：
 
-1. 為您將在這篇文章中使用的 Azure 資源建立資源群組；例如：
    ```azurecli
-   az group create --name wingtiptoysresources --location westus
+   az ad sp create-for-rbac --sdk-auth > my.azureauth
    ```
-   其中：
 
-   | 參數 | 說明 |
-   |---|---|
-   | `name` | 指定資源群組的唯一名稱。 |
-   | `location` | 指定要裝載資源群組的 [Azure 區域](https://azure.microsoft.com/regions/)。 |
-
-   Azure CLI 將會顯示建立資源群組的結果，例如：  
+   此命令會在您的 resources 目錄中建立 my.azureauth 檔案，內含會類似下列範例：
 
    ```json
    {
-     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/resourceGroups/wingtiptoysresources",
-     "location": "westus",
-     "managedBy": null,
-     "name": "wingtiptoysresources",
-     "properties": {
-       "provisioningState": "Succeeded"
-     },
-     "tags": null
+     "clientId": "33333333-3333-3333-3333-333333333333",
+     "clientSecret": "44444444-4444-4444-4444-444444444444",
+     "subscriptionId": "11111111-1111-1111-1111-111111111111",
+     "tenantId": "22222222-2222-2222-2222-222222222222",
+     "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+     "resourceManagerEndpointUrl": "https://management.azure.com/",
+     "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+     "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+     "galleryEndpointUrl": "https://gallery.azure.com/",
+     "managementEndpointUrl": "https://management.core.windows.net/"
    }
    ```
 
-2. 在 Spring Boot 應用程式的資源群組中建立 Azure 儲存體帳戶；例如：
-   ```azurecli
-   az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
-   ```
-   其中：
+## <a name="configure-your-spring-boot-app-to-use-your-azure-storage-account"></a>設定 Spring Boot 應用程式以使用您的 Azure 儲存體帳戶
 
-   | 參數 | 說明 |
-   |---|---|
-   | `name` | 指定儲存體帳戶的唯一名稱。 |
-   | `resource-group` | 指定您在上一個步驟中建立的資源群組名稱。 |
-   | `location` | 指定要裝載儲存體帳戶的 [Azure 區域](https://azure.microsoft.com/regions/)。 |
-   | `sku` | 指定下列其中之一：`Premium_LRS`、`Standard_GRS`、`Standard_LRS`、`Standard_RAGRS`、`Standard_ZRS`。 |
+1. 在應用程式的 resources 目錄中尋找 *application.properties*；例如：
 
-   Azure 會傳回 JSON 長字串，其中包含佈建狀態；例如：|
+   `C:\SpringBoot\storage\src\main\resources\application.properties`
 
-   ```json
-   {
-     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
-     "identity": null,
-     "kind": "Storage"
-       ...
-       ... (A long list of values will be displayed here.)
-       ...
-     "statusOfPrimary": "available",
-     "statusOfSecondary": null,
-     "tags": {},
-     "type": "Microsoft.Storage/storageAccounts"
-   }
-   ```
+   -或-
 
-3. 擷取儲存體帳戶的連接字串；例如：
-   ```azurecli
-   az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
-   ```
-   其中：
+   `/users/example/home/storage/src/main/resources/application.properties`
 
-   | 參數 | 說明 |
-   | ---|---|
-   | `name` | 指定您在先前的步驟中建立的儲存體帳戶唯一名稱。 |
-   | `resource-group` | 指定您在先前的步驟中建立的資源群組名稱。 |
+1.  在文字編輯器中開啟 application.properties 檔案、新增下列數行，然後使用您儲存體帳戶的適當屬性來取代範例值：
 
-   Azure 會傳回 JSON 字串，其中包含儲存體帳戶的連接字串；例如：
-
-   ```json
-   {
-     "connectionString": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=wingtiptoysstorage;AccountKey=AbCdEfGhIjKlMnOpQrStUvWxYz=="
-   }
-   ```
-
-## <a name="configure-and-compile-your-spring-boot-application"></a>設定及編譯 Spring Boot 應用程式
-
-1. 從下載的專案封存檔將檔案解壓縮到某個目錄。
-
-1. 瀏覽至專案中的 src/main/resources 資料夾，然後在文字編輯器中開啟 application.properties 檔案。
-
-1. 新增儲存體帳戶的金鑰；例如：
    ```yaml
-   azure.storage.connection-string=DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=wingtiptoysstorage;AccountKey=AbCdEfGhIjKlMnOpQrStUvWxYz==
+   spring.cloud.azure.credential-file-path=my.azureauth
+   spring.cloud.azure.resource-group=wingtiptoysresources
+   spring.cloud.azure.region=West US
+   spring.cloud.azure.storage.account=wingtiptoysstorage
    ```
+   其中：
+   | 欄位 | 說明 |
+   | ---|---|
+   | `spring.cloud.azure.credential-file-path` | 指定您稍早在本教學課程中建立的 Azure 認證檔案。 |
+   | `spring.cloud.azure.resource-group` | 指定包含您 Azure 儲存體帳戶的 Azure 資源群組。 |
+   | `spring.cloud.azure.region` | 指定建立您 Azure 儲存體帳戶時指定的地理區域。 |
+   | `spring.cloud.azure.storage.account` | 指定您稍早在本教學課程中建立的 Azure 儲存體帳戶。
 
-1. 瀏覽至專案中的 /src/main/java/com/example/wingtiptoysdemo 資料夾，然後在文字編輯器中開啟 *WingtiptoysdemoApplication.java* 檔案。
+1. 儲存並關閉 *application.properties* 檔案。
 
-1. 使用列出容器中 Blob 的下列範例取代現有的 Java 程式碼：
+## <a name="add-sample-code-to-implement-basic-azure-storage-functionality"></a>新增範例程式碼來實作基本的 Azure 儲存體功能
+
+在本節中，您會建立必要的 Java 類別，以便將 Blob 儲存在 Azure 儲存體帳戶中。
+
+### <a name="modify-the-main-application-class"></a>修改主要應用程式類別
+
+1. 在應用程式的封裝目錄中尋找主要應用程式 Java 檔案；例如：
+
+   `C:\SpringBoot\storage\src\main\java\com\wingtiptoys\storage\StorageApplication.java`
+
+   -或-
+
+   `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/StorageApplication.java`
+
+1. 在文字編輯器中開啟主要應用程式 Java 檔案，並將下列數行新增至檔案中：
 
    ```java
-   package com.example.wingtiptoysdemo;
-
-   import com.microsoft.azure.storage.*;
-   import com.microsoft.azure.storage.blob.*;
-   import org.springframework.beans.factory.annotation.Autowired;
-   import org.springframework.boot.CommandLineRunner;
+   package com.wingtiptoys.storage;
+   
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-   import java.net.URISyntaxException;
-
+   
    @SpringBootApplication
-   public class WingtiptoysdemoApplication implements CommandLineRunner {
-
-      @Autowired
-      private CloudStorageAccount cloudStorageAccount;
-
-      final String containerName = "mycontainer";
-
+   public class StorageApplication {
       public static void main(String[] args) {
-         SpringApplication.run(WingtiptoysdemoApplication.class, args);
-      }
-
-      public void run(String... var1)
-             throws URISyntaxException, StorageException {
-          // Create a container (if it does not exist).
-          createContainerIfNotExists(containerName);
-          // Upload a blob to the container.
-          uploadTextBlob(containerName);
-      }
-
-      private void createContainerIfNotExists(String containerName)
-            throws URISyntaxException, StorageException {
-         try
-         {
-            // Create a blob client.
-            final CloudBlobClient blobClient = cloudStorageAccount.createCloudBlobClient();
-            // Get a reference to a container. (Name must be lower case.)
-            final CloudBlobContainer container = blobClient.getContainerReference(containerName);
-            // Create the container if it does not exist.
-            container.createIfNotExists();
-         }
-         catch (Exception e)
-         {
-            // Output the stack trace.
-            e.printStackTrace();
-         }
-      }
-
-      private void uploadTextBlob(String containerName)
-            throws URISyntaxException, StorageException {
-         try
-         {
-            // Create a blob client.
-            final CloudBlobClient blobClient = cloudStorageAccount.createCloudBlobClient();
-            // Get a reference to a container. (Name must be lower case.)
-            final CloudBlobContainer container = blobClient.getContainerReference(containerName);
-            // Get a blob reference for a text file.
-            CloudBlockBlob blob = container.getBlockBlobReference("test.txt");
-            // Upload some text into the blob.
-            blob.uploadText("Hello World!");
-         }
-         catch (Exception e)
-         {
-            // Output the stack trace.
-            e.printStackTrace();
-         }
+         SpringApplication.run(StorageApplication.class, args);
       }
    }
    ```
-   > [!NOTE]
-   >
-   > 上述範例會自動裝配您在 application.properties 檔案中所定義的儲存體帳戶設定。
-   >
 
-1. 編譯和執行應用程式：
+1. 儲存並關閉主要應用程式 Java 檔案。
+
+### <a name="add-a-web-controller-class"></a>新增 Web 控制器類別
+
+1. 在應用程式的 package 目錄中建立名為 *WebController.java* 的新 Java 檔案；例如：
+
+   `C:\SpringBoot\storage\src\main\java\com\wingtiptoys\storage\WebController.java`
+
+   -或-
+
+   `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/WebController.java`
+
+1. 在文字編輯器中開啟Web 控制器 Java 檔案，並將下列數行新增至檔案中：
+
+   ```java
+   package com.wingtiptoys.storage;
+   
+   import org.springframework.beans.factory.annotation.Value;
+   import org.springframework.core.io.Resource;
+   import org.springframework.core.io.WritableResource;
+   import org.springframework.util.StreamUtils;
+   import org.springframework.web.bind.annotation.GetMapping;
+   import org.springframework.web.bind.annotation.PostMapping;
+   import org.springframework.web.bind.annotation.RequestBody;
+   import org.springframework.web.bind.annotation.RestController;
+   
+   import java.io.IOException;
+   import java.io.OutputStream;
+   import java.nio.charset.Charset;
+   
+   @RestController
+   public class WebController {
+   
+      @Value("blob://test/myfile.txt")
+      private Resource blobFile;
+
+      @GetMapping(value = "/")
+      public String readBlobFile() throws IOException {
+         return StreamUtils.copyToString(
+            this.blobFile.getInputStream(),
+            Charset.defaultCharset()) + "\n";
+      }
+   
+      @PostMapping(value = "/")
+      public String writeBlobFile(@RequestBody String data) throws IOException {
+         try (OutputStream os = ((WritableResource) this.blobFile).getOutputStream()) {
+            os.write(data.getBytes());
+         }
+         return "File was updated.\n";
+      }
+   }
+   ```
+   
+   其中 `@Value("blob://[container]/[blob]")` 語法會分別為用來儲存資料的容器和 Blob 定義名稱。
+
+1. 儲存並關閉 Web 控制器 Java 檔案。
+
+1. 開啟命令提示字元，並將目錄切換到 *pom.xml* 檔案所在的資料夾；例如：
+
+   `cd C:\SpringBoot\storage`
+
+   -或-
+
+   `cd /users/example/home/storage`
+
+1. 使用 Maven 建置 Spring Boot 應用程式並加以執行；例如：
+
    ```shell
-   mvn clean package spring-boot:run
+   mvn clean package
+   mvn spring-boot:run
    ```
 
-   應用程式會建立容器，並將 Blob 形式的文字檔上傳至容器，其將會列在您於 [Azure 入口網站](https://portal.azure.com)的儲存體帳戶底下。
+1. 當您的應用程式執行時，您可以使用cURL 來測試您的應用程式；例如：
 
-   ![在 Azure 入口網站中列出 Blob](media/configure-spring-boot-starter-java-app-with-azure-storage/list-blobs-in-portal.png)
+   a. 傳送 POST 要求來更新檔案的內容：
 
-   > [!NOTE]
-   > 
-   > 在編譯應用程式時，您可能會看到下列錯誤訊息：
-   > 
-   > `[INFO] ------------------------------------------------------------------------`<br/>
-   > `[INFO] BUILD FAILURE`<br/>
-   > `[INFO] ------------------------------------------------------------------------`<br/>
-   > `[INFO] Total time: 2.616 s`<br/>
-   > `[INFO] Finished at: 2017-11-11T13:14:15Z`<br/>
-   > `[INFO] Final Memory: 26M/213M`<br/>
-   > `[INFO] ------------------------------------------------------------------------`<br/>
-   > `[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2`<br/>
-   > `.18.1:test (default-test) on project wingtiptoysdemo: Execution default-test of`<br/>
-   > `goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test failed: The for`<br/>
-   > `ked VM terminated without properly saying goodbye. VM crash or System.exit called?`<br/>
-   > `[ERROR] Command was /bin/sh -c cd /home/robert/SpringBoot/wingtiptoysdemo && /u`<br/>
-   > `sr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /home/robert/SpringBoot/wingt`<br/>
-   > `iptoysdemo/target/surefire/surefirebooter6371623993063346766.jar /home/robert/S`<br/>
-   > `pringBoot/wingtiptoysdemo/target/surefire/surefire5107893623933537917tmp /home/`<br/>
-   > `robert/SpringBoot/wingtiptoysdemo/target/surefire/surefire_01414159391084128068tmp`<br/>
-   > `[ERROR] -> [Help 1]`<br/>
-   > 
-   > 如果發生這種情況，請停用 Maven Surefire 測試；若要這樣做，請在 pom.xml 檔案中新增下列外掛程式項目：
-   > 
-   > ```xml
-   > <plugin>
-   >   <groupId>org.apache.maven.plugins</groupId>
-   >   <artifactId>maven-surefire-plugin</artifactId>
-   >   <version>2.20.1</version>
-   >   <configuration>
-   >     <skipTests>true</skipTests>
-   >   </configuration>
-   > </plugin>
-   > ```
-   > 
+      ```shell
+      curl -X POST -H "Content-Type: text/plain" -d "Hello World" http://localhost:8080/
+      ```
+
+      您應該會看到檔案已更新的回應。
+
+   b. 傳送 GET 要求來驗證檔案的內容：
+
+      ```shell
+      curl -X GET http://localhost:8080/
+      ```
+
+     您應該會看到您所發佈的 "Hello World" 文字。
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -326,3 +356,15 @@ ms.locfileid: "37090691"
 * [如何從 Java 使用 Azure 佇列儲存體](/azure/storage/queues/storage-java-how-to-use-queue-storage)
 * [如何從 Java 使用 Azure 資料表儲存體](/azure/cosmos-db/table-storage-how-to-use-java)
 * [如何從 Java 使用 Azure 檔案儲存體](/azure/storage/files/storage-java-how-to-use-file-storage)
+
+<!-- IMG List -->
+
+[IMG01]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-01.png
+[IMG02]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-02.png
+[IMG03]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-03.png
+[IMG04]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-04.png
+[IMG05]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-05.png
+
+[SI01]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-01.png
+[SI02]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-02.png
+[SI03]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-03.png
