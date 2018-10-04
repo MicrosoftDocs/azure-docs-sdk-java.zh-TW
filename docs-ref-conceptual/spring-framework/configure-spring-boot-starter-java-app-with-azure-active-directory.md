@@ -14,12 +14,12 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 6d20593620c7fb73f8481be8705bdc42d4e9ce32
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.openlocfilehash: d3b6bdc4aaae79864d370c581585167cf3732160
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37864048"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047176"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>如何對 Azure Active Directory 使用 Spring Boot Starter
 
@@ -27,7 +27,7 @@ ms.locfileid: "37864048"
 
 本文示範如何使用 **[Spring Initializr]** (適用於 Azure Active Directory (Azure AD) 的 Spring Boot Starter) 建立應用程式。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 請務必具備下列必要條件，以便本文中說明的步驟：
 
@@ -37,9 +37,9 @@ ms.locfileid: "37864048"
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>使用 Spring Initializr 建立自訂應用程式
 
-1. 瀏覽至 <https://start.spring.io/>。
+1. 瀏覽至 <https://start.spring.io/> 。
 
-1. 指定您想要使用 [Java] 產生 [Maven 專案]、輸入應用程式的 [群組] 和 [成品] 名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
+1. 指定您想要使用 **JAVA** 產生 **Maven** 專案、輸入應用程式的**群組**和**成品**名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
 
    ![指定群組和成品名稱][security-01]
 
@@ -363,7 +363,7 @@ ms.locfileid: "37864048"
 
 如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
 
-**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot，<https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
+**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot， <https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
 
 如需更詳細的範例，請參閱 GitHub 上的 [Azure Active Directory Spring Boot 範例][AAD Spring Boot Sample]。
 
