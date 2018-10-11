@@ -12,25 +12,25 @@ ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
 ms.openlocfilehash: c14c89f961951d114362adee4fec6239e78cffb3
-ms.sourcegitcommit: 33c70f921f1524c8bdb69ad5a1a3c1b4b1de97ba
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37026770"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892739"
 ---
-# <a name="azure-data-lake-analytics-libraries-for-java"></a><span data-ttu-id="374f9-104">適用於 Java 的 Azure Data Lake Analytics 程式庫</span><span class="sxs-lookup"><span data-stu-id="374f9-104">Azure Data Lake Analytics libraries for Java</span></span>
+# <a name="azure-data-lake-analytics-libraries-for-java"></a><span data-ttu-id="dcc2f-104">適用於 Java 的 Azure Data Lake Analytics 程式庫</span><span class="sxs-lookup"><span data-stu-id="dcc2f-104">Azure Data Lake Analytics libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="374f9-105">概觀</span><span class="sxs-lookup"><span data-stu-id="374f9-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="dcc2f-105">概觀</span><span class="sxs-lookup"><span data-stu-id="dcc2f-105">Overview</span></span>
 
-<span data-ttu-id="374f9-106">使用 [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview) 來執行擴充至大規模資料集的巨量資料分析作業。</span><span class="sxs-lookup"><span data-stu-id="374f9-106">Run big data analysis jobs that scale to massive data sets with [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview).</span></span>
+<span data-ttu-id="dcc2f-106">使用 [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview) 來執行擴充至大規模資料集的巨量資料分析作業。</span><span class="sxs-lookup"><span data-stu-id="dcc2f-106">Run big data analysis jobs that scale to massive data sets with [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview).</span></span>
 
-<span data-ttu-id="374f9-107">若要開始使用 Azure Data Lake Analytics，請參閱[透過 Java SDK 開始使用 Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk)。</span><span class="sxs-lookup"><span data-stu-id="374f9-107">To get started with Azure Data Lake Analytics, see [Get started with Azure Data Lake Analytics using Java SDK](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk).</span></span>
+<span data-ttu-id="dcc2f-107">若要開始使用 Azure Data Lake Analytics，請參閱[透過 Java SDK 開始使用 Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk)。</span><span class="sxs-lookup"><span data-stu-id="dcc2f-107">To get started with Azure Data Lake Analytics, see [Get started with Azure Data Lake Analytics using Java SDK](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="374f9-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="374f9-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="dcc2f-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="dcc2f-108">Management API</span></span>
 
-<span data-ttu-id="374f9-109">使用管理 API 來管理 Data Lake Analytics 帳戶、作業、原則和目錄。</span><span class="sxs-lookup"><span data-stu-id="374f9-109">Use the management API to manage Data Lake Analytics accounts, jobs, policies, and catalogs.</span></span>
+<span data-ttu-id="dcc2f-109">使用管理 API 來管理 Data Lake Analytics 帳戶、作業、原則和目錄。</span><span class="sxs-lookup"><span data-stu-id="dcc2f-109">Use the management API to manage Data Lake Analytics accounts, jobs, policies, and catalogs.</span></span>
 
-<span data-ttu-id="374f9-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="374f9-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="dcc2f-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="dcc2f-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 
 ```XML
@@ -41,9 +41,9 @@ ms.locfileid: "37026770"
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="374f9-111">範例</span><span class="sxs-lookup"><span data-stu-id="374f9-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="dcc2f-111">範例</span><span class="sxs-lookup"><span data-stu-id="dcc2f-111">Example</span></span>
 
-<span data-ttu-id="374f9-112">提交新的 U-SQL 作業到 Data Lake Analytics。</span><span class="sxs-lookup"><span data-stu-id="374f9-112">Submit a new U-SQL job to Data Lake Analytics.</span></span>
+<span data-ttu-id="dcc2f-112">提交新的 U-SQL 作業到 Data Lake Analytics。</span><span class="sxs-lookup"><span data-stu-id="dcc2f-112">Submit a new U-SQL job to Data Lake Analytics.</span></span>
 
 ```java
 // authenticate with service principal credentials
@@ -66,12 +66,12 @@ JobInformation jobInfo = adlaJobClient.getJobOperations().create(accountName, jo
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="374f9-113">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="374f9-113">Explore the Management APIs</span></span>](/java/api/overview/azure/datalakeanalytics/management)
+> [<span data-ttu-id="dcc2f-113">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="dcc2f-113">Explore the Management APIs</span></span>](/java/api/overview/azure/datalakeanalytics/management)
 
-## <a name="samples"></a><span data-ttu-id="374f9-114">範例</span><span class="sxs-lookup"><span data-stu-id="374f9-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="dcc2f-114">範例</span><span class="sxs-lookup"><span data-stu-id="dcc2f-114">Samples</span></span>
 
-<span data-ttu-id="374f9-115">[使用 Java SDK 的 Azure Data Lake Analytics][1]</span><span class="sxs-lookup"><span data-stu-id="374f9-115">[Azure Data Lake Analytics using Java SDK][1]</span></span> 
+<span data-ttu-id="dcc2f-115">[使用 Java SDK 的 Azure Data Lake Analytics][1]</span><span class="sxs-lookup"><span data-stu-id="dcc2f-115">[Azure Data Lake Analytics using Java SDK][1]</span></span> 
 
 [1]: https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk
 
-<span data-ttu-id="374f9-116">檢視 Azure Data Lake Analytics 範例的[完整清單](https://azure.microsoft.com/resources/samples/?platform=java&term=analytics)。</span><span class="sxs-lookup"><span data-stu-id="374f9-116">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=java&term=analytics) of Azure Data Lake Analytics samples.</span></span>
+<span data-ttu-id="dcc2f-116">檢視 Azure Data Lake Analytics 範例的[完整清單](https://azure.microsoft.com/resources/samples/?platform=java&term=analytics)。</span><span class="sxs-lookup"><span data-stu-id="dcc2f-116">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=java&term=analytics) of Azure Data Lake Analytics samples.</span></span>

@@ -12,25 +12,25 @@ ms.technology: azure
 ms.devlang: java
 ms.service: compute
 ms.openlocfilehash: a54bc40e1d28ba6ee1d8b0638cb259adbb69d78d
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823751"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893039"
 ---
-# <a name="azure-virtual-machine-libraries"></a><span data-ttu-id="d99fe-103">Azure 虛擬機器程式庫</span><span class="sxs-lookup"><span data-stu-id="d99fe-103">Azure virtual machine libraries</span></span>
+# <a name="azure-virtual-machine-libraries"></a><span data-ttu-id="42c4c-103">Azure 虛擬機器程式庫</span><span class="sxs-lookup"><span data-stu-id="42c4c-103">Azure virtual machine libraries</span></span>
 
-## <a name="overview"></a><span data-ttu-id="d99fe-104">概觀</span><span class="sxs-lookup"><span data-stu-id="d99fe-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="42c4c-104">概觀</span><span class="sxs-lookup"><span data-stu-id="42c4c-104">Overview</span></span>
 
-<span data-ttu-id="d99fe-105">執行 Linux 或 Windows 並可視需要擴充的計算資源。</span><span class="sxs-lookup"><span data-stu-id="d99fe-105">On-demand, scalable computing resources running Linux or Windows.</span></span>
+<span data-ttu-id="42c4c-105">執行 Linux 或 Windows 並可視需要擴充的計算資源。</span><span class="sxs-lookup"><span data-stu-id="42c4c-105">On-demand, scalable computing resources running Linux or Windows.</span></span>
 
-<span data-ttu-id="d99fe-106">若要開始使用 Azure 虛擬機器，請參閱[使用 Azure 入口網站建立 Linux 虛擬機器](/azure/virtual-machines/linux/quick-create-portal)。</span><span class="sxs-lookup"><span data-stu-id="d99fe-106">To get started with Azure virtual machines, see [Create a Linux virtual machine with the Azure portal](/azure/virtual-machines/linux/quick-create-portal).</span></span>
+<span data-ttu-id="42c4c-106">若要開始使用 Azure 虛擬機器，請參閱[使用 Azure 入口網站建立 Linux 虛擬機器](/azure/virtual-machines/linux/quick-create-portal)。</span><span class="sxs-lookup"><span data-stu-id="42c4c-106">To get started with Azure virtual machines, see [Create a Linux virtual machine with the Azure portal](/azure/virtual-machines/linux/quick-create-portal).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="d99fe-107">管理 API</span><span class="sxs-lookup"><span data-stu-id="d99fe-107">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="42c4c-107">管理 API</span><span class="sxs-lookup"><span data-stu-id="42c4c-107">Management API</span></span>
 
-<span data-ttu-id="d99fe-108">從程式碼使用管理 API 在 Azure 中建立、設定及相應放大 Windows 和 Linux 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="d99fe-108">Create, configure, and scale out Windows and Linux virtual machines in Azure from your code with the management API.</span></span>
+<span data-ttu-id="42c4c-108">從程式碼使用管理 API 在 Azure 中建立、設定及相應放大 Windows 和 Linux 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="42c4c-108">Create, configure, and scale out Windows and Linux virtual machines in Azure from your code with the management API.</span></span>
 
-<span data-ttu-id="d99fe-109">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="d99fe-109">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="42c4c-109">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用管理 API。</span><span class="sxs-lookup"><span data-stu-id="42c4c-109">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -41,9 +41,9 @@ ms.locfileid: "31823751"
 ```   
 
 
-## <a name="example"></a><span data-ttu-id="d99fe-110">範例</span><span class="sxs-lookup"><span data-stu-id="d99fe-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="42c4c-110">範例</span><span class="sxs-lookup"><span data-stu-id="42c4c-110">Example</span></span>
 
-<span data-ttu-id="d99fe-111">在新的 Azure 資源群組中建立新的 Linux 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="d99fe-111">Create a new Linux virtual machine in a new Azure resource group.</span></span>
+<span data-ttu-id="42c4c-111">在新的 Azure 資源群組中建立新的 Linux 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="42c4c-111">Create a new Linux virtual machine in a new Azure resource group.</span></span>
 
 ```java
 VirtualMachine newLinuxVm = azure.virtualMachines().define(linuxVmName)
@@ -60,16 +60,16 @@ VirtualMachine newLinuxVm = azure.virtualMachines().define(linuxVmName)
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="d99fe-112">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="d99fe-112">Explore the Management APIs</span></span>](/java/api/overview/azure/virtualmachines/management)
+> [<span data-ttu-id="42c4c-112">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="42c4c-112">Explore the Management APIs</span></span>](/java/api/overview/azure/virtualmachines/management)
 
 
-## <a name="samples"></a><span data-ttu-id="d99fe-113">範例</span><span class="sxs-lookup"><span data-stu-id="d99fe-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="42c4c-113">範例</span><span class="sxs-lookup"><span data-stu-id="42c4c-113">Samples</span></span>
 
-<span data-ttu-id="d99fe-114">[管理虛擬機器][1] </span><span class="sxs-lookup"><span data-stu-id="d99fe-114">[Manage virtual machines][1] </span></span>  
-<span data-ttu-id="d99fe-115">[管理虛擬網路][6] </span><span class="sxs-lookup"><span data-stu-id="d99fe-115">[Manage virtual networks][6] </span></span>  
-<span data-ttu-id="d99fe-116">[從自訂映像建立虛擬機器][2] </span><span class="sxs-lookup"><span data-stu-id="d99fe-116">[Create a virtual machine from a custom image][2] </span></span>  
-<span data-ttu-id="d99fe-117">[跨區域平行建立虛擬機器][5]  </span><span class="sxs-lookup"><span data-stu-id="d99fe-117">[Create virtual machines across regions in parallel][5]  </span></span>  
-<span data-ttu-id="d99fe-118">[使用負載平衡器建立虛擬機器擴展集][7]</span><span class="sxs-lookup"><span data-stu-id="d99fe-118">[Create a virtual machine scale set with a load balancer][7]</span></span>    
+<span data-ttu-id="42c4c-114">[管理虛擬機器][1] </span><span class="sxs-lookup"><span data-stu-id="42c4c-114">[Manage virtual machines][1] </span></span>  
+<span data-ttu-id="42c4c-115">[管理虛擬網路][6] </span><span class="sxs-lookup"><span data-stu-id="42c4c-115">[Manage virtual networks][6] </span></span>  
+<span data-ttu-id="42c4c-116">[從自訂映像建立虛擬機器][2] </span><span class="sxs-lookup"><span data-stu-id="42c4c-116">[Create a virtual machine from a custom image][2] </span></span>  
+<span data-ttu-id="42c4c-117">[跨區域平行建立虛擬機器][5]  </span><span class="sxs-lookup"><span data-stu-id="42c4c-117">[Create virtual machines across regions in parallel][5]  </span></span>  
+<span data-ttu-id="42c4c-118">[使用負載平衡器建立虛擬機器擴展集][7]</span><span class="sxs-lookup"><span data-stu-id="42c4c-118">[Create a virtual machine scale set with a load balancer][7]</span></span>    
 
 [1]: ../docs-ref-conceptual/java-sdk-manage-virtual-machines.md
 [2]: https://azure.microsoft.com/resources/samples/managed-disk-java-create-virtual-machine-using-custom-image/
@@ -77,4 +77,4 @@ VirtualMachine newLinuxVm = azure.virtualMachines().define(linuxVmName)
 [6]: ../docs-ref-conceptual/java-sdk-manage-virtual-networks.md
 [7]: ../docs-ref-conceptual/java-sdk-manage-vm-scalesets.md
 
-<span data-ttu-id="d99fe-119">深入探索可在應用程式中使用的 [Azure 虛擬機器 Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=VM)。</span><span class="sxs-lookup"><span data-stu-id="d99fe-119">Explore more [sample Java code for Azure virtual machines](https://azure.microsoft.com/resources/samples/?platform=java&term=VM) you can use in your apps.</span></span>
+<span data-ttu-id="42c4c-119">深入探索可在應用程式中使用的 [Azure 虛擬機器 Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=VM)。</span><span class="sxs-lookup"><span data-stu-id="42c4c-119">Explore more [sample Java code for Azure virtual machines](https://azure.microsoft.com/resources/samples/?platform=java&term=VM) you can use in your apps.</span></span>

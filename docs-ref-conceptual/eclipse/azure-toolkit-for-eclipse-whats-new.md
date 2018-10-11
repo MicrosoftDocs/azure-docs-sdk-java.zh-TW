@@ -15,20 +15,20 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: e993fd09e555274f51a500408efbffc4ac5df394
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954669"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892549"
 ---
-# <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="9b114-103">適用於 Eclipse 的 Azure 工具組的新功能</span><span class="sxs-lookup"><span data-stu-id="9b114-103">What's new in the Azure Toolkit for Eclipse</span></span>
+# <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="70d0a-103">適用於 Eclipse 的 Azure 工具組的新功能</span><span class="sxs-lookup"><span data-stu-id="70d0a-103">What's new in the Azure Toolkit for Eclipse</span></span>
 
-<span data-ttu-id="9b114-104">以下網頁包含適用於 Eclipse 的 Azure 工具組的各種版本和最新更新相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9b114-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for Eclipse.</span></span>
+<span data-ttu-id="70d0a-104">以下網頁包含適用於 Eclipse 的 Azure 工具組的各種版本和最新更新相關資訊。</span><span class="sxs-lookup"><span data-stu-id="70d0a-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for Eclipse.</span></span>
 
-<span data-ttu-id="9b114-105"><https://github.com/Microsoft/azure-tools-for-java/releases></span><span class="sxs-lookup"><span data-stu-id="9b114-105"><https://github.com/Microsoft/azure-tools-for-java/releases></span></span>
+<https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE] 
-> <span data-ttu-id="9b114-106">另外還有適用於 IntelliJ IDE 的 Azure 工具組。</span><span class="sxs-lookup"><span data-stu-id="9b114-106">There is also an Azure Toolkit for the IntelliJ IDE.</span></span> <span data-ttu-id="9b114-107">如需詳細資訊，請參閱 [Azure Toolkit for IntelliJ]。</span><span class="sxs-lookup"><span data-stu-id="9b114-107">For more information, see [Azure Toolkit for IntelliJ].</span></span> 
+> <span data-ttu-id="70d0a-105">另外還有適用於 IntelliJ IDE 的 Azure 工具組。</span><span class="sxs-lookup"><span data-stu-id="70d0a-105">There is also an Azure Toolkit for the IntelliJ IDE.</span></span> <span data-ttu-id="70d0a-106">如需詳細資訊，請參閱 [Azure Toolkit for IntelliJ]。</span><span class="sxs-lookup"><span data-stu-id="70d0a-106">For more information, see [Azure Toolkit for IntelliJ].</span></span> 
 > 
 
 <!--
@@ -314,7 +314,7 @@ Azure Plugin for Eclipse - December 2011 CTP has released. New features include:
 
 -->
 
-## <a name="next-steps"></a><span data-ttu-id="9b114-108">後續步驟</span><span class="sxs-lookup"><span data-stu-id="9b114-108">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="70d0a-107">後續步驟</span><span class="sxs-lookup"><span data-stu-id="70d0a-107">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 

@@ -15,20 +15,20 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: dcbd7e8a78470df0ab3bc2d7c87137a97fc4665c
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954399"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893419"
 ---
-# <a name="whats-new-in-the-azure-toolkit-for-intellij"></a><span data-ttu-id="ac3d5-103">適用於 IntelliJ 的 Azure 工具組新增功能</span><span class="sxs-lookup"><span data-stu-id="ac3d5-103">What's New in the Azure Toolkit for IntelliJ</span></span>
+# <a name="whats-new-in-the-azure-toolkit-for-intellij"></a><span data-ttu-id="71ada-103">適用於 IntelliJ 的 Azure 工具組新增功能</span><span class="sxs-lookup"><span data-stu-id="71ada-103">What's New in the Azure Toolkit for IntelliJ</span></span>
 
-<span data-ttu-id="ac3d5-104">以下網頁包含適用於 IntelliJ 的 Azure 工具組的各種版本和最新更新相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ac3d5-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for IntelliJ.</span></span>
+<span data-ttu-id="71ada-104">以下網頁包含適用於 IntelliJ 的 Azure 工具組的各種版本和最新更新相關資訊。</span><span class="sxs-lookup"><span data-stu-id="71ada-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for IntelliJ.</span></span>
 
-<span data-ttu-id="ac3d5-105"><https://github.com/Microsoft/azure-tools-for-java/releases></span><span class="sxs-lookup"><span data-stu-id="ac3d5-105"><https://github.com/Microsoft/azure-tools-for-java/releases></span></span>
+<https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE] 
-> <span data-ttu-id="ac3d5-106">另外還有適用於 Eclipse IDE 的 Azure 工具組。</span><span class="sxs-lookup"><span data-stu-id="ac3d5-106">There is also an Azure Toolkit for the Eclipse IDE.</span></span> <span data-ttu-id="ac3d5-107">如需詳細資訊，請參閱 [適用於 Eclipse 的 Azure 工具組]。</span><span class="sxs-lookup"><span data-stu-id="ac3d5-107">For more information, see [Azure Toolkit for Eclipse].</span></span> 
+> <span data-ttu-id="71ada-105">另外還有適用於 Eclipse IDE 的 Azure 工具組。</span><span class="sxs-lookup"><span data-stu-id="71ada-105">There is also an Azure Toolkit for the Eclipse IDE.</span></span> <span data-ttu-id="71ada-106">如需詳細資訊，請參閱 [Azure Toolkit for Eclipse]。</span><span class="sxs-lookup"><span data-stu-id="71ada-106">For more information, see [Azure Toolkit for Eclipse].</span></span> 
 > 
 
 <!--
@@ -72,13 +72,12 @@ The Azure Toolkit for IntelliJ - April 2016 release includes the following enhan
 
 -->
 
-## <a name="next-steps"></a><span data-ttu-id="ac3d5-108">後續步驟</span><span class="sxs-lookup"><span data-stu-id="ac3d5-108">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="71ada-107">後續步驟</span><span class="sxs-lookup"><span data-stu-id="71ada-107">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 
-[適用於 Eclipse 的 Azure 工具組]: ../eclipse/azure-toolkit-for-eclipse.md
 [Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [Azure Sign In Instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [How to publish a Web App as a Docker Container using the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-publish-as-docker-container.md
