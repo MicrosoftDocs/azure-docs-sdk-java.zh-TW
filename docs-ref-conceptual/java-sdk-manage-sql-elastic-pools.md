@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 9ec0cf3083b8659fa850b798ca0ecf18b2757234
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931114"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893569"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>從 Java 應用程式管理彈性集區中的 Azure SQL 資料庫
 
@@ -125,7 +125,7 @@ sqlServer.elasticPools().delete(elasticPoolName);
 
 此範例會刪除它所建立的所有資源，然後才結束。
 
-| 範例中使用的類別 | 注意事項 |
+| 範例中使用的類別 | 注意 |
 |-------|-------|
 | [SqlServer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_server) | Azure 中由 `azure.sqlServers().define()...create()` Fluent 鏈結所建立的 SQL DB 伺服器。 提供方法來建立和使用彈性集區與資料庫。 
 | [SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_database) | 代表 SQL 資料庫的用戶端物件。 透過 `sqlServer().define()...create()` 所建立。 

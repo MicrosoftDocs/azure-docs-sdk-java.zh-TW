@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: e3048b3317477f4b1fb8edf93e4bebad6b7fafce
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931164"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893609"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>從 Java 應用程式管理 Azure 虛擬機器
 
@@ -154,7 +154,7 @@ azure.virtualMachines().deleteByResourceGroup(rgName,windowsVmName);
 
 此範例會記錄這兩個虛擬機器的相關資訊，並在兩者完成前將其同時刪除。
 
-| 範例中使用的類別 | 注意事項
+| 範例中使用的類別 | 注意
 |-------|-------|
 | [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 查詢屬性並管理虛擬機器的狀態。 使用 `azure.virtualMachines().list()` 以清單形式擷取，或依名稱或識別碼 `azure.virtualMachines().getByResourceGroup()` 擷取
 | [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | 對應至[虛擬機器大小選項](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)且具有靜態值的類別，可供 `withSize()` 方法用來定義配置給 VM 的資源。

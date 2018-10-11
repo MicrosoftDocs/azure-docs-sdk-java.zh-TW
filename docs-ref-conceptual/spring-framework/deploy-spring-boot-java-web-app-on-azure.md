@@ -15,17 +15,17 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: adf779e2ba6ca73ea3a2406613f9622cc9ecbf99
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954521"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893159"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>透過 Azure App Service 將 Spring Boot 應用程式部署至雲端
 
 本教學課程將引導您完成建立範例 [Spring Boot] Getting Started Web 應用程式，並將它部署到 [Azure App Service]。
 
-### <a name="prerequisites"></a>先決條件
+### <a name="prerequisites"></a>必要條件
 
 若要完成本教學課程中的步驟，您必須具備下列項目：
 
@@ -203,7 +203,7 @@ ms.locfileid: "28954521"
 
 如需 Spring Boot 範例專案的進一步詳細資訊，請參閱 [Spring Boot Getting Started]。
 
-如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr** (網址為 https://start.spring.io/)。
+如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr**，網址為 https://start.spring.io/。
 
 如需如何設定 Web 應用程式之其他設定的詳細資訊，請參閱[在 Azure App Service 中設定 Web 應用程式]。
 

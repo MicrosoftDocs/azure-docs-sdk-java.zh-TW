@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: dcbd7e8a78470df0ab3bc2d7c87137a97fc4665c
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954399"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893419"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>適用於 IntelliJ 的 Azure 工具組新增功能
 
@@ -28,7 +28,7 @@ ms.locfileid: "28954399"
 <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE] 
-> 另外還有適用於 Eclipse IDE 的 Azure 工具組。 如需詳細資訊，請參閱 [適用於 Eclipse 的 Azure 工具組]。 
+> 另外還有適用於 Eclipse IDE 的 Azure 工具組。 如需詳細資訊，請參閱 [Azure Toolkit for Eclipse]。 
 > 
 
 <!--
@@ -78,7 +78,7 @@ The Azure Toolkit for IntelliJ - April 2016 release includes the following enhan
 
 <!-- URL List -->
 
-[適用於 Eclipse 的 Azure 工具組]: ../eclipse/azure-toolkit-for-eclipse.md
+[Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [Azure Sign In Instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [How to publish a Web App as a Docker Container using the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-publish-as-docker-container.md
 [Managing Storage Accounts using the Azure Explorer for IntelliJ]: ./azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md

@@ -15,17 +15,17 @@ ms.tgt_pltfrm: cache-redis
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 8bfe7c2ddd238e0e5a259de9078b831a97b1b1a4
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954579"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892909"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>將 Spring Boot Initializer 應用程式設定為透過 Azure Redis Cache 在雲端使用 Redis
 
 本文將引導您使用 Azure 入口網站在雲端建立 Redis 快取、使用 **[Spring Initializr]** 建立自訂應用程式，及建立 Java Web 應用程式以使用 Redis 快取來儲存和擷取資料。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 請務必具備下列必要條件，以便本文中說明的步驟：
 
@@ -35,7 +35,7 @@ ms.locfileid: "28954579"
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>使用 Spring Initializr 建立自訂應用程式
 
-1. 瀏覽至 <https://start.spring.io/>。
+1. 瀏覽至 <https://start.spring.io/> 。
 
 1. 指定您想要使用 [Java] 產生 [Maven 專案]、輸入應用程式的 [群組] 和 [成品] 名稱，然後按一下 Spring Initializr 的 [切換至完整版本] 連結。
 
@@ -60,7 +60,7 @@ ms.locfileid: "28954579"
 
 ## <a name="create-a-redis-cache-on-azure"></a>在 Azure 上建立 Redis 快取
 
-1. 瀏覽至 <https://portal.azure.com/> 上的 Azure 入口網站，然後按一下 [+新增]。
+1. 瀏覽至 Azure 入口網站 <https://portal.azure.com/>，然後按一下 [+ 新增]。
 
    ![Azure 入口網站][AZ01]
 
@@ -208,7 +208,7 @@ ms.locfileid: "28954579"
 
 如需有關在 Azure 上開始搭配使用 Redis 快取與 Java 的詳細資訊，請參閱[如何搭配使用 Azure Redis 快取與 Java][Redis Cache with Java]。
 
-**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot，<https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
+**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot， <https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
 
 <!-- URL List -->
 

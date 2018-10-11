@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 678d4b279cecb83c95b3bf0f6bcdf1581924aa62
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954439"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893499"
 ---
 # <a name="spring-boot-starters-for-azure"></a>適用於 Azure 的 Spring Boot Starter
 
@@ -233,7 +233,7 @@ ms.locfileid: "28954439"
 
 如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
 
-如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr** (網址為 https://start.spring.io/)。
+如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr**，網址為 https://start.spring.io/。
 
 <!-- URL List -->
 

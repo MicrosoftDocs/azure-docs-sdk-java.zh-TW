@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 3d21cdd890912c1fc58fc65a79ba972b8327edeb
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931084"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892539"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>從 Java 應用程式建立和管理 Azure 虛擬網路
 
@@ -175,7 +175,7 @@ azure.networks().deleteByResourceGroup(rgName,vnetName1);
 
 此範例會建立具有兩個子網路、且每個子網路上各有一部虛擬機器的虛擬網路。 後端子網路會與公用網際網路隔絕。 前端子網路則會接受來自網際網路的傳入 HTTP 流量。 虛擬網路中的兩個虛擬機器會透過預設的網路安全性群組規則彼此通訊。
 
-| 範例中使用的類別 | 注意事項
+| 範例中使用的類別 | 注意
 |-------|-------|
 | [網路](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | 從 `azure.networks().define()...create()` 所建立之虛擬網路在本機所代表的物件。 使用 `update()...apply()` Fluent 鏈結來更新現有的虛擬網路。
 | [子網路](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._subnet) | 在定義或更新網路時使用 `withSubnet()` 於虛擬網路上建立子網路。 從 `Network.subnets().get()` 或 `Network.subnets().entrySet()` 取得代表子網路的物件。 這些物件會有方法可以查詢子網路屬性。

@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: traffic-manager
 ms.openlocfilehash: fd78402f50df16ad7d57c0ca67815bfad5b18d51
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823741"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892869"
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a>適用於 Java 的 Azure 流量管理員程式庫
 

@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 4653726b387369c18942b6c11392f15b9f0351f3
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931154"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893489"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>從 Java 應用程式管理 Azure 虛擬機器擴展集
 
@@ -228,7 +228,7 @@ virtualMachineScaleSet.update()
 
 [程式碼範例](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java)會先為擴展集建立虛擬網路以跨虛擬機器進行通訊，並建立負載平衡器以跨虛擬機器來分散流量。 `azure.virtualMachineScaleSets().define()...create()` 方法鏈結會建立擴展集，並為其配置三個執行 Apache Web 伺服器的 Linux 執行個體。    
    
-| 範例中使用的類別 | 注意事項
+| 範例中使用的類別 | 注意
 |-------|-------|
 | [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | 查詢、啟動、停止、更新和刪除擴展集內的所有虛擬機器。
 | [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | 擷取自 `virtualMachineScaleSet.virtualMachines().get()` 或 `list()`，可讓您在擴展集內查詢、啟動、停止、設定和刪除虛擬機器。

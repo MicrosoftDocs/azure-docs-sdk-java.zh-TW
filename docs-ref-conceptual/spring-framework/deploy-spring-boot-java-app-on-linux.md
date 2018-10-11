@@ -16,17 +16,17 @@ ms.topic: article
 ms.workload: web
 ms.custom: mvc
 ms.openlocfilehash: 49d94d11ad6a4e103ded849e477d99f01955c693
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090861"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48898785"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>將 Spring Boot 應用程式部署到 Azure Container Service 中的 Linux
 
 本教學課程會逐步引導您使用 [Docker] 來開發 [Spring Boot] 應用程式，並且將其部署至 [Azure Container Service (AKS)] 中的 Linux 主機。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 若要完成本教學課程中的步驟，您必須具備下列必要條件：
 

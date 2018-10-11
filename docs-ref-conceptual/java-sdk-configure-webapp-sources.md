@@ -10,11 +10,11 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 910d1e43c9942d6402aeccb8757ba819b7453dab
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931184"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893139"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>從 Java 應用程式設定 Azure App Service 部署來源
 
@@ -155,7 +155,7 @@ WebApp app4 = azure.webApps()
 
 第四個應用程式會在您每次推送變更或合併提取要求時，將主要分支中的程式碼部署到 GitHub 存放庫的主要分支。
 
-| 範例中使用的類別 | 注意事項
+| 範例中使用的類別 | 注意
 |-------|-------|
 | [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_app) | 透過 `azure.webApps().define()....create()` Fluent 鏈結所建立。 會建立 App Service Web 應用程式以及應用程式所需的任何資源。 大部分的方法都會查詢物件的組態詳細資料，但 `restart()` 等動詞命令方法則會變更 webapp 的狀態。
 | [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_container) | 具有靜態公用欄位的類別，在定義執行 Java webcontainer 的 WebApp 時可作為 `withWebContainer()` 的參數。 Jetty 和 Tomcat 版本均有選項可供選擇。

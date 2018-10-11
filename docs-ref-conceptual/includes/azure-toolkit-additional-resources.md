@@ -1,6 +1,6 @@
 如需適用於 Eclipse 和 IntelliJ IDEA 的 Azure 工具組的詳細資訊，請參閱下列連結：
 
-* [適用於 Eclipse 的 Azure 工具組](../eclipse/azure-toolkit-for-eclipse.md) 
+* [Azure Toolkit for Eclipse](../eclipse/azure-toolkit-for-eclipse.md) 
   * [版本資訊](https://github.com/Microsoft/azure-tools-for-java/releases) 
   * [安裝 Azure Toolkit for Eclipse](../eclipse/azure-toolkit-for-eclipse-installation.md) 
   * [在 Eclipse 中建立 Azure Hello World Web 應用程式](../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md) 

@@ -10,11 +10,11 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: e20feb555c3a360eceae60c1569af9a00a5cd027
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931194"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893209"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>從 Java 應用程式跨多個區域建立虛擬機器
 
@@ -186,7 +186,7 @@ finally {
 
 即使發生錯誤，`finally` 區塊也會從 Azure 訂用帳戶中刪除資源。
 
-| 範例中使用的類別 | 注意事項
+| 範例中使用的類別 | 注意
 |-------|-------|
 | [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 查詢屬性並管理虛擬機器的狀態。 透過 `azure.virtualMachines().list()` 以清單形式擷取，或依名稱或識別碼 `azure.virtualMachines().getByResourceGroup()` 擷取
 | [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | 靜態值，對應至[虛擬機器大小選項](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)以在定義虛擬機器時作為 `withSize()` 的參數。

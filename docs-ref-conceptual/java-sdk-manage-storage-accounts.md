@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 5945164b2b04e1fa9169590a71f6c5f9f45842d6
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931054"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893059"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>從 Java 應用程式管理 Azure 儲存體帳戶
 
@@ -102,7 +102,7 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 - 列出資源群組中的所有儲存體帳戶
 - 刪除儲存體帳戶 
 
-| 範例中使用的類別 | 注意事項
+| 範例中使用的類別 | 注意
 |-------|-------|
 | [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account)  | 用來表示 Azure 儲存體帳戶。 請使用該類別的方法來取得有關儲存體帳戶的資訊。
 | [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account_key) | `StorageAccount.getKeys()` 會傳回儲存體帳戶金鑰。 在 `StorageAccount` 中使用 `regenerateKey` 方法來更新金鑰。
