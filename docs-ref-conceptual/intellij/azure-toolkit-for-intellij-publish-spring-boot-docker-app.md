@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4228352efa4354bfe4969c1a5ecd3f3b40483f85
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954729"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893579"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，將 Spring Boot 應用程式發佈為 Docker 容器
 
@@ -51,7 +51,7 @@ ms.locfileid: "28954729"
 
       ![用於輸入 GitHub 權杖的對話方塊][CL02b]
 
-1. 針對存放庫 URL 輸入 **https://github.com/spring-guides/gs-spring-boot-docker.git** ，指定您的本機路徑和資料夾資訊，然後按一下 **[複製]** 。
+1. 針對存放庫 URL 輸入 **https://github.com/spring-guides/gs-spring-boot-docker.git**，指定本機路徑和資料夾資訊，然後按一下 [複製]。
 
    ![[複製存放庫] 對話方塊][CL03]
 
@@ -151,7 +151,7 @@ IntelliJ 會匯入 Spring Boot 應用程式作為專案，並且在匯入完成�
 
       ![指定主要類別][ART04d]
 
-1. 按一下 [SERVICEPRINCIPAL] 。
+1. 按一下 [確定]。
 
    ![關閉 [專案結構] 對話方塊][ART05]
 
