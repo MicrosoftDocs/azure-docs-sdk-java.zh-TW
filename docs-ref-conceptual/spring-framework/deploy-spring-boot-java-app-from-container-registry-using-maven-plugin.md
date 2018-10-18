@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 88eb64c07ad4f480dc2d2c2869e710c0ae910c4d
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: e84960ebf79b89b2430924016a429518a935d086
+ms.sourcegitcommit: 9d9e2fa97ebd95a699adcb58e82c3fc0882f0a24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892679"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49315932"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署至 Azure App Service
 
@@ -65,7 +65,7 @@ ms.locfileid: "48892679"
 
 1. 將 [Spring Boot on Docker Getting Started] 範例專案複製到您所建立的目錄中；例如：
    ```shell
-   git clone -b private-registry https://github.com/spring-guides/gs-spring-boot-docker
+   git clone -b https://github.com/spring-guides/gs-spring-boot-docker
    ```
 
 1. 將目錄變更至已完成的專案；例如：
