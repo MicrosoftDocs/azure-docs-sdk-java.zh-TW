@@ -8,18 +8,18 @@ ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
 ms.date: 9/20/2018
-ms.openlocfilehash: 5e3887341ddb2fdcab336f0a8a232e6e8bfbe0f2
-ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
+ms.openlocfilehash: 1271f70fff876f4d24c8afa81123c54735f2d522
+ms.sourcegitcommit: 788b49d0b37909c575c9e5176e484cba627e7921
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047155"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120536"
 ---
 # <a name="hdinsight-java-management-sdk-preview"></a>HDInsight Java 管理 SDK (預覽)
 
 ## <a name="overview"></a>概觀
 
-HDInsight Java SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 它包含用來建立、刪除、更新、列出、調整、執行指令碼動作、監視、取得 HDInsight 叢集屬性的作業，和其他多種作業。
+HDInsight Java SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 它包含用來建立、刪除、更新、列出、調整大小、執行指令碼動作、監視、取得 HDInsight 叢集屬性的作業，和其他多種作業。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -340,7 +340,7 @@ client.clusters.delete("<Resource Group Name>", "<Cluster Name>");
 client.clusters.update("<Resource Group Name>", "<Cluster Name>", <Map<String,String> of Tags>);
 ```
 
-### <a name="scale-cluster"></a>調整叢集
+### <a name="resize-cluster"></a>調整叢集大小
 
 您可以藉由指定新的大小來調整指定叢集的背景工作節點數目，如下所示：
 
