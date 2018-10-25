@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 00062f5442e072af30036388f2f1f066221d7316
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 85fe1d9c56530b716a1f1750713f4c87d43dfad3
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506326"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799954"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>如何搭配 Azure 事件中樞使用適用於 Apache Kafka 的 Spring Boot Starter
 
@@ -58,7 +58,7 @@ ms.locfileid: "46506326"
    * 選取您想要用於命名空間的**訂用帳戶**。
    * 指定是否要為命名空間建立新的**資源群組**，或選擇現有的資源群組。
    * 指定事件中樞命名空間的**位置**。
-   
+
    ![指定 Azure 事件中樞命名空間選項][IMG02]
 
 1. 指定上面列出的選項之後，按一下 [建立] 以建立您的命名空間。
@@ -222,7 +222,7 @@ ms.locfileid: "46506326"
 
    `/users/example/home/eventhub/src/main/resources/application.properties`
 
-1.  在文字編輯器中開啟 application.properties 檔案、新增下列數行，然後使用您事件中樞的適當屬性來取代範例值：
+2. 在文字編輯器中開啟 application.properties 檔案、新增下列數行，然後使用您事件中樞的適當屬性來取代範例值：
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -235,17 +235,19 @@ ms.locfileid: "46506326"
    spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
    其中：
-   | 欄位 | 說明 |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | 指定您稍早在本教學課程中建立的 Azure 認證檔案。 |
-   | `spring.cloud.azure.resource-group` | 指定包含您 Azure 事件中樞的 Azure 資源群組。 |
-   | `spring.cloud.azure.region` | 指定建立您 Azure 事件中樞時指定的地理區域。 |
-   | `spring.cloud.azure.eventhub.namespace` | 指定建立您 Azure 事件中樞命名空間時指定的唯一名稱。 |
-   | `spring.cloud.stream.bindings.input.destination` | 指定作為輸入目的地的 Azure 事件中樞，在本教學課程中是指您稍早在本教學課程中建立的中樞。 |
-   | `spring.cloud.stream.bindings.input.group `| 指定 Azure 事件中樞中的取用者群組，可以設定為 '$Default'，以使用您建立 Azure 事件中樞時所建立的基本取用者群組。 |
-   | `spring.cloud.stream.bindings.output.destination` | 指定作為輸出目的地的 Azure 事件中樞，這在本教學課程中會等同輸入目的地。 |
 
-1. 儲存並關閉 *application.properties* 檔案。
+   |                       欄位                       |                                                                                   說明                                                                                    |
+   |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |     `spring.cloud.azure.credential-file-path`     |                                                    指定您稍早在本教學課程中建立的 Azure 認證檔案。                                                    |
+   |        `spring.cloud.azure.resource-group`        |                                                      指定包含您 Azure 事件中樞的 Azure 資源群組。                                                      |
+   |            `spring.cloud.azure.region`            |                                           指定建立您 Azure 事件中樞時指定的地理區域。                                            |
+   |      `spring.cloud.azure.eventhub.namespace`      |                                          指定建立您 Azure 事件中樞命名空間時指定的唯一名稱。                                           |
+   | `spring.cloud.stream.bindings.input.destination`  |                            指定作為輸入目的地的 Azure 事件中樞，在本教學課程中是指您稍早在本教學課程中建立的中樞。                            |
+   |    `spring.cloud.stream.bindings.input.group `    | 指定 Azure 事件中樞中的取用者群組，可以設定為 '$Default'，以使用您建立 Azure 事件中樞時所建立的基本取用者群組。 |
+   | `spring.cloud.stream.bindings.output.destination` |                               指定作為輸出目的地的 Azure 事件中樞，這在本教學課程中會等同輸入目的地。                               |
+
+
+3. 儲存並關閉 *application.properties* 檔案。
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>新增範例程式碼來實作基本的事件中樞功能
 
@@ -265,10 +267,10 @@ ms.locfileid: "46506326"
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class KafkaApplication {
       public static void main(String[] args) {
@@ -286,7 +288,7 @@ ms.locfileid: "46506326"
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.messaging.Source;
@@ -295,7 +297,7 @@ ms.locfileid: "46506326"
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RequestParam;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    @EnableBinding(Source.class)
    @RestController
    public class KafkaSource {
@@ -318,13 +320,13 @@ ms.locfileid: "46506326"
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.annotation.StreamListener;
    import org.springframework.cloud.stream.messaging.Sink;
-   
+
    @EnableBinding(Sink.class)
    public class KafkaSink {
       private static final Logger LOGGER = LoggerFactory.getLogger(KafkaSink.class);

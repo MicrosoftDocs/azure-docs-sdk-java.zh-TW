@@ -14,12 +14,12 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: d3b6bdc4aaae79864d370c581585167cf3732160
-ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
+ms.openlocfilehash: 665768ffe7bec977d553ffa62e1dbd6b968eb9de
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047176"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799904"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>如何對 Azure Active Directory 使用 Spring Boot Starter
 
@@ -85,54 +85,54 @@ ms.locfileid: "48047176"
 
    ![新增應用程式註冊][directory-04]
 
-1. 按一下 [新增應用程式註冊]，指定您的應用程式 [名稱]，使用 http://localhost:8080 作為 [登入 URL]，然後按一下 [建立]。
+2. 按一下 [新增應用程式註冊]，指定您的應用程式 [名稱]，使用 http://localhost:8080 作為 [登入 URL]，然後按一下 [建立]。
 
    ![建立新的應用程式註冊][directory-05]
 
-1. 應用程式註冊建立好之後，請對它按一下。
+3. 應用程式註冊建立好之後，請對它按一下。
 
    ![選取您的應用程式註冊][directory-06]
 
-1. 當您應用程式的註冊頁面顯示時，請複製您的**應用程式識別碼**；您稍後在本教學課程中，將使用此值來設定您的 application.properties 檔案。 按一下 [設定]，然後按一下 [金鑰]。
+4. 當您應用程式的註冊頁面顯示時，請複製您的**應用程式識別碼**；您稍後在本教學課程中，將使用此值來設定您的 application.properties 檔案。 按一下 [設定]，然後按一下 [金鑰]。
 
    ![建立應用程式註冊金鑰][directory-07]
 
-1. 新增 [說明]，並指定新金鑰的 [持續時間]，然後按一下 [儲存]；當您按一下 [儲存] 圖示時，系統就會自動填入金鑰的值，您必須複製金鑰值，以供稍後在本教學課程中設定您的 application.properties 檔案。 (之後您就無法擷取此值)。
+5. 新增 [說明]，並指定新金鑰的 [持續時間]，然後按一下 [儲存]；當您按一下 [儲存] 圖示時，系統就會自動填入金鑰的值，您必須複製金鑰值，以供稍後在本教學課程中設定您的 application.properties 檔案。 (之後您就無法擷取此值)。
 
    ![指定應用程式註冊金鑰參數][directory-08]
 
-1. 從應用程式註冊的主要頁面，按一下 [設定]，然後按一下 [所需的權限]。
+6. 從應用程式註冊的主要頁面，按一下 [設定]，然後按一下 [所需的權限]。
 
    ![應用程式註冊所需的權限][directory-09]
 
-1. 按一下 [Windows Azure Active Directory]。
+7. 按一下 [Windows Azure Active Directory]。
 
    ![選取 [Windows Azure Active Directory]][directory-10]
 
-1. 核取 [以登入使用者身分存取目錄] 和 [登入及讀取使用者個人檔案] 的方塊，然後按一下 [儲存]。
+8. 核取 [以登入使用者身分存取目錄] 和 [登入及讀取使用者個人檔案] 的方塊，然後按一下 [儲存]。
 
    ![啟用存取權限][directory-11]
 
-1. 在 [所需的權限] 頁面上，按一下 [授與權限]，然後在出現提示時按一下 [是]。
+9. 在 [所需的權限] 頁面上，按一下 [授與權限]，然後在出現提示時按一下 [是]。
 
    ![授與存取權限][directory-12]
 
-1. 從應用程式註冊的主要頁面，按一下 [設定]，然後按一下 [回覆 URL]。
+10. 從應用程式註冊的主要頁面，按一下 [設定]，然後按一下 [回覆 URL]。
 
-   ![編輯 [回覆 URL]][directory-14]
+    ![編輯 [回覆 URL]][directory-14]
 
-1. 輸入 "http://localhost:8080/login/oauth2/code/azure" 作為新的回覆 URL，然後按一下 [儲存]。
+11. 輸入 "<http://localhost:8080/login/oauth2/code/azure>" 作為新的回覆 URL，然後按一下 [儲存]。
 
-   ![新增新回覆 URL][directory-15]
+    ![新增新回覆 URL][directory-15]
 
-1. 從您應用程式註冊的主頁面中，按一下 [資訊清單]，然後將 `oauth2AllowImplicitFlow` 參數的值設定為 `true`，然後按一下 [儲存]。
+12. 從您應用程式註冊的主頁面中，按一下 [資訊清單]，然後將 `oauth2AllowImplicitFlow` 參數的值設定為 `true`，然後按一下 [儲存]。
 
-   ![設定應用程式資訊清單][directory-16]
+    ![設定應用程式資訊清單][directory-16]
 
-   > [!NOTE]
-   > 
-   > 如需 `oauth2AllowImplicitFlow` 參數和其他應用程式設定的詳細資訊，請參閱 [Azure Active Directory 應用程式資訊清單][AAD app manifest]。 
-   >
+    > [!NOTE]
+    > 
+    > 如需 `oauth2AllowImplicitFlow` 參數和其他應用程式設定的詳細資訊，請參閱 [Azure Active Directory 應用程式資訊清單][AAD app manifest]。 
+    >
 
 ### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>將使用者帳戶新增至您的目錄，然後將該帳戶新增至群組
 

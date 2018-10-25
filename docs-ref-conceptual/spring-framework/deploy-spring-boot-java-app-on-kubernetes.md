@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 546aa2dc18143ca173d72198ea8e6c30bda3c97f
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: 8e8f9088146af504ba2d9d45e2e82118c4081359
+ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639721"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49962502"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>在 Azure Kubernetes Service 中的 Kubernetes 叢集上部署 Spring Boot 應用程式
 
@@ -73,7 +73,7 @@ ms.locfileid: "45639721"
    mvn package spring-boot:run
    ```
 
-1. 瀏覽至 http://localhost:8080 來測試 Web 應用程式，或使用下列 `curl` 命令：
+1. 瀏覽至 `http://localhost:8080` 來測試 Web 應用程式，或使用下列 `curl` 命令：
    ```
    curl http://localhost:8080
    ```

@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 3f7eeffe8bd36196f9b79edd60830b5d202ea285
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: dfc3b6121bddcb637735047e2e7bc7485da9a4fe
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506325"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799944"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>如何使用 Azure 事件中樞建立 Spring Cloud Stream Binder 應用程式
 
@@ -57,10 +57,10 @@ ms.locfileid: "46506325"
    * 選取您想要用於命名空間的**訂用帳戶**。
    * 指定是否要為命名空間建立新的**資源群組**，或選擇現有的資源群組。
    * 指定事件中樞命名空間的**位置**。
-   
+
    ![指定 Azure 事件中樞命名空間選項][IMG02]
 
-1. 當您指定上面列出的選項之後，按一下 [建立] 以建立您的命名空間。
+1. 指定上面列出的選項之後，按一下 [建立] 以建立您的命名空間。
 
 ### <a name="create-an-azure-event-hub-in-your-namespace"></a>在命名空間中建立 Azure 事件中樞
 
@@ -97,7 +97,7 @@ ms.locfileid: "46506325"
    * 指定儲存體帳戶的**位置**。
    * 選取您想要用於儲存體帳戶的**訂用帳戶**。
    * 指定是否要為儲存體帳戶建立新的**資源群組**，或選擇現有的資源群組。
-   
+
    ![指定 Azure 儲存體帳戶選項][IMG08]
 
 1. 當您指定上面列出的選項之後，按一下 [建立] 以建立您的儲存體帳戶。
@@ -108,7 +108,7 @@ ms.locfileid: "46506325"
 
 1. 指定下列選項：
 
-   * 以 **Java** 產生 **Maven** 專案。
+   * 使用 **Java** 產生 **Maven** 專案。
    * 指定 **Spring Boot** 版本，應等於或大於 2.0。
    * 指定應用程式的**群組**和**成品**名稱。
    * 新增 **Web** 相依性。
@@ -236,7 +236,7 @@ ms.locfileid: "46506325"
 
    `/users/example/home/eventhub/src/main/resources/application.properties`
 
-1.  在文字編輯器中開啟 application.properties 檔案、新增下列數行，然後使用您事件中樞的適當屬性來取代範例值：
+2. 在文字編輯器中開啟 application.properties 檔案、新增下列數行，然後使用您事件中樞的適當屬性來取代範例值：
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -250,18 +250,20 @@ ms.locfileid: "46506325"
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
    ```
    其中：
-   | 欄位 | 說明 |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | 指定您稍早在本教學課程中建立的 Azure 認證檔案。 |
-   | `spring.cloud.azure.resource-group` | 指定包含您 Azure 事件中樞的 Azure 資源群組。 |
-   | `spring.cloud.azure.region` | 指定建立您 Azure 事件中樞時指定的地理區域。 |
-   | `spring.cloud.azure.eventhub.namespace` | 指定建立您 Azure 事件中樞命名空間時指定的唯一名稱。 |
-   | `spring.cloud.azure.eventhub.checkpoint-storage-account` | 指定您稍早在本教學課程中建立的 Azure 儲存體帳戶。
-   | `spring.cloud.stream.bindings.input.destination` | 指定作為輸入目的地的 Azure 事件中樞，在本教學課程中是指您稍早在本教學課程中建立的中樞。 |
-   | `spring.cloud.stream.bindings.input.group `| 指定 Azure 事件中樞中的取用者群組，可以設定為 '$Default'，以使用您建立 Azure 事件中樞時所建立的基本取用者群組。 |
-   | `spring.cloud.stream.bindings.output.destination` | 指定作為輸出目的地的 Azure 事件中樞，這在本教學課程中會等同輸入目的地。 |
 
-1. 儲存並關閉 *application.properties* 檔案。
+   |                          欄位                           |                                                                                   說明                                                                                    |
+   |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |        `spring.cloud.azure.credential-file-path`         |                                                    指定您稍早在本教學課程中建立的 Azure 認證檔案。                                                    |
+   |           `spring.cloud.azure.resource-group`            |                                                      指定包含您 Azure 事件中樞的 Azure 資源群組。                                                      |
+   |               `spring.cloud.azure.region`                |                                           指定建立您 Azure 事件中樞時指定的地理區域。                                            |
+   |         `spring.cloud.azure.eventhub.namespace`          |                                          指定建立您 Azure 事件中樞命名空間時指定的唯一名稱。                                           |
+   | `spring.cloud.azure.eventhub.checkpoint-storage-account` |                                                    指定您稍早在本教學課程中建立的 Azure 儲存體帳戶。                                                    |
+   |     `spring.cloud.stream.bindings.input.destination`     |                            指定作為輸入目的地的 Azure 事件中樞，在本教學課程中是指您稍早在本教學課程中建立的中樞。                            |
+   |       `spring.cloud.stream.bindings.input.group `        | 指定 Azure 事件中樞中的取用者群組，可以設定為 '$Default'，以使用您建立 Azure 事件中樞時所建立的基本取用者群組。 |
+   |    `spring.cloud.stream.bindings.output.destination`     |                               指定作為輸出目的地的 Azure 事件中樞，這在本教學課程中會等同輸入目的地。                               |
+
+
+3. 儲存並關閉 *application.properties* 檔案。
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>新增範例程式碼來實作基本的事件中樞功能
 
@@ -281,10 +283,10 @@ ms.locfileid: "46506325"
 
    ```java
    package com.wingtiptoys.eventhub;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class EventhubApplication {
       public static void main(String[] args) {
@@ -301,7 +303,7 @@ ms.locfileid: "46506325"
 
    ```java
    package com.wingtiptoys.eventhub;
-   
+
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.messaging.Source;
@@ -309,14 +311,14 @@ ms.locfileid: "46506325"
    import org.springframework.web.bind.annotation.PostMapping;
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    @EnableBinding(Source.class)
    @RestController
    public class EventhubSource {
-   
+
       @Autowired
       private Source source;
-   
+
       @PostMapping("/messages")
       public String postMessage(@RequestBody String message) {
          this.source.output().send(new GenericMessage<>(message));
@@ -332,7 +334,7 @@ ms.locfileid: "46506325"
 
    ```java
    package com.wingtiptoys.eventhub;
-   
+
    import com.microsoft.azure.spring.integration.core.AzureHeaders;
    import com.microsoft.azure.spring.integration.core.api.Checkpointer;
    import org.slf4j.Logger;
@@ -341,10 +343,10 @@ ms.locfileid: "46506325"
    import org.springframework.cloud.stream.annotation.StreamListener;
    import org.springframework.cloud.stream.messaging.Sink;
    import org.springframework.messaging.handler.annotation.Header;
-   
+
    @EnableBinding(Sink.class)
    public class EventhubSink {
-   
+
       private static final Logger LOGGER = LoggerFactory.getLogger(EventhubSink.class);
 
       @StreamListener(Sink.INPUT)
@@ -379,12 +381,12 @@ ms.locfileid: "46506325"
    mvn spring-boot:run
    ```
 
-1. 當您的應用程式執行時，您可以使用cURL 來測試您的應用程式；例如：
+1. 當您的應用程式執行時，可以使用cURL 來測試您的應用程式；例如：
 
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   您應該會看到 "hello" 已發佈至您的應用程式記錄檔。 例如︰
+   您應該會看到 "hello" 已發佈至應用程式記錄檔。 例如︰
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'
