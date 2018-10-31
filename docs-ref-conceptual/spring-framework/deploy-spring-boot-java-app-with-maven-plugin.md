@@ -6,21 +6,21 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: brborges
-ms.author: robmcm;kevinzha;brborges
-ms.date: 10/04/2018
+ms.author: robmcm
+ms.date: 10/18/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 36afcc764c1cb984779518ddec004ecbfa1b7c57
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: dc3038fed6859203f36e0c4dc9a9b01e81a7c4c5
+ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48876392"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49962492"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>將 Spring Boot JAR 檔案 Web 應用程式部署至 Linux 上的 Azure App Service
 
-本文示範如何使用[適用於 App Service Web Apps 的 Maven 外掛程式](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)，將 Spring Boot 應用程式封裝成 Java SE JAR，並部署至 [Linux 上的 Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/containers/)。 若要將應用程式相依性、執行階段及組態合併至單一可部署成品，請從 [Tomcat 與 WAR 檔案](/azure/app-service/containers/quickstart-java)中選擇Java SE 部署。
+本文示範如何使用[適用於 App Service Web Apps 的 Maven 外掛程式](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)，將 Spring Boot 應用程式封裝成 Java SE JAR，並部署至 [Linux 上的 Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/containers/)。 若要將應用程式相依性、執行階段及組態合併至單一可部署成品，請從 [Tomcat 與 WAR 檔案](/azure/app-service/containers/quickstart-java)中選擇 Java SE 部署。
 
 
 如果您沒有 Azure 訂用帳戶，請在開始前建立[免費帳戶](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) 。
@@ -33,6 +33,18 @@ ms.locfileid: "48876392"
 * [Java 開發套件 (JDK)](https://www.azul.com/downloads/azure-only/zulu/) 1.7 版或更新版本。
 * Apache 的 [Maven](https://maven.apache.org/) 3.0 版。
 * [Git](https://git-scm.com/downloads) 用戶端。
+
+## <a name="install-and-sign-in-to-azure-cli"></a>安裝並登入 Azure CLI
+
+讓 Maven 外掛程式部署 Spring Boot 應用程式最簡單且最輕鬆的方式是使用 [Azure CLI](https://docs.microsoft.com/cli/azure/)。
+
+使用 Azure CLI 登入您的 Azure 帳戶：
+   
+   ```shell
+   az login
+   ```
+   
+依照指示完成登入程序。
 
 ## <a name="clone-the-sample-app"></a>複製範例應用程式
 
@@ -82,10 +94,10 @@ ms.locfileid: "48876392"
 
 1. 在程式碼編輯器中，開啟 `pom.xml`。
 
-1. 在 pom.xml 的 `<build>` 區段中，於 `<plugins>` 標記內新增下列 `<plugin>` 項目。
+2. 在 pom.xml 的 `<build>` 區段中，於 `<plugins>` 標記內新增下列 `<plugin>` 項目。
 
    ```xml
-  <plugin>
+   <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
     <version>1.4.0</version>
@@ -108,10 +120,10 @@ ms.locfileid: "48876392"
       <!-- Java Runtime Stack for Web App on Linux-->
       <linuxRuntime>jre8</linuxRuntime>
     </configuration>
-  </plugin>
-  ```
+   </plugin>
+   ```
 
-1. 更新外掛程式組態中的下列預留位置：
+3. 更新外掛程式組態中的下列預留位置：
 
 | Placeholder | 說明 |
 | ----------- | ----------- |
@@ -120,18 +132,6 @@ ms.locfileid: "48876392"
 | `REGION` | 託管 Web 應用程式的 Azure 區域，例如 `westus2`。 您可以使用 `az account list-locations` 命令，從 Cloud Shell 或 CLI 取得區域清單。 |
 
 您可以在 [GitHub 上的 Maven 外掛程式參考](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin)中找到組態選項的完整清單。
-
-## <a name="install-and-log-in-to-azure-cli"></a>安裝並登入 Azure CLI
-
-讓 Maven 外掛程式部署 Spring Boot 應用程式最簡單且最輕鬆的方式是使用 [Azure CLI](https://docs.microsoft.com/cli/azure/)。
-
-1. 使用 Azure CLI 登入您的 Azure 帳戶：
-   
-   ```shell
-   az login
-   ```
-   
-   依照指示完成登入程序。
 
 ## <a name="deploy-the-app-to-azure"></a>將應用程式部署至 Azure
 

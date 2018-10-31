@@ -14,12 +14,12 @@ ms.service: Azure DevOps
 ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: web
-ms.openlocfilehash: c2b6bf3370982d26d8d23fede370e0105a70b734
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 818e37291fa47f99cb161c63a86062bddbf6248c
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506329"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799934"
 ---
 # <a name="cicd-for-microprofile-applications-using-azure-devops"></a>使用 Azure DevOps 為 MicroProfile 應用程式設定 CI/CD
 
@@ -38,9 +38,9 @@ EXPOSE 8080
 - 建立新的 [Azure DevOps 專案](https://docs.microsoft.com/en-us/vsts/organizations/projects/create-project?view=vsts&tabs=new-nav)，並使用上述的 Git URL 來**匯入存放庫**
 - 建立 [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry) (ACR)
 - 建立用於容器的 Azure Web App
-> [!NOTE]
->
-> 佈建 Web 應用程式執行個體時，選取容器設定中的 [快速入門]
+  > [!NOTE]
+  >
+  > 佈建 Web 應用程式執行個體時，選取容器設定中的 [快速入門]
 
 
 ## <a name="create-a-build-definition"></a>建立組建定義
@@ -54,17 +54,17 @@ EXPOSE 8080
 2. 按一下 [新增管線] 按鈕，然後按一下 [繼續] 來開始定義您的組建工作
 3. 從範本清單選取 [Maven]，然後按一下 [套用] 按鈕來建立您的 Java 專案
 4. 使用 [代理程式集區] 欄位的下拉式功能表來選取 [託管的 Linux 預覽] 選項。
-> [!NOTE]
->
-> 這會告訴 Azure DevOps 要使用哪個組建伺服器。  您可以使用您私人的自訂組建伺服器
+   > [!NOTE]
+   >
+   > 這會告訴 Azure DevOps 要使用哪個組建伺服器。  您可以使用您私人的自訂組建伺服器
 
 5. 若要設定您的組建以進行持續整合，請選取 [觸發程序] 索引標籤，然後核取 [啟用持續整合] 核取方塊。  
 
 <img src="media/VSTS/Build-Triggers2.png"> 
- 
+
 6. 選取 [工作] 索引標籤可返回主要的組建管線頁面
-7. 使用 [儲存與佇列] 下拉式功能表來選取 [儲存] 選項
- 
+7. 使用 [儲存 &amp; 佇列] 下拉式功能表來選取 [儲存] 選項
+
 
 ## <a name="create-a-docker-build-image"></a>建立 Docker 組建映像
 
@@ -72,15 +72,14 @@ EXPOSE 8080
 
 1. 選取 [工作] 索引標籤可返回主要的組建管線頁面
 2. 按一下 [+] 圖示，即可將新工作新增至組建定義
- 
+
 <img src="media/VSTS/Tasks-add4.png">
- 
-3. 從範本清單中選取 [Docker]，然後按一下 [新增] 按鈕
+
+3. 從範本清單中選取 [Docker]&quot;&quot;，然後按一下 [新增] 按鈕
 4. 在 [顯示名稱] 欄位中輸入描述性名稱
 5. 確認 [容器登錄類型] 的下拉式功能表中已選取 [Azure Container Registry]。
-> [!NOTE]
->
->  如果您使用 Docker 中樞或另一個登錄，請改為選取 [容器登錄]。  然後按一下 [+ 新增] 按鈕，為其提供認證和連線資訊。 然後跳至命令區段以繼續。
+&gt; [!NOTE]
+&gt; &gt;  如果您使用 Docker 中樞或另一個登錄，請改為選取 [容器登錄]&quot;&quot;。  然後按一下 [+ 新增]&quot;&quot; 按鈕，為其提供認證和連線資訊。 然後跳至命令區段以繼續。
 
 6. 使用 [Azure 訂用帳戶] 下拉式功能表來選擇您的 Azure 訂用帳戶識別碼。  然後按一下 [授權] 按鈕
 7. 在 [Azure 容器登錄] 下拉式功能表中，選取您在 Azure 中建立的登錄名稱。
@@ -103,7 +102,7 @@ EXPOSE 8080
 5. 按一下組建編號，以確認 Java 專案的組建管線已成功完成。
 
 <img src="media/VSTS/Build-Number6.png">
- 
+
 
 ## <a name="create-a-release-definition-for-a-java-app"></a>建立 Java 應用程式的發行定義
 
@@ -112,20 +111,19 @@ EXPOSE 8080
 1. 在 Azure DevOps 專案頁面的頂端按一下 [組建與發行] 索引標籤。  然後，選取 [發行] 連結。
 
 <img src="media/VSTS/Release-new-pipeline7.png">
- 
-2. 按一下 [新增管線] 按鈕
+
+2. 按一下 &quot;[新增管線]** 按鈕
 3. 在範本清單中選取 [將 Java 應用程式部署至 Azure App Service]，然後按一下 [套用] 按鈕。
 
 <img src="media/VSTS/deploy-java-template8.png">
- 
-4. 設定**階段名稱** (例如開發、測試、預備或生產)。  然後按一下 [X] 按鈕來關閉快顯視窗
-5. 在成品區段中按一下 [+ 新增] 按鈕。  這會將組建定義中的成品連結至此發行定義。  
-6. 使用 [來源 (組建管線)] 的下拉式功能表來選取您的組建定義。 然後按一下 [新增] 按鈕以繼續。
+
+4. 設定<strong>階段名稱</strong> (例如開發、測試、預備或生產)。  然後按一下 [X] 按鈕來關閉快顯視窗
+5. 在成品區段中按一下 [+ 新增] 按鈕。  這會將組建定義中的成品連結至此發行定義。<br/>6.使用 [來源 (組建管線)] 的下拉式功能表來選取您的組建定義。 然後按一下 [新增] 按鈕以繼續。
 
 <img src="media/VSTS/add-artifact9.png">
- 
+
 7. 按一下管線上的 [工作] 索引標籤。  然後，選取您的階段名稱。
- 
+
 <img src="media/VSTS/release-stage10.png">
 
 8. 使用 [Azure 訂用帳戶] 下拉式功能表來選擇您的 Azure 訂用帳戶識別碼。
@@ -152,12 +150,12 @@ EXPOSE 8080
 4. 按一下 [部署 Azure App Service]。 
 5. 展開 [應用程式和組態設定] 區段，然後按一下 [應用程式設定] 欄位的瀏覽路徑來新增環境變數，即可在部署期間連線到容器登錄。
 6. 按一下 [+ 新增] 按鈕，以定義下列應用程式設定，並指派環境變數
-- DOCKER_REGISTRY_SERVER_PASSWORD = $(registry.password)
-- DOCKER_REGISTRY_SERVER_URL = $(registry.url)
-- DOCKER_REGISTRY_SERVER_USERNAME = $(registry.username)
+7. DOCKER_REGISTRY_SERVER_PASSWORD = $(registry.password)
+8. DOCKER_REGISTRY_SERVER_URL = $(registry.url)
+9. DOCKER_REGISTRY_SERVER_USERNAME = $(registry.username)
 
 <img src="media/VSTS/environment-variables14.png">
- 
+
 7. 按一下 [確定] 按鈕以繼續
 
 ## <a name="setup-continious-deployment--deploy-java-application"></a>設定持續部署與部署 Java 應用程式
@@ -166,7 +164,7 @@ EXPOSE 8080
 2. 在 [成品] 區段中，按一下閃電圖示。  然後將 [持續部署觸發程序] 設定為 [已啟用]。
 
 <img src="media/VSTS/release-enable-CD.png">
- 
+
 3. 按一下 [儲存] 按鈕，然後按一下 [確定] 按鈕 
 4. 按一下 [+ 發行] 下拉式功能表，然後選取 [建立發行] 連結
 5. 使用 [觸發程序階段從自動變更為手動] 下拉式功能表，選取您階段名稱的核取方塊
@@ -177,11 +175,11 @@ EXPOSE 8080
 
 ## <a name="test-the-java-web-application"></a>測試 Java Web 應用程式
 1. 在 Web 瀏覽器中執行 Web 應用程式 URL：  
-https://{your-app-service-name}.azurewebsites.net/api/hello
+   https://{your-app-service-name}.azurewebsites.net/api/hello
 
- 
+
 <img src="media/VSTS/web-app16.png">
 
 2. 網頁應該會顯示 **Hello Azure!**
- 
+
 <img src="media/VSTS/web-api17.png">
