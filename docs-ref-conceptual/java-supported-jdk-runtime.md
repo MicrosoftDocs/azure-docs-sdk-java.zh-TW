@@ -5,18 +5,20 @@ author: rloutlaw
 manager: angerobe
 ms.devlang: java
 ms.topic: article
-ms.date: 10/15/2017
+ms.date: 10/26/2017
 ms.author: routlaw
-ms.openlocfilehash: 2865219f350990e8b07f7d2cd99f536168a6b8d4
-ms.sourcegitcommit: 7df2d442ad7cbdb235e5dd35302a9b73379c23d5
+ms.openlocfilehash: 7f75b26bffc02a161e8d58827970bd80a3a6c48a
+ms.sourcegitcommit: 66f3dd4bdb09712b73c9194e23028567c0c4ee3f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50026994"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235204"
 ---
 # <a name="get-java-jdk-downloads-and-support-when-developing-for-azure"></a>開發 Azure 時取得 Java JDK 下載和支援
 
-在 Azure 和 Azure Stack 上的 Java 開發人員可以使用 [OpenJDK 的 Azul Systems Zulu Enterprise 組建](https://www.azul.com/downloads/azure-only/zulu/)建置及執行生產環境使用的 Java 應用程式，而不會產生額外的支援成本。 您可以在 Azure 上使用任何想要的 Java 執行階段，但是若使用 Zulu 時，可取得免費的維護更新，且可使用[合格 Azure 支援方案](https://azure.microsoft.com/support/plans/)建立 Microsoft 支援問題。
+在 Azure 和 Azure Stack 上的 Java 開發人員可以使用 [Azul Zulu Enterprise for Azure](https://www.azul.com/downloads/azure-only/zulu/) 建置及執行生產環境使用的 Java 應用程式，而不會產生額外的支援成本。 您可以在 Azure 上使用任何想要的 Java 執行階段，但是若使用 Zulu 時，可取得免費的維護更新，且可使用[合格 Azure 支援方案](https://azure.microsoft.com/support/plans/)建立 Microsoft 支援問題。
+
+開發人員可以使用自己的 Java 執行階段 (包括 Oracle JDK 和 Red Hat JDK)，在 Azure 上執行應用程式及連線至各項 Azure 服務和功能。 Oracle Java SE 的實際執行版本仍然能夠繼續供 Java 開發人員在 Azure Windows 或 Linux 虛擬機器中執行工作負載。
 
 ## <a name="supported-java-versions-and-update-schedule"></a>支援的 Java 版本及更新排程
 
@@ -31,9 +33,9 @@ Azul Systems 可維護這些版本的 [Java SE 藍圖](https://www.azul.com/prod
 
 ## <a name="use-for-local-development"></a>本機開發使用 
 
-開發人員可以從 [Azul Systems 的網站](https://www.azul.com/downloads/azure-only/zulu/)下載適用於 Azure 和 Azure Stack 的 Java JDK。 下載適用於 Windows、Linux 和 macOS。 使用 Linux 的開發人員也可以透過 [yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) 和 [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo) 套件管理員取得套件。
+開發人員可以[下載](https://www.azul.com/downloads/azure-only/zulu/)適用於 Azure 和 Azure Stack 的 Java JDK 以便在本機開發環境中使用。 下載適用於 Windows、Linux 和 macOS。 使用 Linux 的開發人員也可以透過 [yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) 和 [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo) 套件管理員取得套件。
 
-若透過[合格的 Azure 支援方案](https://azure.microsoft.com/support/plans/)開發 Azure 或 Azure Stack，則會提供支援 Azure 的 Azul Zulu JDK 產品支援。
+在開發 Azure 或 Azure Stack 相關項目時，[合格的 Azure 支援方案](https://azure.microsoft.com/support/plans/)會提供適用於 JDK 的本機開發支援。
 
 ## <a name="use-in-docker-containers"></a>在 Docker 容器中使用
 
