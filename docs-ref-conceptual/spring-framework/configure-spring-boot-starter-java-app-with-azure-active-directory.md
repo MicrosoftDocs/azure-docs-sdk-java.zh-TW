@@ -14,28 +14,37 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 665768ffe7bec977d553ffa62e1dbd6b968eb9de
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: da44a40b7b52e75bb0a946b46ddfc033bfef54e9
+ms.sourcegitcommit: 473c3aec55f3e9b131dc87c62e2eac218ce9564e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799904"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51571715"
 ---
-# <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>如何對 Azure Active Directory 使用 Spring Boot Starter
+# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>教學課程：使用適用於 Azure Active Directory 的 Spring Boot Starter 保護 Java Web 應用程式
 
 ## <a name="overview"></a>概觀
 
 本文示範如何使用 **[Spring Initializr]** (適用於 Azure Active Directory (Azure AD) 的 Spring Boot Starter) 建立應用程式。
 
+在本教學課程中，您了解如何：
+
+> [!div class="checklist"]
+> * 使用 Spring Initializr 建立 Java 應用程式
+> * 設定 Azure Active Directory
+> * 使用 Spring Boot 類別和註解保護應用程式
+> * 建置與測試您的 Java 應用程式
+
+如果您沒有 Azure 訂用帳戶，請在開始前建立[免費帳戶](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) 。
+
 ## <a name="prerequisites"></a>必要條件
 
 請務必具備下列必要條件，以便本文中說明的步驟：
 
-* Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。
-* [Java 開發套件 (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) \(英文\) 1.7 版或更新版本。
+* [Java 開發套件 (JDK)](https://aka.ms/azure-jdks) \(英文\) 1.7 版或更新版本。
 * [Apache Maven](http://maven.apache.org/) \(英文\) 3.0 版或更新版本。
 
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>使用 Spring Initializr 建立自訂應用程式
+## <a name="create-an-application-using-the-spring-initializr"></a>使用 Spring Initializr 建立應用程式
 
 1. 瀏覽至 <https://start.spring.io/> 。
 
@@ -171,9 +180,9 @@ ms.locfileid: "49799904"
 
 1. 從您稍早在本教學課程中建立並下載的專案封存，將檔案解壓縮到目錄中。
 
-1. 巡覽至專案中的父資料夾，然後在文字編輯器中開啟 pom.xml 檔案。
+1. 瀏覽至專案中的父資料夾，然後在文字編輯器中開啟 `pom.xml`Maven 專案檔。
 
-1. 新增 Spring OAuth2 安全性的相依性；例如：
+1. 將適用於 Spring OAth2 安全性的相依性新增至 `pom.xml`：
 
    ```xml
    <dependency>
@@ -351,31 +360,20 @@ ms.locfileid: "49799904"
 
 ## <a name="next-steps"></a>後續步驟
 
-如需使用 Azure Active Directory 的詳細資訊，請參閱下列文章：
+在本教學課程中，您已使用 Azure Active Direcotry 入門版建立了新的 Java Web 應用程式、設定了新的 Azure AD 租用戶並在其中註冊了新的應用程式，並接著將您的應用程式設定為使用 Spring 註解和類別來保護 Web 應用程式。 若要深入了解 Spring 和 Azure，請繼續閱讀「Azure 上的 Spring」文件中心中的資訊。
 
-* [Azure Active Directory 文件]。
-
-如需在 Azure 上使用 Spring Boot 應用程式的詳細資訊，請參閱下列文章：
-
-* [將 Spring Boot 應用程式部署到 Azure App Service](deploy-spring-boot-java-web-app-on-azure.md)
-
-* [在 Azure Container Service 的 Kubernetes 叢集上執行 Spring Boot 應用程式](deploy-spring-boot-java-app-on-kubernetes.md)
-
-如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
-
-**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot， <https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
-
-如需更詳細的範例，請參閱 GitHub 上的 [Azure Active Directory Spring Boot 範例][AAD Spring Boot Sample]。
+> [!div class="nextstepaction"]
+> [Azure 上的 Spring](/java/azure/spring-framework)
 
 <!-- URL List -->
 
-[Azure Active Directory 文件]: /azure/active-directory/
+[Azure Active Directory Documentation]: /azure/active-directory/
 [AAD app manifest]: /azure/active-directory/develop/active-directory-application-manifest
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
-[適用於 Java 開發人員的 Azure]: /java/azure/
-[免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
-[適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
-[MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[Azure for Java Developers]: /java/azure/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
