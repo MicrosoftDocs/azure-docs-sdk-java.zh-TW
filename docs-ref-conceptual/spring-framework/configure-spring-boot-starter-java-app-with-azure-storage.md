@@ -4,22 +4,22 @@ description: 了解如何使用 Azure 儲存體 Starter 來設定 Spring Boot In
 services: storage
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 09/10/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 4838b6dbd354ad941df12933dddfa7f3e7eef905
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: f94b2981f1e641a6e4b2d9d3028608a56a6590e7
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799964"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338872"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>如何對 Azure 儲存體使用 Spring Boot Starter
 
@@ -33,7 +33,7 @@ ms.locfileid: "49799964"
 
 * Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)或註冊[免費的 Azure 帳戶](https://azure.microsoft.com/pricing/free-trial/)。
 * [Azure 命令列介面 (CLI)](http://docs.microsoft.com/cli/azure/overview)。
-* 最新的 [Java 開發套件 (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) 1.7 版或更新版本。
+* 受支援的 Java 開發套件 (JDK)。 如需在 Azure 上進行開發時可使用的 JDK 相關資訊，請參閱 <https://aka.ms/azure-jdks>。
 * Apache 的 [Maven](http://maven.apache.org/) 3.0 版或更新版本。
 
 > [!IMPORTANT]

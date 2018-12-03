@@ -7,13 +7,13 @@ ms.reviewer: jasonh
 ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
-ms.date: 9/20/2018
-ms.openlocfilehash: 9fd35d12e0aa864b5d23cf03547f7b76dc74c677
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.date: 11/21/2018
+ms.openlocfilehash: 96ecbedc90706775a80b97c42f0d55a46a45b8ac
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799894"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338682"
 ---
 # <a name="hdinsight-java-management-sdk-preview"></a>HDInsight Java 管理 SDK (預覽)
 
@@ -24,7 +24,7 @@ HDInsight Java SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 �
 ## <a name="prerequisites"></a>必要條件
 
 * 一個 Azure 帳戶。 如果您沒有帳戶，請[取得免費試用帳戶](https://azure.microsoft.com/free/)。
-* [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* 受支援的 Java 開發套件 (JDK)。 如需在 Azure 上進行開發時可使用的 JDK 相關資訊，請參閱 <https://aka.ms/azure-jdks>。
 * [Maven](https://maven.apache.org/install.html)
 
 ## <a name="sdk-installation"></a>SDK 安裝

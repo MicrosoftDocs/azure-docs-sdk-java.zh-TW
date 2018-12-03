@@ -11,14 +11,14 @@ ms.workload: na
 ms.tgt_pltfrm: na
 ms.devlang: Java
 ms.topic: article
-ms.date: 07/02/2018
+ms.date: 11/13/2018
 ms.author: robmcm
-ms.openlocfilehash: 3f2de63f7eb1422ff1dd6db45d68e02f4af188b8
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 477cb9347255928f8583af8fbe4ea90a42ce6c18
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48898780"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339042"
 ---
 # <a name="adding-a-root-certificate-to-the-java-ca-certificates-store"></a>新增根憑證至 Java CA 憑證存放區
 
@@ -93,3 +93,5 @@ Baltimore 憑證可能已安裝在您的 cacerts 存放區中，因此您需要�
 如需 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure](/java/azure)。
 
 <!-- For more information about the root certificates used by Azure, see [Azure Root Certificate Migration](http://blogs.msdn.com/b/windowsazure/archive/2013/03/15/windows-azure-root-certificate-migration.aspx). -->
+
+如需在 Azure 上進行開發時可使用的支援 JDK 相關資訊，請參閱 <https://aka.ms/azure-jdks>。

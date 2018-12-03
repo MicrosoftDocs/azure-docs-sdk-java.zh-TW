@@ -4,22 +4,22 @@ description: 本教學課程將逐步引導您藉由使用 Maven 外掛程式，
 services: container-registry
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;kevinzha
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: e84960ebf79b89b2430924016a429518a935d086
-ms.sourcegitcommit: 9d9e2fa97ebd95a699adcb58e82c3fc0882f0a24
+ms.openlocfilehash: cc345987085e442978b59a45d6fc3e1b52160515
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49315932"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338942"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>如何使用適用於 Azure Web 應用程式的 Maven 外掛程式，將 Azure Container Registry 中的 Spring Boot 應用程式部署至 Azure App Service
 
@@ -38,7 +38,7 @@ ms.locfileid: "49315932"
 
 * Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。
 * [Azure 命令列介面 (CLI)]。
-* 最新的 [Java 開發套件 (JDK)] 1.7 版或更新版本。
+* 受支援的 Java 開發套件 (JDK)。 如需在 Azure 上進行開發時可使用的 JDK 相關資訊，請參閱 <https://aka.ms/azure-jdks>。
 * Apache 的 [Maven] 建置工具 (第 3 版)。
 * [Git] 用戶端。
 * [Docker] 用戶端。
@@ -406,13 +406,15 @@ Maven 會將您的 Web 應用程式部署至 Azure；如果 Web 應用程式不�
 [適用於 Maven 的 Docker 外掛程式]: https://github.com/spotify/docker-maven-plugin
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 

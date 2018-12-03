@@ -3,23 +3,23 @@ title: ''
 description: 本教學課程示範如何使用適用於 Eclipse 的 3.0.6 版 (或舊版) Azure 工具組來建立 Azure 的 Hello World Web 應用程式。
 services: app-service
 documentationcenter: java
-author: selvasingh
-manager: routlaw
+author: rmcmurray
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 896e7eff389bc7d3ac119d315c50aae505a381da
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: b05dcd52f36524ab17652f83c6ced4006f874365
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892559"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338712"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>使用 Eclipse 的舊版工具組建立 Azure 的 Hello World Web 應用程式
 
@@ -109,7 +109,7 @@ ms.locfileid: "48892559"
 
    d. 在 [Web 容器]  下拉式功能表中，為您的應用程式選取適當的軟體。
       
-      目前，您可以從 Tomcat 8、Tomcat 7 或 Jetty 9 選擇。 所選軟體最新發行的版本由 Azure 提供，會在最新發行的 JDK 8 (由 Oracle 建立並由 Azure 提供) 中運作。
+      目前，您可以從 Tomcat 8、Tomcat 7 或 Jetty 9 選擇。 所選軟體最新發行的版本由 Azure 提供，會在最新發行的 JDK 中運作。
 
    e. 在 [訂用帳戶]  下拉式選單中，選取您希望此部署使用的訂用帳戶。
 
@@ -124,7 +124,7 @@ ms.locfileid: "48892559"
    * 在 [名稱]  文字方塊中，為新的資源群組指定名稱。
    * 在 [區域]  下拉式功能表中，為資源群組選取適當的 Azure 資料中心位置。
    * 選擇性︰根據預設，Azure 會自動將最新的 Java 8 散發套件部署到 Web 應用程式容器，成為 JVM。 不過，如果 Web 應用程式需要的話，您也可以指定 JVM 的其他版本和散發套件。 若要指定 Web 應用程式的 JDK，請按一下 [JDK]  索引標籤，然後選取下列選項之一︰
-     * **部署 Azure Web Apps 服務提供的預設 JDK**︰這個選項會部署最新的 Java 8 散發套件。
+     * **部署 Azure Web Apps 服務提供的預設 JDK**︰這個選項會部署最新的 Java 散發套件。
      * **部署 Azure 提供的第三方 JDK**：這個選項可讓您從 Microsoft Azure 提供的 JDK 清單中選擇。
      * **從這個下載位置部署自己的 JDK：** 這個選項可讓您指定自己的 JDK 散發套件。您必須將它封裝為 ZIP 檔案，再上傳到公開使用的下載位置，或您擁有存取權限的 Azure 儲存體帳戶。
           

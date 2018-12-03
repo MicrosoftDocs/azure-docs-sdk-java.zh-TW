@@ -4,22 +4,22 @@ description: 了解如何使用 Azure Key Vault Starter 來設定 Spring Boot In
 services: key-vault
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 78b7a9a2e26168b19dc8a1d12e47456752b57ffc
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: fcb18de809f4465239f1f360a755624a5095e03a
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639771"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339152"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>如何對 Azure Key Vault 使用 Spring Boot Starter
 
@@ -32,10 +32,10 @@ ms.locfileid: "45639771"
 請務必具備下列必要條件，以便本文中說明的步驟：
 
 * Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。
-* [Java 開發套件 (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) \(英文\) 1.7 版或更新版本。
+* 受支援的 Java 開發套件 (JDK)。 如需在 Azure 上進行開發時可使用的 JDK 相關資訊，請參閱 <https://aka.ms/azure-jdks>。
 * [Apache Maven](http://maven.apache.org/) \(英文\) 3.0 版或更新版本。
 
-## <a name="create-an-app-using-the-spring-initialzr"></a>使用 Spring Initialzr 建立應用程式
+## <a name="create-an-app-using-spring-initializr"></a>使用 Spring Initialzr 建立應用程式
 
 1. 瀏覽至 <https://start.spring.io/> 。
 
@@ -53,7 +53,7 @@ ms.locfileid: "45639771"
 
 1. 出現提示時，將專案下載至本機電腦上的路徑。
 
-## <a name="sign-into-azure-and-select-the-subscription-to-use"></a>登入 Azure，並選取要使用的訂用帳戶
+## <a name="sign-into-azure"></a>登入 Azure
 
 1. 開啟命令提示字元。
 
@@ -94,7 +94,7 @@ ms.locfileid: "45639771"
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
    ```
 
-## <a name="create-and-configure-a-new-azure-key-vault-using-the-azure-cli"></a>使用 Azure CLI 建立和設定新的 Azure Key Vault
+## <a name="create-a-new-azure-key-vault"></a>建立新的 Azure Key Vault
 
 1. 為將要用於金鑰保存庫的 Azure 資源建立資源群組；例如：
    ```azurecli
@@ -231,7 +231,7 @@ ms.locfileid: "45639771"
    }
    ```
 
-## <a name="configure-and-compile-your-spring-boot-application"></a>設定及編譯 Spring Boot 應用程式
+## <a name="configure-and-compile-your-app"></a>設定及編譯您的應用程式
 
 1. 從您稍早下載至目錄的 Spring Boot 專案封存檔解壓縮檔案。
 
@@ -305,7 +305,9 @@ ms.locfileid: "45639771"
 
    ![Spring Boot 執行階段訊息][build-application-02]
 
-## <a name="next-steps"></a>後續步驟
+## <a name="summary"></a>總結
+
+在本教學課程中，您已使用 **[Spring Initializr]** 建立了新的 Java Web 應用程式、也建立了 Azure Key Vault 來儲存機密資訊，同時已將應用程式設定為從金鑰保存庫擷取資訊。
 
 如需有關使用 Azure Key Vault 的詳細資訊，請參閱下列文章：
 
@@ -320,6 +322,13 @@ ms.locfileid: "45639771"
 * [在 Azure Container Service 的 Kubernetes 叢集上執行 Spring Boot 應用程式](deploy-spring-boot-java-app-on-kubernetes.md)
 
 如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
+
+## <a name="next-steps"></a>後續步驟
+
+若要深入了解 Spring 和 Azure，請繼續閱讀「Azure 上的 Spring」文件中心中的資訊。
+
+> [!div class="nextstepaction"]
+> [Azure 上的 Spring](/java/azure/spring-framework)
 
 <!-- URL List -->
 

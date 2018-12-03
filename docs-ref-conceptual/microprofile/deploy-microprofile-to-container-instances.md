@@ -8,18 +8,18 @@ manager: routlaw
 editor: brunoborges
 ms.assetid: ''
 ms.author: brborges
-ms.date: 07/30/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 336af51bbdf5d2f843c3868ebc2358e128daaeaa
-ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
+ms.openlocfilehash: 22870b7ba32f115e7270c63d1bf42cbfc6531d7e
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43324324"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338782"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>使用 Docker 與 Azure 將 MicroProfile 應用程式部署到雲端
 
@@ -35,7 +35,7 @@ ms.locfileid: "43324324"
 
 * Azure 訂用帳戶；如果您沒有 Azure 訂用帳戶，可以註冊[免費的 Azure 帳戶]。
 * [Azure 命令列介面 (CLI)]。
-* 最新的 [Java 開發套件 (JDK)]，1.8 版或更新版本。
+* 受支援的 Java 開發套件 (JDK)。 如需在 Azure 上進行開發時可使用的 JDK 相關資訊，請參閱 <https://aka.ms/azure-jdks>。
 * Apache 的 [Maven] 建置工具 (第 3 版以上)。
 * [Git] 用戶端。
 
@@ -165,6 +165,7 @@ curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Maven]: http://maven.apache.org/
-[Java 開發套件 (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 [Azure 容器執行個體]: https://docs.microsoft.com/azure/container-instances/
 [Azure Container Registry]:  https://docs.microsoft.com/azure/container-registry

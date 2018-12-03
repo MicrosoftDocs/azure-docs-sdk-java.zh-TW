@@ -2,7 +2,7 @@
 若要完成文章中的步驟，您需要下列軟體元件以安裝 Azure Toolkit for Eclipse：
 
 * Eclipse IDE for Java EE Developers、Mars 或更新版本。 您可以從 [Eclipse 網站](http://www.eclipse.org/downloads/)下載。
-* Java Developer Kit (JDK) 1.8 版或更新版本。
+* 受支援的 Java 開發套件 (JDK)。 如需在 Azure 上進行開發時可使用的 JDK 相關資訊，請參閱 <https://aka.ms/azure-jdks>。
 * 作業系統。 Azure Toolkit for Eclipse 已在下列作業系統上測試：
   
   * Windows 10、Windows 8.1、Windows 8 及 Windows 7
