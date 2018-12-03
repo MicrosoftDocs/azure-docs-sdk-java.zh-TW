@@ -8,118 +8,118 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 09/10/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: ccef834d0ff1c40b061946f8ab1852584da80d7b
-ms.sourcegitcommit: a168dc8c2396b6c4749abef03debb1f69298da38
+ms.openlocfilehash: ab465b56c05c7d480109fc97a4f1c74beaf53856
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50746999"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339112"
 ---
-# <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a><span data-ttu-id="d44f1-103">如何搭配 Azure 事件中樞使用適用於 Apache Kafka 的 Spring Boot Starter</span><span class="sxs-lookup"><span data-stu-id="d44f1-103">How to use the Spring Boot Starter for Apache Kafka with Azure Event Hubs</span></span>
+# <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a><span data-ttu-id="526f7-103">如何搭配 Azure 事件中樞使用適用於 Apache Kafka 的 Spring Boot Starter</span><span class="sxs-lookup"><span data-stu-id="526f7-103">How to use the Spring Boot Starter for Apache Kafka with Azure Event Hubs</span></span>
 
-## <a name="overview"></a><span data-ttu-id="d44f1-104">概觀</span><span class="sxs-lookup"><span data-stu-id="d44f1-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="526f7-104">概觀</span><span class="sxs-lookup"><span data-stu-id="526f7-104">Overview</span></span>
 
-<span data-ttu-id="d44f1-105">本文會示範如何將使用 Spring Boot Initializer 建立的 Java 架構 Spring Cloud Stream Binder 設定為搭配使用 [Apache Kafka] 與 Azure 事件中樞。</span><span class="sxs-lookup"><span data-stu-id="d44f1-105">This article demonstrates how to configure a Java-based Spring Cloud Stream Binder created with the Spring Boot Initializer to use [Apache Kafka] with Azure Event Hubs.</span></span>
+<span data-ttu-id="526f7-105">本文會示範如何將使用 Spring Boot Initializer 建立的 Java 架構 Spring Cloud Stream Binder 設定為搭配使用 [Apache Kafka] 與 Azure 事件中樞。</span><span class="sxs-lookup"><span data-stu-id="526f7-105">This article demonstrates how to configure a Java-based Spring Cloud Stream Binder created with the Spring Boot Initializer to use [Apache Kafka] with Azure Event Hubs.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="d44f1-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="d44f1-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="526f7-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="526f7-106">Prerequisites</span></span>
 
-<span data-ttu-id="d44f1-107">若要遵循本文中的步驟，需要具備下列必要條件：</span><span class="sxs-lookup"><span data-stu-id="d44f1-107">The following prerequisites are required in order to follow the steps in this article:</span></span>
+<span data-ttu-id="526f7-107">若要遵循本文中的步驟，需要具備下列必要條件：</span><span class="sxs-lookup"><span data-stu-id="526f7-107">The following prerequisites are required in order to follow the steps in this article:</span></span>
 
-* <span data-ttu-id="d44f1-108">Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。</span><span class="sxs-lookup"><span data-stu-id="d44f1-108">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="d44f1-109">[Java 開發套件 (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) \(英文\) 1.7 版或更新版本。</span><span class="sxs-lookup"><span data-stu-id="d44f1-109">A [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 or later.</span></span>
-* <span data-ttu-id="d44f1-110">[Apache Maven](http://maven.apache.org/) \(英文\) 3.0 版或更新版本。</span><span class="sxs-lookup"><span data-stu-id="d44f1-110">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
+* <span data-ttu-id="526f7-108">Azure 訂用帳戶；如果您還沒有 Azure 訂用帳戶，則可以啟用 [MSDN 訂戶權益]或註冊[免費的 Azure 帳戶]。</span><span class="sxs-lookup"><span data-stu-id="526f7-108">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="526f7-109">受支援的 Java 開發套件 (JDK)。</span><span class="sxs-lookup"><span data-stu-id="526f7-109">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="526f7-110">如需在 Azure 上進行開發時可使用的 JDK 相關資訊，請參閱 <https://aka.ms/azure-jdks>。</span><span class="sxs-lookup"><span data-stu-id="526f7-110">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
+* <span data-ttu-id="526f7-111">[Apache Maven](http://maven.apache.org/) \(英文\) 3.0 版或更新版本。</span><span class="sxs-lookup"><span data-stu-id="526f7-111">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
 
 > [!IMPORTANT]
 >
-> <span data-ttu-id="d44f1-111">您需要 Spring Boot 2.0 版或更新版本才能完成本文中的步驟。</span><span class="sxs-lookup"><span data-stu-id="d44f1-111">Spring Boot version 2.0 or greater is required to complete the steps in this article.</span></span>
+> <span data-ttu-id="526f7-112">您需要 Spring Boot 2.0 版或更新版本才能完成本文中的步驟。</span><span class="sxs-lookup"><span data-stu-id="526f7-112">Spring Boot version 2.0 or greater is required to complete the steps in this article.</span></span>
 >
 
-## <a name="create-an-azure-event-hub-using-the-azure-portal"></a><span data-ttu-id="d44f1-112">使用 Azure 入口網站建立 Azure 事件中樞</span><span class="sxs-lookup"><span data-stu-id="d44f1-112">Create an Azure Event Hub using the Azure portal</span></span>
+## <a name="create-an-azure-event-hub-using-the-azure-portal"></a><span data-ttu-id="526f7-113">使用 Azure 入口網站建立 Azure 事件中樞</span><span class="sxs-lookup"><span data-stu-id="526f7-113">Create an Azure Event Hub using the Azure portal</span></span>
 
-### <a name="create-an-azure-event-hub-namespace"></a><span data-ttu-id="d44f1-113">建立 Azure 事件中樞命名空間</span><span class="sxs-lookup"><span data-stu-id="d44f1-113">Create an Azure Event Hub Namespace</span></span>
+### <a name="create-an-azure-event-hub-namespace"></a><span data-ttu-id="526f7-114">建立 Azure 事件中樞命名空間</span><span class="sxs-lookup"><span data-stu-id="526f7-114">Create an Azure Event Hub Namespace</span></span>
 
-1. <span data-ttu-id="d44f1-114">從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站並登入。</span><span class="sxs-lookup"><span data-stu-id="d44f1-114">Browse to the Azure portal at <https://portal.azure.com/> and sign in.</span></span>
+1. <span data-ttu-id="526f7-115">從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站並登入。</span><span class="sxs-lookup"><span data-stu-id="526f7-115">Browse to the Azure portal at <https://portal.azure.com/> and sign in.</span></span>
 
-1. <span data-ttu-id="d44f1-115">依序按一下 [+ 建立資源]、[物聯網] 和 [事件中樞]。</span><span class="sxs-lookup"><span data-stu-id="d44f1-115">Click **+Create a resource**, then **Internet of Things**, and then click **Event Hubs**.</span></span>
+1. <span data-ttu-id="526f7-116">依序按一下 [+ 建立資源]、[物聯網] 和 [事件中樞]。</span><span class="sxs-lookup"><span data-stu-id="526f7-116">Click **+Create a resource**, then **Internet of Things**, and then click **Event Hubs**.</span></span>
 
    ![建立 Azure 事件中樞命名空間][IMG01]
 
-1. <span data-ttu-id="d44f1-117">在 [建立命名空間] 頁面上，輸入下列資訊：</span><span class="sxs-lookup"><span data-stu-id="d44f1-117">On the **Create Namespace** page, enter the following information:</span></span>
+1. <span data-ttu-id="526f7-118">在 [建立命名空間] 頁面上，輸入下列資訊：</span><span class="sxs-lookup"><span data-stu-id="526f7-118">On the **Create Namespace** page, enter the following information:</span></span>
 
-   * <span data-ttu-id="d44f1-118">輸入唯一**名稱**，這將成為事件中樞命名空間 URI 的一部分。</span><span class="sxs-lookup"><span data-stu-id="d44f1-118">Enter a unique **Name**, which will become part of the URI for your event hub namespace.</span></span> <span data-ttu-id="d44f1-119">例如：如果您輸入 **wingtiptoys** 作為**名稱**，則 URI 會是 wingtiptoys.servicebus.windows.net。</span><span class="sxs-lookup"><span data-stu-id="d44f1-119">For example: if you entered **wingtiptoys** for the **Name**, the URI would be *wingtiptoys.servicebus.windows.net*.</span></span>
-   * <span data-ttu-id="d44f1-120">為事件中樞命名空間選擇 [定價層]。</span><span class="sxs-lookup"><span data-stu-id="d44f1-120">Choose a **Pricing tier** for your event hub namespace.</span></span>
-   * <span data-ttu-id="d44f1-121">為命名空間指定 [啟用 Kafka]。</span><span class="sxs-lookup"><span data-stu-id="d44f1-121">Specify **Enable Kafka** for your namespace.</span></span>
-   * <span data-ttu-id="d44f1-122">選取您想要用於命名空間的**訂用帳戶**。</span><span class="sxs-lookup"><span data-stu-id="d44f1-122">Choose the **Subscription** you want to use for your namespace.</span></span>
-   * <span data-ttu-id="d44f1-123">指定是否要為命名空間建立新的**資源群組**，或選擇現有的資源群組。</span><span class="sxs-lookup"><span data-stu-id="d44f1-123">Specify whether to create a new **Resource group** for your namespace, or choose an existing resource group.</span></span>
-   * <span data-ttu-id="d44f1-124">指定事件中樞命名空間的**位置**。</span><span class="sxs-lookup"><span data-stu-id="d44f1-124">Specify the **Location** for your event hub namespace.</span></span>
+   * <span data-ttu-id="526f7-119">輸入唯一**名稱**，這將成為事件中樞命名空間 URI 的一部分。</span><span class="sxs-lookup"><span data-stu-id="526f7-119">Enter a unique **Name**, which will become part of the URI for your event hub namespace.</span></span> <span data-ttu-id="526f7-120">例如：如果您輸入 **wingtiptoys** 作為**名稱**，則 URI 會是 wingtiptoys.servicebus.windows.net。</span><span class="sxs-lookup"><span data-stu-id="526f7-120">For example: if you entered **wingtiptoys** for the **Name**, the URI would be *wingtiptoys.servicebus.windows.net*.</span></span>
+   * <span data-ttu-id="526f7-121">為事件中樞命名空間選擇 [定價層]。</span><span class="sxs-lookup"><span data-stu-id="526f7-121">Choose a **Pricing tier** for your event hub namespace.</span></span>
+   * <span data-ttu-id="526f7-122">為命名空間指定 [啟用 Kafka]。</span><span class="sxs-lookup"><span data-stu-id="526f7-122">Specify **Enable Kafka** for your namespace.</span></span>
+   * <span data-ttu-id="526f7-123">選取您想要用於命名空間的**訂用帳戶**。</span><span class="sxs-lookup"><span data-stu-id="526f7-123">Choose the **Subscription** you want to use for your namespace.</span></span>
+   * <span data-ttu-id="526f7-124">指定是否要為命名空間建立新的**資源群組**，或選擇現有的資源群組。</span><span class="sxs-lookup"><span data-stu-id="526f7-124">Specify whether to create a new **Resource group** for your namespace, or choose an existing resource group.</span></span>
+   * <span data-ttu-id="526f7-125">指定事件中樞命名空間的**位置**。</span><span class="sxs-lookup"><span data-stu-id="526f7-125">Specify the **Location** for your event hub namespace.</span></span>
 
    ![指定 Azure 事件中樞命名空間選項][IMG02]
 
-1. <span data-ttu-id="d44f1-126">指定上面列出的選項之後，按一下 [建立] 以建立您的命名空間。</span><span class="sxs-lookup"><span data-stu-id="d44f1-126">When you have specified the options listed above, click **Create** to create your namespace.</span></span>
+1. <span data-ttu-id="526f7-127">指定上面列出的選項之後，按一下 [建立] 以建立您的命名空間。</span><span class="sxs-lookup"><span data-stu-id="526f7-127">When you have specified the options listed above, click **Create** to create your namespace.</span></span>
 
-### <a name="create-an-azure-event-hub-in-your-namespace"></a><span data-ttu-id="d44f1-127">在命名空間中建立 Azure 事件中樞</span><span class="sxs-lookup"><span data-stu-id="d44f1-127">Create an Azure Event Hub in your namespace</span></span>
+### <a name="create-an-azure-event-hub-in-your-namespace"></a><span data-ttu-id="526f7-128">在命名空間中建立 Azure 事件中樞</span><span class="sxs-lookup"><span data-stu-id="526f7-128">Create an Azure Event Hub in your namespace</span></span>
 
-1. <span data-ttu-id="d44f1-128">從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站。</span><span class="sxs-lookup"><span data-stu-id="d44f1-128">Browse to the Azure portal at <https://portal.azure.com/>.</span></span>
+1. <span data-ttu-id="526f7-129">從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站。</span><span class="sxs-lookup"><span data-stu-id="526f7-129">Browse to the Azure portal at <https://portal.azure.com/>.</span></span>
 
-1. <span data-ttu-id="d44f1-129">按一下 [所有資源]，然後按一下您建立的命名空間。</span><span class="sxs-lookup"><span data-stu-id="d44f1-129">Click **All resources**, and then click the namespace that you created.</span></span>
+1. <span data-ttu-id="526f7-130">按一下 [所有資源]，然後按一下您建立的命名空間。</span><span class="sxs-lookup"><span data-stu-id="526f7-130">Click **All resources**, and then click the namespace that you created.</span></span>
 
    ![選取 Azure 事件中樞命名空間][IMG03]
 
-1. <span data-ttu-id="d44f1-131">按一下 [事件中樞]，然後按一下 [+ 事件中樞]。</span><span class="sxs-lookup"><span data-stu-id="d44f1-131">Click **Event Hubs**, and then click **+Event Hub**.</span></span>
+1. <span data-ttu-id="526f7-132">按一下 [事件中樞]，然後按一下 [+ 事件中樞]。</span><span class="sxs-lookup"><span data-stu-id="526f7-132">Click **Event Hubs**, and then click **+Event Hub**.</span></span>
 
    ![新增 Azure 事件中樞][IMG04]
 
-1. <span data-ttu-id="d44f1-133">在 [建立事件中樞] 頁面上，為您的事件中樞輸入唯一**名稱**，然後按一下 [建立]。</span><span class="sxs-lookup"><span data-stu-id="d44f1-133">On the **Create Event Hub** page, enter a unique **Name** for your Event Hub, and then click **Create**.</span></span>
+1. <span data-ttu-id="526f7-134">在 [建立事件中樞] 頁面上，為您的事件中樞輸入唯一**名稱**，然後按一下 [建立]。</span><span class="sxs-lookup"><span data-stu-id="526f7-134">On the **Create Event Hub** page, enter a unique **Name** for your Event Hub, and then click **Create**.</span></span>
 
    ![建立 Azure 事件中樞][IMG05]
 
-1. <span data-ttu-id="d44f1-135">事件中樞建好之後，即會列在 [事件中樞] 頁面上。</span><span class="sxs-lookup"><span data-stu-id="d44f1-135">When your Event Hub has been created, it will be listed on the **Event Hubs** page.</span></span>
+1. <span data-ttu-id="526f7-136">事件中樞建好之後，即會列在 [事件中樞] 頁面上。</span><span class="sxs-lookup"><span data-stu-id="526f7-136">When your Event Hub has been created, it will be listed on the **Event Hubs** page.</span></span>
 
    ![建立 Azure 事件中樞][IMG06]
 
-## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a><span data-ttu-id="d44f1-137">使用 Spring Initializr 建立簡單的 Spring Boot 應用程式</span><span class="sxs-lookup"><span data-stu-id="d44f1-137">Create a simple Spring Boot application with the Spring Initializr</span></span>
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a><span data-ttu-id="526f7-138">使用 Spring Initializr 建立簡單的 Spring Boot 應用程式</span><span class="sxs-lookup"><span data-stu-id="526f7-138">Create a simple Spring Boot application with the Spring Initializr</span></span>
 
-1. <span data-ttu-id="d44f1-138">瀏覽至 <https://start.spring.io/> 。</span><span class="sxs-lookup"><span data-stu-id="d44f1-138">Browse to <https://start.spring.io/>.</span></span>
+1. <span data-ttu-id="526f7-139">瀏覽至 <https://start.spring.io/> 。</span><span class="sxs-lookup"><span data-stu-id="526f7-139">Browse to <https://start.spring.io/>.</span></span>
 
-1. <span data-ttu-id="d44f1-139">指定下列選項：</span><span class="sxs-lookup"><span data-stu-id="d44f1-139">Specify the following options:</span></span>
+1. <span data-ttu-id="526f7-140">指定下列選項：</span><span class="sxs-lookup"><span data-stu-id="526f7-140">Specify the following options:</span></span>
 
-   * <span data-ttu-id="d44f1-140">使用 **Java** 產生 **Maven** 專案。</span><span class="sxs-lookup"><span data-stu-id="d44f1-140">Generate a **Maven** project with **Java**.</span></span>
-   * <span data-ttu-id="d44f1-141">指定 **Spring Boot** 版本，應等於或大於 2.0。</span><span class="sxs-lookup"><span data-stu-id="d44f1-141">Specify a **Spring Boot** version that is equal to or greater than 2.0.</span></span>
-   * <span data-ttu-id="d44f1-142">指定應用程式的**群組**和**成品**名稱。</span><span class="sxs-lookup"><span data-stu-id="d44f1-142">Specify the **Group** and **Artifact** names for your application.</span></span>
-   * <span data-ttu-id="d44f1-143">新增 **Web** 相依性。</span><span class="sxs-lookup"><span data-stu-id="d44f1-143">Add the **Web** dependency.</span></span>
+   * <span data-ttu-id="526f7-141">使用 **Java** 產生 **Maven** 專案。</span><span class="sxs-lookup"><span data-stu-id="526f7-141">Generate a **Maven** project with **Java**.</span></span>
+   * <span data-ttu-id="526f7-142">指定 **Spring Boot** 版本，應等於或大於 2.0。</span><span class="sxs-lookup"><span data-stu-id="526f7-142">Specify a **Spring Boot** version that is equal to or greater than 2.0.</span></span>
+   * <span data-ttu-id="526f7-143">指定應用程式的**群組**和**成品**名稱。</span><span class="sxs-lookup"><span data-stu-id="526f7-143">Specify the **Group** and **Artifact** names for your application.</span></span>
+   * <span data-ttu-id="526f7-144">新增 **Web** 相依性。</span><span class="sxs-lookup"><span data-stu-id="526f7-144">Add the **Web** dependency.</span></span>
 
       ![Spring Initializr 的基本選項][SI01]
 
    > [!NOTE]
    >
-   > <span data-ttu-id="d44f1-145">Spring Initializr 會使用**群組**和**成品**名稱來建立套件名稱；例如：com.wingtiptoys.kafka。</span><span class="sxs-lookup"><span data-stu-id="d44f1-145">The Spring Initializr uses the **Group** and **Artifact** names to create the package name; for example: *com.wingtiptoys.kafka*.</span></span>
+   > <span data-ttu-id="526f7-146">Spring Initializr 會使用**群組**和**成品**名稱來建立套件名稱；例如：com.wingtiptoys.kafka。</span><span class="sxs-lookup"><span data-stu-id="526f7-146">The Spring Initializr uses the **Group** and **Artifact** names to create the package name; for example: *com.wingtiptoys.kafka*.</span></span>
    >
 
-1. <span data-ttu-id="d44f1-146">當您指定上面列出的選項之後，按一下 [產生專案]。</span><span class="sxs-lookup"><span data-stu-id="d44f1-146">When you have specified the options listed above, click **Generate Project**.</span></span>
+1. <span data-ttu-id="526f7-147">當您指定上面列出的選項之後，按一下 [產生專案]。</span><span class="sxs-lookup"><span data-stu-id="526f7-147">When you have specified the options listed above, click **Generate Project**.</span></span>
 
-1. <span data-ttu-id="d44f1-147">出現提示時，將專案下載至本機電腦上的路徑。</span><span class="sxs-lookup"><span data-stu-id="d44f1-147">When prompted, download the project to a path on your local computer.</span></span>
+1. <span data-ttu-id="526f7-148">出現提示時，將專案下載至本機電腦上的路徑。</span><span class="sxs-lookup"><span data-stu-id="526f7-148">When prompted, download the project to a path on your local computer.</span></span>
 
    ![下載 Spring 專案][SI02]
 
-1. <span data-ttu-id="d44f1-149">當您在本機系統上擷取檔案之後，就可以開始編輯簡單的 Spring Boot 應用程式。</span><span class="sxs-lookup"><span data-stu-id="d44f1-149">After you have extracted the files on your local system, your simple Spring Boot application will be ready for editing.</span></span>
+1. <span data-ttu-id="526f7-150">當您在本機系統上擷取檔案之後，就可以開始編輯簡單的 Spring Boot 應用程式。</span><span class="sxs-lookup"><span data-stu-id="526f7-150">After you have extracted the files on your local system, your simple Spring Boot application will be ready for editing.</span></span>
 
-## <a name="configure-your-spring-boot-app-to-use-the-spring-cloud-kafka-stream-and-azure-event-hub-starters"></a><span data-ttu-id="d44f1-150">將 Spring Boot 應用程式設定為使用 Spring Cloud Kafka Stream 與 Azure 事件中樞 Starter</span><span class="sxs-lookup"><span data-stu-id="d44f1-150">Configure your Spring Boot app to use the Spring Cloud Kafka Stream and Azure Event Hub starters</span></span>
+## <a name="configure-your-spring-boot-app-to-use-the-spring-cloud-kafka-stream-and-azure-event-hub-starters"></a><span data-ttu-id="526f7-151">將 Spring Boot 應用程式設定為使用 Spring Cloud Kafka Stream 與 Azure 事件中樞 Starter</span><span class="sxs-lookup"><span data-stu-id="526f7-151">Configure your Spring Boot app to use the Spring Cloud Kafka Stream and Azure Event Hub starters</span></span>
 
-1. <span data-ttu-id="d44f1-151">在應用程式的根目錄中尋找 pom.xml 檔案；例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-151">Locate the *pom.xml* file in the root directory of your app; for example:</span></span>
+1. <span data-ttu-id="526f7-152">在應用程式的根目錄中尋找 pom.xml 檔案；例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-152">Locate the *pom.xml* file in the root directory of your app; for example:</span></span>
 
    `C:\SpringBoot\kafka\pom.xml`
 
-   <span data-ttu-id="d44f1-152">-或-</span><span class="sxs-lookup"><span data-stu-id="d44f1-152">-or-</span></span>
+   <span data-ttu-id="526f7-153">-或-</span><span class="sxs-lookup"><span data-stu-id="526f7-153">-or-</span></span>
 
    `/users/example/home/kafka/pom.xml`
 
-1. <span data-ttu-id="d44f1-153">在文字編輯器中開啟 pom.xml 檔案，並將 Spring Cloud Kafka Stream 和 Azure 事件中樞 Starter 新增至 `<dependencies>` 的清單：</span><span class="sxs-lookup"><span data-stu-id="d44f1-153">Open the *pom.xml* file in a text editor, and add the Spring Cloud Kafka Stream and Azure Event Hub starters to the list of `<dependencies>`:</span></span>
+1. <span data-ttu-id="526f7-154">在文字編輯器中開啟 pom.xml 檔案，並將 Spring Cloud Kafka Stream 和 Azure 事件中樞 Starter 新增至 `<dependencies>` 的清單：</span><span class="sxs-lookup"><span data-stu-id="526f7-154">Open the *pom.xml* file in a text editor, and add the Spring Cloud Kafka Stream and Azure Event Hub starters to the list of `<dependencies>`:</span></span>
 
    ```xml
    <dependency>
@@ -136,36 +136,36 @@ ms.locfileid: "50746999"
 
    ![編輯 pom.xml 檔案][SI03]
 
-1. <span data-ttu-id="d44f1-155">儲存並關閉 *pom.xml* 檔案。</span><span class="sxs-lookup"><span data-stu-id="d44f1-155">Save and close the *pom.xml* file.</span></span>
+1. <span data-ttu-id="526f7-156">儲存並關閉 *pom.xml* 檔案。</span><span class="sxs-lookup"><span data-stu-id="526f7-156">Save and close the *pom.xml* file.</span></span>
 
-## <a name="create-an-azure-credential-file"></a><span data-ttu-id="d44f1-156">建立 Azure 認證檔案</span><span class="sxs-lookup"><span data-stu-id="d44f1-156">Create an Azure Credential File</span></span>
+## <a name="create-an-azure-credential-file"></a><span data-ttu-id="526f7-157">建立 Azure 認證檔案</span><span class="sxs-lookup"><span data-stu-id="526f7-157">Create an Azure Credential File</span></span>
 
-1. <span data-ttu-id="d44f1-157">開啟命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="d44f1-157">Open a command prompt.</span></span>
+1. <span data-ttu-id="526f7-158">開啟命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="526f7-158">Open a command prompt.</span></span>
 
-1. <span data-ttu-id="d44f1-158">瀏覽至 Spring Boot 應用程式的 resources 目錄；例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-158">Navigate to the *resources* directory of your Spring Boot app; for example:</span></span>
+1. <span data-ttu-id="526f7-159">瀏覽至 Spring Boot 應用程式的 resources 目錄；例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-159">Navigate to the *resources* directory of your Spring Boot app; for example:</span></span>
 
    ```shell
    cd C:\SpringBoot\eventhub\src\main\resources
    ```
 
-   <span data-ttu-id="d44f1-159">-或-</span><span class="sxs-lookup"><span data-stu-id="d44f1-159">-or-</span></span>
+   <span data-ttu-id="526f7-160">-或-</span><span class="sxs-lookup"><span data-stu-id="526f7-160">-or-</span></span>
 
    ```shell
    cd /users/example/home/eventhub/src/main/resources
    ```
 
-1. <span data-ttu-id="d44f1-160">登入您的 Azure 帳戶：</span><span class="sxs-lookup"><span data-stu-id="d44f1-160">Sign in to your Azure account:</span></span>
+1. <span data-ttu-id="526f7-161">登入您的 Azure 帳戶：</span><span class="sxs-lookup"><span data-stu-id="526f7-161">Sign in to your Azure account:</span></span>
 
    ```azurecli
    az login
    ```
 
-1. <span data-ttu-id="d44f1-161">列出您的訂用帳戶：</span><span class="sxs-lookup"><span data-stu-id="d44f1-161">List your subscriptions:</span></span>
+1. <span data-ttu-id="526f7-162">列出您的訂用帳戶：</span><span class="sxs-lookup"><span data-stu-id="526f7-162">List your subscriptions:</span></span>
 
    ```azurecli
    az account list
    ```
-   <span data-ttu-id="d44f1-162">Azure 會傳回訂用帳戶清單，而且您必須複製所要使用之訂用帳戶的 GUID；例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-162">Azure will return a list of your subscriptions, and you will need to copy the GUID for the subscription that you want to use; for example:</span></span>
+   <span data-ttu-id="526f7-163">Azure 會傳回訂用帳戶清單，而且您必須複製所要使用之訂用帳戶的 GUID；例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-163">Azure will return a list of your subscriptions, and you will need to copy the GUID for the subscription that you want to use; for example:</span></span>
 
    ```json
    [
@@ -184,19 +184,19 @@ ms.locfileid: "50746999"
    ]
    ```
    
-1. <span data-ttu-id="d44f1-163">指定您希望在 Azure 中使用的訂用帳戶 GUID，例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-163">Specify the GUID for the subscription you want to use with Azure; for example:</span></span>
+1. <span data-ttu-id="526f7-164">指定您希望在 Azure 中使用的訂用帳戶 GUID，例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-164">Specify the GUID for the subscription you want to use with Azure; for example:</span></span>
 
    ```azurecli
    az account set -s 11111111-1111-1111-1111-111111111111
    ```
 
-1. <span data-ttu-id="d44f1-164">建立 Azure 認證檔案：</span><span class="sxs-lookup"><span data-stu-id="d44f1-164">Create your Azure Credential file:</span></span>
+1. <span data-ttu-id="526f7-165">建立 Azure 認證檔案：</span><span class="sxs-lookup"><span data-stu-id="526f7-165">Create your Azure Credential file:</span></span>
 
    ```azurecli
    az ad sp create-for-rbac --sdk-auth > my.azureauth
    ```
 
-   <span data-ttu-id="d44f1-165">此命令會在您的 resources 目錄中建立 my.azureauth 檔案，內含會類似下列範例：</span><span class="sxs-lookup"><span data-stu-id="d44f1-165">This command will create a *my.azureauth* file in your *resources* directory with contents that resemble the following example:</span></span>
+   <span data-ttu-id="526f7-166">此命令會在您的 resources 目錄中建立 my.azureauth 檔案，內含會類似下列範例：</span><span class="sxs-lookup"><span data-stu-id="526f7-166">This command will create a *my.azureauth* file in your *resources* directory with contents that resemble the following example:</span></span>
 
    ```json
    {
@@ -213,17 +213,17 @@ ms.locfileid: "50746999"
    }
    ```
 
-## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a><span data-ttu-id="d44f1-166">設定 Spring Boot 應用程式以使用您的 Azure 事件中樞</span><span class="sxs-lookup"><span data-stu-id="d44f1-166">Configure your Spring Boot app to use your Azure Event Hub</span></span>
+## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a><span data-ttu-id="526f7-167">設定 Spring Boot 應用程式以使用您的 Azure 事件中樞</span><span class="sxs-lookup"><span data-stu-id="526f7-167">Configure your Spring Boot app to use your Azure Event Hub</span></span>
 
-1. <span data-ttu-id="d44f1-167">在應用程式的 resources 目錄中尋找 *application.properties*；例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-167">Locate the *application.properties* in the *resources* directory of your app; for example:</span></span>
+1. <span data-ttu-id="526f7-168">在應用程式的 resources 目錄中尋找 *application.properties*；例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-168">Locate the *application.properties* in the *resources* directory of your app; for example:</span></span>
 
    `C:\SpringBoot\eventhub\src\main\resources\application.properties`
 
-   <span data-ttu-id="d44f1-168">-或-</span><span class="sxs-lookup"><span data-stu-id="d44f1-168">-or-</span></span>
+   <span data-ttu-id="526f7-169">-或-</span><span class="sxs-lookup"><span data-stu-id="526f7-169">-or-</span></span>
 
    `/users/example/home/eventhub/src/main/resources/application.properties`
 
-2. <span data-ttu-id="d44f1-169">在文字編輯器中開啟 application.properties 檔案、新增下列數行，然後使用您事件中樞的適當屬性來取代範例值：</span><span class="sxs-lookup"><span data-stu-id="d44f1-169">Open the *application.properties* file in a text editor, add the following lines, and then replace the sample values with the appropriate properties for your event hub:</span></span>
+2. <span data-ttu-id="526f7-170">在文字編輯器中開啟 application.properties 檔案、新增下列數行，然後使用您事件中樞的適當屬性來取代範例值：</span><span class="sxs-lookup"><span data-stu-id="526f7-170">Open the *application.properties* file in a text editor, add the following lines, and then replace the sample values with the appropriate properties for your event hub:</span></span>
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -235,36 +235,36 @@ ms.locfileid: "50746999"
    spring.cloud.stream.bindings.input.group=$Default
    spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
-   <span data-ttu-id="d44f1-170">其中：</span><span class="sxs-lookup"><span data-stu-id="d44f1-170">Where:</span></span>
+   <span data-ttu-id="526f7-171">其中：</span><span class="sxs-lookup"><span data-stu-id="526f7-171">Where:</span></span>
 
-   |                       <span data-ttu-id="d44f1-171">欄位</span><span class="sxs-lookup"><span data-stu-id="d44f1-171">Field</span></span>                       |                                                                                   <span data-ttu-id="d44f1-172">說明</span><span class="sxs-lookup"><span data-stu-id="d44f1-172">Description</span></span>                                                                                    |
+   |                       <span data-ttu-id="526f7-172">欄位</span><span class="sxs-lookup"><span data-stu-id="526f7-172">Field</span></span>                       |                                                                                   <span data-ttu-id="526f7-173">說明</span><span class="sxs-lookup"><span data-stu-id="526f7-173">Description</span></span>                                                                                    |
    |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |     `spring.cloud.azure.credential-file-path`     |                                                    <span data-ttu-id="d44f1-173">指定您稍早在本教學課程中建立的 Azure 認證檔案。</span><span class="sxs-lookup"><span data-stu-id="d44f1-173">Specifies Azure credential file that you created earlier in this tutorial.</span></span>                                                    |
-   |        `spring.cloud.azure.resource-group`        |                                                      <span data-ttu-id="d44f1-174">指定包含您 Azure 事件中樞的 Azure 資源群組。</span><span class="sxs-lookup"><span data-stu-id="d44f1-174">Specifies the Azure Resource Group that contains your Azure Event Hub.</span></span>                                                      |
-   |            `spring.cloud.azure.region`            |                                           <span data-ttu-id="d44f1-175">指定建立您 Azure 事件中樞時指定的地理區域。</span><span class="sxs-lookup"><span data-stu-id="d44f1-175">Specifies the geographical region that you specified when you created your Azure Event Hub.</span></span>                                            |
-   |      `spring.cloud.azure.eventhub.namespace`      |                                          <span data-ttu-id="d44f1-176">指定建立您 Azure 事件中樞命名空間時指定的唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="d44f1-176">Specifies the unique name that you specified when you created your Azure Event Hub Namespace.</span></span>                                           |
-   | `spring.cloud.stream.bindings.input.destination`  |                            <span data-ttu-id="d44f1-177">指定作為輸入目的地的 Azure 事件中樞，在本教學課程中是指您稍早在本教學課程中建立的中樞。</span><span class="sxs-lookup"><span data-stu-id="d44f1-177">Specifies the input destination Azure Event Hub, which for this tutorial is the  hub you created earlier in this tutorial.</span></span>                            |
-   |    `spring.cloud.stream.bindings.input.group `    | <span data-ttu-id="d44f1-178">指定 Azure 事件中樞中的取用者群組，可以設定為 '$Default'，以使用您建立 Azure 事件中樞時所建立的基本取用者群組。</span><span class="sxs-lookup"><span data-stu-id="d44f1-178">Specifies a Consumer Group from Azure Event Hub, which can be set to '$Default' in order to use the basic consumer group that was created when you created your Azure Event Hub.</span></span> |
-   | `spring.cloud.stream.bindings.output.destination` |                               <span data-ttu-id="d44f1-179">指定作為輸出目的地的 Azure 事件中樞，這在本教學課程中會等同輸入目的地。</span><span class="sxs-lookup"><span data-stu-id="d44f1-179">Specifies the output destination Azure Event Hub, which for this tutorial will be the same as the input destination.</span></span>                               |
+   |     `spring.cloud.azure.credential-file-path`     |                                                    <span data-ttu-id="526f7-174">指定您稍早在本教學課程中建立的 Azure 認證檔案。</span><span class="sxs-lookup"><span data-stu-id="526f7-174">Specifies Azure credential file that you created earlier in this tutorial.</span></span>                                                    |
+   |        `spring.cloud.azure.resource-group`        |                                                      <span data-ttu-id="526f7-175">指定包含您 Azure 事件中樞的 Azure 資源群組。</span><span class="sxs-lookup"><span data-stu-id="526f7-175">Specifies the Azure Resource Group that contains your Azure Event Hub.</span></span>                                                      |
+   |            `spring.cloud.azure.region`            |                                           <span data-ttu-id="526f7-176">指定建立您 Azure 事件中樞時指定的地理區域。</span><span class="sxs-lookup"><span data-stu-id="526f7-176">Specifies the geographical region that you specified when you created your Azure Event Hub.</span></span>                                            |
+   |      `spring.cloud.azure.eventhub.namespace`      |                                          <span data-ttu-id="526f7-177">指定建立您 Azure 事件中樞命名空間時指定的唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="526f7-177">Specifies the unique name that you specified when you created your Azure Event Hub Namespace.</span></span>                                           |
+   | `spring.cloud.stream.bindings.input.destination`  |                            <span data-ttu-id="526f7-178">指定作為輸入目的地的 Azure 事件中樞，在本教學課程中是指您稍早在本教學課程中建立的中樞。</span><span class="sxs-lookup"><span data-stu-id="526f7-178">Specifies the input destination Azure Event Hub, which for this tutorial is the  hub you created earlier in this tutorial.</span></span>                            |
+   |    `spring.cloud.stream.bindings.input.group `    | <span data-ttu-id="526f7-179">指定 Azure 事件中樞中的取用者群組，可以設定為 '$Default'，以使用您建立 Azure 事件中樞時所建立的基本取用者群組。</span><span class="sxs-lookup"><span data-stu-id="526f7-179">Specifies a Consumer Group from Azure Event Hub, which can be set to '$Default' in order to use the basic consumer group that was created when you created your Azure Event Hub.</span></span> |
+   | `spring.cloud.stream.bindings.output.destination` |                               <span data-ttu-id="526f7-180">指定作為輸出目的地的 Azure 事件中樞，這在本教學課程中會等同輸入目的地。</span><span class="sxs-lookup"><span data-stu-id="526f7-180">Specifies the output destination Azure Event Hub, which for this tutorial will be the same as the input destination.</span></span>                               |
 
 
-3. <span data-ttu-id="d44f1-180">儲存並關閉 *application.properties* 檔案。</span><span class="sxs-lookup"><span data-stu-id="d44f1-180">Save and close the *application.properties* file.</span></span>
+3. <span data-ttu-id="526f7-181">儲存並關閉 *application.properties* 檔案。</span><span class="sxs-lookup"><span data-stu-id="526f7-181">Save and close the *application.properties* file.</span></span>
 
-## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a><span data-ttu-id="d44f1-181">新增範例程式碼來實作基本的事件中樞功能</span><span class="sxs-lookup"><span data-stu-id="d44f1-181">Add sample code to implement basic event hub functionality</span></span>
+## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a><span data-ttu-id="526f7-182">新增範例程式碼來實作基本的事件中樞功能</span><span class="sxs-lookup"><span data-stu-id="526f7-182">Add sample code to implement basic event hub functionality</span></span>
 
-<span data-ttu-id="d44f1-182">在本節中，您會建立必要的 Java 類別，以便將事件傳送至事件中樞。</span><span class="sxs-lookup"><span data-stu-id="d44f1-182">In this section, you create the necessary Java classes for sending events to your event hub.</span></span>
+<span data-ttu-id="526f7-183">在本節中，您會建立必要的 Java 類別，以便將事件傳送至事件中樞。</span><span class="sxs-lookup"><span data-stu-id="526f7-183">In this section, you create the necessary Java classes for sending events to your event hub.</span></span>
 
-### <a name="modify-the-main-application-class"></a><span data-ttu-id="d44f1-183">修改主要應用程式類別</span><span class="sxs-lookup"><span data-stu-id="d44f1-183">Modify the main application class</span></span>
+### <a name="modify-the-main-application-class"></a><span data-ttu-id="526f7-184">修改主要應用程式類別</span><span class="sxs-lookup"><span data-stu-id="526f7-184">Modify the main application class</span></span>
 
-1. <span data-ttu-id="d44f1-184">在應用程式的封裝目錄中尋找主要應用程式 Java 檔案；例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-184">Locate the main application Java file in the package directory of your app; for example:</span></span>
+1. <span data-ttu-id="526f7-185">在應用程式的封裝目錄中尋找主要應用程式 Java 檔案；例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-185">Locate the main application Java file in the package directory of your app; for example:</span></span>
 
    `C:\SpringBoot\kafka\src\main\java\com\wingtiptoys\kafka\KafkaApplication.java`
 
-   <span data-ttu-id="d44f1-185">-或-</span><span class="sxs-lookup"><span data-stu-id="d44f1-185">-or-</span></span>
+   <span data-ttu-id="526f7-186">-或-</span><span class="sxs-lookup"><span data-stu-id="526f7-186">-or-</span></span>
 
    `/users/example/home/kafka/src/main/java/com/wingtiptoys/kafka/KafkaApplication.java`
 
-1. <span data-ttu-id="d44f1-186">在文字編輯器中開啟主要應用程式 Java 檔案，並將下列數行新增至檔案中：</span><span class="sxs-lookup"><span data-stu-id="d44f1-186">Open the main application Java file in a text editor, and add the following lines to the file:</span></span>
+1. <span data-ttu-id="526f7-187">在文字編輯器中開啟主要應用程式 Java 檔案，並將下列數行新增至檔案中：</span><span class="sxs-lookup"><span data-stu-id="526f7-187">Open the main application Java file in a text editor, and add the following lines to the file:</span></span>
 
    ```java
    package com.wingtiptoys.kafka;
@@ -280,12 +280,12 @@ ms.locfileid: "50746999"
    }
    ```
 
-1. <span data-ttu-id="d44f1-187">儲存並關閉主要應用程式 Java 檔案。</span><span class="sxs-lookup"><span data-stu-id="d44f1-187">Save and close the main application Java file.</span></span>
+1. <span data-ttu-id="526f7-188">儲存並關閉主要應用程式 Java 檔案。</span><span class="sxs-lookup"><span data-stu-id="526f7-188">Save and close the main application Java file.</span></span>
 
 
-### <a name="create-a-new-class-for-the-source-connector"></a><span data-ttu-id="d44f1-188">建立新的來源連接器類別</span><span class="sxs-lookup"><span data-stu-id="d44f1-188">Create a new class for the source connector</span></span>
+### <a name="create-a-new-class-for-the-source-connector"></a><span data-ttu-id="526f7-189">建立新的來源連接器類別</span><span class="sxs-lookup"><span data-stu-id="526f7-189">Create a new class for the source connector</span></span>
 
-1. <span data-ttu-id="d44f1-189">在應用程式的 package 目錄中，建立名為 KafkaSource.java 的新 Java 檔案，然後在文字編輯器中開啟檔案，並加入下列幾行：</span><span class="sxs-lookup"><span data-stu-id="d44f1-189">Create a new Java file named *KafkaSource.java* in the package directory of your app, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="526f7-190">在應用程式的 package 目錄中，建立名為 KafkaSource.java 的新 Java 檔案，然後在文字編輯器中開啟檔案，並加入下列幾行：</span><span class="sxs-lookup"><span data-stu-id="526f7-190">Create a new Java file named *KafkaSource.java* in the package directory of your app, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.wingtiptoys.kafka;
@@ -313,11 +313,11 @@ ms.locfileid: "50746999"
    }
    ```
 
-1. <span data-ttu-id="d44f1-190">儲存並關閉 KafkaSource.java 檔案。</span><span class="sxs-lookup"><span data-stu-id="d44f1-190">Save and close the *KafkaSource.java* file.</span></span>
+1. <span data-ttu-id="526f7-191">儲存並關閉 KafkaSource.java 檔案。</span><span class="sxs-lookup"><span data-stu-id="526f7-191">Save and close the *KafkaSource.java* file.</span></span>
 
-### <a name="create-a-new-class-for-the-sink-connector"></a><span data-ttu-id="d44f1-191">建立新的接收連接器類別</span><span class="sxs-lookup"><span data-stu-id="d44f1-191">Create a new class for the sink connector</span></span>
+### <a name="create-a-new-class-for-the-sink-connector"></a><span data-ttu-id="526f7-192">建立新的接收連接器類別</span><span class="sxs-lookup"><span data-stu-id="526f7-192">Create a new class for the sink connector</span></span>
 
-1. <span data-ttu-id="d44f1-192">在應用程式的 package 目錄中，建立名為 KafkaSink.java 的新 Java 檔案，然後在文字編輯器中開啟檔案，並加入下列幾行：</span><span class="sxs-lookup"><span data-stu-id="d44f1-192">Create a new Java file named *KafkaSink.java* in the package directory of your app, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="526f7-193">在應用程式的 package 目錄中，建立名為 KafkaSink.java 的新 Java 檔案，然後在文字編輯器中開啟檔案，並加入下列幾行：</span><span class="sxs-lookup"><span data-stu-id="526f7-193">Create a new Java file named *KafkaSink.java* in the package directory of your app, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.wingtiptoys.kafka;
@@ -339,31 +339,31 @@ ms.locfileid: "50746999"
    }
    ```
 
-1. <span data-ttu-id="d44f1-193">儲存並關閉 KafkaSink.java 檔案。</span><span class="sxs-lookup"><span data-stu-id="d44f1-193">Save and close the *KafkaSink.java* file.</span></span>
+1. <span data-ttu-id="526f7-194">儲存並關閉 KafkaSink.java 檔案。</span><span class="sxs-lookup"><span data-stu-id="526f7-194">Save and close the *KafkaSink.java* file.</span></span>
 
-## <a name="build-and-test-your-application"></a><span data-ttu-id="d44f1-194">建置與測試您的應用程式</span><span class="sxs-lookup"><span data-stu-id="d44f1-194">Build and test your application</span></span>
+## <a name="build-and-test-your-application"></a><span data-ttu-id="526f7-195">建置與測試您的應用程式</span><span class="sxs-lookup"><span data-stu-id="526f7-195">Build and test your application</span></span>
 
-1. <span data-ttu-id="d44f1-195">開啟命令提示字元，並將目錄切換到 *pom.xml* 檔案所在的資料夾；例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-195">Open a command prompt and change directory to the folder where your *pom.xml* file is located; for example:</span></span>
+1. <span data-ttu-id="526f7-196">開啟命令提示字元，並將目錄切換到 *pom.xml* 檔案所在的資料夾；例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-196">Open a command prompt and change directory to the folder where your *pom.xml* file is located; for example:</span></span>
 
    `cd C:\SpringBoot\kafka`
 
-   <span data-ttu-id="d44f1-196">-或-</span><span class="sxs-lookup"><span data-stu-id="d44f1-196">-or-</span></span>
+   <span data-ttu-id="526f7-197">-或-</span><span class="sxs-lookup"><span data-stu-id="526f7-197">-or-</span></span>
 
    `cd /users/example/home/kafka`
 
-1. <span data-ttu-id="d44f1-197">使用 Maven 建置 Spring Boot 應用程式並加以執行；例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-197">Build your Spring Boot application with Maven and run it; for example:</span></span>
+1. <span data-ttu-id="526f7-198">使用 Maven 建置 Spring Boot 應用程式並加以執行；例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-198">Build your Spring Boot application with Maven and run it; for example:</span></span>
 
    ```shell
    mvn clean package
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="d44f1-198">當您的應用程式執行時，可以使用cURL 來測試您的應用程式；例如：</span><span class="sxs-lookup"><span data-stu-id="d44f1-198">Once your application is running, you can use *curl* to test your application; for example:</span></span>
+1. <span data-ttu-id="526f7-199">當您的應用程式執行時，可以使用cURL 來測試您的應用程式；例如：</span><span class="sxs-lookup"><span data-stu-id="526f7-199">Once your application is running, you can use *curl* to test your application; for example:</span></span>
 
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   <span data-ttu-id="d44f1-199">您應該會看到 "hello" 已發佈至應用程式記錄檔。</span><span class="sxs-lookup"><span data-stu-id="d44f1-199">You should see "hello" posted to your application's logs.</span></span> <span data-ttu-id="d44f1-200">例如︰</span><span class="sxs-lookup"><span data-stu-id="d44f1-200">For example:</span></span>
+   <span data-ttu-id="526f7-200">您應該會看到 "hello" 已發佈至應用程式記錄檔。</span><span class="sxs-lookup"><span data-stu-id="526f7-200">You should see "hello" posted to your application's logs.</span></span> <span data-ttu-id="526f7-201">例如︰</span><span class="sxs-lookup"><span data-stu-id="526f7-201">For example:</span></span>
 
    ```shell
    [http-nio-8080-exec-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version : 1.0.2
@@ -374,7 +374,7 @@ ms.locfileid: "50746999"
 
 > [!NOTE]
 > 
-> <span data-ttu-id="d44f1-201">基於測試目的，您可以修改 KafkaSource.java，使其包含簡單的 HTML 表單，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="d44f1-201">For testing purposes, you could modify your *KafkaSource.java* so that it contains a simple HTML form like the following example:</span></span>
+> <span data-ttu-id="526f7-202">基於測試目的，您可以修改 KafkaSource.java，使其包含簡單的 HTML 表單，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="526f7-202">For testing purposes, you could modify your *KafkaSource.java* so that it contains a simple HTML form like the following example:</span></span>
 > 
 > ```java
 > package com.wingtiptoys.kafka;
@@ -412,30 +412,30 @@ ms.locfileid: "50746999"
 > }
 > ```
 > 
-> <span data-ttu-id="d44f1-202">這可讓您使用網頁瀏覽器來測試您的應用程式：</span><span class="sxs-lookup"><span data-stu-id="d44f1-202">This will allow you to use a web browser to test your application:</span></span>
+> <span data-ttu-id="526f7-203">這可讓您使用網頁瀏覽器來測試您的應用程式：</span><span class="sxs-lookup"><span data-stu-id="526f7-203">This will allow you to use a web browser to test your application:</span></span>
 > 
 > ![使用網頁瀏覽器測試應用程式][TB01]
 > 
-> <span data-ttu-id="d44f1-204">當您提交表單時，應用程式會顯示結果：</span><span class="sxs-lookup"><span data-stu-id="d44f1-204">When you submit the form, your application will display the results:</span></span>
+> <span data-ttu-id="526f7-205">當您提交表單時，應用程式會顯示結果：</span><span class="sxs-lookup"><span data-stu-id="526f7-205">When you submit the form, your application will display the results:</span></span>
 > 
 > ![網頁瀏覽器中的應用程式回應][TB02]
 > 
 
-## <a name="next-steps"></a><span data-ttu-id="d44f1-206">後續步驟</span><span class="sxs-lookup"><span data-stu-id="d44f1-206">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="526f7-207">後續步驟</span><span class="sxs-lookup"><span data-stu-id="526f7-207">Next steps</span></span>
 
-<span data-ttu-id="d44f1-207">若要深入了解適用於事件中樞 Stream Binder 和 Apache Kafka 的 Azure 支援，請參閱下列文章：</span><span class="sxs-lookup"><span data-stu-id="d44f1-207">For more information about Azure support for Event Hub Stream Binder and Apache Kafka, see the following articles:</span></span>
+<span data-ttu-id="526f7-208">若要深入了解適用於事件中樞 Stream Binder 和 Apache Kafka 的 Azure 支援，請參閱下列文章：</span><span class="sxs-lookup"><span data-stu-id="526f7-208">For more information about Azure support for Event Hub Stream Binder and Apache Kafka, see the following articles:</span></span>
 
-* [<span data-ttu-id="d44f1-208">Azure 事件中樞是什麼？</span><span class="sxs-lookup"><span data-stu-id="d44f1-208">What is Azure Event Hubs?</span></span>](/azure/event-hubs/event-hubs-about)
+* [<span data-ttu-id="526f7-209">Azure 事件中樞是什麼？</span><span class="sxs-lookup"><span data-stu-id="526f7-209">What is Azure Event Hubs?</span></span>](/azure/event-hubs/event-hubs-about)
 
-* [<span data-ttu-id="d44f1-209">適用於 Apache Kafka 的 Azure 事件中樞</span><span class="sxs-lookup"><span data-stu-id="d44f1-209">Azure Event Hubs for Apache Kafka</span></span>](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)
+* [<span data-ttu-id="526f7-210">適用於 Apache Kafka 的 Azure 事件中樞</span><span class="sxs-lookup"><span data-stu-id="526f7-210">Azure Event Hubs for Apache Kafka</span></span>](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)
 
-* [<span data-ttu-id="d44f1-210">使用 Azure 入口網站來建立事件中樞命名空間和事件中樞</span><span class="sxs-lookup"><span data-stu-id="d44f1-210">Create an Event Hubs namespace and an event hub using the Azure portal</span></span>](/azure/event-hubs/event-hubs-create)
+* [<span data-ttu-id="526f7-211">使用 Azure 入口網站來建立事件中樞命名空間和事件中樞</span><span class="sxs-lookup"><span data-stu-id="526f7-211">Create an Event Hubs namespace and an event hub using the Azure portal</span></span>](/azure/event-hubs/event-hubs-create)
 
-* [<span data-ttu-id="d44f1-211">建立已啟用 Apache kafka 的事件中樞</span><span class="sxs-lookup"><span data-stu-id="d44f1-211">Create Apache Kafka enabled event hubs</span></span>](/azure/event-hubs/event-hubs-create-kafka-enabled)
+* [<span data-ttu-id="526f7-212">建立已啟用 Apache kafka 的事件中樞</span><span class="sxs-lookup"><span data-stu-id="526f7-212">Create Apache Kafka enabled event hubs</span></span>](/azure/event-hubs/event-hubs-create-kafka-enabled)
 
-<span data-ttu-id="d44f1-212">如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱 [適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。</span><span class="sxs-lookup"><span data-stu-id="d44f1-212">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+<span data-ttu-id="526f7-213">如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱 [適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。</span><span class="sxs-lookup"><span data-stu-id="526f7-213">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
 
-<span data-ttu-id="d44f1-213">**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。</span><span class="sxs-lookup"><span data-stu-id="d44f1-213">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="d44f1-214">[Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。</span><span class="sxs-lookup"><span data-stu-id="d44f1-214">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="d44f1-215">為了協助開發人員開始使用 Spring Boot， <https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。</span><span class="sxs-lookup"><span data-stu-id="d44f1-215">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="d44f1-216">除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。</span><span class="sxs-lookup"><span data-stu-id="d44f1-216">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
+<span data-ttu-id="526f7-214">**[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。</span><span class="sxs-lookup"><span data-stu-id="526f7-214">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="526f7-215">[Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。</span><span class="sxs-lookup"><span data-stu-id="526f7-215">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="526f7-216">為了協助開發人員開始使用 Spring Boot， <https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。</span><span class="sxs-lookup"><span data-stu-id="526f7-216">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="526f7-217">除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。</span><span class="sxs-lookup"><span data-stu-id="526f7-217">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
 
 <!-- URL List -->
 
