@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: 115a095d-1b70-41d6-adb4-78f24b2a4451
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 12/12/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: dd76cb3a0355e4e8471b7a32b6b33cb71bd3f16b
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 0cbb515a62e540fdc9decb8055bb57e0cb35e7b2
+ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892789"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53638987"
 ---
 # <a name="azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ
 IntelliJ 的 Azure 工具組提供範本和功能，您可以使用這些範本和功能透過 IntelliJ 整合式開發環境 (IDE) 輕鬆地建立、開發、測試及部署 Azure 應用程式。
@@ -66,7 +66,7 @@ IntelliJ 的 Azure 工具組提供範本和功能，您可以使用這些範本�
 
 * [JetBrains 外掛程式存放庫中的 Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij)
 
-如需有關使用 [Java 搭配 Azure 的詳細資訊](https://docs.microsoft.com/java/azure/)，請參閱 和[適用於 Visual Studio Team Services 的 Java 工具](https://java.visualstudio.com/)。
+如需有關使用 [Java 搭配 Azure 的詳細資訊](https://docs.microsoft.com/java/azure/)，請參閱 和[適用於 Visual Studio Team Services 的 Java 工具](/azure/devops/java/)。
 
 > [!NOTE]
 > 
@@ -78,7 +78,6 @@ IntelliJ 的 Azure 工具組提供範本和功能，您可以使用這些範本�
 <!-- URL List -->
 
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->
 
