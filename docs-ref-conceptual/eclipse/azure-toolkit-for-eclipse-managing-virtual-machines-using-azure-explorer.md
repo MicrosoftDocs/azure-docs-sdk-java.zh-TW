@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 53dfbfb0de2bcb56ebfc4d5ca2c4c19528edcfbf
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 7f3b4a6adb4234bbf11f0f7cddafbe99fa0ff3df
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338692"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636694"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>使用 Azure Explorer for Eclipse 來管理虛擬機器
 
@@ -47,11 +47,11 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
 4. 在 [選取虛擬機器映像] 視窗中，輸入下列資訊︰
 
-   * **位置**︰指定要建立虛擬機器的位置 (例如「美國西部」)。
+   * **位置**：指定要建立虛擬機器的位置 (例如「美國西部」)。
 
-   * **發行者**︰指定是哪個發行者建立您將用於建立虛擬機器的映像 (例如「Microsoft」)。
+   * **發行者**：指定是哪個發行者建立您將用於建立虛擬機器的映像 (例如「Microsoft」)。
 
-   * **供應項目**︰從選取的發行者中指定要使用的虛擬機器供應項目 (例如「JDK」)。
+   * **供應項目**：從選取的發行者中指定要使用的虛擬機器供應項目 (例如「JDK」)。
 
    * **SKU**︰從選取的供應項目中指定要使用的 Stockkeeping 單元 (SKU) (例如「JDK_8」)。
 
@@ -65,9 +65,9 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
    * **虛擬機器名稱**：指定您新虛擬機器的名稱，其必須以字母開頭，且只能包含字母、數字及連字號。
 
-   * **大小**︰指定要配置給虛擬機器的核心和記憶體數目。
+   * **大小**：指定要配置給虛擬機器的核心和記憶體數目。
 
-   * **使用者名稱**︰指定要管理您的虛擬機器所建立的系統管理員帳戶。
+   * **使用者名稱**：指定要管理您的虛擬機器所建立的系統管理員帳戶。
 
    * **密碼**和**確認**︰指定您系統管理員帳戶的密碼。
 
@@ -77,13 +77,13 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
 8. 在 [建立新的儲存體帳戶] 視窗中輸入下列資訊：
 
-   * **資源群組**︰指定虛擬機器的資源群組。 選取下列其中一個選項：
-     * **新建**：指定您想要建立新的資源群組。
+   * **資源群組**：指定虛擬機器的資源群組。 選取下列其中一個選項：
+     * **建立新項目**：指定您想要建立新的資源群組。
      * **使用現有項目**︰指定您要選取已與您 Azure 帳戶相關聯的資源群組。
 
        ![新建儲存體帳戶對話方塊][CR05]
 
-   * **儲存體帳戶**︰指定要用來儲存虛擬機器的儲存體帳戶。 您可以使用現有的儲存體帳戶或建立新帳戶。
+   * **儲存體帳戶**：指定要用來儲存虛擬機器的儲存體帳戶。 您可以使用現有的儲存體帳戶或建立新帳戶。
 
    * **虛擬網路**和**子網路**︰指定虛擬機器所要連線的虛擬網路和子網路。 您可以使用現有的網路和子網路，也可以建立新的網路和子網路。 如果您選取 [新建]，畫面上會顯示下列對話方塊︰
 
@@ -91,11 +91,11 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
 9. 在 [相關聯的資源] 視窗中，輸入下列資訊：
 
-   * **公用 IP 位址**︰指定虛擬機器的對外 IP 位址。 您可以選擇建立新的 IP 位址，但如果虛擬機器不會有公用 IP 位址，您也可以選取 [(無)]。
+   * **公用 IP 位址**：指定虛擬機器的對外 IP 位址。 您可以選擇建立新的 IP 位址，但如果虛擬機器不會有公用 IP 位址，您也可以選取 [(無)]。
 
    * **網路安全性群組**︰為虛擬機器指定選用的網路防火牆。 您可以選取現有防火牆，但如果虛擬機器不會使用網路防火牆，您也可以選取 [(無)]。
 
-   * **可用性設定組**︰指定虛擬機器可以加入的選用可用性設定組。 您可以選取現有的可用性設定組、建立新的可用性設定組，如果虛擬機器將不屬於任何可用性設定組，則可選取 [(無)]。
+   * **可用性設定組**：指定虛擬機器可以加入的選用可用性設定組。 您可以選取現有的可用性設定組、建立新的可用性設定組，如果虛擬機器將不屬於任何可用性設定組，則可選取 [(無)]。
 
    ![相關聯的資源視窗][CR07]
 
@@ -158,8 +158,8 @@ Azure Explorer 是 Azure Toolkit for Eclipse 一部分，可為 Java 開發人�
 
 [Azure 中的 Windows 虛擬機器大小]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure 中的 Linux 虛擬機器大小]: /azure/virtual-machines/virtual-machines-linux-sizes
-[Windows 虛擬機器定價]: /pricing/details/virtual-machines/windows/
-[Linux 虛擬機器定價]: /pricing/details/virtual-machines/linux/
+[Windows 虛擬機器定價]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Linux 虛擬機器定價]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

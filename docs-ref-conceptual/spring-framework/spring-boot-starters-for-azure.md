@@ -8,18 +8,18 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 678d4b279cecb83c95b3bf0f6bcdf1581924aa62
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 69c0381313994796af31d5301ceadb9f6f40dcb5
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893499"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991552"
 ---
 # <a name="spring-boot-starters-for-azure"></a>適用於 Azure 的 Spring Boot Starter
 
@@ -229,18 +229,25 @@ ms.locfileid: "48893499"
 
 ## <a name="next-steps"></a>後續步驟
 
+若要深入了解 Spring 和 Azure，請繼續閱讀「Azure 上的 Spring」文件中心中的資訊。
+
+> [!div class="nextstepaction"]
+> [Azure 上的 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>其他資源
+
 如需在 Azure 上使用 [Spring Boot] 應用程式的詳細資訊，請參閱 [Azure 上的 Spring]。
 
-如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
+如需如何搭配使用 Azure 和 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[使用 Azure DevOps 和 Java]。
 
 如需開始使用您自己的 Spring Boot 應用程式的說明，請參閱 **Spring Initializr**，網址為 https://start.spring.io/。
 
 <!-- URL List -->
 
-[適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
-[適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
+[適用於 Java 開發人員的 Azure]: /java/azure/
+[使用 Azure DevOps 和 Java]: /azure/devops/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Azure 上的 Spring]: https://docs.microsoft.com/java/azure/spring-framework/
+[Azure 上的 Spring]: /java/azure/spring-framework/
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 

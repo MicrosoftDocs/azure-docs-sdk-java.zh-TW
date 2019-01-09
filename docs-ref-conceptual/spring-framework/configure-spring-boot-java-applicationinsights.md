@@ -8,26 +8,22 @@ manager: alexklim
 editor: ''
 ms.assetid: ''
 ms.author: dhdoshi
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: Azure Monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: eef5afa1bcd8ceb92eca1584df8816b73ac78948
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: f69cdcc5b479e83b230f23a8a76f96284a1b785b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338732"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991432"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>將 Spring Boot Initializer 應用程式設定為使用 Application Insights
 
 本文將逐步引導您使用 **[Spring Initializr]** 建立 Spring Boot 應用程式，其使用 Azure Application Insights Spring Boot 簡易版來進行雲端 JAVA 應用程式的端對端監視。
-
-> [!NOTE]
-> 
-> *此簡易版目前為 *BETA 版 (公開預覽)<em>。</em>
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -91,7 +87,7 @@ ms.locfileid: "52338732"
  <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>applicationinsights-spring-boot-starter</artifactId>
-    <version>1.0.1-BETA</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -222,7 +218,7 @@ ms.locfileid: "52338732"
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-spring-boot-starter</artifactId>
-        <version>1.0.1-BETA</version>
+        <version>1.1.1</version>
     </dependency>
 
     <dependency>
@@ -272,13 +268,20 @@ ms.locfileid: "52338732"
 
 ## <a name="next-steps"></a>後續步驟
 
+若要深入了解 Spring 和 Azure，請繼續閱讀「Azure 上的 Spring」文件中心中的資訊。
+
+> [!div class="nextstepaction"]
+> [Azure 上的 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>其他資源
+
 如需在 Azure 上使用 Spring Boot 應用程式的詳細資訊，請參閱下列文章：
 
 * [將 Spring Boot 應用程式部署到 Azure App Service](deploy-spring-boot-java-web-app-on-azure.md)
 
 * [在 Azure Container Service 的 Kubernetes 叢集上執行 Spring Boot 應用程式](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Application Insights 支援自動收集外部相依性，及其與連入要求的相互關聯。 我們目前支援 Oracle、MsSQL、MySQL 和 Redis 的自動集合。 如需啟用自動集合的詳細資訊，請遵循[如何使用 Application Insights JAVA 代理程式](https://docs.microsoft.com/azure/application-insights/app-insights-java-agent)一文。
+Application Insights 支援自動收集外部相依性，及其與連入要求的相互關聯。 我們目前支援 Oracle、MsSQL、MySQL 和 Redis 的自動集合。 如需啟用自動集合的詳細資訊，請遵循[如何使用 Application Insights JAVA 代理程式](/azure/application-insights/app-insights-java-agent)一文。
 
 如需 Azure Application Insights 及其監控功能的詳細資訊，請參閱 **[Application Insights]** 首頁。
 
@@ -286,21 +289,21 @@ Application Insights 支援自動收集外部相依性，及其與連入要求�
 
 針對功能要求和潛在錯誤 (bug)，請在 [GitHub](https://github.com/Microsoft/ApplicationInsights-Java/issues) 存放庫開啟問題。
 
-如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
+如需如何搭配使用 Azure 和 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[使用 Azure DevOps 和 Java]。
 
 **[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot，[https://github.com/spring-guides/](https://github.com/spring-guides/) 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
 
 <!-- URL List -->
 
-[適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
+[適用於 Java 開發人員的 Azure]: /java/azure/
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
-[適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
+[使用 Azure DevOps 和 Java]: /azure/devops/
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot 設定檔特定屬性]: https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-profile-specific-properties
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
-[Application Insights]: https://docs.microsoft.com/azure/application-insights/
+[Application Insights]: /azure/application-insights/
 
 <!-- IMG List -->
 

@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 57441a9cbdf0805e08f303c1f05049ce7f668ac0
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: a3aff77bc2fd2dac0396187d9e6b27910bc60e58
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338662"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636413"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>使用適用於 IntelliJ 的 Azure Explorer 來管理虛擬機器
 
@@ -46,15 +46,15 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
 4. 在 [選取虛擬機器映像] 視窗中，輸入下列資訊︰
 
-   * **位置**︰指定要建立虛擬機器的位置 (例如「美國西部」)。 
+   * **位置**：指定要建立虛擬機器的位置 (例如「美國西部」)。 
 
    * **建議的映像**︰指定您會從常用映像的簡短清單中選擇映像。
 
    * **自訂映像**︰指定您會藉由提供下列資訊來選擇自訂映像︰
 
-      * **發行者**︰指定要讓虛擬機器使用的映像是由哪個發行者所建立 (例如「Microsoft」)。
+      * **發行者**：指定要讓虛擬機器使用的映像是由哪個發行者所建立 (例如「Microsoft」)。
 
-      * **供應項目**︰從選取的發行者中指定要使用的虛擬機器供應項目 (例如「JDK」)。
+      * **供應項目**：從選取的發行者中指定要使用的虛擬機器供應項目 (例如「JDK」)。
 
       * **SKU**︰從選取的供應項目中指定要使用的 Stockkeeping 單元 (SKU) (例如「JDK_8」)。
 
@@ -68,9 +68,9 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
    * **虛擬機器名稱**：指定您新虛擬機器的名稱，其必須以字母開頭，且只能包含字母、數字及連字號。
 
-   * **大小**︰指定要配置給虛擬機器的核心和記憶體數目。
+   * **大小**：指定要配置給虛擬機器的核心和記憶體數目。
 
-   * **使用者名稱**︰指定要管理您的虛擬機器所建立的系統管理員帳戶。
+   * **使用者名稱**：指定要管理您的虛擬機器所建立的系統管理員帳戶。
 
    * **密碼**和**確認**︰指定您系統管理員帳戶的密碼。
 
@@ -80,13 +80,13 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
 8. 在 [相關聯的資源] 視窗中，輸入下列資訊：
 
-   * **資源群組**︰指定虛擬機器的資源群組。 選取下列其中一個選項：
-      * **新建**：指定您想要建立新的資源群組。
+   * **資源群組**：指定虛擬機器的資源群組。 選取下列其中一個選項：
+      * **建立新項目**：指定您想要建立新的資源群組。
       * **使用現有項目**︰指定您要從 Azure 帳戶相關聯的資源群組清單中進行選擇。
 
-       ![[相關聯的資源] 視窗][CR07]
+       ![相關聯的資源視窗][CR07]
 
-   * **儲存體帳戶**︰指定要用來儲存虛擬機器的儲存體帳戶。 您可以選擇現有儲存體帳戶或建立新的帳戶。 如果您選擇 [新建]，畫面上會隨即顯示下列對話方塊︰
+   * **儲存體帳戶**：指定要用來儲存虛擬機器的儲存體帳戶。 您可以選擇現有儲存體帳戶或建立新的帳戶。 如果您選擇 [新建]，畫面上會隨即顯示下列對話方塊︰
 
       ![[建立儲存體帳戶] 對話方塊][CR05]
 
@@ -94,11 +94,11 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
       ![[建立虛擬網路] 對話方塊][CR06]
 
-   * **公用 IP 位址**︰指定虛擬機器的對外 IP 位址。 您可以選擇建立新的 IP 位址，但如果虛擬機器不會有公用 IP 位址，您也可以選取 [(無)]。 
+   * **公用 IP 位址**：指定虛擬機器的對外 IP 位址。 您可以選擇建立新的 IP 位址，但如果虛擬機器不會有公用 IP 位址，您也可以選取 [(無)]。 
 
    * **網路安全性群組**︰為虛擬機器指定選用的網路防火牆。 您可以選取現有防火牆，但如果虛擬機器不會使用網路防火牆，您也可以選取 [(無)]。 
 
-   * **可用性設定組**︰指定虛擬機器可以加入的選用可用性設定組。 您可以選取現有的可用性設定組、建立新的可用性設定組，也可以在虛擬機器不會加入任何可用性設定組時選取 [(無)]。
+   * **可用性設定組**：指定虛擬機器可以加入的選用可用性設定組。 您可以選取現有的可用性設定組、建立新的可用性設定組，也可以在虛擬機器不會加入任何可用性設定組時選取 [(無)]。
 
 9. 按一下 [完成] 。  
     [Azure Explorer] 工具視窗中便會出現新的虛擬機器。 
@@ -159,8 +159,8 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 [適用於 IntelliJ 的 Azure 工具組登入指示]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Azure 中的 Windows 虛擬機器大小]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure 中的 Linux 虛擬機器大小]: /azure/virtual-machines/virtual-machines-linux-sizes
-[Windows 虛擬機器定價]: /pricing/details/virtual-machines/windows/
-[Linux 虛擬機器定價]: /pricing/details/virtual-machines/linux/
+[Windows 虛擬機器定價]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Linux 虛擬機器定價]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

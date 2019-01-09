@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 2c4dfe35ed2f4728e5704aac938410f847fe5b1f
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 4b720cf4639a12c6dd8cc5040107c1b52de6f642
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338672"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991402"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>將 Spring Boot Initializer 應用程式設定為透過 Azure Redis Cache 在雲端使用 Redis
 
@@ -198,13 +198,20 @@ ms.locfileid: "52338672"
 
 ## <a name="next-steps"></a>後續步驟
 
+若要深入了解 Spring 和 Azure，請繼續閱讀「Azure 上的 Spring」文件中心中的資訊。
+
+> [!div class="nextstepaction"]
+> [Azure 上的 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>其他資源
+
 如需在 Azure 上使用 Spring Boot 應用程式的詳細資訊，請參閱下列文章：
 
 * [將 Spring Boot 應用程式部署到 Azure App Service](deploy-spring-boot-java-web-app-on-azure.md)
 
 * [在 Azure Container Service 的 Kubernetes 叢集上執行 Spring Boot 應用程式](deploy-spring-boot-java-app-on-kubernetes.md)
 
-如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
+如需如何搭配使用 Azure 和 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[使用 Azure DevOps 和 Java]。
 
 如需有關在 Azure 上開始搭配使用 Redis 快取與 Java 的詳細資訊，請參閱[如何搭配使用 Azure Redis 快取與 Java][Redis Cache with Java]。
 
@@ -212,9 +219,9 @@ ms.locfileid: "52338672"
 
 <!-- URL List -->
 
-[適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
+[適用於 Java 開發人員的 Azure]: /java/azure/
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
-[適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
+[使用 Azure DevOps 和 Java]: /azure/devops/java/
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

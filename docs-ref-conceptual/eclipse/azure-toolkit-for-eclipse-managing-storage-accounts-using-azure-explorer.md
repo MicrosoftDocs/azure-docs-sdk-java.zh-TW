@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 310d95436189af09f794154f4c9f0e71c47d88c8
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: dc39298d88f2fb0b2f56d6fbc0071b68b8d27989
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48898872"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636654"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>使用適用於 Eclipse 的 Azure Explorer 來管理儲存體帳戶
 
@@ -45,19 +45,19 @@ Azure Explorer 是 Azure Toolkit for Eclipse 的一部分，提供易於使用�
 
    * **名稱**：指定新儲存體帳戶的名稱。
 
-   * **訂用帳戶**：指定您要用於新儲存體帳戶的 Azure 訂用帳戶。
+   * 訂用帳戶：指定您要用於新儲存體帳戶的 Azure 訂用帳戶。
 
-   * **資源群組**︰指定虛擬機器的資源群組。 選取下列其中一個選項：
-      * **新建**：指定您想要建立新的資源群組。
+   * **資源群組**：指定虛擬機器的資源群組。 選取下列其中一個選項：
+      * **建立新項目**：指定您想要建立新的資源群組。
       * **使用現有項目**︰指定您會從 Azure 帳戶相關聯的資源群組清單中進行選擇。
 
-   * **區域**︰指定要建立儲存體帳戶的位置 (例如「美國西部」)。
+   * **區域**：指定要建立儲存體帳戶的位置 (例如「美國西部」)。
 
    * **帳戶種類**︰指定要建立的儲存體帳戶類型 (例如「Blob 儲存體」)。 如需詳細資訊，請參閱[關於 Azure 儲存體帳戶]。
 
-   * **效能**︰從選取的發行者指定要使用的儲存體帳戶供應項目 (例如「進階」)。 如需詳細資訊，請參閱 [Azure 儲存體延展性和效能目標]。
+   * **效能**：從選取的發行者指定要使用的儲存體帳戶供應項目 (例如「進階」)。 如需詳細資訊，請參閱 [Azure 儲存體延展性和效能目標]。
 
-   * **複寫**︰指定儲存體帳戶的複寫 (例如「區域備援」)。 如需詳細資訊，請參閱 [Azure 儲存體複寫]。
+   * **複寫**：指定儲存體帳戶的複寫 (例如「區域備援」)。 如需詳細資訊，請參閱 [Azure 儲存體複寫]。
 
 1. 當您指定好上述所有選項時，按一下 [建立]。
 
@@ -122,8 +122,8 @@ Azure Explorer 是 Azure Toolkit for Eclipse 的一部分，提供易於使用�
 
 [Azure 中的 Windows 儲存體帳戶大小]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure 中的 Linux 儲存體帳戶大小]: /azure/virtual-machines/virtual-machines-linux-sizes
-[Windows 儲存體帳戶定價]: /pricing/details/virtual-machines/windows/
-[Linux 儲存體帳戶定價]: /pricing/details/virtual-machines/linux/
+[Windows 儲存體帳戶定價]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Linux 儲存體帳戶定價]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

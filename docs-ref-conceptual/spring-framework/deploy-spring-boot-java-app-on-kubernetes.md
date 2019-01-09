@@ -8,19 +8,19 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: d5ebfb7fc7279c745f77848dae397509662f0c0d
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 89a7a6900e5e0a544b4dc3fde960f62aeab6ebef
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338722"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991472"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>在 Azure Kubernetes Service 中的 Kubernetes 叢集上部署 Spring Boot 應用程式
 
@@ -78,7 +78,7 @@ ms.locfileid: "52338722"
    curl http://localhost:8080
    ```
 
-1. 您應該會看到顯示下列訊息：**Hello Docker World**
+1. 您應該會看到下列訊息：**Hello Docker World**
 
    ![在本機瀏覽範例應用程式][SB01]
 
@@ -304,14 +304,21 @@ ms.locfileid: "52338722"
 
 ## <a name="next-steps"></a>後續步驟
 
+若要深入了解 Spring 和 Azure，請繼續閱讀「Azure 上的 Spring」文件中心中的資訊。
+
+> [!div class="nextstepaction"]
+> [Azure 上的 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>其他資源
+
 如需在 Azure 上使用 Spring Boot 的詳細資訊，請參閱下列文章：
 
 * [將 Spring Boot 應用程式部署到 Azure App Service](deploy-spring-boot-java-web-app-on-azure.md)
 * [將 Spring Boot 應用程式部署到 Azure Container Service 中的 Linux](deploy-spring-boot-java-app-on-linux.md)
 
-如需有關使用 Azure 搭配 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[適用於 Visual Studio Team Services 的 Java 工具]。
+如需如何搭配使用 Azure 和 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[使用 Azure DevOps 和 Java]。
 
-<!-- Newly added --> 如需使用 Visual Studio Code 將 Java 應用程式部署至 Kubernetes 的詳細資訊，請參閱 [Visual Studio Code Java 教學課程]。
+如需使用 Visual Studio Code 將 Java 應用程式部署至 Kubernetes 的詳細資訊，請參閱 [Visual Studio Code Java 教學課程]。
 
 如需 Spring Boot on Docker 範例專案的詳細資訊，請參閱 [Spring Boot on Docker Getting Started]。
 
@@ -321,7 +328,7 @@ ms.locfileid: "52338722"
 
 下列連結提供以 Azure 使用 Kubernetes 的其他資訊：
 
-* [在 Azure Kubernetes Service 中開始使用 Kubernetes 叢集](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+* [在 Azure Kubernetes Service 中開始使用 Kubernetes 叢集](/azure/aks/intro-kubernetes)
 
 如需使用 Kubernetes 命令列介面的詳細資訊，請參閱 **kubectl** 使用者指南，網址為 <https://kubernetes.io/docs/user-guide/kubectl/> 。
 
@@ -337,14 +344,14 @@ Kubernetes 網站有幾篇文章討論在私用登錄中使用映像：
 
 [Azure 命令列介面 (CLI)]: /cli/azure/overview
 [Azure Kubernetes Service (AKS)]: https://azure.microsoft.com/services/kubernetes-service/
-[適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
+[適用於 Java 開發人員的 Azure]: /java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [針對 Linux 上的 Azure Web 應用程式使用自訂 Docker 映像]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[適用於 Visual Studio Team Services 的 Java 工具]: https://java.visualstudio.com/
+[使用 Azure DevOps 和 Java]: /azure/devops/java/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [Maven]: http://maven.apache.org/
@@ -360,7 +367,7 @@ Kubernetes 網站有幾篇文章討論在私用登錄中使用映像：
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
-[從 Azure Kubernetes Service 對 Azure Container Registry 進行驗證]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
+[從 Azure Kubernetes Service 對 Azure Container Registry 進行驗證]: /azure/container-registry/container-registry-auth-aks/
 [Visual Studio Code Java 教學課程]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

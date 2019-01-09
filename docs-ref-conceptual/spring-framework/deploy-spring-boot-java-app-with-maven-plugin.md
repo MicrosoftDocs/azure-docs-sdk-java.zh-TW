@@ -7,20 +7,20 @@ author: rmcmurray
 manager: mbaldwin
 editor: brborges
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 066ac30697c6adccc0c6a7b9d57205de488bdc53
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 950b360eb525b0c6b97daad0798c27ded0582b8b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339002"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991342"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>將 Spring Boot JAR 檔案 Web 應用程式部署至 Linux 上的 Azure App Service
 
-本文示範如何使用[適用於 App Service Web Apps 的 Maven 外掛程式](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)，將 Spring Boot 應用程式封裝成 Java SE JAR，並部署至 [Linux 上的 Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/containers/)。 若要將應用程式相依性、執行階段及組態合併至單一可部署成品，請從 [Tomcat 與 WAR 檔案](/azure/app-service/containers/quickstart-java)中選擇 Java SE 部署。
+本文示範如何使用[適用於 App Service Web Apps 的 Maven 外掛程式](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)，將 Spring Boot 應用程式封裝成 Java SE JAR，並部署至 [Linux 上的 Azure App Service](/azure/app-service/containers/)。 若要將應用程式相依性、執行階段及組態合併至單一可部署成品，請從 [Tomcat 與 WAR 檔案](/azure/app-service/containers/quickstart-java)中選擇 Java SE 部署。
 
 
 如果您沒有 Azure 訂用帳戶，請在開始前建立[免費帳戶](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) 。
@@ -36,7 +36,7 @@ ms.locfileid: "52339002"
 
 ## <a name="install-and-sign-in-to-azure-cli"></a>安裝並登入 Azure CLI
 
-讓 Maven 外掛程式部署 Spring Boot 應用程式最簡單且最輕鬆的方式是使用 [Azure CLI](https://docs.microsoft.com/cli/azure/)。
+讓 Maven 外掛程式部署 Spring Boot 應用程式最簡單且最輕鬆的方式是使用 [Azure CLI](/cli/azure/)。
 
 使用 Azure CLI 登入您的 Azure 帳戶：
    
@@ -86,7 +86,7 @@ ms.locfileid: "52339002"
    curl http://localhost:8080
    ```
 
-1. 您應該會看到顯示下列訊息：**Greetings from Spring Boot!**
+1. 您應該會看到下列訊息：**Greetings from Spring Boot!**
 
 ## <a name="configure-maven-plugin-for-azure-app-service"></a>為 Azure App Service 設定 Maven 外掛程式
 
@@ -159,9 +159,16 @@ Maven 會將您的 Web 應用程式部署至 Azure；如果 Web 應用程式或 
 
    ![決定 Web 應用程式的 URL][AP02]
 
-使用與之前相同的 cURL 命令來確認部署是否成功；請使用入口網站中的 Web 應用程式 URL，不要使用 `localhost`。 您應該會看到顯示下列訊息：**Greetings from Spring Boot!** 
+使用與之前相同的 cURL 命令來確認部署是否成功；請使用入口網站中的 Web 應用程式 URL，不要使用 `localhost`。 您應該會看到下列訊息：**Greetings from Spring Boot!** 
 
 ## <a name="next-steps"></a>後續步驟
+
+若要深入了解 Spring 和 Azure，請繼續閱讀「Azure 上的 Spring」文件中心中的資訊。
+
+> [!div class="nextstepaction"]
+> [Azure 上的 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>其他資源
 
 如需本文所討論之各種技術的詳細資訊，請參閱下列文章：
 
@@ -176,17 +183,17 @@ Maven 會將您的 Web 應用程式部署至 Azure；如果 Web 應用程式或 
 <!-- URL List -->
 
 [Azure Command-Line Interface (CLI)]: /cli/azure/overview
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: /java/azure/
 [Azure 入口網站]: https://portal.azure.com/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Working with Azure DevOps and Java]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot Getting Started]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
-[適用於 Azure Web 應用程式的 Maven 外掛程式]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+[適用於 Azure Web 應用程式的 Maven 外掛程式]: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
 
 [Java Development Kit (JDK)]: https://aka.ms/azure-jdks
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->

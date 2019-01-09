@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: f94b2981f1e641a6e4b2d9d3028608a56a6590e7
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: cdd157abdb993517f7c880a7edaff10f0e3d1033
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338872"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991582"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>如何對 Azure 儲存體使用 Spring Boot Starter
 
@@ -347,11 +347,20 @@ ms.locfileid: "52338872"
 
      您應該會看到您所發佈的 "Hello World" 文字。
 
+## <a name="summary"></a>總結
+
+在此教學課程中，您已使用 **[Spring Initializr]** 建立了新的 Java 應用程式、也對應用程式新增了 Azure 儲存體入門版，同時已將應用程式設定為要將 Blob 上傳至 Azure 儲存體帳戶。
+
 ## <a name="next-steps"></a>後續步驟
 
-如需可供 Microsoft Azure 使用之其他 Spring Boot Starter 的詳細資訊，請參閱[適用於 Azure 的 Spring Boot Starter](spring-boot-starters-for-azure.md)。
+若要深入了解 Spring 和 Azure，請繼續閱讀「Azure 上的 Spring」文件中心中的資訊。
 
-如需將 Azure 功能整合到 Spring 架構應用程式的其他資訊，請參閱 [Azure 上的 Spring Framework](/java/azure/spring-framework/)。
+> [!div class="nextstepaction"]
+> [Azure 上的 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>其他資源
+
+如需可供 Microsoft Azure 使用之其他 Spring Boot Starter 的詳細資訊，請參閱[適用於 Azure 的 Spring Boot Starter](spring-boot-starters-for-azure.md)。
 
 如需可從 Spring Boot 應用程式呼叫之其他 Azure 儲存體 API 的詳細資訊，請參閱下列文章：
 * [如何從 Java 使用 Azure Blob 儲存體](/azure/storage/blobs/storage-java-how-to-use-blob-storage)
