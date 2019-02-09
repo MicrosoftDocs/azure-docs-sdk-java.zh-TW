@@ -8,18 +8,17 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/20/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: fdff8dc2bd7a29473314d5c0bc99b7bcda369156
+ms.sourcegitcommit: 54e7f077d694a5b1dd7fa6c8870b7d476af9829c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892589"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55648722"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>使用適用於 IntelliJ 的 Azure 工具組，在雲端中將 Hello World Web 應用程式部署到 Linux 容器
 
@@ -72,23 +71,15 @@ ms.locfileid: "48892589"
 
 1. 瀏覽至 [Azure 入口網站]並登入。
 
-   一旦您已在 Azure 入口網站登入您的帳戶後，就可以遵循[使用 Azure 入口網站建立私人 Docker 容器登錄]文章中的步驟，為便於了解，會在下列步驟中加以釋義。
+   一旦已在 Azure 入口網站登入您的帳戶後，就可以遵循[使用 Azure 入口網站建立私人 Docker 容器登錄]文章中的步驟，為便於了解，會在下列步驟中加以釋義。
 
-1. 依序按一下功能表的 [+ 新增] 圖示、[容器]，以及 [Azure Container Registry]。
+1. 依序按一下功能表的 [+ 建立資源] 圖示、[容器]，以及 [Container Registry]。
    
-   ![建立新的 Azure Container Registry][AR01]
-
-1. 當 Azure Container Registry 範本的資訊頁面顯示時，按一下 [建立]。 
-
-   ![建立新的 Azure Container Registry][AR02]
+   ![建立新的 Azure Container Registry][create-container-registry-01]
 
 1. 當 [建立容器登錄] 頁面顯示時，輸入您的 [登錄名稱] 和 [資源群組]，針對 [管理使用者] 選擇 [啟用]，然後按一下 [建立]。
 
-   ![設定 Azure Container Registry 設定][AR03]
-
-1. 一旦建立容器登錄之後，瀏覽至 Azure 入口網站中的容器登錄，然後按一下 [存取金鑰]。 將後續步驟的使用者名稱和密碼記下。
-
-   ![Azure Container Registry 存取金鑰][AR04]
+   ![設定 Azure Container Registry 設定][create-container-registry-02]
 
 ## <a name="deploy-your-web-app-in-a-docker-container"></a>在 Docker 容器中部署 Web 應用程式
 
@@ -98,33 +89,39 @@ ms.locfileid: "48892589"
 
    ![新增 Docker 支援][add-docker-support]
 
-1. 新增 Docker 支援之後，請在專案總管中以滑鼠右鍵按一下專案，選擇 [Azure]，然後按一下 [在 Web 應用程式 (Linux) 上執行]。
+1. 新增 Docker 支援之後，請在專案總管中以滑鼠右鍵按一下專案，選擇 [Azure]，然後按一下 [在用於容器的 Web App 上執行]。
 
-   ![在 Web 應用程式 (Linux) 上執行][run-on-web-app-linux]
+   ![在用於容器的 Web App 上執行][run-on-web-app-for-containers]
 
-1. 顯示 [在 Web 應用程式 (Linux) 上執行] 對話方塊時，請填寫必要資訊：
+1. 顯示 [在用於容器的 Web App 上執行] 對話方塊時，請填寫必要資訊：
 
-   * [名稱]：這會指定將顯示於 Azure 工具組的易記名稱。 
+   * **名稱**：這會指定將顯示於 Azure 工具組的易記名稱。 
 
-   * [伺服器 URL]：這會指定本文先前章節中容器登錄的 URL；這通常會使用下列語法："*registry*.azurecr.io"。 
+   * **Container Registry**：從您在本文的上一節內建立的下拉式選單中，選取容器登錄。 系統會自動填入 [伺服器 URL]、[使用者名稱]和 [密碼] 欄位。
 
-   * [使用者名稱] 和 [密碼]：指定本文先前章節中容器登錄的存取金鑰。 
-
-   * [映像與標記]：指定容器映像名稱；這通常會使用下列語法："*registry*.azurecr.io/*appname*:latest"，其中： 
+   * **映像與標記**：指定容器映像名稱；這通常會使用下列語法："*registry*.azurecr.io/*appname*:latest"，其中： 
       * registry 是本文先前章節中的容器登錄 
       * appname 是 Web 應用程式的名稱 
 
-   * [使用現有的 Web 應用程式] 或 [建立新的 Web 應用程式]：指定您是否要將容器部署至現有的 Web 應用程式或建立新的 Web 應用程式。 
+   * **使用現有的 Web 應用程式**或**建立新的 Web 應用程式**：指定是否要將容器部署至現有的 Web 應用程式或建立新的 Web 應用程式。 您指定的**應用程式名稱**將為 Web 應用程式建立 URL；例如：*wingtiptoys.azurewebsites.net* 。
 
-   * [資源群組]：指定您是否要使用現有的資源群組或建立新的資源群組。 
+   * **資源群組**：指定是否要使用現有的資源群組或建立新的資源群組。 
 
-   * [App Service 方案]：指定您是否要使用現有的 App Service 方案或建立新的 App Service 方案。 
+   * **App Service 方案**：指定是否要使用現有的應用程式服務方案或建立新的應用程式服務方案。 
 
-1. 完成以上所列設定時，請按一下 [執行]。
+   ![在用於容器的 Web App 上執行][run-on-web-app-linux]
 
-   ![建立 Web 應用程式][create-web-app]
+1. 完成以上所列設定時，請按一下 [執行]。 成功部署 Web 應用程式後，狀態會顯示在 [執行] 視窗中。
 
-1. 發佈 Web 應用程式之後，系統會將您的設定儲存為預設值，您可以按一下工具列上的綠色箭號圖示，在 Azure 上執行您的應用程式。 您可以按一下 Web 應用程式的下拉式功能表，然後按一下 [編輯組態]，修改這些設定。
+   ![已成功部署 Web 應用程式][successfully-deployed]
+
+1. 發佈 Web 應用程式之後，您可以瀏覽至稍早為 Web 應用程式指定的 URL；例如：*wingtiptoys.azurewebsites.net*。
+
+   ![瀏覽至您的 Web 應用程式][browsing-to-web-app]
+
+## <a name="optional-modify-your-web-app-publish-settings"></a>選用：修改您的 Web 應用程式發佈設定
+
+1. 發佈 Web 應用程式之後，系統會將設定儲存為預設值，您可以按一下工具列上的綠色箭號圖示，在 Azure 上執行您的應用程式。 您可以按一下 Web 應用程式的下拉式功能表，然後按一下 [編輯組態]，修改這些設定。
 
    ![[編輯組態] 功能表][edit-configuration-menu]
 
@@ -151,20 +148,18 @@ ms.locfileid: "48892589"
 
 <!-- IMG List -->
 
-[AR01]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR01.png
-[AR02]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR02.png
-[AR03]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR03.png
-[AR04]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR04.png
-
+[add-docker-support]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/add-docker-support.png
+[browsing-to-web-app]:  media/azure-toolkit-for-intellij-hello-world-web-app-linux/browsing-to-web-app.png
+[create-container-registry-01]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-container-registry-01.png
+[create-container-registry-02]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-container-registry-02.png
 [docker-settings-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/docker-settings-menu.png
+[edit-configuration-dialog]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-dialog.png
+[edit-configuration-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-menu.png
 [file-new-project]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/file-new-project.png
-[maven-archetype-webapp]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-archetype-webapp.png
 [groupid-and-artifactid]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/groupid-and-artifactid.png
+[maven-archetype-webapp]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-archetype-webapp.png
 [maven-options]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-options.png
 [project-name]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/project-name.png
-[add-docker-support]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/add-docker-support.png
+[run-on-web-app-for-containers]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/run-on-web-app-for-containers.png
 [run-on-web-app-linux]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/run-on-web-app-linux.png
-[create-web-app]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-web-app.png
-[edit-configuration-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-menu.png
-[edit-configuration-dialog]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-dialog.png
 [successfully-deployed]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/successfully-deployed.png
