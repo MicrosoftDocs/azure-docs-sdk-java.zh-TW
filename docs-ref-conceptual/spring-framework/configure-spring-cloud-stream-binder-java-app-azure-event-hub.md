@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 98b3dc1243bf293ede121eafd51b041649d165db
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 9223cc425fcef28369431fa1c7a7b93062a210c2
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991422"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335401"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>如何使用 Azure 事件中樞建立 Spring Cloud Stream Binder 應用程式
 
@@ -143,12 +143,10 @@ ms.locfileid: "53991422"
    ```xml
    <dependency>
       <groupId>com.microsoft.azure</groupId>
-      <artifactId>spring-cloud-azure-eventhub-stream-binder</artifactId>
-      <version>1.0.0.M2</version>
+      <artifactId>spring-cloud-azure-eventhubs-stream-binder</artifactId>
+      <version>1.1.0.RC2</version>
    </dependency>
    ```
-
-   ![編輯 pom.xml 檔案][SI03]
 
 1. 儲存並關閉 *pom.xml* 檔案。
 
@@ -197,6 +195,7 @@ ms.locfileid: "53991422"
      }
    ]
    ```
+   
 1. 指定您希望在 Azure 中使用的訂用帳戶 GUID，例如：
 
    ```azurecli
@@ -410,13 +409,14 @@ ms.locfileid: "53991422"
 
 * [如何搭配 Azure 事件中樞使用適用於 Apache Kafka 的 Spring Boot Starter](configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md)
 
-如需如何搭配使用 Azure 和 Java 的詳細資訊，請參閱 [適用於 Java 開發人員的 Azure] 和[使用 Azure DevOps 和 Java]。
+如需如何搭配使用 Azure 和 Java 的詳細資訊，請參閱[適用於 Java 開發人員的 Azure] 和[使用 Azure DevOps 和 Java]。
 
 **[Spring Framework]** 是一個開放原始碼解決方案，可協助 Java 開發人員建立企業級應用程式。 [Spring Boot] 是建立在該平台基礎上更為熱門的專案之一，其中會提供用來建立獨立 Java 應用程式的簡化方法。 為了協助開發人員開始使用 Spring Boot， <https://github.com/spring-guides/> 上提供了數個範例 Spring Boot 套件。 除了從基本的 Spring Boot 專案清單中進行選擇，**[Spring Initializr]** 還能協助開發人員開始建立自訂的 Spring Boot 應用程式。
 
 <!-- URL List -->
 
 [免費的 Azure 帳戶]: https://azure.microsoft.com/pricing/free-trial/
+[適用於 Java 開發人員的 Azure]: https://docs.microsoft.com/java/azure/
 [使用 Azure DevOps 和 Java]: /azure/devops/
 [MSDN 訂戶權益]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
