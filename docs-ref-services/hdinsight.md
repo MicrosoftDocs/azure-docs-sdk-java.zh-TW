@@ -8,12 +8,12 @@ ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
 ms.date: 11/21/2018
-ms.openlocfilehash: 96ecbedc90706775a80b97c42f0d55a46a45b8ac
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 3827b5744a5d08c53cbbff1db29eca34194c1625
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338682"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335431"
 ---
 # <a name="hdinsight-java-management-sdk-preview"></a>HDInsight Java 管理 SDK (預覽)
 
@@ -47,7 +47,6 @@ HDInsight Java SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 �
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-client-authentication</artifactId>
     <version>1.6.2</version>
-    <scope>test</scope>
   </dependency>
   ```
 
@@ -60,12 +59,12 @@ HDInsight Java SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 �
   </dependency>
   ```
 
-## <a name="authentication"></a>驗證
+## <a name="authentication"></a>Authentication
 
 SDK 必須先使用您的 Azure 訂用帳戶進行驗證。  請依照下列範例建立服務主體，並使用它來驗證。 此動作完成後，您會有 `HDInsightManagementClientImpl` 的執行個體，其中包含許多可用來執行管理作業的方法 (分述於下列各節中)。
 
 > [!NOTE]
-> 除了下列範例以外，還有其他方式可進行驗證，可能更符合您的需求。 所有方法皆概述於此處：[使用適用於 Java 的 Azure 管理程式庫來進行驗證](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable)
+> 除了下列範例以外，還有其他方式可進行驗證，可能更符合您的需求。 此處概述所有方法：[使用適用於 Java 的 Azure 管理程式庫來進行驗證](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable)
 
 ### <a name="authentication-example-using-a-service-principal"></a>使用服務主體的驗證範例
 
@@ -150,7 +149,8 @@ public class Main {
                 CLIENT_SECRET,
                 AzureEnvironment.AZURE);
 
-        HDInsightManagementClientImpl client = new HDInsightManagementClientImpl(credentials);
+        HDInsightManagementClientImpl client = new HDInsightManagementClientImpl(credentials)
+                .withSubscriptionId(SUBSCRIPTION_ID);
 ```
 
 
@@ -355,7 +355,7 @@ HDInsight 管理 SDK 也可用來透過 Operations Management Suite (OMS) 管理
 ### <a name="enable-oms-monitoring"></a>啟用 OMS 監視
 
 > [!NOTE]
-> 若要啟用 OMS 監視，您必須擁有現有的 Log Analytics 工作區。 如果您尚未建立此工作區，您可以參考下列資料了解其建立方式：[在 Azure 入口網站中建立 Log Analytics 工作區](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)。
+> 若要啟用 OMS 監視，您必須擁有現有的 Log Analytics 工作區。 如果您尚未建立工作區，您可以在此了解如何建立：[在 Azure 入口網站中建立 Log Analytics 工作區](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)。
 
 若要對您的叢集啟用 OMS 監視：
 
@@ -383,7 +383,7 @@ client.extensions().disableMonitoring("<Resource Group Name>", "<Cluster Name>")
 
 HDInsight 提供名為指令碼動作的設定方法，此方法會叫用自訂指令碼來自訂叢集。
 > [!NOTE]
-> 如需如何使用指令碼動作的詳細資訊，請參閱：[使用指令碼動作自訂以 Linux 為基礎的 HDInsight 叢集](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)
+> 您可以在此處找到如何使用指令碼動作的詳細資訊：[使用指令碼動作自訂 Linux 型 HDInsight 叢集](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)
 
 ### <a name="execute-script-actions"></a>執行指令碼動作
 
