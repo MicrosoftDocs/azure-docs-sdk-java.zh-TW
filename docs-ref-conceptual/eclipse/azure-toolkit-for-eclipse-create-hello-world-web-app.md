@@ -14,20 +14,20 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 5e025c90c2619ec72ffddf5815fd49c3ac59c00f
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: c98f966eb17e3fbde877451c8f8fefb21e6bf686
+ms.sourcegitcommit: dca98b953fa3149fb2e6aa49e27e843b6df0c6c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893089"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57786887"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>使用 Eclipse 建立 Azure 的 Hello World Web 應用程式
 
-本教學課程示範如何使用 [Azure Toolkit for Eclipse]，建立基本的 Hello World 應用程式，並部署到 Azure 作為 Web 應用程式。
+本教學課程示範如何使用 [適用於 Eclipse 的 Azure 工具組]，建立基本的 Hello World 應用程式，並部署到 Azure 作為 Web 應用程式。
 
 > [!NOTE]
 >
-> 如需使用[Azure Toolkit for IntelliJ]的此文章版本，請參閱[使用 IntelliJ 建立 Azure 的 Hello World Web 應用程式][intellij-hello-world]。
+> 如需使用[適用於 IntelliJ 的 Azure 工具組]的此文章版本，請參閱[使用 IntelliJ 建立 Azure 的 Hello World Web 應用程式][intellij-hello-world]。
 >
 
 > [!IMPORTANT]
@@ -93,6 +93,8 @@ ms.locfileid: "48893089"
 
       在 [建立 App Service] 對話方塊中指定 Web 應用程式的必要資訊，然後按一下 [建立]。
 
+      您可以在此設定執行階段環境、應用程式設定、服務方案以及資源群組。
+
       ![建立 App Service 對話方塊][create-app-service-dialog]
 
 1. 選取您的 Web 應用程式，然後按一下 [部署]。
@@ -119,8 +121,8 @@ ms.locfileid: "48893089"
 
 <!-- URL List -->
 
-[Azure Toolkit for Eclipse]: azure-toolkit-for-eclipse.md
-[Azure Toolkit for IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
+[適用於 Eclipse 的 Azure 工具組]: azure-toolkit-for-eclipse.md
+[適用於 IntelliJ 的 Azure 工具組]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Web 應用程式概觀]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
