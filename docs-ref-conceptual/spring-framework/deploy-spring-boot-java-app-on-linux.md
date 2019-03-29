@@ -1,7 +1,7 @@
 ---
-title: 在 Azure Container Service 的 Linux 上部署 Spring Boot Web 應用程式
+title: 在適用於容器的 Azure App Service 上部署 Spring Boot Web App
 description: 本教學課程會逐步引導您將 Spring Boot 應用程式部署為 Microsoft Azure 上之 Linux Web 應用程式的步驟。
-services: container-service
+services: azure app service
 documentationcenter: java
 author: rmcmurray
 manager: mbaldwin
@@ -10,21 +10,21 @@ ms.assetid: ''
 ms.author: robmcm
 ms.date: 12/19/2018
 ms.devlang: java
-ms.service: container-service
+ms.service: azure app service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: aa8fa6d15d868e55b252483993d001d19746244b
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: a9d4bd5a1677078431b5502b276b17cd973cbea0
+ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991502"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58489656"
 ---
-# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>將 Spring Boot 應用程式部署到 Azure Container Service 中的 Linux
+# <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>在適用於容器的 Azure App Service 上部署 Spring Boot 應用程式
 
-本教學課程會逐步引導您使用 [Docker] 來開發 [Spring Boot] 應用程式，並且將其部署至 [Azure Container Service (AKS)] 中的 Linux 主機。
+本教學課程會逐步引導您使用 [Docker] 將 [Spring Boot] 應用程式容器化，並且將您的 Docker 映像部署至 [Azure App Service](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro) 中的 Linux 主機。
 
 ## <a name="prerequisites"></a>必要條件
 
