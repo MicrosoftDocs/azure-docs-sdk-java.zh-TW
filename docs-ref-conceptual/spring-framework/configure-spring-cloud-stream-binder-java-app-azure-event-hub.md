@@ -385,7 +385,7 @@ ms.locfileid: "57335401"
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   您應該會看到 "hello" 已發佈至應用程式記錄檔。 例如︰
+   您應該會看到 "hello" 已發佈至應用程式記錄。 例如︰
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'

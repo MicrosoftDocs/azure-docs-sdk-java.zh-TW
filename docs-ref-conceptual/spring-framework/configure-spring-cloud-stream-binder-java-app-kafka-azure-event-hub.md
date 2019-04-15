@@ -363,7 +363,7 @@ ms.locfileid: "53991532"
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   您應該會看到 "hello" 已發佈至應用程式記錄檔。 例如︰
+   您應該會看到 "hello" 已發佈至應用程式記錄。 例如︰
 
    ```shell
    [http-nio-8080-exec-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version : 1.0.2
