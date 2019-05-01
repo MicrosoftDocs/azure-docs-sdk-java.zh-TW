@@ -11,26 +11,26 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: redis-cache
-ms.openlocfilehash: dd03825d9ae7cba32087f92262d5ef213cf3af0b
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 6f19587d3caeaccd2805007f60bd4ba96fee0bf7
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593303"
 ---
-# <a name="redis-cache-libraries-for-java"></a><span data-ttu-id="8dafb-104">適用於 Java 的 Redis 快取程式庫</span><span class="sxs-lookup"><span data-stu-id="8dafb-104">Redis Cache libraries for Java</span></span>
+# <a name="redis-cache-libraries-for-java"></a><span data-ttu-id="2f7d4-104">適用於 Java 的 Redis 快取程式庫</span><span class="sxs-lookup"><span data-stu-id="2f7d4-104">Redis Cache libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="8dafb-105">概觀</span><span class="sxs-lookup"><span data-stu-id="8dafb-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="2f7d4-105">概觀</span><span class="sxs-lookup"><span data-stu-id="2f7d4-105">Overview</span></span>
 
-<span data-ttu-id="8dafb-106">Azure Redis 快取是安全、分散式的金鑰-值存放區，並以熱門的開放原始碼 [Redis](https://redis.io/) 快取作為基礎。</span><span class="sxs-lookup"><span data-stu-id="8dafb-106">Azure Redis Cache is a secure, distributed key-value store based on the popular open source [Redis](https://redis.io/) cache.</span></span> 
+<span data-ttu-id="2f7d4-106">Azure Redis 快取是安全、分散式的金鑰-值存放區，並以熱門的開放原始碼 [Redis](https://redis.io/) 快取作為基礎。</span><span class="sxs-lookup"><span data-stu-id="2f7d4-106">Azure Redis Cache is a secure, distributed key-value store based on the popular open source [Redis](https://redis.io/) cache.</span></span> 
 
-<span data-ttu-id="8dafb-107">若要開始使用 Azure Redis 快取，請參閱[如何搭配使用 Azure Redis 快取與 Java](/azure/redis-cache/cache-java-get-started)。</span><span class="sxs-lookup"><span data-stu-id="8dafb-107">To get started with Azure Redis Cache, see [How to use Azure Redis Cache with Java](/azure/redis-cache/cache-java-get-started).</span></span>
+<span data-ttu-id="2f7d4-107">若要開始使用 Azure Redis 快取，請參閱[如何搭配使用 Azure Redis 快取與 Java](/azure/redis-cache/cache-java-get-started)。</span><span class="sxs-lookup"><span data-stu-id="2f7d4-107">To get started with Azure Redis Cache, see [How to use Azure Redis Cache with Java](/azure/redis-cache/cache-java-get-started).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="8dafb-108">用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="8dafb-108">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="2f7d4-108">用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="2f7d4-108">Client library</span></span>
 
-<span data-ttu-id="8dafb-109">使用開放原始碼 [Jedis](https://github.com/xetorthio/jedis) 用戶端連線至 Azure Redis 快取並透過快取來儲存和擷取值。</span><span class="sxs-lookup"><span data-stu-id="8dafb-109">Connect to Azure Redis Cache and store and retrieve values from the cache using the open-source [Jedis](https://github.com/xetorthio/jedis) client.</span></span>  
+<span data-ttu-id="2f7d4-109">使用開放原始碼 [Jedis](https://github.com/xetorthio/jedis) 用戶端連線至 Azure Redis 快取並透過快取來儲存和擷取值。</span><span class="sxs-lookup"><span data-stu-id="2f7d4-109">Connect to Azure Redis Cache and store and retrieve values from the cache using the open-source [Jedis](https://github.com/xetorthio/jedis) client.</span></span>  
 
-<span data-ttu-id="8dafb-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端程式庫。</span><span class="sxs-lookup"><span data-stu-id="8dafb-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
+<span data-ttu-id="2f7d4-110">[新增相依性](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)至 Maven 的 `pom.xml` 檔案，以在專案中使用用戶端程式庫。</span><span class="sxs-lookup"><span data-stu-id="2f7d4-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
 
 ```XML
 <dependency>
@@ -41,9 +41,9 @@ ms.locfileid: "48892769"
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="8dafb-111">範例</span><span class="sxs-lookup"><span data-stu-id="8dafb-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2f7d4-111">範例</span><span class="sxs-lookup"><span data-stu-id="2f7d4-111">Example</span></span>
 
-<span data-ttu-id="8dafb-112">連線到 Azure Redis，並將字串插入快取中。</span><span class="sxs-lookup"><span data-stu-id="8dafb-112">Connect to Azure Redis and insert a string into the cache.</span></span>
+<span data-ttu-id="2f7d4-112">連線到 Azure Redis，並將字串插入快取中。</span><span class="sxs-lookup"><span data-stu-id="2f7d4-112">Connect to Azure Redis and insert a string into the cache.</span></span>
 
 ```java
 JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 6380, useSsl);
@@ -52,9 +52,9 @@ JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 
     jedis.set("foo", "bar");
 ```
 
-## <a name="management-api"></a><span data-ttu-id="8dafb-113">管理 API</span><span class="sxs-lookup"><span data-stu-id="8dafb-113">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="2f7d4-113">管理 API</span><span class="sxs-lookup"><span data-stu-id="2f7d4-113">Management API</span></span>
 
-<span data-ttu-id="8dafb-114">使用管理 API 建立及調整 Azure Redis 資源和管理存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="8dafb-114">Create and scale Azure Redis resources and manage access keys to with the management API.</span></span>
+<span data-ttu-id="2f7d4-114">使用管理 API 建立及調整 Azure Redis 資源和管理存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="2f7d4-114">Create and scale Azure Redis resources and manage access keys to with the management API.</span></span>
 
 ```XML
 <dependency>
@@ -64,9 +64,9 @@ JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="8dafb-115">範例</span><span class="sxs-lookup"><span data-stu-id="8dafb-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2f7d4-115">範例</span><span class="sxs-lookup"><span data-stu-id="2f7d4-115">Example</span></span>
 
-<span data-ttu-id="8dafb-116">在[雙節點的標準層](https://azure.microsoft.com/services/cache/)中建立新的 Azure Redis 快取。</span><span class="sxs-lookup"><span data-stu-id="8dafb-116">Create a new Azure Redis Cache in the [two-node standard tier](https://azure.microsoft.com/services/cache/).</span></span> 
+<span data-ttu-id="2f7d4-116">在[雙節點的標準層](https://azure.microsoft.com/services/cache/)中建立新的 Azure Redis 快取。</span><span class="sxs-lookup"><span data-stu-id="2f7d4-116">Create a new Azure Redis Cache in the [two-node standard tier](https://azure.microsoft.com/services/cache/).</span></span> 
 
 ```java
 RedisCache cache = azure.redisCaches().define(redisCacheName1)
@@ -76,10 +76,10 @@ RedisCache cache = azure.redisCaches().define(redisCacheName1)
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="8dafb-117">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="8dafb-117">Explore the Management APIs</span></span>](/java/api/overview/azure/rediscache/management)
+> [<span data-ttu-id="2f7d4-117">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="2f7d4-117">Explore the Management APIs</span></span>](/java/api/overview/azure/rediscache/management)
 
-## <a name="samples"></a><span data-ttu-id="8dafb-118">範例</span><span class="sxs-lookup"><span data-stu-id="8dafb-118">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="2f7d4-118">範例</span><span class="sxs-lookup"><span data-stu-id="2f7d4-118">Samples</span></span>
 
-[<span data-ttu-id="8dafb-119">管理 Azure Redis 快取</span><span class="sxs-lookup"><span data-stu-id="8dafb-119">Manage Azure Redis Cache</span></span>](https://github.com/Azure-Samples/redis-java-manage-cache)   
+[<span data-ttu-id="2f7d4-119">管理 Azure Redis 快取</span><span class="sxs-lookup"><span data-stu-id="2f7d4-119">Manage Azure Redis Cache</span></span>](https://github.com/Azure-Samples/redis-java-manage-cache)   
 
-<span data-ttu-id="8dafb-120">深入探索可在應用程式中使用的 [Azure Redis 快取 Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=redis)。</span><span class="sxs-lookup"><span data-stu-id="8dafb-120">Explore more [sample Java code for Azure Redis Cache](https://azure.microsoft.com/resources/samples/?platform=java&term=redis) you can use in your apps.</span></span>
+<span data-ttu-id="2f7d4-120">深入探索可在應用程式中使用的 [Azure Redis 快取 Java 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=java&term=redis)。</span><span class="sxs-lookup"><span data-stu-id="2f7d4-120">Explore more [sample Java code for Azure Redis Cache](https://azure.microsoft.com/resources/samples/?platform=java&term=redis) you can use in your apps.</span></span>

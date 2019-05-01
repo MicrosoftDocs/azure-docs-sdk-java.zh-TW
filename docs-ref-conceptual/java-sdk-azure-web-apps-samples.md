@@ -12,26 +12,26 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
-ms.openlocfilehash: 2f1e43f3835ffcdb138bf7e29a1656b7ee381281
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: be4031059587ceb88f6824356f677c37a198de80
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592583"
 ---
-# <a name="azure-management-libraries-for-java-samples-for-web-apps"></a><span data-ttu-id="3d043-104">針對 Web 應用程式所提供之適用於 Java 的 Azure 管理程式庫範例</span><span class="sxs-lookup"><span data-stu-id="3d043-104">Azure management libraries for Java samples for web apps</span></span>
+# <a name="azure-management-libraries-for-java-samples-for-web-apps"></a><span data-ttu-id="36803-104">針對 Web 應用程式所提供之適用於 Java 的 Azure 管理程式庫範例</span><span class="sxs-lookup"><span data-stu-id="36803-104">Azure management libraries for Java samples for web apps</span></span>
 
-| <span data-ttu-id="3d043-105">**建立應用程式**</span><span class="sxs-lookup"><span data-stu-id="3d043-105">**Create an app**</span></span> ||
+| <span data-ttu-id="36803-105">**建立應用程式**</span><span class="sxs-lookup"><span data-stu-id="36803-105">**Create an app**</span></span> ||
 |---|---|
-| <span data-ttu-id="3d043-106">[建立 Web 應用程式並從 FTP 或 GitHub 部署][1]</span><span class="sxs-lookup"><span data-stu-id="3d043-106">[Create a web app and deploy from FTP or GitHub][1]</span></span> | <span data-ttu-id="3d043-107">透過本機 Git、FTP 以及 GitHub 的持續整合來部署 Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="3d043-107">Deploy web apps from local Git, FTP, and continuous integration from GitHub.</span></span> |
-| <span data-ttu-id="3d043-108">[建立 Web 應用程式和管理部署位置][2]</span><span class="sxs-lookup"><span data-stu-id="3d043-108">[Create a web app and manage deployment slots][2]</span></span> | <span data-ttu-id="3d043-109">建立 Web 應用程式並部署到預備位置，然後在位置之間交換部署。</span><span class="sxs-lookup"><span data-stu-id="3d043-109">Create a web app and deploy to staging slots, and then swap deployments between slots.</span></span> |
-| <span data-ttu-id="3d043-110">**設定應用程式**</span><span class="sxs-lookup"><span data-stu-id="3d043-110">**Configure app**</span></span> ||
-| <span data-ttu-id="3d043-111">[建立 Web 應用程式和設定自訂網域][3]</span><span class="sxs-lookup"><span data-stu-id="3d043-111">[Create a web app and configure a custom domain][3]</span></span> | <span data-ttu-id="3d043-112">使用自訂網域和自我簽署的 SSL 憑證來建立 Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="3d043-112">Create a web app with a custom domain and self-signed SSL certificate.</span></span> |
-| <span data-ttu-id="3d043-113">**調整應用程式規模**</span><span class="sxs-lookup"><span data-stu-id="3d043-113">**Scale apps**</span></span> ||
-| <span data-ttu-id="3d043-114">[透過跨多個區域的高可用性來調整 Web 應用程式的規模][4]</span><span class="sxs-lookup"><span data-stu-id="3d043-114">[Scale a web app with high availability across multiple regions][4]</span></span> | <span data-ttu-id="3d043-115">在三個不同的地理區域中調整 Web 應用程式的規模，並使用 Azure 流量管理員讓它們可透過單一端點來供人使用。</span><span class="sxs-lookup"><span data-stu-id="3d043-115">Scale a web app in three different geographical regions and make them available through a single endpoint using Azure Traffic Manager.</span></span> | 
-| <span data-ttu-id="3d043-116">**將應用程式連線至資源**</span><span class="sxs-lookup"><span data-stu-id="3d043-116">**Connect app to resources**</span></span> ||
-| <span data-ttu-id="3d043-117">[將 Web 應用程式連線至儲存體帳戶][5]</span><span class="sxs-lookup"><span data-stu-id="3d043-117">[Connect a web app to a storage account][5]</span></span> | <span data-ttu-id="3d043-118">建立 Azure 儲存體帳戶，然後將儲存體帳戶連接字串新增至應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="3d043-118">Create an Azure storage account and add the storage account connection string to the app settings.</span></span> |
-| <span data-ttu-id="3d043-119">[將 Web 應用程式連線至 SQL 資料庫][6]</span><span class="sxs-lookup"><span data-stu-id="3d043-119">[Connect a web app to a SQL database][6]</span></span> | <span data-ttu-id="3d043-120">建立 Web 應用程式和 SQL 資料庫，然後將 SQL 資料庫連接字串新增至應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="3d043-120">Create a web app and SQL database, and then add the SQL database connection string to the app settings.</span></span> |
+| <span data-ttu-id="36803-106">[建立 Web 應用程式並從 FTP 或 GitHub 部署][1]</span><span class="sxs-lookup"><span data-stu-id="36803-106">[Create a web app and deploy from FTP or GitHub][1]</span></span> | <span data-ttu-id="36803-107">透過本機 Git、FTP 以及 GitHub 的持續整合來部署 Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="36803-107">Deploy web apps from local Git, FTP, and continuous integration from GitHub.</span></span> |
+| <span data-ttu-id="36803-108">[建立 Web 應用程式和管理部署位置][2]</span><span class="sxs-lookup"><span data-stu-id="36803-108">[Create a web app and manage deployment slots][2]</span></span> | <span data-ttu-id="36803-109">建立 Web 應用程式並部署到預備位置，然後在位置之間交換部署。</span><span class="sxs-lookup"><span data-stu-id="36803-109">Create a web app and deploy to staging slots, and then swap deployments between slots.</span></span> |
+| <span data-ttu-id="36803-110">**設定應用程式**</span><span class="sxs-lookup"><span data-stu-id="36803-110">**Configure app**</span></span> ||
+| <span data-ttu-id="36803-111">[建立 Web 應用程式和設定自訂網域][3]</span><span class="sxs-lookup"><span data-stu-id="36803-111">[Create a web app and configure a custom domain][3]</span></span> | <span data-ttu-id="36803-112">使用自訂網域和自我簽署的 SSL 憑證來建立 Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="36803-112">Create a web app with a custom domain and self-signed SSL certificate.</span></span> |
+| <span data-ttu-id="36803-113">**調整應用程式規模**</span><span class="sxs-lookup"><span data-stu-id="36803-113">**Scale apps**</span></span> ||
+| <span data-ttu-id="36803-114">[透過跨多個區域的高可用性來調整 Web 應用程式的規模][4]</span><span class="sxs-lookup"><span data-stu-id="36803-114">[Scale a web app with high availability across multiple regions][4]</span></span> | <span data-ttu-id="36803-115">在三個不同的地理區域中調整 Web 應用程式的規模，並使用 Azure 流量管理員讓它們可透過單一端點來供人使用。</span><span class="sxs-lookup"><span data-stu-id="36803-115">Scale a web app in three different geographical regions and make them available through a single endpoint using Azure Traffic Manager.</span></span> | 
+| <span data-ttu-id="36803-116">**將應用程式連線至資源**</span><span class="sxs-lookup"><span data-stu-id="36803-116">**Connect app to resources**</span></span> ||
+| <span data-ttu-id="36803-117">[將 Web 應用程式連線至儲存體帳戶][5]</span><span class="sxs-lookup"><span data-stu-id="36803-117">[Connect a web app to a storage account][5]</span></span> | <span data-ttu-id="36803-118">建立 Azure 儲存體帳戶，然後將儲存體帳戶連接字串新增至應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="36803-118">Create an Azure storage account and add the storage account connection string to the app settings.</span></span> |
+| <span data-ttu-id="36803-119">[將 Web 應用程式連線至 SQL 資料庫][6]</span><span class="sxs-lookup"><span data-stu-id="36803-119">[Connect a web app to a SQL database][6]</span></span> | <span data-ttu-id="36803-120">建立 Web 應用程式和 SQL 資料庫，然後將 SQL 資料庫連接字串新增至應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="36803-120">Create a web app and SQL database, and then add the SQL database connection string to the app settings.</span></span> |
 
 [1]: java-sdk-configure-webapp-sources.md
 [2]: https://azure.microsoft.com/resources/samples/app-service-java-manage-staging-and-production-slots-for-web-apps/

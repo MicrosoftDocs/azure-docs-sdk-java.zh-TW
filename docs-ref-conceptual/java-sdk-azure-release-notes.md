@@ -10,45 +10,45 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 0aaa83ceb42192441decb5972baae56fed337fb2
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4681e07993e18344655f91e35148bbe956974e95
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592593"
 ---
-# <a name="release-notes"></a><span data-ttu-id="6dba4-104">版本資訊</span><span class="sxs-lookup"><span data-stu-id="6dba4-104">Release Notes</span></span> 
+# <a name="release-notes"></a><span data-ttu-id="28bc8-104">版本資訊</span><span class="sxs-lookup"><span data-stu-id="28bc8-104">Release Notes</span></span> 
 
-## <a name="october-5-2017---130"></a><span data-ttu-id="6dba4-105">2017 年 10 月 5 日 - 1.3.0</span><span class="sxs-lookup"><span data-stu-id="6dba4-105">October 5, 2017 - 1.3.0</span></span> 
+## <a name="october-5-2017---130"></a><span data-ttu-id="28bc8-105">2017 年 10 月 5 日 - 1.3.0</span><span class="sxs-lookup"><span data-stu-id="28bc8-105">October 5, 2017 - 1.3.0</span></span> 
 
-<span data-ttu-id="6dba4-106">版本 1.3.0 向下相容於舊版的服務及功能，可達到與舊版相同的可用性 (穩定性)。</span><span class="sxs-lookup"><span data-stu-id="6dba4-106">Version 1.3.0 is backwards compatible with previous versions for services and features use that reached the general availability (stable) stage in previous releases.</span></span>
+<span data-ttu-id="28bc8-106">版本 1.3.0 向下相容於舊版的服務及功能，可達到與舊版相同的可用性 (穩定性)。</span><span class="sxs-lookup"><span data-stu-id="28bc8-106">Version 1.3.0 is backwards compatible with previous versions for services and features use that reached the general availability (stable) stage in previous releases.</span></span>
 
-<span data-ttu-id="6dba4-107">所有針對舊版服務所進行的重大更新都會以 @Beta 標註。</span><span class="sxs-lookup"><span data-stu-id="6dba4-107">Any breaking changes from Preview versions for those services are marked with the @Beta annotation.</span></span>
+<span data-ttu-id="28bc8-107">所有針對舊版服務所進行的重大更新都會以 @Beta 標註。</span><span class="sxs-lookup"><span data-stu-id="28bc8-107">Any breaking changes from Preview versions for those services are marked with the @Beta annotation.</span></span>
 
-<span data-ttu-id="6dba4-108">如果您要將程式碼移轉至 1.3.0，可以使用[這些附註](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md)來讓現有程式碼做好移轉至版本 1.3 的準備。</span><span class="sxs-lookup"><span data-stu-id="6dba4-108">If you are migrating your code to 1.3.0, you can use [these notes](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md) to prepare your existing code for the 1.3 version.</span></span>
+<span data-ttu-id="28bc8-108">如果您要將程式碼移轉至 1.3.0，可以使用[這些附註](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md)來讓現有程式碼做好移轉至版本 1.3 的準備。</span><span class="sxs-lookup"><span data-stu-id="28bc8-108">If you are migrating your code to 1.3.0, you can use [these notes](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md) to prepare your existing code for the 1.3 version.</span></span>
 
-### <a name="generally-availabile-in-v13"></a><span data-ttu-id="6dba4-109">在 V1.3 中正式運作</span><span class="sxs-lookup"><span data-stu-id="6dba4-109">Generally availabile in V1.3</span></span>
+### <a name="generally-availabile-in-v13"></a><span data-ttu-id="28bc8-109">在 V1.3 中正式運作</span><span class="sxs-lookup"><span data-stu-id="28bc8-109">Generally availabile in V1.3</span></span>
 
-<span data-ttu-id="6dba4-110">某些在舊版中仍屬搶鮮版 (Beta) 的 API 現已在 GA 中正式運作，尤其是：</span><span class="sxs-lookup"><span data-stu-id="6dba4-110">Some of the APIs that were still in Beta in previous releases are now GA, in particular:</span></span>
+<span data-ttu-id="28bc8-110">某些在舊版中仍屬搶鮮版 (Beta) 的 API 現已在 GA 中正式運作，尤其是：</span><span class="sxs-lookup"><span data-stu-id="28bc8-110">Some of the APIs that were still in Beta in previous releases are now GA, in particular:</span></span>
 
-- <span data-ttu-id="6dba4-111">非同步方法</span><span class="sxs-lookup"><span data-stu-id="6dba4-111">async methods</span></span>
-- <span data-ttu-id="6dba4-112">CDN 中先前屬於搶鮮版的所有方法</span><span class="sxs-lookup"><span data-stu-id="6dba4-112">all methods in CDN that were previously in Beta</span></span>
-- <span data-ttu-id="6dba4-113">應用程式閘道中先前屬於搶鮮版的所有方法和介面</span><span class="sxs-lookup"><span data-stu-id="6dba4-113">all methods and interfaces in Application Gateways that were previously in Beta</span></span>
+- <span data-ttu-id="28bc8-111">非同步方法</span><span class="sxs-lookup"><span data-stu-id="28bc8-111">async methods</span></span>
+- <span data-ttu-id="28bc8-112">CDN 中先前屬於搶鮮版的所有方法</span><span class="sxs-lookup"><span data-stu-id="28bc8-112">all methods in CDN that were previously in Beta</span></span>
+- <span data-ttu-id="28bc8-113">應用程式閘道中先前屬於搶鮮版的所有方法和介面</span><span class="sxs-lookup"><span data-stu-id="28bc8-113">all methods and interfaces in Application Gateways that were previously in Beta</span></span>
 
-  <span data-ttu-id="6dba4-114">程式庫的某些部分仍處於預覽階段。</span><span class="sxs-lookup"><span data-stu-id="6dba4-114">Some parts of the library are still in Preview.</span></span> <span data-ttu-id="6dba4-115">請參閱下表以了解程式庫的目前狀態：</span><span class="sxs-lookup"><span data-stu-id="6dba4-115">Refer to the table below for the current state of the libraries:</span></span>
+  <span data-ttu-id="28bc8-114">程式庫的某些部分仍處於預覽階段。</span><span class="sxs-lookup"><span data-stu-id="28bc8-114">Some parts of the library are still in Preview.</span></span> <span data-ttu-id="28bc8-115">請參閱下表以了解程式庫的目前狀態：</span><span class="sxs-lookup"><span data-stu-id="28bc8-115">Refer to the table below for the current state of the libraries:</span></span>
 
-<span data-ttu-id="6dba4-116">服務或功能</span><span class="sxs-lookup"><span data-stu-id="6dba4-116">Service or feature</span></span> | <span data-ttu-id="6dba4-117">以正式運作版來提供</span><span class="sxs-lookup"><span data-stu-id="6dba4-117">Available as GA</span></span> | <span data-ttu-id="6dba4-118">以預覽版來提供</span><span class="sxs-lookup"><span data-stu-id="6dba4-118">Available as Preview</span></span> 
+<span data-ttu-id="28bc8-116">服務或功能</span><span class="sxs-lookup"><span data-stu-id="28bc8-116">Service or feature</span></span> | <span data-ttu-id="28bc8-117">以正式運作版來提供</span><span class="sxs-lookup"><span data-stu-id="28bc8-117">Available as GA</span></span> | <span data-ttu-id="28bc8-118">以預覽版來提供</span><span class="sxs-lookup"><span data-stu-id="28bc8-118">Available as Preview</span></span> 
 ---------|---------|---------|-
-<span data-ttu-id="6dba4-119">計算</span><span class="sxs-lookup"><span data-stu-id="6dba4-119">Compute</span></span>  | <span data-ttu-id="6dba4-120">虛擬機器和 VM 擴充功能、虛擬機器擴展集、受控磁碟</span><span class="sxs-lookup"><span data-stu-id="6dba4-120">Virtual machines and VM extensions, Virtual machine scale sets, managed disks</span></span>   | <span data-ttu-id="6dba4-121">Azure Container Service、Azure Container Registry</span><span class="sxs-lookup"><span data-stu-id="6dba4-121">Azure container service, Azure container registry</span></span> 
-<span data-ttu-id="6dba4-122">儲存體</span><span class="sxs-lookup"><span data-stu-id="6dba4-122">Storage</span></span>   |  <span data-ttu-id="6dba4-123">儲存體帳戶</span><span class="sxs-lookup"><span data-stu-id="6dba4-123">Storage accounts</span></span>       |    <span data-ttu-id="6dba4-124">加密</span><span class="sxs-lookup"><span data-stu-id="6dba4-124">Encryption</span></span>     
-<span data-ttu-id="6dba4-125">SQL Database</span><span class="sxs-lookup"><span data-stu-id="6dba4-125">SQL Database</span></span>  | <span data-ttu-id="6dba4-126">資料庫、防火牆、彈性集區</span><span class="sxs-lookup"><span data-stu-id="6dba4-126">Databases, firewalls, elastic pools</span></span>              
-<span data-ttu-id="6dba4-127">網路功能</span><span class="sxs-lookup"><span data-stu-id="6dba4-127">Networking</span></span>    |  <span data-ttu-id="6dba4-128">虛擬網路、網路介面、IP 位址、路由表、網路安全性群組、DNS、流量管理員、應用程式閘道</span><span class="sxs-lookup"><span data-stu-id="6dba4-128">Virtual networks , network interfaces , IP addresses ,routing tables, network security groups , DNS, Traffic managers, Application gateways</span></span>  |    <span data-ttu-id="6dba4-129">負載平衡器、對等互連、虛擬網路閘道、網路監看員</span><span class="sxs-lookup"><span data-stu-id="6dba4-129">Load balancers, Network peering, Virtual Network Gateway, Network watchers</span></span> 
-<span data-ttu-id="6dba4-130">更多服務</span><span class="sxs-lookup"><span data-stu-id="6dba4-130">More services</span></span>    |  <span data-ttu-id="6dba4-131">Resource Manager、Key Vault、Redis、CDN、Batch</span><span class="sxs-lookup"><span data-stu-id="6dba4-131">Resource Manager, Key Vault, Redis,  CDN, Batch</span></span>       |  <span data-ttu-id="6dba4-132">Web 應用程式、函式應用程式、服務匯流排、Graph RBAC、Cosmos DB、搜尋服務</span><span class="sxs-lookup"><span data-stu-id="6dba4-132">Web apps, Function apps, Service Bus, Graph RBAC, Cosmos DB, Search</span></span>  
-<span data-ttu-id="6dba4-133">基礎</span><span class="sxs-lookup"><span data-stu-id="6dba4-133">Fundamentals</span></span>     |   <span data-ttu-id="6dba4-134">驗證 - 核心、Async 方法、受控服務識別</span><span class="sxs-lookup"><span data-stu-id="6dba4-134">Authentication - core , Async methods , Managed Service Identity</span></span>      |      |
+<span data-ttu-id="28bc8-119">計算</span><span class="sxs-lookup"><span data-stu-id="28bc8-119">Compute</span></span>  | <span data-ttu-id="28bc8-120">虛擬機器和 VM 擴充功能、虛擬機器擴展集、受控磁碟</span><span class="sxs-lookup"><span data-stu-id="28bc8-120">Virtual machines and VM extensions, Virtual machine scale sets, managed disks</span></span>   | <span data-ttu-id="28bc8-121">Azure Container Service、Azure Container Registry</span><span class="sxs-lookup"><span data-stu-id="28bc8-121">Azure container service, Azure container registry</span></span> 
+<span data-ttu-id="28bc8-122">儲存體</span><span class="sxs-lookup"><span data-stu-id="28bc8-122">Storage</span></span>   |  <span data-ttu-id="28bc8-123">儲存體帳戶</span><span class="sxs-lookup"><span data-stu-id="28bc8-123">Storage accounts</span></span>       |    <span data-ttu-id="28bc8-124">加密</span><span class="sxs-lookup"><span data-stu-id="28bc8-124">Encryption</span></span>     
+<span data-ttu-id="28bc8-125">SQL Database</span><span class="sxs-lookup"><span data-stu-id="28bc8-125">SQL Database</span></span>  | <span data-ttu-id="28bc8-126">資料庫、防火牆、彈性集區</span><span class="sxs-lookup"><span data-stu-id="28bc8-126">Databases, firewalls, elastic pools</span></span>              
+<span data-ttu-id="28bc8-127">網路功能</span><span class="sxs-lookup"><span data-stu-id="28bc8-127">Networking</span></span>    |  <span data-ttu-id="28bc8-128">虛擬網路、網路介面、IP 位址、路由表、網路安全性群組、DNS、流量管理員、應用程式閘道</span><span class="sxs-lookup"><span data-stu-id="28bc8-128">Virtual networks , network interfaces , IP addresses ,routing tables, network security groups , DNS, Traffic managers, Application gateways</span></span>  |    <span data-ttu-id="28bc8-129">負載平衡器、對等互連、虛擬網路閘道、網路監看員</span><span class="sxs-lookup"><span data-stu-id="28bc8-129">Load balancers, Network peering, Virtual Network Gateway, Network watchers</span></span> 
+<span data-ttu-id="28bc8-130">更多服務</span><span class="sxs-lookup"><span data-stu-id="28bc8-130">More services</span></span>    |  <span data-ttu-id="28bc8-131">Resource Manager、Key Vault、Redis、CDN、Batch</span><span class="sxs-lookup"><span data-stu-id="28bc8-131">Resource Manager, Key Vault, Redis,  CDN, Batch</span></span>       |  <span data-ttu-id="28bc8-132">Web 應用程式、函式應用程式、服務匯流排、Graph RBAC、Cosmos DB、搜尋服務</span><span class="sxs-lookup"><span data-stu-id="28bc8-132">Web apps, Function apps, Service Bus, Graph RBAC, Cosmos DB, Search</span></span>  
+<span data-ttu-id="28bc8-133">基礎</span><span class="sxs-lookup"><span data-stu-id="28bc8-133">Fundamentals</span></span>     |   <span data-ttu-id="28bc8-134">驗證 - 核心、Async 方法、受控服務識別</span><span class="sxs-lookup"><span data-stu-id="28bc8-134">Authentication - core , Async methods , Managed Service Identity</span></span>      |      |
 
-> <span data-ttu-id="6dba4-135">預覽功能在會程式庫的類別、介面或方法層級中以 `@Beta` 標註。</span><span class="sxs-lookup"><span data-stu-id="6dba4-135">Preview features are marked with a `@Beta` annotation at the class or interface or method level in libraries.</span></span> <span data-ttu-id="6dba4-136">這些功能可能會有所變更。</span><span class="sxs-lookup"><span data-stu-id="6dba4-136">These features are subject to change.</span></span> <span data-ttu-id="6dba4-137">未來可能會以任何方式修改，或甚至移除。</span><span class="sxs-lookup"><span data-stu-id="6dba4-137">They can be modified in any way, or even removed, in the future.</span></span>
+> <span data-ttu-id="28bc8-135">預覽功能在會程式庫的類別、介面或方法層級中以 `@Beta` 標註。</span><span class="sxs-lookup"><span data-stu-id="28bc8-135">Preview features are marked with a `@Beta` annotation at the class or interface or method level in libraries.</span></span> <span data-ttu-id="28bc8-136">這些功能可能會有所變更。</span><span class="sxs-lookup"><span data-stu-id="28bc8-136">These features are subject to change.</span></span> <span data-ttu-id="28bc8-137">未來可能會以任何方式修改，或甚至移除。</span><span class="sxs-lookup"><span data-stu-id="28bc8-137">They can be modified in any way, or even removed, in the future.</span></span>
 
-### <a name="import-with-maven"></a><span data-ttu-id="6dba4-138">使用 Maven 來匯入</span><span class="sxs-lookup"><span data-stu-id="6dba4-138">Import with Maven</span></span>
+### <a name="import-with-maven"></a><span data-ttu-id="28bc8-138">使用 Maven 來匯入</span><span class="sxs-lookup"><span data-stu-id="28bc8-138">Import with Maven</span></span>
 
 ```XML
 <dependency>
@@ -58,8 +58,8 @@ ms.locfileid: "48899081"
 </dependency>
 ```
 
-### <a name="get-help-and-give-feedback"></a><span data-ttu-id="6dba4-139">獲得協助及提供意見</span><span class="sxs-lookup"><span data-stu-id="6dba4-139">Get help and give feedback</span></span>
+### <a name="get-help-and-give-feedback"></a><span data-ttu-id="28bc8-139">獲得協助及提供意見</span><span class="sxs-lookup"><span data-stu-id="28bc8-139">Get help and give feedback</span></span>
 
-<span data-ttu-id="6dba4-140">查看 [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-java-sdk) 社群，以獲得在自己的程式碼中使用程式庫的說明。</span><span class="sxs-lookup"><span data-stu-id="6dba4-140">Check out the [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-java-sdk) community for help using the libraries in your own code.</span></span> <span data-ttu-id="6dba4-141">如果您遇到任何錯誤，或是有可改善這些程式庫的建議，請透過 [GitHub](https://github.com/Azure/azure-sdk-for-java/issues) 提出問題。</span><span class="sxs-lookup"><span data-stu-id="6dba4-141">If you encounter any bugs or have suggestions to improve these libraries, please file issues via [GitHub](https://github.com/Azure/azure-sdk-for-java/issues).</span></span>
+<span data-ttu-id="28bc8-140">查看 [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-java-sdk) 社群，以獲得在自己的程式碼中使用程式庫的說明。</span><span class="sxs-lookup"><span data-stu-id="28bc8-140">Check out the [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-java-sdk) community for help using the libraries in your own code.</span></span> <span data-ttu-id="28bc8-141">如果您遇到任何錯誤，或是有可改善這些程式庫的建議，請透過 [GitHub](https://github.com/Azure/azure-sdk-for-java/issues) 提出問題。</span><span class="sxs-lookup"><span data-stu-id="28bc8-141">If you encounter any bugs or have suggestions to improve these libraries, please file issues via [GitHub](https://github.com/Azure/azure-sdk-for-java/issues).</span></span>
 
 
