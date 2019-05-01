@@ -10,12 +10,12 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 5945164b2b04e1fa9169590a71f6c5f9f45842d6
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 620ee28691f70ed6cf29c4f7c169cd43a6e71351
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592573"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>從 Java 應用程式管理 Azure 儲存體帳戶
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8aef3852b3ce58957f08f1bc6219979eadda33cf
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592665"
+---
 |  |  |
 |---------|---------|
 | [將 Azure AD 整合到 Java Web 應用程式中][1] | 在 Java Web 應用程式中設定 OAuth2 驗證。

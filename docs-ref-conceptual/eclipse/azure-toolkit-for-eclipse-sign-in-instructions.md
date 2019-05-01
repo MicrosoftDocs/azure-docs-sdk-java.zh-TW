@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: eb6099ab0c19bf3588cb7fd668f070771e58fe74
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 79f6cfd3b21d68c131a3f0052d86e4bcb3254e55
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61591001"
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>適用於 Eclipse 的 Azure 工具組的 Azure 登入指示
 

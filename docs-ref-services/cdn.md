@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cdn
-ms.openlocfilehash: 199e9b4b2b2431e23954d24e4adeb4326eb4741c
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 88013a1d82d11d97bf99cb5acf0dee4bc8b5704d
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592883"
 ---
 # <a name="azure-cdn-libraries-for-java"></a>適用於 Java 的 Azure CDN 程式庫
 

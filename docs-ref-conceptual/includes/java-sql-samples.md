@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8d8ca00d6707927c0664908f1e79deddf63d80d7
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592641"
+---
 |  |  |
 |---------|---------|
 | [使用 JDBC 從 Azure SQL Database 進行連線及查詢資料][4] | 設定作為範例的資料庫，然後執行選取、插入、更新和刪除命令。 |
