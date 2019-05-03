@@ -1,6 +1,6 @@
 ---
 title: 適用於 Java 的 Azure SQL Database 程式庫
-description: 使用管理 API 透過 JDBC 驅動程式或管理 Azure SQL Database 執行個體來連線到 Azure SQL Database。
+description: 使用管理 API 透過 JDBC 驅動程式或管理 Azure SQL 資料庫執行個體來連線到 Azure SQL 資料庫。
 keywords: Azure, Java, SDK, API, SQL, 資料庫, JDBC
 author: rloutlaw
 ms.author: routlaw

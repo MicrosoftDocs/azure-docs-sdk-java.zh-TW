@@ -305,7 +305,7 @@ az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP
 az group delete --name sampleWebResourceGroup
 ```
 
-## <a name="connect-to-an-azure-sql-database"></a>連線到 Azure SQL Database
+## <a name="connect-to-an-azure-sql-database"></a>連線到 Azure SQL 資料庫
 
 使用下列程式碼取代 `AzureApp.java` 中目前的主要方法，並為 `dbPassword` 變數設定實際的值。
 此程式碼會使用允許遠端存取的防火牆規則來建立新的 SQL 資料庫，然後使用 SQL Database JBDC 驅動程式來與該資料庫連線。 

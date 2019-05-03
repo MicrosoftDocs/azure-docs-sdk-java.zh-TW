@@ -42,7 +42,7 @@ ms.locfileid: "53992120"
 
 > [!NOTE]
 > 
-> 您可以在[在 Azure 入口網站中建立 Azure SQL Database](/azure/sql-database/sql-database-get-started-portal) 中，閱讀更多關於如何建立 Azure SQL Database 的詳細資訊。
+> 您可以在[在 Azure 入口網站中建立 Azure SQL 資料庫](/azure/sql-database/sql-database-get-started-portal)中，閱讀更多關於如何建立 Azure SQL Database 的詳細資訊。
 
 1. 從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站並登入。
 
@@ -173,7 +173,7 @@ ms.locfileid: "53992120"
 
 ## <a name="summary"></a>總結
 
-在此教學課程中，您已建立使用 Spring Data 的範例 Java 應用程式，以在 Azure SQL Database 中使用 JDBC 儲存和擷取資訊。
+在此教學課程中，您已建立使用 Spring Data 的範例 Java 應用程式，以在 Azure SQL 資料庫中使用 JDBC 儲存和擷取資訊。
 
 ## <a name="next-steps"></a>後續步驟
 
