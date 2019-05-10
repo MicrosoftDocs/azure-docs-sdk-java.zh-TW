@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 046ae0428d50a7f173f5ad15be53ffd8e66c11c5
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ee5d286f3c5979b3a10e3e3be08a68caa6eef31d
+ms.sourcegitcommit: 420fcd58e3a907d629c9c15fda56ad818d9dfe7c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892519"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65470187"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>使用適用於 IntelliJ 的 Azure Explorer 來管理 Redis 快取
 
@@ -45,13 +45,13 @@ Azure Explorer 是適用於 IntelliJ 的 Azure 工具組一部分，可為 Java 
 
    a. **DNS 名稱**：指定新 Redis 快取的 DNS 子網域，會在前面加上 ".redis.cache.windows.net"；例如：wingtiptoys.redis.cache.windows.net。
 
-   b. **訂用帳戶**：指定您要用於新 Redis 快取的 Azure 訂用帳戶。
+   b. 訂用帳戶：指定您要用於新 Redis 快取的 Azure 訂用帳戶。
 
-   c. **資源群組**︰指定 Redis 快取的資源群組；您必須選擇下列選項之一︰ 
-      * **新建**：指定您想要建立新的資源群組。 
-      * **使用現有**︰指定您將從與您 Azure 帳戶相關聯的資源群組清單中進行選擇。 
+   c. **資源群組**：指定 Redis 快取的資源群組；您必須選擇下列選項之一︰ 
+      * **建立新項目**：指定您想要建立新的資源群組。 
+      * **使用現有項目**︰指定您將從與您 Azure 帳戶相關聯的資源群組清單中進行選擇。 
 
-   d. **位置**︰指定要建立 Redis 快取的位置；例如「美國西部」。
+   d. **位置**：指定要建立 Redis 快取的位置；例如「美國西部」。
 
    e. **定價層**：指定您 Redis 快取所使用的定價層；此設定會決定用戶端連線的數目。 (如需詳細資訊，請參閱 [Redis 快取定價]。)
 
