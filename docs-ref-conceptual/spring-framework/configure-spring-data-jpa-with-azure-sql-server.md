@@ -13,12 +13,12 @@ ms.devlang: java
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 7119283bec250a4ab0854ba2c29b0906624448e9
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 02b6eff059c8b7dff1c7473d0460ca44e76f6f2e
+ms.sourcegitcommit: 04cff6e3c6d3a9c15f7d88d5d3c238f0bdc787fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53992125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64673961"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>如何搭配使用 Spring Data JPA 和 Azure SQL Database
 
@@ -36,7 +36,7 @@ ms.locfileid: "53992125"
 * [Curl](https://curl.haxx.se/) 或類似的 HTTP 公用程式，以便測試功能。
 * [Git](https://git-scm.com/downloads) 用戶端。
 
-## <a name="create-an-azure-sql-satabase"></a>建立 Azure SQL Database
+## <a name="create-an-azure-sql-database"></a>建立 Azure SQL Database
 
 ### <a name="create-a-sql-database-server-using-the-azure-portal"></a>使用 Azure 入口網站建立 SQL 資料庫伺服器
 
@@ -46,31 +46,31 @@ ms.locfileid: "53992125"
 
 1. 從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站並登入。
 
-1. 按一下 [+建立資源]、[資料庫]，然後按一下 [SQL Database]。
+1. 按一下 [+建立資源]  、[資料庫]  ，然後按一下 [SQL Database]  。
 
    ![建立 SQL 資料庫][SQL01]
 
 1. 指定下列資訊：
 
    - **資料庫名稱**：為 SQL Database 選擇唯一的名稱；您會在稍後將會指定的 SQL 伺服器中建立此名稱。
-   - 訂用帳戶：指定您要使用的 Azure 訂用帳戶。
+   - 訂用帳戶  ：指定您要使用的 Azure 訂用帳戶。
    - **資源群組**：指定是要建立新的資源群組，還是選擇現有的資源群組。
    - **選取來源**：在此教學課程中，選取 `Blank database` 以建立新的資料庫。
 
    ![指定 SQL Database 屬性][SQL02]
    
-1. 按一下 [伺服器]、[建立新的伺服器]，然後指定下列資訊：
+1. 按一下 [伺服器]  、[建立新的伺服器]  ，然後指定下列資訊：
 
-   - **伺服器名稱**：為 SQL 伺服器選擇唯一的名稱；此名稱將用來建立完整網域名稱，例如 wingtiptoyssql.database.windows.net。
+   - **伺服器名稱**：為 SQL 伺服器選擇唯一的名稱；此名稱將用來建立完整網域名稱，例如 wingtiptoyssql.database.windows.net  。
    - **伺服器管理員登入**：指定資料庫管理員的名稱。
    - **密碼**和**確認密碼**：指定資料庫管理員的密碼。
    - **位置**：指定與資料庫最為接近的地理區域。
 
    ![指定 SQL 伺服器][SQL03]
 
-1. 上述所有資訊皆輸入完成時，按一下 [選取]。
+1. 上述所有資訊皆輸入完成時，按一下 [選取]  。
 
-1. 在此教學課程中，指定價格最實惠的 [定價層]，然後按一下 [建立]。
+1. 在此教學課程中，指定價格最實惠的 [定價層]  ，然後按一下 [建立]  。
 
    ![建立 SQL Database][SQL04]
 
@@ -78,15 +78,15 @@ ms.locfileid: "53992125"
 
 1. 從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站並登入。
 
-1. 按一下 [所有資源]，然後按一下您剛才建立的 SQL 伺服器。
+1. 按一下 [所有資源]  ，然後按一下您剛才建立的 SQL 伺服器。
 
    ![選取 SQL 伺服器][SQL05]
 
-1. 在 [概觀] 區段中，按一下 [顯示防火牆設定]
+1. 在 [概觀]  區段中，按一下 [顯示防火牆設定] 
 
    ![顯示防火牆設定][SQL06]
 
-1. 在 [防火牆和虛擬網路] 區段中，藉由指定規則的唯一名稱來建立新的規則，然後輸入需要存取資料庫的 IP 位址範圍，再按一下 [儲存]。
+1. 在 [防火牆和虛擬網路]  區段中，藉由指定規則的唯一名稱來建立新的規則，然後輸入需要存取資料庫的 IP 位址範圍，再按一下 [儲存]  。
 
    ![設定防火牆設定][SQL07]
 
@@ -94,11 +94,11 @@ ms.locfileid: "53992125"
 
 1. 從 <https://portal.azure.com/> 瀏覽至 Azure 入口網站並登入。
 
-1. 按一下 [所有資源]，然後按一下您剛才建立的 SQL 資料庫。
+1. 按一下 [所有資源]  ，然後按一下您剛才建立的 SQL 資料庫。
 
    ![選取 SQL Database][SQL08]
 
-1. 按一下 [連接字串]，然後按一下 [JDBC]，並複製 [JDBC] 文字欄位中的值。
+1. 按一下 [連接字串]  ，然後按一下 [JDBC]  ，並複製 [JDBC] 文字欄位中的值。
 
    ![擷取 JDBC 連接字串][SQL09]
 
@@ -110,9 +110,9 @@ ms.locfileid: "53992125"
    git clone https://github.com/Azure-Samples/spring-data-jdbc-on-azure.git
    ```
 
-1. 在範例專案的 [資源] 目錄中尋找 application.properties 檔案，如果該檔案不存在，則加以建立。
+1. 在範例專案的 [資源]  目錄中尋找 application.properties  檔案，如果該檔案不存在，則加以建立。
 
-1. 在文字編輯器中開啟 application.properties 檔案、在檔案中新增或設定下列幾行，然後使用本文稍早的適當值來取代範例值：
+1. 在文字編輯器中開啟 application.properties  檔案、在檔案中新增或設定下列幾行，然後使用本文稍早的適當值來取代範例值：
 
    ```yaml
    spring.datasource.url=jdbc:sqlserver://wingtiptoyssql.database.windows.net:1433;database=wingtiptoys;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;

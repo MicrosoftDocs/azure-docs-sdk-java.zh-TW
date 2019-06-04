@@ -11,12 +11,12 @@ ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 950b360eb525b0c6b97daad0798c27ded0582b8b
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 5df4ca6ae9f307d937d7dfa0f2c1765f2efde1a1
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991342"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625706"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>將 Spring Boot JAR 檔案 Web 應用程式部署至 Linux 上的 Azure App Service
 
@@ -100,7 +100,7 @@ ms.locfileid: "53991342"
    <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.4.0</version>
+    <version>1.5.4</version>
     <configuration>
       <deploymentType>jar</deploymentType>
 
@@ -127,8 +127,8 @@ ms.locfileid: "53991342"
 
 | Placeholder | 說明 |
 | ----------- | ----------- |
-| `RESOURCEGROUP_NAME` | 要在其中建立 Web 應用程式的新資源群組名稱。 將應用程式的所有資源放在群組中，藉此同時管理。 例如，刪除資源群組會刪除所有與應用程式相關聯的資源。 使用唯一的新資源群組名稱來更新此值，例如 TestResources。 您在下一節中會使用此資源群組名稱來清除所有的 Azure 資源。 |
-| `WEBAPP_NAME` | 應用程式名稱會成為 Web 應用程式在部署至 Azure 時的部分主機名稱 (WEBAPP_NAME.azurewebsites.net)。 將此值更新為新 Azure Web 應用程式的唯一名稱 (例如 contoso)，它將會主控您的 Java 應用程式。 |
+| `RESOURCEGROUP_NAME` | 要在其中建立 Web 應用程式的新資源群組名稱。 將應用程式的所有資源放在群組中，藉此同時管理。 例如，刪除資源群組會刪除所有與應用程式相關聯的資源。 使用唯一的新資源群組名稱來更新此值，例如 TestResources  。 您在下一節中會使用此資源群組名稱來清除所有的 Azure 資源。 |
+| `WEBAPP_NAME` | 應用程式名稱會成為 Web 應用程式在部署至 Azure 時的部分主機名稱 (WEBAPP_NAME.azurewebsites.net)。 將此值更新為新 Azure Web 應用程式的唯一名稱 (例如 contoso  )，它將會主控您的 Java 應用程式。 |
 | `REGION` | 託管 Web 應用程式的 Azure 區域，例如 `westus2`。 您可以使用 `az account list-locations` 命令，從 Cloud Shell 或 CLI 取得區域清單。 |
 
 您可以在 [GitHub 上的 Maven 外掛程式參考](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin)中找到組態選項的完整清單。
@@ -137,7 +137,7 @@ ms.locfileid: "53991342"
 
 一旦您已設定本文上述章節中的所有設定，您已準備好將 Web 應用程式部署至 Azure。 若要這樣做，請使用下列步驟：
 
-1. 如果您對 pom.xml 檔案進行任何變更，從您稍早使用的命令提示字元或終端機視窗，使用 Maven 重新建置 JAR 檔案；例如：
+1. 如果您對 pom.xml  檔案進行任何變更，從您稍早使用的命令提示字元或終端機視窗，使用 Maven 重新建置 JAR 檔案；例如：
    ```shell
    mvn clean package
    ```
@@ -155,7 +155,7 @@ Maven 會將您的 Web 應用程式部署至 Azure；如果 Web 應用程式或 
 
    ![列在 Azure 入口網站應用程式服務中的 Web 應用程式][AP01]
 
-* Web 應用程式的 URL 會列在 Web 應用程式的 [概觀] 中：
+* Web 應用程式的 URL 會列在 Web 應用程式的 [概觀]  中：
 
    ![決定 Web 應用程式的 URL][AP02]
 
