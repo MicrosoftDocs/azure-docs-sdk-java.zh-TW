@@ -1,5 +1,5 @@
 ---
-title: 適用於 Eclipse 的 Azure 工具組登入指示
+title: Azure Toolkit for Eclipse 的登入指示
 description: 了解如何使用適用於 Eclipse 的 Azure 工具組登入 Microsoft Azure。
 services: ''
 documentationcenter: java
@@ -14,131 +14,117 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 79f6cfd3b21d68c131a3f0052d86e4bcb3254e55
-ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.openlocfilehash: b4b13de38913ae6e7ae2bb09210ac742efc9d0ad
+ms.sourcegitcommit: d18d9dce22b7f7af178f756bd341433d24e3c3b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61591001"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66575315"
 ---
-# <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="1e421-103">適用於 Eclipse 的 Azure 工具組的 Azure 登入指示</span><span class="sxs-lookup"><span data-stu-id="1e421-103">Azure Sign In Instructions for the Azure Toolkit for Eclipse</span></span>
+# <a name="sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="20794-103">Azure Toolkit for Eclipse 的登入指示</span><span class="sxs-lookup"><span data-stu-id="20794-103">Sign-in instructions for the Azure Toolkit for Eclipse</span></span>
 
-<span data-ttu-id="1e421-104">適用於 Eclipse 的 Azure 工具組提供兩種登入您 Azure 帳戶的方法︰</span><span class="sxs-lookup"><span data-stu-id="1e421-104">The Azure Toolkit for Eclipse provides two methods for signing into your Azure account:</span></span>
+<span data-ttu-id="20794-104">適用於 Eclipse 的 Azure 工具組提供兩種登入您 Azure 帳戶的方法︰</span><span class="sxs-lookup"><span data-stu-id="20794-104">The Azure Toolkit for Eclipse provides two methods for signing into your Azure account:</span></span>
 
-  * <span data-ttu-id="1e421-105">**自動化** - 當您使用這個方法時，您所建立的認證檔案會包含您的服務主體資料，此後您可以使用認證檔案自動登入 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="1e421-105">**Automated** - when you are using this method, you will create a credentials file which contains your service principal data, after which you can use the credentials file to automatically sign into your Azure account.</span></span>
-  * <span data-ttu-id="1e421-106">**互動式** - 當您使用這個方法時，每次登入 Azure 帳戶都要輸入 Azure 認證。</span><span class="sxs-lookup"><span data-stu-id="1e421-106">**Interactive** - when you are using this method, you will enter your Azure credentials each time you sign into your Azure account.</span></span>
+  - [<span data-ttu-id="20794-105">使用裝置登入來登入您的 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="20794-105">Sign in to your Azure account by Device Login</span></span>](#sign-in-to-your-azure-account-by-device-login)
+  - [<span data-ttu-id="20794-106">使用服務主體來登入您的 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="20794-106">Sign in to your Azure account by Service Principal</span></span>](#sign-in-to-your-azure-account-by-service-principal)
 
-<span data-ttu-id="1e421-107">下列各節中的步驟將說明如何使用每個方法。</span><span class="sxs-lookup"><span data-stu-id="1e421-107">The steps in the following sections will describe how to use each method.</span></span>
+<span data-ttu-id="20794-107">此外也提供[**登出**](#sign-out-of-your-azure-account)方法。</span><span class="sxs-lookup"><span data-stu-id="20794-107">[**Sign out**](#sign-out-of-your-azure-account) methods are also provided.</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
 
-## <a name="signing-into-your-azure-account-automatically-and-creating-a-credentials-file-to-use-in-the-future"></a><span data-ttu-id="1e421-108">自動登入 Azure 帳戶，並建立要在未來使用的認證檔案</span><span class="sxs-lookup"><span data-stu-id="1e421-108">Signing into your Azure account automatically and creating a credentials file to use in the future</span></span>
+## <a name="sign-in-to-your-azure-account-by-device-login"></a><span data-ttu-id="20794-108">使用裝置登入來登入您的 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="20794-108">Sign in to your Azure account by Device Login</span></span>
 
-<span data-ttu-id="1e421-109">下列步驟將逐步引導您建立的認證檔案會包含您的服務主體資料。</span><span class="sxs-lookup"><span data-stu-id="1e421-109">The following steps will walk you through creating a credentials file which contains your service principal data.</span></span> <span data-ttu-id="1e421-110">一旦完成這些步驟後，Eclipse 會自動使用認證檔案，讓您每次開啟專案時都會自動登入 Azure。</span><span class="sxs-lookup"><span data-stu-id="1e421-110">Once you have completed these steps, Eclipse will automatically use the credentials file to automatically sign you into Azure each time you open your project.</span></span>
+<span data-ttu-id="20794-109">若要使用裝置登入來登入 Azure，請執行下列作業：</span><span class="sxs-lookup"><span data-stu-id="20794-109">To sign in Azure by device login, do the following:</span></span>
 
-1. <span data-ttu-id="1e421-111">使用 Eclipse 開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="1e421-111">Open your project with Eclipse.</span></span>
+1. <span data-ttu-id="20794-110">使用 Eclipse 開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="20794-110">Open your project with Eclipse.</span></span>
 
-1. <span data-ttu-id="1e421-112">依序按一下 [工具]、[Azure] 以及 [登入]。</span><span class="sxs-lookup"><span data-stu-id="1e421-112">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+2. <span data-ttu-id="20794-111">依序按一下 [工具]  、[Azure]  以及 [登入]  。</span><span class="sxs-lookup"><span data-stu-id="20794-111">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+   <span data-ttu-id="20794-112">![Azure 登入的 Eclipse 功能表][I01]</span><span class="sxs-lookup"><span data-stu-id="20794-112">![Eclipse Menu for Azure Sign In][I01]</span></span>
 
-   ![Azure 登入的 Eclipse 功能表][A01]
+3. <span data-ttu-id="20794-113">在 [Azure 登入]  視窗中，選取 [裝置登入]  ，然後按一下 [登入]  。</span><span class="sxs-lookup"><span data-stu-id="20794-113">In the **Azure Sign In** window, select **Device Login**, and then click **Sign in**.</span></span>
 
-1. <span data-ttu-id="1e421-114">當 [Azure 登入] 對話方塊出現時，請選取 [自動化]，然後按一下 [新增]。</span><span class="sxs-lookup"><span data-stu-id="1e421-114">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **New**.</span></span>
+   ![選取了 [裝置登入] 的 [Azure 登入] 視窗][I02]
 
-   ![[登入] 對話方塊][A02]
+4. <span data-ttu-id="20794-115">按一下 [Azure 裝置登入]  對話方塊中的 [複製並開啟]  。</span><span class="sxs-lookup"><span data-stu-id="20794-115">Click **Copy&Open** in **Azure Device Login** dialog .</span></span>
 
-1. <span data-ttu-id="1e421-116">當 [Azure 登入] 對話方塊出現時，請輸入您的 Azure 認證，然後按一下 [登入]。</span><span class="sxs-lookup"><span data-stu-id="1e421-116">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
+   ![[Azure 登入] 對話方塊視窗][I03]
 
-   ![[Azure 登入] 對話方塊][A03]
+> [!NOTE]
+>
+> <span data-ttu-id="20794-117">如果瀏覽器未開啟，請將 Eclipse 設定為使用外部瀏覽器，如 Internet Explorer、Firefox 或 Chrome：</span><span class="sxs-lookup"><span data-stu-id="20794-117">If the browser doesn't open, configure Eclipse to use an external browser like Internet Explorer, Firefox, or Chrome:</span></span>
+>
+> 1. <span data-ttu-id="20794-118">在 Eclipse 中開啟 [喜好設定] -> [一般] -> [網頁瀏覽器] -> [使用外部網頁瀏覽器]</span><span class="sxs-lookup"><span data-stu-id="20794-118">Open Preferences -> General -> Web Browser -> Use external web browser in Eclipse</span></span>
+>
+> 2. <span data-ttu-id="20794-119">選取您想要使用的瀏覽器</span><span class="sxs-lookup"><span data-stu-id="20794-119">Select the browser you prefer to use</span></span>
+>
 
-1. <span data-ttu-id="1e421-118">當 [建立驗證檔案] 對話方塊出現時，請選取您想要使用的訂用帳戶，選擇您的目的地目錄，然後按一下 [啟動]。</span><span class="sxs-lookup"><span data-stu-id="1e421-118">When the **Create authentication files** dialog box appears, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
+5. <span data-ttu-id="20794-120">在瀏覽器中，貼上您的裝置程式碼 (您在上一個步驟中按一下 [複製並開啟]  時所複製)，然後按 [下一步]  。</span><span class="sxs-lookup"><span data-stu-id="20794-120">In the browser, paste your device code (which has been copied when you clicked **Copy&Open** in last step) and then click **Next**.</span></span>
 
-   ![[Azure 登入] 對話方塊][A04]
+   ![裝置登入瀏覽器][I04]
 
-1. <span data-ttu-id="1e421-120">[服務主體建立狀態]對話方塊隨即顯示，並在您的檔案成功建立之後，按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="1e421-120">The **Service Principal Creatation Status** dialog box will be displayed, and after your files have been created successfully, click **OK**.</span></span>
+6. <span data-ttu-id="20794-122">最後，在 [選取訂用帳戶]  對話方塊中，選取您要使用的訂用帳戶，然後按一下 [確定]  。</span><span class="sxs-lookup"><span data-stu-id="20794-122">Finally, in the **Select Subscriptions** dialog box, select the subscriptions that you want to use, then click **OK**.</span></span>
+
+   ![[選取訂用帳戶] 對話方塊][I05]
+
+## <a name="sign-in-to-your-azure-account-by-service-principal"></a><span data-ttu-id="20794-124">使用服務主體來登入您的 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="20794-124">Sign in to your Azure account by Service Principal</span></span>
+
+<span data-ttu-id="20794-125">本節會逐步引導您建立認證檔案，並在檔案中包含您的服務主體資料。</span><span class="sxs-lookup"><span data-stu-id="20794-125">This section walks you through creating a credentials file that contains your service principal data.</span></span> <span data-ttu-id="20794-126">在完成此程序後，Eclipse 會使用認證檔案，讓您在開啟專案時自動登入 Azure。</span><span class="sxs-lookup"><span data-stu-id="20794-126">After you have completed this process, Eclipse uses the credentials file to automatically sign you in to Azure when open your project.</span></span>
+
+1. <span data-ttu-id="20794-127">使用 Eclipse 開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="20794-127">Open your project with Eclipse.</span></span>
+
+2. <span data-ttu-id="20794-128">依序按一下 [工具]  、[Azure]  以及 [登入]  。</span><span class="sxs-lookup"><span data-stu-id="20794-128">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+   <span data-ttu-id="20794-129">![Eclipse Azure 登入命令][A01]</span><span class="sxs-lookup"><span data-stu-id="20794-129">![The Eclipse Azure Sign In command][A01]</span></span>
+
+3. <span data-ttu-id="20794-130">在 [Azure 登入]  視窗中，選取 [服務主體]  。</span><span class="sxs-lookup"><span data-stu-id="20794-130">In the **Azure Sign In** window, select **Service Principal**.</span></span> <span data-ttu-id="20794-131">如果您還沒有服務主體驗證檔案，請按一下 [新增]  建立一個。</span><span class="sxs-lookup"><span data-stu-id="20794-131">If you do not have the service principal authentication file yet, click **New** to create one.</span></span> <span data-ttu-id="20794-132">否則，您可以按一下 [瀏覽]  加以開啟，並跳到步驟 8。</span><span class="sxs-lookup"><span data-stu-id="20794-132">Otherwise you can click **Browse** to open it and jump to step 8.</span></span>
+
+   ![選取了 [服務主體] 的 [Azure 登入] 視窗][A02]
+
+4. <span data-ttu-id="20794-134">按一下 [Azure 裝置登入]  對話方塊中的 [複製並開啟]  。</span><span class="sxs-lookup"><span data-stu-id="20794-134">Click **Copy&Open** in **Azure Device Login** dialog.</span></span>
+
+   ![[Azure 登入] 對話方塊視窗][A08]
+
+> [!NOTE]
+>
+> <span data-ttu-id="20794-136">如果瀏覽器未開啟，請將 Eclipse 設定為使用外部瀏覽器，如 IE 或 Chrome：</span><span class="sxs-lookup"><span data-stu-id="20794-136">If the browser doesn't open, configure eclipse to use an external browser like IE or Chrome:</span></span>
+>
+> 1. <span data-ttu-id="20794-137">在 Eclipse 中開啟 [喜好設定] -> [一般] -> [網頁瀏覽器] -> [使用外部網頁瀏覽器]</span><span class="sxs-lookup"><span data-stu-id="20794-137">Open Preferences -> General -> Web Browser -> Use external web browser in Eclipse</span></span>
+>
+> 2. <span data-ttu-id="20794-138">選取您想要使用的瀏覽器</span><span class="sxs-lookup"><span data-stu-id="20794-138">Select the browser you prefer to use</span></span>
+>
+
+5. <span data-ttu-id="20794-139">在瀏覽器中，貼上您的裝置程式碼 (您在上一個步驟中按一下 [複製並開啟]  時所複製)，然後按 [下一步]  。</span><span class="sxs-lookup"><span data-stu-id="20794-139">In the browser, paste your device code (which has been copied when you click **Copy&Open** in last step) and then click **Next**.</span></span>
+
+   ![裝置登入瀏覽器][A03]
+
+6. <span data-ttu-id="20794-141">在 [建立驗證檔案]  視窗中，選取您想要使用的訂用帳戶，選擇您的目的地目錄，然後按一下 [啟動]  。</span><span class="sxs-lookup"><span data-stu-id="20794-141">In the **Create Authentication Files** window, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
+
+   ![[建立驗證檔案] 視窗][A04]
+
+7. <span data-ttu-id="20794-143">在 [服務主體建立狀態]  對話方塊中，於系統成功建立檔案之後按一下 [確定]  。</span><span class="sxs-lookup"><span data-stu-id="20794-143">In the **Service Principal Creation Status** dialog box, click **OK** after your files have been created successfully.</span></span>
 
    ![[服務主體建立狀態] 對話方塊][A05]
 
-1. <span data-ttu-id="1e421-122">當 [Azure 登入]對話方塊出現時，按一下 [登入]。</span><span class="sxs-lookup"><span data-stu-id="1e421-122">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
+8. <span data-ttu-id="20794-145">已建立檔案的位址會自動填入 [Azure 登入]  視窗中，此時請按一下 [登入]  。</span><span class="sxs-lookup"><span data-stu-id="20794-145">Address of the created file will be automatically filled in the **Azure Sign In** window, now click **Sign in**.</span></span>
 
    ![[Azure 登入] 對話方塊][A06]
 
-1. <span data-ttu-id="1e421-124">當 [選取訂用帳戶]對話方塊出現時，請選取您要使用的訂用帳戶，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="1e421-124">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
+9. <span data-ttu-id="20794-147">最後，在 [選取訂用帳戶]  對話方塊中，選取您要使用的訂用帳戶，然後按一下 [確定]  。</span><span class="sxs-lookup"><span data-stu-id="20794-147">Finally, in the **Select Subscriptions** dialog box, select the subscriptions that you want to use, then click **OK**.</span></span>
 
    ![[選取訂用帳戶] 對話方塊][A07]
 
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-automatically"></a><span data-ttu-id="1e421-126">當您以自動化方式登入時，登出您的 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="1e421-126">Signing out of your Azure account when you signed in automatically</span></span>
+## <a name="sign-out-of-your-azure-account"></a><span data-ttu-id="20794-149">登出您的 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="20794-149">Sign out of your Azure account</span></span>
 
-<span data-ttu-id="1e421-127">在上一節中設定步驟之後，每次您重新啟動 Eclipse 時，Azure 工具組都會自動將您登入 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="1e421-127">After you have configured the steps in the previous section, the Azure Toolkit will automatically sign you into your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="1e421-128">不過，若要登出您的 Azure 帳戶，並防止 Azure 工具組自動將您登入，請使用下列步驟。</span><span class="sxs-lookup"><span data-stu-id="1e421-128">However, to sign out of your Azure account and prevent the Azure Toolkit from signing you in automatically, use the following steps.</span></span>
+<span data-ttu-id="20794-150">在前述步驟中設定好帳戶後，每當您啟動 Eclipse 時，系統就會將您自動登入。</span><span class="sxs-lookup"><span data-stu-id="20794-150">After you have configured your account by preceding steps, you will be automatically signed in each time you start Eclipse.</span></span> <span data-ttu-id="20794-151">不過，如果您想要登出 Azure 帳戶，請使用下列步驟。</span><span class="sxs-lookup"><span data-stu-id="20794-151">However, if you want to sign out of your Azure account, use the following steps.</span></span>
 
-1. <span data-ttu-id="1e421-129">在 Eclipse 中，依序按一下 [工具]、[Azure] 以及 [登出]。</span><span class="sxs-lookup"><span data-stu-id="1e421-129">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
-
-   ![Azure 登出的 Eclipse 功能表][L01]
-
-1. <span data-ttu-id="1e421-131">當 [Azure 登出] 對話方塊出現時，按一下 [是]。</span><span class="sxs-lookup"><span data-stu-id="1e421-131">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
-
-   ![[登出] 對話方塊][L03]
-
-## <a name="signing-into-your-azure-account-automatically-using-a-credentials-file-which-you-have-already-created"></a><span data-ttu-id="1e421-133">使用已建立的認證檔案來自動登入 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="1e421-133">Signing into your Azure account automatically using a credentials file which you have already created</span></span>
-
-<span data-ttu-id="1e421-134">如果您在使用 Eclipse 時登出 Azure，必須重新設定適用於 Eclipse 的 Azure 工具組來使用已建立的認證檔案之後，才可以自動登入 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="1e421-134">If you sign out of Azure when you are using Eclipse, you will need to reconfigure the Azure Toolkit for Eclipse to use a credentials file which have created before you can automatically sign into your Azure acccount.</span></span> <span data-ttu-id="1e421-135">下列步驟將引導您將 Azure 工具組設定為使用現有的認證檔案。</span><span class="sxs-lookup"><span data-stu-id="1e421-135">The following steps will walk you through configuring the Azure Toolkit to use an existing credentials file.</span></span>
-
-1. <span data-ttu-id="1e421-136">使用 Eclipse 開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="1e421-136">Open your project with Eclipse.</span></span>
-
-1. <span data-ttu-id="1e421-137">依序按一下 [工具]、[Azure] 以及 [登入]。</span><span class="sxs-lookup"><span data-stu-id="1e421-137">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
-
-   ![Azure 登入的 Eclipse 功能表][A01]
-
-1. <span data-ttu-id="1e421-139">當 [Azure 登入] 對話方塊出現時，請選取 [自動化]，然後按一下 [瀏覽]。</span><span class="sxs-lookup"><span data-stu-id="1e421-139">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **Browse**.</span></span>
-
-   ![[登入] 對話方塊][A02]
-
-1. <span data-ttu-id="1e421-141">當 [選取已驗證檔案] 對話方塊出現時，請選取您稍早建立的認證檔案，接著按一下 [開啟]。</span><span class="sxs-lookup"><span data-stu-id="1e421-141">When the **Select Authenticated File** dialog box appears, select a credentials file which you created earlier, and then click **Open**.</span></span>
-
-   ![[登入] 對話方塊][A08]
-
-1. <span data-ttu-id="1e421-143">當 [Azure 登入]對話方塊出現時，按一下 [登入]。</span><span class="sxs-lookup"><span data-stu-id="1e421-143">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
-
-   ![[Azure 登入] 對話方塊][A06]
-
-1. <span data-ttu-id="1e421-145">當 [選取訂用帳戶]對話方塊出現時，請選取您要使用的訂用帳戶，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="1e421-145">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
-
-   ![[選取訂用帳戶] 對話方塊][A07]
-
-## <a name="signing-into-your-azure-account-interactively"></a><span data-ttu-id="1e421-147">以互動方式登入您的 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="1e421-147">Signing into your Azure account interactively</span></span>
-
-<span data-ttu-id="1e421-148">下列步驟將說明如何以手動方式輸入您的 Azure 認證來登入 Azure。</span><span class="sxs-lookup"><span data-stu-id="1e421-148">The following steps will illustrate how to sign into Azure by manually entering your Azure credentials.</span></span>
-
-1. <span data-ttu-id="1e421-149">使用 Eclipse 開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="1e421-149">Open your project with Eclipse.</span></span>
-
-1. <span data-ttu-id="1e421-150">依序按一下 [工具]、[Azure] 以及 [登入]。</span><span class="sxs-lookup"><span data-stu-id="1e421-150">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
-
-   ![Azure 登入的 Eclipse 功能表][I01]
-
-1. <span data-ttu-id="1e421-152">當 [Azure 登入] 對話方塊出現時，請選取 [互動式]，然後按一下 [登入]。</span><span class="sxs-lookup"><span data-stu-id="1e421-152">When the **Azure Sign In** dialog box appears, select **Interactive**, and then click **Sign In**.</span></span>
-
-   ![[登入] 對話方塊][I02]
-
-1. <span data-ttu-id="1e421-154">當 [Azure 登入] 對話方塊出現時，請輸入您的 Azure 認證，然後按一下 [登入]。</span><span class="sxs-lookup"><span data-stu-id="1e421-154">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
-
-   ![[Azure 登入] 對話方塊][I03]
-
-1. <span data-ttu-id="1e421-156">當 [選取訂用帳戶]對話方塊出現時，請選取您要使用的訂用帳戶，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="1e421-156">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
-
-   ![[選取訂用帳戶] 對話方塊][I04]
-
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-interactively"></a><span data-ttu-id="1e421-158">當您以互動方式登入時，登出您的 Azure 帳戶</span><span class="sxs-lookup"><span data-stu-id="1e421-158">Signing out of your Azure account when you signed in interactively</span></span>
-
-<span data-ttu-id="1e421-159">在上一節中設定步驟之後，每次您重新啟動 Eclipse 時，都會自動將您登出 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="1e421-159">After you have configured the steps in the previous section, you will automatically signed out of your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="1e421-160">不過，如果您想要登出您的 Azure 帳戶而不重新啟動 Eclipse，請使用下列步驟。</span><span class="sxs-lookup"><span data-stu-id="1e421-160">However, if you want to sign out of your Azure account without restarting Eclipse, use the following steps.</span></span>
-
-1. <span data-ttu-id="1e421-161">在 Eclipse 中，依序按一下 [工具]、[Azure] 以及 [登出]。</span><span class="sxs-lookup"><span data-stu-id="1e421-161">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
+1. <span data-ttu-id="20794-152">在 Eclipse 中，依序按一下 [工具]  、[Azure]  以及 [登出]  。</span><span class="sxs-lookup"><span data-stu-id="20794-152">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
 
    ![Azure 登出的 Eclipse 功能表][L01]
 
-1. <span data-ttu-id="1e421-163">當 [Azure 登出] 對話方塊出現時，按一下 [是]。</span><span class="sxs-lookup"><span data-stu-id="1e421-163">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
+2. <span data-ttu-id="20794-154">當 [Azure 登出]  對話方塊出現時，按一下 [是]  。</span><span class="sxs-lookup"><span data-stu-id="20794-154">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
 
    ![[登出] 對話方塊][L02]
 
-## <a name="next-steps"></a><span data-ttu-id="1e421-165">後續步驟</span><span class="sxs-lookup"><span data-stu-id="1e421-165">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="20794-156">後續步驟</span><span class="sxs-lookup"><span data-stu-id="20794-156">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
@@ -151,6 +137,7 @@ ms.locfileid: "61591001"
 [I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
 [I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
 [I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [A01]: media/azure-toolkit-for-eclipse-sign-in-instructions/A01.png
 [A02]: media/azure-toolkit-for-eclipse-sign-in-instructions/A02.png

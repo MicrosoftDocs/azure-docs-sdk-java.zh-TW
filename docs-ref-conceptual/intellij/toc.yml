@@ -1,37 +1,30 @@
-items:
 - name: Azure Toolkit for IntelliJ
   href: azure-toolkit-for-intellij.md
   items:
-  - name: Install
-    href: azure-toolkit-for-intellij-installation.md
-  - name: 開始使用
-    href: azure-toolkit-for-intellij-create-hello-world-web-app.md
-    maintainContext: true
-  - name: 教學課程
-    items:
-    - name: 在 Linux 容器中部署 Hello World Web 應用程式
-      href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
-    - name: 將容器部署到 Azure VM
-      href: azure-toolkit-for-intellij-publish-as-docker-container.md
-    - name: 將 Web 應用程式部署至 Azure App Service
-      href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
-  - name: 作法
-    items:
-    - name: 設定驗證
-      href: azure-toolkit-for-intellij-sign-in-instructions.md
-    - name: 管理 Azure 資源
+    - name: 開始使用
+      href: azure-toolkit-for-intellij-create-hello-world-web-app.md
+      maintainContext: true
+    - name: 教學課程
       items:
-      - name: 虛擬機器
-        href: azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md
-      - name: 儲存體帳戶
-        href: azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md
-      - name: Azure Redis 快取
-        href: azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md
-  - name: 版本資訊
-    href: https://github.com/Microsoft/azure-tools-for-java/releases
-ms.openlocfilehash: 24fb626fdca4b5648264fc5b079972a198375f62
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893396"
+        - name: 將 Web 應用程式部署至 Linux 容器
+          href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
+        - name: 將 Web 應用程式發佈為 Docker 容器
+          href: azure-toolkit-for-intellij-publish-as-docker-container.md
+        - name: 將 Spring Boot 應用程式發佈為 Docker 容器
+          href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
+    - name: 作法
+      items:
+        - name: 登入您的 Azure 帳戶
+          href: azure-toolkit-for-intellij-sign-in-instructions.md
+        - name: 管理 Azure 資源
+          items:
+            - name: 虛擬機器
+              href: azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md
+            - name: 儲存體帳戶
+              href: azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md
+            - name: Azure Redis 快取
+              href: azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md
+    - name: 版本資訊
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+    - name: Marketplace
+      href: 'https://plugins.jetbrains.com/plugin/8053'
