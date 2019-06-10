@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 42bb030a916cc5aaf1e20242518a0a400b8baa88
-ms.sourcegitcommit: f33befab25a66a252b4c91c7aeb1b77cb32821bb
+ms.openlocfilehash: 9ab781d27e8968ab867efc65f3ac422ac6253a6a
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59745156"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270851"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>在 Azure Kubernetes Service 中的 Kubernetes 叢集上部署 Spring Boot 應用程式
 
@@ -116,14 +116,14 @@ ms.locfileid: "59745156"
    az acr login
    ```
 
-1. 巡覽至 Spring Boot 應用程式已完成的專案目錄 (例如，"*C:\SpringBoot\gs-spring-boot-docker\complete*" 或 "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*")，並使用文字編輯器開啟 *pom.xml* 檔案。
+1. 巡覽至 Spring Boot 應用程式已完成的專案目錄 (例如，"*C:\SpringBoot\gs-spring-boot-docker\complete*" 或 " */users/robert/SpringBoot/gs-spring-boot-docker/complete*")，並使用文字編輯器開啟 *pom.xml* 檔案。
 
 1. 用 Azure Container Registry 的登錄名稱和最新版本的 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) 更新 *pom.xml* 檔案中的 `<properties>` 集合。
 
    ```xml
    <properties>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>1.0.2</jib-maven-plugin.version>
+      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -136,10 +136,10 @@ ms.locfileid: "59745156"
      <groupId>com.google.cloud.tools</groupId>
      <version>${jib-maven-plugin.version}</version>
      <configuration>
-        <from>              
+        <from>
             <image>openjdk:8-jre-alpine</image>
         </from>
-        <to>                
+        <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
         </to>
      </configuration>
@@ -148,9 +148,14 @@ ms.locfileid: "59745156"
 
 1. 瀏覽至 Spring Boot 應用程式已完成的專案目錄，然後執行下列命令來建置映像，並將映像推送到登錄：
 
-   ```
+   ```cmd
    mvn compile jib:build
    ```
+
+> [!NOTE]
+>
+> 基於 Azure Cli 和 Azure Container Registry 的安全考量，`az acr login` 所建立的認證具有 1 小時的有效期，如果發生 *401 未授權*錯誤，您可以再次執行 `az acr login -n <your registry name>` 命令以重新驗證。
+>
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>使用 Azure CLI 在 AKS 上建立 Kubernetes 叢集
 
@@ -252,26 +257,26 @@ ms.locfileid: "59745156"
 
    ![Kubernetes 設定網站][KB01]
 
-1. 當 [資源建立] 頁面出現時，請指定下列選項：
+1. 當 [資源建立]  頁面出現時，請指定下列選項：
 
-   a. 選取 [建立應用程式]。
+   a. 選取 [建立應用程式]  。
 
-   b. 在 [應用程式名稱] 中輸入您的 Spring Boot 應用程式名稱，例如："*gs-spring-boot-docker*"。
+   b. 在 [應用程式名稱]  中輸入您的 Spring Boot 應用程式名稱，例如："*gs-spring-boot-docker*"。
 
-   c. 在 [容器映像] 中輸入先前的登入伺服器和容器映像，例如："*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"。
+   c. 在 [容器映像]  中輸入先前的登入伺服器和容器映像，例如："*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"。
 
-   d. 針對 [服務] 選擇 [外部]。
+   d. 針對 [服務]  選擇 [外部]  。
 
-   e. 在 [連接埠] 和 [目標連接埠] 文字方塊中指定您的外部和內部連接埠。
+   e. 在 [連接埠]  和 [目標連接埠]  文字方塊中指定您的外部和內部連接埠。
 
    ![Kubernetes 設定網站][KB02]
 
 
-1. 按一下 [部署] 來部署容器。
+1. 按一下 [部署]  來部署容器。
 
    ![Kubernetes 部署][KB05]
 
-1. 應用程式一經部署，您就會看到 [服務] 底下列出您的 Spring Boot 應用程式。
+1. 應用程式一經部署，您就會看到 [服務]  底下列出您的 Spring Boot 應用程式。
 
    ![Kubernetes 服務][KB06]
 

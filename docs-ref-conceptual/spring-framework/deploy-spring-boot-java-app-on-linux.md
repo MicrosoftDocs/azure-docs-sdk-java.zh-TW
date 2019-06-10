@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: a9d4bd5a1677078431b5502b276b17cd973cbea0
-ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
+ms.openlocfilehash: 407b852e24ef88d2fb075bd064f1acf2b107ddc1
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58489656"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270860"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>在適用於容器的 Azure App Service 上部署 Spring Boot 應用程式
 
@@ -100,126 +100,108 @@ ms.locfileid: "58489656"
 
    一旦您已在 Azure 入口網站登入您的帳戶後，就可以遵循[使用 Azure 入口網站建立私人 Docker 容器登錄]文章中的步驟，為便於了解，會在下列步驟中加以釋義。
 
-1. 依序按一下功能表的 [+ 新增] 圖示、[容器]，以及 [Azure Container Registry]。
+1. 依序按一下功能表的 [+ 新增]  圖示、[容器]  ，以及 [Azure Container Registry]  。
    
    ![建立新的 Azure Container Registry][AR01]
 
-1. 當 Azure Container Registry 範本的資訊頁面顯示時，按一下 [建立]。 
+1. 當 Azure Container Registry 範本的資訊頁面顯示時，按一下 [建立]  。 
 
    ![建立新的 Azure Container Registry][AR02]
 
-1. 當 [建立容器登錄] 頁面顯示時，輸入您的 [登錄名稱] 和 [資源群組]，針對 [管理使用者] 選擇 [啟用]，然後按一下 [建立]。
+1. 當 [建立容器登錄]  頁面顯示時，輸入您的 [登錄名稱]  和 [資源群組]  ，針對 [管理使用者]  選擇 [啟用]  ，然後按一下 [建立]  。
 
    ![設定 Azure Container Registry 設定][AR03]
 
-1. 一旦建立容器登錄之後，瀏覽至 Azure 入口網站中的容器登錄，然後按一下 [存取金鑰]。 將後續步驟的使用者名稱和密碼記下。
+1. 一旦建立容器登錄之後，瀏覽至 Azure 入口網站中的容器登錄，然後按一下 [存取金鑰]  。 將後續步驟的使用者名稱和密碼記下。
 
    ![Azure Container Registry 存取金鑰][AR04]
 
 ## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>設定要使用 Azure Container Registry 存取金鑰的 Maven
 
-1. 瀏覽至您 Maven 安裝的設定目錄，並使用文字編輯器開啟 settings.xml 檔案。
+1. 瀏覽至 Spring Boot 應用程式的已完成專案目錄 (例如："*C:\SpringBoot\gs-spring-boot-docker\complete*" 或 " */users/robert/SpringBoot/gs-spring-boot-docker/complete*")，並使用文字編輯器開啟 pom.xml  檔案。
 
-1. 將本教學課程上一節的 Azure Container Registry 存取設定新增至 settings.xml 檔案中的 `<servers>` 集合；例如：
-
-   ```xml
-   <servers>
-      <server>
-         <id>wingtiptoysregistry</id>
-         <username>wingtiptoysregistry</username>
-         <password>AbCdEfGhIjKlMnOpQrStUvWxYz</password>
-      </server>
-   </servers>
-   ```
-
-1. 瀏覽至 Spring Boot 應用程式的已完成專案目錄 (例如："*C:\SpringBoot\gs-spring-boot-docker\complete*" 或 "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*")，並使用文字編輯器開啟 pom.xml 檔案。
-
-1. 使用本教學課程上一節的 Azure Container Registry 登入伺服器值來更新 pom.xml 檔案中的 `<properties>` 集合；例如：
+1. 使用最新版的 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) 以及本教學課程上一節的 Azure Container Registry 登入伺服器值和存取設定，更新 pom.xml  檔案中的 `<properties>` 集合。 例如︰
 
    ```xml
    <properties>
+      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
+      <username>wingtiptoysregistry</username>
+      <password>{put your Azure Container Registry access key here}</password>
    </properties>
    ```
 
-1. 更新 pom.xml 檔案中的 `<plugins>` 集合，以便 `<plugin>` 可包含本教學課程上一節的登入伺服器位址和 Azure Container Registry 的登錄名稱。 例如︰
+1. 將 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) 新增至 pom.xml  檔案中的 `<plugins>` 集合，然後在 `<from>/<image>` 指定基底映像、在 `<to>/<image>` 指定最終映像名稱，並在 `<to>/<auth>` 指定上一節中的使用者名稱和密碼。 例如︰
 
    ```xml
    <plugin>
-      <groupId>com.spotify</groupId>
-      <artifactId>docker-maven-plugin</artifactId>
-      <version>0.4.11</version>
-      <configuration>
-         <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-         <dockerDirectory>src/main/docker</dockerDirectory>
-         <resources>
-            <resource>
-               <targetPath>/</targetPath>
-               <directory>${project.build.directory}</directory>
-               <include>${project.build.finalName}.jar</include>
-            </resource>
-         </resources>
-         <serverId>wingtiptoysregistry</serverId>
-         <registryUrl>https://wingtiptoysregistry.azurecr.io</registryUrl>
-      </configuration>
+     <artifactId>jib-maven-plugin</artifactId>
+     <groupId>com.google.cloud.tools</groupId>
+     <version>${jib-maven-plugin.version}</version>
+     <configuration>
+        <from>
+            <image>openjdk:8-jre-alpine</image>
+        </from>
+        <to>
+            <image>${docker.image.prefix}/${project.artifactId}</image>
+            <auth>
+               <username>${username}</username>
+               <password>${password}</password>
+            </auth>
+        </to>
+     </configuration>
    </plugin>
    ```
 
 1. 瀏覽至您 Spring Boot 應用程式的已完成專案目錄，然後執行下列命令來重建應用程式，並將容器推送到您的 Azure Container Registry：
 
-   ```
-   mvn package docker:build -DpushImage 
+   ```cmd
+   mvn compile jib:build
    ```
 
 > [!NOTE]
 >
-> 當您要將 Docker 容器推送至 Azure 時，可能會收到類似下列其中一項的錯誤訊息，即使已成功建立 Docker 容器也一樣：
->
-> * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: no basic auth credentials`
->
-> * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: Incomplete Docker registry authorization credentials. Please provide all of username, password, and email or none.`
->
-> 如果發生這種情況，您可能需要從 Docker 命令列登入 Azure 帳戶；例如：
->
-> `docker login -u wingtiptoysregistry -p "AbCdEfGhIjKlMnOpQrStUvWxYz" wingtiptoysregistry.azurecr.io`
->
-> 接著，您可以從命令列推送您的容器；例如：
->
-> `docker push wingtiptoysregistry.azurecr.io/gs-spring-boot-docker`
+> 當您使用 Jib 將映像推送到 Azure Container Registry 時，映像將不接受 *Dockerfile*；如需詳細資訊，請參閱[此文件](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html)。
 >
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>使用您的容器映像在 Azure App Service 上建立 Linux 的 Web 應用程式
 
 1. 瀏覽至 [Azure 入口網站]並登入。
 
-2. 依序按一下功能表的 [+ 新增] 圖示、[Web + 行動]，以及 [Linux 上的 Web 應用程式]。
+2. 依序按一下功能表的 [+ 建立資源]  圖示、[Web]  ，以及 [用於容器的 Web App]  。
    
    ![在 Azure 入口網站中建立新的 Web 應用程式][LX01]
 
-3. 當 [Linux 上的 Web 應用程式] 頁面顯示時，輸入下列資訊：
+3. 當 [Linux 上的 Web 應用程式]  頁面顯示時，輸入下列資訊：
 
-   a. 為 [應用程式名稱] 輸入唯一名稱；例如："wingtiptoyslinux"。
+   a. 為 [應用程式名稱]  輸入唯一名稱；例如："wingtiptoyslinux" 
 
-   b. 從下拉式清單選擇 [訂用帳戶]。
+   b. 從下拉式清單選擇 [訂用帳戶]  。
 
-   c. 選擇現有 [資源群組]，或指定名稱以建立新的資源群組。
+   c. 選擇現有 [資源群組]  ，或指定名稱以建立新的資源群組。
 
-   d. 按一下 [設定容器]，並輸入下列資訊：
+   d. 選擇 *Linux* 作為 **OS**。
 
-   * 選擇 [私人登錄]。
+   e. 按一下 [App Service 方案/位置]  ，並選擇現有的 App Service 方案，或按一下 [新建]  以建立新的 App Service 方案。
 
-   * **映像和選擇性標記**：指定您先前的容器名稱，例如："wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest"
+   f. 按一下 [設定容器]  ，並輸入下列資訊：
 
-   * **伺服器 URL**：指定您先前的登錄 URL，例如："*<https://wingtiptoysregistry.azurecr.io>*"
+   * 選擇 [單一容器]  和 [Azure Container Registry]  。
 
-   * **登入使用者名稱**和**密碼**：從您在先前步驟中使用的**存取金鑰**指定您的登入認證。
+   * **登錄**：選擇您先前建立的容器名稱，例如："wingtiptoysregistry" 
+
+   * **映像**：選擇映像名稱，例如："gs-spring-boot-docker" 
    
-   e. 一旦您輸入上述所有資訊後，按一下 [確定]。
+   * **標籤**︰選擇映像的標記，例如："latest" 
+   
+   * **啟動檔案**：將其保留為空白，因為映像已有啟動命令
+   
+   e. 在輸入上述所有資訊後，按一下 [套用]  。
 
    ![設定 Web 應用程式設定][LX02]
 
-4. 按一下頁面底部的 [新增] 。
+4. 按一下頁面底部的 [新增]  。
 
 > [!NOTE]
 >
@@ -227,15 +209,13 @@ ms.locfileid: "58489656"
 >
 > 1. 瀏覽至 [Azure 入口網站]並登入。
 > 
-> 2. 按一下 [應用程式服務] 的圖示。 (請參閱下列映像中的項目 #1。)
+> 2. 按一下 **App Service** 的圖示，並從清單中選取您的 Web 應用程式。
 >
-> 3. 從清單中選取 Web 應用程式。 (下列映像中的項目 #2。)
+> 4. 按一下 [組態]  。 (下圖中的項目 #1。)
 >
-> 4. 按一下 [ **應用程式設定**]。 (下列映像中的項目 #3。)
+> 5. 在 [應用程式設定]  區段中，新增名為 **PORT** 的新設定，並輸入您的自訂連接埠號碼作為其值。 (下圖中的項目 #2、#3、#4。)
 >
-> 5. 在 [應用程式設定] 區段中，新增名為 **PORT** 的新環境變數，並輸入值的自訂連接埠號碼。 (下列映像中的項目 #4。)
->
-> 6. 按一下 [檔案] 。 (下列映像中的項目 #5。)
+> 6. 按一下 [檔案]  。 (下列映像中的項目 #5。)
 >
 > ![在 Azure 入口網站中儲存自訂連接埠號碼][LX03]
 >

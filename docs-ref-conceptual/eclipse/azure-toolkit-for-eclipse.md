@@ -14,73 +14,52 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 88d92cfd82244d5df2ad34304155d41c5aab0ee9
-ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
+ms.openlocfilehash: 5bec0af1a17b87d24f29bc856691870d4d697888
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53638957"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625757"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>適用於 Eclipse 的 Azure 工具組
 
-適用於 Eclipse 的 Azure 工具組提供範本和功能，您可以使用這些範本和功能從 Eclipse 整合式開發環境 (IDE) 輕鬆地建立、開發、測試雲端應用程式，並將其部署至 Azure。
+適用於 Eclipse 的 Azure 工具組提供範本和功能，您可以使用這些範本和功能從 Eclipse IDE 輕鬆地建立、開發、測試雲端應用程式，並將其部署至 Azure。
 
 > [!NOTE]
 > 
 > 另外還有適用於 IntelliJ IDE 的 Azure 工具組。 如需詳細資訊，請參閱 [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md)。
 > 
 
-## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>開始使用適用於 Eclipse 的 Azure 工具組
-下列文章可協助您開始使用適用於 Eclipse 的 Azure 工具組：
+## <a name="get-started-in-10-minutes"></a>10 分鐘快速入門
 
-* [安裝 Azure Toolkit for Eclipse](azure-toolkit-for-eclipse-installation.md)
+* [建立 Azure App Service 的 Hello World Web 應用程式](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
 
-* [Azure Toolkit for Eclipse 的登入指示](azure-toolkit-for-eclipse-sign-in-instructions.md)
+## <a name="step-by-step-tutorials"></a>逐步教學課程
 
-* [在 Eclipse 中建立 Azure Hello World Web 應用程式](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
+* [將 Spring Boot 應用程式發佈為 Docker 容器](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
 
-## <a name="use-the-azure-toolkit-for-eclipse-with-your-java-projects"></a>使用適用於 Eclipse 的 Azure 工具組進行 Java 專案
-下列文章會示範如何使用 Azure Toolkit for Eclipse 將 Azure 的功能加入您的 Java 專案：
-
-* [使用適用於 Eclipse 的 Azure 工具組，將 Spring Boot 應用程式發佈為 Docker 容器](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
-
-* [使用適用於 Eclipse 的 Azure 工具組將 Web 應用程式發佈為 Docker 容器](azure-toolkit-for-eclipse-publish-as-docker-container.md)
+* [將 Web 應用程式發佈為 Docker 容器](azure-toolkit-for-eclipse-publish-as-docker-container.md)
 
 * [使用適用於 Eclipse 的 HDInsight 工具外掛程式建立 HDInsight Spark Linux 叢集的 Spark 應用程式](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
 
 * [在 Eclipse 中顯示 Azure Libraries for Java 封裝的 Javadoc 內容](azure-toolkit-for-eclipse-displaying-javadoc-content-for-azure-libraries.md)
 
-## <a name="manage-azure-resources-using-the-azure-toolkit-for-eclipse"></a>使用適用於 Eclipse 的 Azure 工具組管理 Azure 資源
-下列文章會示範如何使用適用於 Eclipse 的 Azure 工具組管理 Azure 專案：
+## <a name="managing-azure-resources"></a>管理 Azure 資源
 
-* [使用適用於 Eclipse 的 Azure Explorer 來管理 Redis 快取](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
+* [Redis 快取](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
 
-* [使用適用於 Eclipse 的 Azure Explorer 來管理儲存體帳戶](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
+* [儲存體帳戶](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
 
-* [使用適用於 Eclipse 的 Azure Explorer 來管理虛擬機器](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
+* [虛擬機器](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="whats-more"></a>相關資訊
 
-如需 Azure Toolkit for Eclipse 的詳細資訊，請參閱下列頁面：
-
-* [Azure 工具組版本資訊](https://github.com/Microsoft/azure-tools-for-java/releases)
-
-* [Eclipse Marketplace 中的 Azure Toolkit for Eclipse](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
-
-如需有關使用 [Java 搭配 Azure 的詳細資訊](https://docs.microsoft.com/java/azure/)，請參閱 和[適用於 Visual Studio Team Services 的 Java 工具](/azure/devops/java/)。
-
-<!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 > [!NOTE]
 > 
 > 適用於 Eclipse 的 Azure 工具組是開放原始碼專案，其來源程式碼可從[專案網站的 MIT License](https://github.com/microsoft/azure-tools-for-java) 下取得。
 > 
-
-<!-- URL List -->
-
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure
-
-<!-- Temporarily Deprecated URLs -->
 
 <!-- [Deploying large deployments](azure-toolkit-for-eclipse-deploying-large-deployments.md) -->
 <!-- [How to Maintain Session Data with Session Affinity]: http://go.microsoft.com/fwlink/?LinkID=699539 -->

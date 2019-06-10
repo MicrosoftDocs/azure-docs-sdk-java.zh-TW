@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: fdf0334a8796d636a1968943cc34d7ae98d6361c
-ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
+ms.openlocfilehash: 22389ce7346a1d97c072dcc82162c9286f21f178
+ms.sourcegitcommit: 04d0d92c46399976b58a9dfa107ba644378bf171
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040256"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65986202"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>開始使用 Azure 上的 Java 進行雲端開發
 
@@ -74,10 +74,10 @@ graphURL=https\://graph.windows.net/
 
 將前四個值替換為以下內容：
 
-- subscription：使用在 Azure CLI 2.0 中透過 `az account show` 所得到的 id 值。
-- client：使用從服務主體輸出所擷取之輸出中得到的 appId 值。
-- key：使用從服務主體輸出所得到的 password 值。
-- tenant：使用從服務主體輸出所得到的 tenant 值。
+- subscription：使用在 Azure CLI 2.0 中透過 `az account show` 所得到的 id  值。
+- client：使用從服務主體輸出所擷取之輸出中得到的 appId  值。
+- key：使用從服務主體輸出所得到的 password  值。
+- tenant：使用從服務主體輸出所得到的 tenant  值。
 
 將此檔案儲存在系統上可供程式碼讀取且安全的位置。 您可以將此檔案用於日後撰寫的程式碼，因此建議您將其儲存在本文應用程式以外的位置。
 
@@ -147,23 +147,23 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 
 ### <a name="install-the-azure-toolkit-for-intellij"></a>安裝 Azure Toolkit for Intellij
 
-如果您要以程式設計方式部署 Web 應用程式或 API，就必須要有 [Azure 工具組](intellij/azure-toolkit-for-intellij-installation.md)，但此工具組目前並未用於任何其他種類的開發。 以下是安裝程序的摘要。 如需詳細步驟，請瀏覽[安裝 Azure Toolkit for Intellij](intellij/azure-toolkit-for-intellij-installation.md)。
+如果您要以程式設計方式部署 Web 應用程式或 API，就必須要有 [Azure 工具組](intellij/azure-toolkit-for-intellij-installation.md)，但此工具組目前並未用於任何其他種類的開發。 以下是安裝程序的摘要。 如需快速入門，請瀏覽[適用於 IntelliJ 的 Azure 工具組快速入門](intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md)。
 
-選取 [檔案] 功能表，然後選取 [設定...]。 
+- 選取 [檔案]  功能表，然後選取 [設定...]  。 
 
-選取 [瀏覽存放庫...] 並搜尋 "Azure"，然後安裝 **Azure Toolkit for Intellij**。
+- 選取 [瀏覽存放庫...]  並搜尋 "Azure"，然後安裝 **Azure Toolkit for Intellij**。
 
-重新啟動 Intellij。
+- 重新啟動 Intellij。
 
 ### <a name="install-the-azure-toolkit-for-eclipse"></a>安裝適用於 Eclipse 的 Azure 工具組
 
-如果您要以程式設計方式部署 Web 應用程式或 API，就必須要有 [Azure 工具組](eclipse/azure-toolkit-for-eclipse.md)，但此工具組目前並未用於任何其他種類的開發。 以下是安裝程序的摘要。 如需詳細步驟，請瀏覽[安裝 Azure Toolkit for Eclipse](eclipse/azure-toolkit-for-eclipse.md)。
+如果您要以程式設計方式部署 Web 應用程式或 API，就必須要有 [Azure 工具組](eclipse/azure-toolkit-for-eclipse.md)，但此工具組目前並未用於任何其他種類的開發。 以下是安裝程序的摘要。 如需快速入門，請瀏覽[適用於 Eclipse 的 Azure 工具組快速入門](eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md)。
 
-選取 [說明] 功能表，然後選取 [安裝新軟體]。
+- 選取 [說明]  功能表，然後選取 [安裝新軟體]  。
 
-在 [使用:] 欄位中輸入 `http://dl.microsoft.com/eclipse`，然後按 Enter 鍵。
+- 在 [使用:]  欄位中輸入 `http://dl.microsoft.com/eclipse`，然後按 Enter 鍵。
 
-然後，選取 [Azure Toolkit for Java] 旁的核取方塊，然後取消核取 [在安裝期間連絡所有更新網站來尋找必要軟體] 的核取方塊。 然後，選取 [下一步]。
+- 然後，選取 [Azure Toolkit for Java]  旁的核取方塊，然後取消核取 [在安裝期間連絡所有更新網站來尋找必要軟體]  的核取方塊。 然後，選取 [下一步]。
 
 ## <a name="create-a-linux-virtual-machine"></a>建立 Linux 虛擬機器
 

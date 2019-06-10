@@ -1,5 +1,5 @@
 ---
-title: 適用於 Eclipse 的 Azure 工具組登入指示
+title: Azure Toolkit for Eclipse 的登入指示
 description: 了解如何使用適用於 Eclipse 的 Azure 工具組登入 Microsoft Azure。
 services: ''
 documentationcenter: java
@@ -14,127 +14,113 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 79f6cfd3b21d68c131a3f0052d86e4bcb3254e55
-ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.openlocfilehash: b4b13de38913ae6e7ae2bb09210ac742efc9d0ad
+ms.sourcegitcommit: d18d9dce22b7f7af178f756bd341433d24e3c3b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61591001"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66575315"
 ---
-# <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>適用於 Eclipse 的 Azure 工具組的 Azure 登入指示
+# <a name="sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse 的登入指示
 
 適用於 Eclipse 的 Azure 工具組提供兩種登入您 Azure 帳戶的方法︰
 
-  * **自動化** - 當您使用這個方法時，您所建立的認證檔案會包含您的服務主體資料，此後您可以使用認證檔案自動登入 Azure 帳戶。
-  * **互動式** - 當您使用這個方法時，每次登入 Azure 帳戶都要輸入 Azure 認證。
+  - [使用裝置登入來登入您的 Azure 帳戶](#sign-in-to-your-azure-account-by-device-login)
+  - [使用服務主體來登入您的 Azure 帳戶](#sign-in-to-your-azure-account-by-service-principal)
 
-下列各節中的步驟將說明如何使用每個方法。
+此外也提供[**登出**](#sign-out-of-your-azure-account)方法。
 
 [!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
 
-## <a name="signing-into-your-azure-account-automatically-and-creating-a-credentials-file-to-use-in-the-future"></a>自動登入 Azure 帳戶，並建立要在未來使用的認證檔案
+## <a name="sign-in-to-your-azure-account-by-device-login"></a>使用裝置登入來登入您的 Azure 帳戶
 
-下列步驟將逐步引導您建立的認證檔案會包含您的服務主體資料。 一旦完成這些步驟後，Eclipse 會自動使用認證檔案，讓您每次開啟專案時都會自動登入 Azure。
+若要使用裝置登入來登入 Azure，請執行下列作業：
 
 1. 使用 Eclipse 開啟您的專案。
 
-1. 依序按一下 [工具]、[Azure] 以及 [登入]。
+2. 依序按一下 [工具]  、[Azure]  以及 [登入]  。
+   ![Azure 登入的 Eclipse 功能表][I01]
 
-   ![Azure 登入的 Eclipse 功能表][A01]
+3. 在 [Azure 登入]  視窗中，選取 [裝置登入]  ，然後按一下 [登入]  。
 
-1. 當 [Azure 登入] 對話方塊出現時，請選取 [自動化]，然後按一下 [新增]。
+   ![選取了 [裝置登入] 的 [Azure 登入] 視窗][I02]
 
-   ![[登入] 對話方塊][A02]
+4. 按一下 [Azure 裝置登入]  對話方塊中的 [複製並開啟]  。
 
-1. 當 [Azure 登入] 對話方塊出現時，請輸入您的 Azure 認證，然後按一下 [登入]。
+   ![[Azure 登入] 對話方塊視窗][I03]
 
-   ![[Azure 登入] 對話方塊][A03]
+> [!NOTE]
+>
+> 如果瀏覽器未開啟，請將 Eclipse 設定為使用外部瀏覽器，如 Internet Explorer、Firefox 或 Chrome：
+>
+> 1. 在 Eclipse 中開啟 [喜好設定] -> [一般] -> [網頁瀏覽器] -> [使用外部網頁瀏覽器]
+>
+> 2. 選取您想要使用的瀏覽器
+>
 
-1. 當 [建立驗證檔案] 對話方塊出現時，請選取您想要使用的訂用帳戶，選擇您的目的地目錄，然後按一下 [啟動]。
+5. 在瀏覽器中，貼上您的裝置程式碼 (您在上一個步驟中按一下 [複製並開啟]  時所複製)，然後按 [下一步]  。
 
-   ![[Azure 登入] 對話方塊][A04]
+   ![裝置登入瀏覽器][I04]
 
-1. [服務主體建立狀態]對話方塊隨即顯示，並在您的檔案成功建立之後，按一下 [確定]。
+6. 最後，在 [選取訂用帳戶]  對話方塊中，選取您要使用的訂用帳戶，然後按一下 [確定]  。
+
+   ![[選取訂用帳戶] 對話方塊][I05]
+
+## <a name="sign-in-to-your-azure-account-by-service-principal"></a>使用服務主體來登入您的 Azure 帳戶
+
+本節會逐步引導您建立認證檔案，並在檔案中包含您的服務主體資料。 在完成此程序後，Eclipse 會使用認證檔案，讓您在開啟專案時自動登入 Azure。
+
+1. 使用 Eclipse 開啟您的專案。
+
+2. 依序按一下 [工具]  、[Azure]  以及 [登入]  。
+   ![Eclipse Azure 登入命令][A01]
+
+3. 在 [Azure 登入]  視窗中，選取 [服務主體]  。 如果您還沒有服務主體驗證檔案，請按一下 [新增]  建立一個。 否則，您可以按一下 [瀏覽]  加以開啟，並跳到步驟 8。
+
+   ![選取了 [服務主體] 的 [Azure 登入] 視窗][A02]
+
+4. 按一下 [Azure 裝置登入]  對話方塊中的 [複製並開啟]  。
+
+   ![[Azure 登入] 對話方塊視窗][A08]
+
+> [!NOTE]
+>
+> 如果瀏覽器未開啟，請將 Eclipse 設定為使用外部瀏覽器，如 IE 或 Chrome：
+>
+> 1. 在 Eclipse 中開啟 [喜好設定] -> [一般] -> [網頁瀏覽器] -> [使用外部網頁瀏覽器]
+>
+> 2. 選取您想要使用的瀏覽器
+>
+
+5. 在瀏覽器中，貼上您的裝置程式碼 (您在上一個步驟中按一下 [複製並開啟]  時所複製)，然後按 [下一步]  。
+
+   ![裝置登入瀏覽器][A03]
+
+6. 在 [建立驗證檔案]  視窗中，選取您想要使用的訂用帳戶，選擇您的目的地目錄，然後按一下 [啟動]  。
+
+   ![[建立驗證檔案] 視窗][A04]
+
+7. 在 [服務主體建立狀態]  對話方塊中，於系統成功建立檔案之後按一下 [確定]  。
 
    ![[服務主體建立狀態] 對話方塊][A05]
 
-1. 當 [Azure 登入]對話方塊出現時，按一下 [登入]。
+8. 已建立檔案的位址會自動填入 [Azure 登入]  視窗中，此時請按一下 [登入]  。
 
    ![[Azure 登入] 對話方塊][A06]
 
-1. 當 [選取訂用帳戶]對話方塊出現時，請選取您要使用的訂用帳戶，然後按一下 [確定]。
+9. 最後，在 [選取訂用帳戶]  對話方塊中，選取您要使用的訂用帳戶，然後按一下 [確定]  。
 
    ![[選取訂用帳戶] 對話方塊][A07]
 
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-automatically"></a>當您以自動化方式登入時，登出您的 Azure 帳戶
+## <a name="sign-out-of-your-azure-account"></a>登出您的 Azure 帳戶
 
-在上一節中設定步驟之後，每次您重新啟動 Eclipse 時，Azure 工具組都會自動將您登入 Azure 帳戶。 不過，若要登出您的 Azure 帳戶，並防止 Azure 工具組自動將您登入，請使用下列步驟。
+在前述步驟中設定好帳戶後，每當您啟動 Eclipse 時，系統就會將您自動登入。 不過，如果您想要登出 Azure 帳戶，請使用下列步驟。
 
-1. 在 Eclipse 中，依序按一下 [工具]、[Azure] 以及 [登出]。
-
-   ![Azure 登出的 Eclipse 功能表][L01]
-
-1. 當 [Azure 登出] 對話方塊出現時，按一下 [是]。
-
-   ![[登出] 對話方塊][L03]
-
-## <a name="signing-into-your-azure-account-automatically-using-a-credentials-file-which-you-have-already-created"></a>使用已建立的認證檔案來自動登入 Azure 帳戶
-
-如果您在使用 Eclipse 時登出 Azure，必須重新設定適用於 Eclipse 的 Azure 工具組來使用已建立的認證檔案之後，才可以自動登入 Azure 帳戶。 下列步驟將引導您將 Azure 工具組設定為使用現有的認證檔案。
-
-1. 使用 Eclipse 開啟您的專案。
-
-1. 依序按一下 [工具]、[Azure] 以及 [登入]。
-
-   ![Azure 登入的 Eclipse 功能表][A01]
-
-1. 當 [Azure 登入] 對話方塊出現時，請選取 [自動化]，然後按一下 [瀏覽]。
-
-   ![[登入] 對話方塊][A02]
-
-1. 當 [選取已驗證檔案] 對話方塊出現時，請選取您稍早建立的認證檔案，接著按一下 [開啟]。
-
-   ![[登入] 對話方塊][A08]
-
-1. 當 [Azure 登入]對話方塊出現時，按一下 [登入]。
-
-   ![[Azure 登入] 對話方塊][A06]
-
-1. 當 [選取訂用帳戶]對話方塊出現時，請選取您要使用的訂用帳戶，然後按一下 [確定]。
-
-   ![[選取訂用帳戶] 對話方塊][A07]
-
-## <a name="signing-into-your-azure-account-interactively"></a>以互動方式登入您的 Azure 帳戶
-
-下列步驟將說明如何以手動方式輸入您的 Azure 認證來登入 Azure。
-
-1. 使用 Eclipse 開啟您的專案。
-
-1. 依序按一下 [工具]、[Azure] 以及 [登入]。
-
-   ![Azure 登入的 Eclipse 功能表][I01]
-
-1. 當 [Azure 登入] 對話方塊出現時，請選取 [互動式]，然後按一下 [登入]。
-
-   ![[登入] 對話方塊][I02]
-
-1. 當 [Azure 登入] 對話方塊出現時，請輸入您的 Azure 認證，然後按一下 [登入]。
-
-   ![[Azure 登入] 對話方塊][I03]
-
-1. 當 [選取訂用帳戶]對話方塊出現時，請選取您要使用的訂用帳戶，然後按一下 [確定]。
-
-   ![[選取訂用帳戶] 對話方塊][I04]
-
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-interactively"></a>當您以互動方式登入時，登出您的 Azure 帳戶
-
-在上一節中設定步驟之後，每次您重新啟動 Eclipse 時，都會自動將您登出 Azure 帳戶。 不過，如果您想要登出您的 Azure 帳戶而不重新啟動 Eclipse，請使用下列步驟。
-
-1. 在 Eclipse 中，依序按一下 [工具]、[Azure] 以及 [登出]。
+1. 在 Eclipse 中，依序按一下 [工具]  、[Azure]  以及 [登出]  。
 
    ![Azure 登出的 Eclipse 功能表][L01]
 
-1. 當 [Azure 登出] 對話方塊出現時，按一下 [是]。
+2. 當 [Azure 登出]  對話方塊出現時，按一下 [是]  。
 
    ![[登出] 對話方塊][L02]
 
@@ -151,6 +137,7 @@ ms.locfileid: "61591001"
 [I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
 [I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
 [I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [A01]: media/azure-toolkit-for-eclipse-sign-in-instructions/A01.png
 [A02]: media/azure-toolkit-for-eclipse-sign-in-instructions/A02.png
