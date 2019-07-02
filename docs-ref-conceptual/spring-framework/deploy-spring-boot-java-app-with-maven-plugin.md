@@ -11,12 +11,12 @@ ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 5df4ca6ae9f307d937d7dfa0f2c1765f2efde1a1
-ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
+ms.openlocfilehash: b133290d1f14429cbf36d6ed5a67d27e1a637593
+ms.sourcegitcommit: 599405a9ce892d75073ef0776befa2fa22407b4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65625706"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67237605"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>將 Spring Boot JAR 檔案 Web 應用程式部署至 Linux 上的 Azure App Service
 
@@ -100,38 +100,79 @@ ms.locfileid: "65625706"
    <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.5.4</version>
-    <configuration>
-      <deploymentType>jar</deploymentType>
-
-      <!-- configure app to run on port 80, required by App Service -->
-      <appSettings>
-        <property> 
-          <name>JAVA_OPTS</name> 
-          <value>-Dserver.port=80</value> 
-        </property> 
-      </appSettings>
-
-      <!-- Web App information -->
-      <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
-      <appName>${WEBAPP_NAME}</appName>
-      <region>${REGION}</region>  
-
-      <!-- Java Runtime Stack for Web App on Linux-->
-      <linuxRuntime>jre8</linuxRuntime>
-    </configuration>
+    <version>1.6.0</version>
    </plugin>
    ```
 
-3. 更新外掛程式組態中的下列預留位置：
+3. 接著您可以設定部署、在命令提示字元中執行 Maven 命令 `mvn azure-webapp:config` 並使用**數字**在提示中選擇這些選項：
+    * **OS**：Linux  
+    * **javaVersion**：jre8
+    * **runtimeStack**：jre8
 
-| Placeholder | 說明 |
-| ----------- | ----------- |
-| `RESOURCEGROUP_NAME` | 要在其中建立 Web 應用程式的新資源群組名稱。 將應用程式的所有資源放在群組中，藉此同時管理。 例如，刪除資源群組會刪除所有與應用程式相關聯的資源。 使用唯一的新資源群組名稱來更新此值，例如 TestResources  。 您在下一節中會使用此資源群組名稱來清除所有的 Azure 資源。 |
-| `WEBAPP_NAME` | 應用程式名稱會成為 Web 應用程式在部署至 Azure 時的部分主機名稱 (WEBAPP_NAME.azurewebsites.net)。 將此值更新為新 Azure Web 應用程式的唯一名稱 (例如 contoso  )，它將會主控您的 Java 應用程式。 |
-| `REGION` | 託管 Web 應用程式的 Azure 區域，例如 `westus2`。 您可以使用 `az account list-locations` 命令，從 Cloud Shell 或 CLI 取得區域清單。 |
+看到 **Confirm (Y/N)** 提示時，按下 **'y'** 完成設定。
 
-您可以在 [GitHub 上的 Maven 外掛程式參考](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin)中找到組態選項的完整清單。
+```cmd
+~@Azure:~/gs-spring-boot/complete$ mvn azure-webapp:config
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< org.springframework:gs-spring-boot >-----------------
+[INFO] Building gs-spring-boot 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- azure-webapp-maven-plugin:1.6.0:config (default-cli) @ gs-spring-boot ---
+[WARNING] The plugin may not work if you change the os of an existing webapp.
+Define value for OS(Default: Linux):
+1. linux [*]
+2. windows
+3. docker
+Enter index to use:
+Define value for javaVersion(Default: jre8):
+1. jre8 [*]
+2. java11
+Enter index to use:
+Define value for runtimeStack(Default: TOMCAT 8.5):
+1. TOMCAT 9.0
+2. jre8
+3. TOMCAT 8.5 [*]
+4. WILDFLY 14
+Enter index to use: 2
+Please confirm webapp properties
+AppName : gs-spring-boot-1559091271202
+ResourceGroup : gs-spring-boot-1559091271202-rg
+Region : westeurope
+PricingTier : Premium_P1V2
+OS : Linux
+RuntimeStack : JAVA 8-jre8
+Deploy to slot : false
+Confirm (Y/N)? : Y
+```
+
+4. 將 `<appSettings>` 區段新增到 `<azure-webapp-maven-plugin>` 的 `<configuration>` 區段，以接聽連接埠 *80*。
+
+    ```xml
+   <plugin>
+       <groupId>com.microsoft.azure</groupId>
+       <artifactId>azure-webapp-maven-plugin</artifactId>
+       <version>1.6.0</version>
+       <configuration>
+          <schemaVersion>V2</schemaVersion>
+          <resourceGroup>gs-spring-boot-1559091271202-rg</resourceGroup>
+          <appName>gs-spring-boot-1559091271202</appName>
+          <region>westeurope</region>
+          <pricingTier>P1V2</pricingTier>
+
+          <!-- Begin of App Settings  -->
+          <appSettings>
+             <property>
+                   <name>JAVA_OPTS</name>
+                   <value>-Dserver.port=80</value>
+             </property>
+          </appSettings>
+          <!-- End of App Settings  -->
+          ...
+         </configuration>
+   </plugin>
+   ```
 
 ## <a name="deploy-the-app-to-azure"></a>將應用程式部署至 Azure
 
